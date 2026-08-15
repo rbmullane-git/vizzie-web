@@ -82,7 +82,11 @@
 
       /* Hero */
       .hero {
-        padding: 128px 0 120px;
+        min-height: calc(100vh - 64px); /* fill the window below the sticky header */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 48px 0;
         background: radial-gradient(1100px 520px at 82% -10%, rgba(34, 197, 94, 0.1), transparent 60%);
       }
       .hero .cta-row { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
