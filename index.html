@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vizzie — Unlocking the power of public data</title>
+    <meta
+      name="description"
+      content="Vizzie is an easy-to-use mapping and analytics platform that connects you to the world's open data — no downloads, no GIS specialists. Just beautiful maps, charts, and data stories."
+    />
+    <link rel="icon" href="favicon.svg" />
+    <meta property="og:title" content="Vizzie — Unlocking the power of public data" />
+    <meta
+      property="og:description"
+      content="Connect to the world's open data and turn it into beautiful maps, charts, and stories — no downloads, no GIS specialists."
+    />
+    <meta property="og:type" content="website" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0e1116;
+        --panel: #161a21;
+        --card: #1e242d;
+        --line: #272e39;
+        --text: #e6e9ef;
+        --muted: #8a93a2;
+        --faint: #5b6472;
+        --green: #22c55e;
+        --green-soft: rgba(34, 197, 94, 0.15);
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto,
+          Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.5;
+      }
+      a { color: inherit; }
+      .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+      /* Header */
+      header.site {
+        position: sticky; top: 0; z-index: 20;
+        background: rgba(14, 17, 22, 0.82); backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      header.site .wrap {
+        display: flex; align-items: center; justify-content: space-between;
+        height: 64px;
+      }
+      .brand { display: flex; align-items: center; gap: 10px; }
+      .brand .word {
+        font-size: 22px; font-weight: 800; letter-spacing: 0.02em; color: var(--green);
+      }
+      .brand .beta { font-size: 13px; font-style: italic; color: var(--muted); }
+      .btn {
+        display: inline-block; background: var(--green); color: var(--bg);
+        font-weight: 700; font-size: 14px; padding: 10px 18px; border-radius: 10px;
+        text-decoration: none; box-shadow: 0 4px 18px rgba(34, 197, 94, 0.3);
+        transition: opacity 0.15s ease;
+      }
+      .btn:hover { opacity: 0.9; }
+      .btn.ghost {
+        background: transparent; color: var(--text);
+        border: 1px solid var(--line); box-shadow: none;
+      }
+      .btn.ghost:hover { background: var(--panel); }
+
+      /* Sections */
+      section { padding: 132px 0; border-bottom: 1px solid var(--line); }
+      .kicker {
+        text-transform: uppercase; letter-spacing: 0.14em; font-size: 12px;
+        font-weight: 800; color: var(--green); margin-bottom: 14px;
+      }
+      h1 { font-size: 52px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; }
+      h2 { font-size: 32px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.18; }
+      .lead { font-size: 20px; color: var(--muted); max-width: 720px; margin-top: 18px; }
+      .sub { font-size: 17px; color: var(--muted); max-width: 720px; }
+
+      /* Hero */
+      .hero {
+        padding: 128px 0 120px;
+        background: radial-gradient(1100px 520px at 82% -10%, rgba(34, 197, 94, 0.1), transparent 60%);
+      }
+      .hero .cta-row { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
+      .hero .note { margin-top: 18px; font-size: 14px; color: var(--faint); }
+      .hero .note b { color: var(--green); }
+
+      /* Grids */
+      .grid { display: grid; gap: 20px; margin-top: 34px; }
+      .g3 { grid-template-columns: repeat(3, 1fr); }
+      .g4 { grid-template-columns: repeat(2, 1fr); }
+      .card {
+        background: var(--panel); border: 1px solid var(--line);
+        border-radius: 14px; padding: 24px;
+      }
+      .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+      .card p { font-size: 15px; color: var(--muted); }
+      .card .step {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 30px; height: 30px; border-radius: 8px; margin-bottom: 14px;
+        background: var(--green-soft); color: var(--green); font-weight: 800; font-size: 15px;
+        border: 1px solid rgba(34, 197, 94, 0.3);
+      }
+      .card .tag {
+        display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.05em;
+        text-transform: uppercase; color: var(--green); background: var(--green-soft);
+        border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 999px;
+        padding: 3px 10px; margin-bottom: 12px;
+      }
+
+      /* Stat band */
+      .band { background: var(--panel); }
+      .stats { display: flex; flex-wrap: wrap; gap: 40px; align-items: baseline; }
+      .stat .n { font-size: 44px; font-weight: 800; color: var(--green); letter-spacing: -0.02em; }
+      .stat .l { font-size: 14px; color: var(--muted); margin-top: 4px; max-width: 220px; }
+
+      /* App screenshot */
+      .shot {
+        width: 100%; border-radius: 14px; border: 1px solid var(--line);
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.5); display: block;
+      }
+
+      /* Portals list */
+      .portals { columns: 230px 4; column-gap: 28px; margin-top: 34px; }
+      .pgrp { break-inside: avoid; margin-bottom: 18px; }
+      .phdr {
+        font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
+        color: var(--green); border-bottom: 1px solid rgba(34, 197, 94, 0.28);
+        padding-bottom: 4px; margin-bottom: 7px;
+      }
+      .prow { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; padding: 1.5px 0; }
+      .prow .pn { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .prow .pc { color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; flex: 0 0 auto; }
+
+      /* Values */
+      .value { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+      .value .badge {
+        flex: 0 0 auto; min-width: 104px; text-align: center; font-size: 11px;
+        font-weight: 800; letter-spacing: 0.05em; color: var(--bg); background: var(--green);
+        border-radius: 8px; padding: 7px 10px;
+      }
+      .value .t { font-size: 16px; color: var(--muted); }
+      .value .t b { color: var(--text); }
+
+      /* CTA */
+      .final { text-align: center; }
+      .final h2 { font-size: 34px; }
+      .final .sub { margin: 14px auto 0; }
+      .final .cta-row { margin-top: 26px; display: flex; justify-content: center; gap: 12px; }
+
+      /* Footer */
+      footer.site { padding: 40px 0; border: none; }
+      footer.site .wrap {
+        display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
+        justify-content: space-between;
+      }
+      footer.site a { color: var(--muted); text-decoration: none; font-size: 14px; }
+      footer.site a:hover { color: var(--text); }
+      footer.site .links { display: flex; gap: 20px; flex-wrap: wrap; }
+      footer.site .copy { font-size: 13px; color: var(--faint); }
+
+      @media (max-width: 820px) {
+        h1 { font-size: 38px; }
+        h2 { font-size: 26px; }
+        section { padding: 88px 0; }
+        .g3, .g4 { grid-template-columns: 1fr; }
+        header.site .brand .beta { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="/" style="text-decoration: none">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <polygon points="12,2 22,7 12,12 2,7" fill="#22C55E" />
+            <polyline points="2,12 12,17 22,12" stroke="#22C55E" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".65" />
+            <polyline points="2,17 12,22 22,17" stroke="#22C55E" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".4" />
+          </svg>
+          <span class="word">Vizzie</span><span class="beta">beta</span>
+        </a>
+        <div style="display: flex; gap: 10px; align-items: center">
+          <a class="btn ghost" data-app="/">Log in</a>
+          <a class="btn" data-app="/#signup">Sign up</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <h1>Unlocking the power of public data</h1>
+        <p class="lead">
+          Vizzie is an easy-to-use mapping and analytics platform that connects you
+          to the world's open data — no downloads, no GIS specialists. Just
+          beautiful maps, charts, and data stories.
+        </p>
+        <div class="cta-row">
+          <a class="btn" data-app="/#signup">Sign up free</a>
+          <a class="btn ghost" href="#how">See how it works</a>
+        </div>
+        <p class="note"><b>Now in beta</b> — a working version is live, and we're welcoming early users.</p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how">
+      <div class="wrap">
+        <div class="kicker">How it works</div>
+        <h2>From open data to a finished map, in one place.</h2>
+        <div class="grid g3">
+          <div class="card">
+            <div class="step">1</div>
+            <h3>Connect</h3>
+            <p>Browse and connect to thousands of open-data portals around the world, live — nothing to download or reformat.</p>
+          </div>
+          <div class="card">
+            <div class="step">2</div>
+            <h3>Explore</h3>
+            <p>Map, chart, and analyse place-based data together on one linked canvas — powerful spatial analysis, without needing to be an expert.</p>
+          </div>
+          <div class="card">
+            <div class="step">3</div>
+            <h3>Share</h3>
+            <p>Turn what you find into presentation-ready maps and interactive stories you can publish and share with a link.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- See it in action -->
+    <section>
+      <div class="wrap">
+        <div class="kicker">See it in action</div>
+        <h2 style="margin-bottom: 8px">A working platform, live today.</h2>
+        <p class="sub" style="margin-bottom: 26px">
+          Vancouver's 150,000 street trees — connected live, mapped in 3D, and
+          charted, all in one place.
+        </p>
+        <img
+          class="shot"
+          src="vizzie-platform-screenshot.png"
+          alt="The Vizzie platform showing Vancouver street trees mapped in 3D with linked charts"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- Connected data -->
+    <section class="band">
+      <div class="wrap">
+        <div class="kicker">Connected today</div>
+        <h2 style="margin-bottom: 26px">The world's open data, in one place.</h2>
+        <div class="stats">
+          <div class="stat"><div class="n">170</div><div class="l">open-data portals connected</div></div>
+          <div class="stat"><div class="n">28</div><div class="l">countries &amp; regions</div></div>
+          <div class="stat"><div class="n">4.1M+</div><div class="l">datasets you can map today</div></div>
+        </div>
+
+        <div class="portals">
+          <div class="pgrp"><div class="phdr">Global</div>
+            <div class="prow"><span class="pn">Harvard Dataverse</span><span class="pc">301,966</span></div>
+            <div class="prow"><span class="pn">NASA Open Data</span><span class="pc">36,039</span></div>
+            <div class="prow"><span class="pn">UN OCHA</span><span class="pc">28,081</span></div>
+            <div class="prow"><span class="pn">World Bank Data</span><span class="pc">7,963</span></div>
+            <div class="prow"><span class="pn">WHO Global Health</span><span class="pc">3,081</span></div>
+            <div class="prow"><span class="pn">OECD Data Portal</span><span class="pc">1,539</span></div>
+            <div class="prow"><span class="pn">UN SDG Database</span><span class="pc">713</span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">European Union</div>
+            <div class="prow"><span class="pn">data.europa.eu</span><span class="pc">1,798,430</span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">United States</div>
+            <div class="prow"><span class="pn">Data.gov</span><span class="pc">548,644</span></div>
+            <div class="prow"><span class="pn">California</span><span class="pc">4,525</span></div>
+            <div class="prow"><span class="pn">NYC Open Data</span><span class="pc">2,396</span></div>
+            <div class="prow"><span class="pn">Washington, DC</span><span class="pc">1,705</span></div>
+            <div class="prow"><span class="pn">CDC</span><span class="pc">1,078</span></div>
+            <div class="prow"><span class="pn">City of Chicago</span><span class="pc">912</span></div>
+            <div class="prow"><span class="pn">San Francisco</span><span class="pc">661</span></div>
+            <div class="prow"><span class="pn">City of Los Angeles</span><span class="pc">360</span></div>
+            <div class="prow"><span class="pn">City of Boston</span><span class="pc">232</span></div>
+            <div class="prow"><span class="pn">City of Seattle</span><span class="pc">144</span></div>
+            <div class="prow"><span class="pn" style="color: var(--faint)">…and 60+ more</span><span class="pc"></span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">Australia</div>
+            <div class="prow"><span class="pn">Queensland Government</span><span class="pc">188,840</span></div>
+            <div class="prow"><span class="pn">data.gov.au</span><span class="pc">140,684</span></div>
+            <div class="prow"><span class="pn">New South Wales</span><span class="pc">17,000</span></div>
+            <div class="prow"><span class="pn">Victoria</span><span class="pc">5,591</span></div>
+            <div class="prow"><span class="pn">Western Australia</span><span class="pc">2,883</span></div>
+            <div class="prow"><span class="pn">City of Melbourne</span><span class="pc">239</span></div>
+            <div class="prow"><span class="pn">City of Sydney</span><span class="pc">185</span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">India</div>
+            <div class="prow"><span class="pn">data.gov.in</span><span class="pc">235,100</span></div>
+            <div class="prow"><span class="pn">Karnataka Open Data</span><span class="pc">7,734</span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">Germany</div>
+            <div class="prow"><span class="pn">Hamburg Transparency</span><span class="pc">236,894</span></div>
+            <div class="prow"><span class="pn">Berlin Open Data</span><span class="pc">2,619</span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">United Kingdom</div>
+            <div class="prow"><span class="pn">data.gov.uk</span><span class="pc">58,502</span></div>
+            <div class="prow"><span class="pn">London Datastore</span><span class="pc">1,301</span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">France</div>
+            <div class="prow"><span class="pn">data.gouv.fr</span><span class="pc">73,794</span></div>
+            <div class="prow"><span class="pn">Paris Open Data</span><span class="pc">490</span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">Canada</div>
+            <div class="prow"><span class="pn">open.canada.ca</span><span class="pc">47,732</span></div>
+            <div class="prow"><span class="pn">City of Toronto</span><span class="pc">556</span></div>
+            <div class="prow"><span class="pn">City of Vancouver</span><span class="pc">197</span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">Japan</div>
+            <div class="prow"><span class="pn">BODIK</span><span class="pc">18,080</span></div>
+            <div class="prow"><span class="pn">Tokyo Metropolitan</span><span class="pc">9,648</span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">New Zealand</div>
+            <div class="prow"><span class="pn">data.govt.nz</span><span class="pc">31,726</span></div>
+            <div class="prow"><span class="pn">Auckland Council</span><span class="pc">193</span></div>
+          </div>
+          <div class="pgrp"><div class="phdr">And more</div>
+            <div class="prow"><span class="pn">Ireland · data.gov.ie</span><span class="pc">22,602</span></div>
+            <div class="prow"><span class="pn">Netherlands</span><span class="pc">20,428</span></div>
+            <div class="prow"><span class="pn">Switzerland</span><span class="pc">16,120</span></div>
+            <div class="prow"><span class="pn">Singapore, Spain, Belgium…</span><span class="pc"></span></div>
+          </div>
+        </div>
+        <p class="sub" style="margin-top: 22px; font-size: 15px">
+          …and new portals added regularly. <span style="color: var(--faint)">Counts as at 6 Aug 2026.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Examples -->
+    <section>
+      <div class="wrap">
+        <div class="kicker">See what you can do</div>
+        <h2>Real data, ready to explore.</h2>
+        <div class="grid g4">
+          <div class="card">
+            <div class="tag">Vancouver</div>
+            <h3>Street trees</h3>
+            <p>Map ~150,000 street trees by species, size, and location — perfect for greening, canopy, and heat-island work.</p>
+          </div>
+          <div class="card">
+            <div class="tag">Australia</div>
+            <h3>Sea level &amp; coastal hazard</h3>
+            <p>See sea-level projections and coastal erosion along the coastline, straight from national data sources.</p>
+          </div>
+          <div class="card">
+            <div class="tag">Europe</div>
+            <h3>Road freight</h3>
+            <p>Explore how freight moves by corridor and commodity across the EU, mapped and charted together.</p>
+          </div>
+          <div class="card">
+            <div class="tag">United States</div>
+            <h3>Households &amp; income</h3>
+            <p>Understand neighbourhoods by income and household make-up, down to the block-group level.</p>
+          </div>
+        </div>
+        <p class="sub" style="margin-top: 28px">
+          All of this data is already public and free. Vizzie just makes it usable —
+          connected live, mapped, and ready to share.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission / values -->
+    <section>
+      <div class="wrap">
+        <div class="kicker">What we believe</div>
+        <h2 style="margin-bottom: 28px">Public data belongs to everyone — so should the power to use it.</h2>
+        <div class="value">
+          <div class="badge">ACCESS</div>
+          <div class="t">Make public data usable by <b>anyone</b>, closing the tools-and-expertise divide.</div>
+        </div>
+        <div class="value">
+          <div class="badge">CAPACITY</div>
+          <div class="t">Help non-specialists and mission-driven organisations actually <b>use</b> data.</div>
+        </div>
+        <div class="value">
+          <div class="badge">ADVOCACY</div>
+          <div class="t">Champion open data, interoperability, and open standards — <b>supporting the movement</b>.</div>
+        </div>
+        <p class="sub" style="margin-top: 18px">Aligned with the Open Data Charter.</p>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final">
+      <div class="wrap">
+        <h2>Be one of the first to use Vizzie.</h2>
+        <p class="sub">We're welcoming early users and would love your feedback. Create a free account, or say hello.</p>
+        <div class="cta-row">
+          <a class="btn" data-app="/#signup">Sign up free</a>
+          <a class="btn ghost" data-app="/">Log in</a>
+        </div>
+        <p class="sub" style="margin-top: 16px">Questions? Email <a href="mailto:hello@vizzie.org" style="color: var(--green); text-decoration: none">hello@vizzie.org</a>.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site">
+      <div class="wrap">
+        <div class="brand">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <polygon points="12,2 22,7 12,12 2,7" fill="#22C55E" />
+            <polyline points="2,12 12,17 22,12" stroke="#8A93A2" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            <polyline points="2,17 12,22 22,17" stroke="#5B6472" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="copy">© 2026 Vizzie</span>
+        </div>
+        <div class="links">
+          <a href="mailto:hello@vizzie.org">hello@vizzie.org</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="data-deletion.html">Data deletion</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // === Update this to your app's URL when it's deployed ===
+      // e.g. "https://app.vizzie.org" — then every Sign up / Log in button points there.
+      var APP_URL = "https://app.vizzie.org";
+      document.querySelectorAll("[data-app]").forEach(function (a) {
+        a.setAttribute("href", APP_URL + (a.getAttribute("data-app") || ""));
+      });
+    </script>
+  </body>
+</html>

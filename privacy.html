@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy · Vizzie</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --page: #0e1116;
+        --surface: #161b22;
+        --ink: #e6edf3;
+        --muted: #8b949e;
+        --brand: #22c55e;
+        --hair: #30363d;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      }
+      main { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+      header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+      .mark {
+        font-size: 26px; font-weight: 800; letter-spacing: 0.02em; color: var(--brand);
+      }
+      .beta { font-style: italic; color: var(--muted); font-size: 14px; }
+      h1 { font-size: 28px; margin: 24px 0 4px; }
+      h2 { font-size: 18px; margin: 32px 0 8px; }
+      p, li { color: var(--ink); }
+      .muted { color: var(--muted); }
+      a { color: var(--brand); }
+      ul { padding-left: 20px; }
+      hr { border: none; border-top: 1px solid var(--hair); margin: 32px 0; }
+      .note {
+        border: 1px solid var(--hair); background: var(--surface);
+        border-radius: 10px; padding: 12px 16px; font-size: 14px; color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="mark">VIZZIE</span><span class="beta">beta</span>
+      </header>
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: 15 August 2026</p>
+
+      <p>
+        This policy explains what personal data Vizzie ("we", "us") collects when
+        you use the Vizzie application and website, how we use it, and the choices
+        you have. Vizzie is a tool for turning open data into maps, charts, and
+        tables.
+      </p>
+
+      <h2>Data we collect</h2>
+      <ul>
+        <li><strong>Account details</strong> — your email address and display name, provided when you sign up or sign in (including via Google or Facebook).</li>
+        <li><strong>Your content</strong> — the projects, maps, charts, and the data sources you follow (open-data portals, publishers, datasets).</li>
+        <li><strong>Usage &amp; security events</strong> — sign-in events (time and browser type), the storage your downloaded data uses, and a record of exports you create.</li>
+        <li><strong>Published-map visits</strong> — when someone opens a map you publish, we record the visit for your own analytics. We store a <em>hashed</em> (irreversible) form of the visitor's IP address and an approximate country — never the raw IP.</li>
+      </ul>
+
+      <h2>How we use it</h2>
+      <ul>
+        <li>To provide the service — sign you in, save your projects, and show your usage and analytics.</li>
+        <li>To secure accounts and prevent abuse.</li>
+        <li>To send essential account emails (e.g. confirmation and password reset), and optional product updates you opt into.</li>
+      </ul>
+
+      <h2>Who we share it with</h2>
+      <p>
+        We do not sell your personal data. We use trusted service providers to run
+        Vizzie, who process data on our behalf:
+      </p>
+      <ul>
+        <li><strong>Supabase</strong> — authentication and database hosting for your account and content.</li>
+        <li><strong>Google / Facebook</strong> — only if you choose to sign in with them, to verify your identity.</li>
+        <li><strong>Mapbox</strong> — optional address lookup and routing features, when used.</li>
+        <li>Open-data providers you connect to serve the public datasets you map.</li>
+      </ul>
+
+      <h2>Data retention</h2>
+      <p>
+        We keep your account data for as long as your account is active. Raw
+        map-visit records are rolled up into aggregate counts after about 30 days,
+        and old sign-in records are pruned over time. You can delete your account
+        and data at any time — see
+        <a href="data-deletion.html">Data Deletion</a>.
+      </p>
+
+      <h2>Your rights</h2>
+      <p>
+        Depending on where you live, you may have the right to access, correct,
+        export, or delete your personal data, and to withdraw consent. To exercise
+        these, contact us at the address below or follow the
+        <a href="data-deletion.html">deletion instructions</a>.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        Access to your data is restricted so that you can only reach your own
+        records; passwords are handled by our authentication provider and are never
+        stored by us in plain text.
+      </p>
+
+      <h2>Children</h2>
+      <p>Vizzie is not directed to children under 13, and we do not knowingly collect their data.</p>
+
+      <h2>Changes</h2>
+      <p>We may update this policy; material changes will be reflected by the "last updated" date above.</p>
+
+      <h2>Contact</h2>
+      <p>Questions or requests: <a href="mailto:privacy@vizzie.org">privacy@vizzie.org</a>.</p>
+
+      <hr />
+      <p class="note">
+        Template notice: this page is a good-faith summary of how Vizzie handles
+        data. Review and adapt it (legal entity name, contact address,
+        jurisdiction-specific rights) and have it checked before public launch — it
+        is not legal advice.
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Deletion · Vizzie</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --page: #0e1116;
+        --surface: #161b22;
+        --ink: #e6edf3;
+        --muted: #8b949e;
+        --brand: #22c55e;
+        --hair: #30363d;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      }
+      main { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+      header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+      .mark { font-size: 26px; font-weight: 800; letter-spacing: 0.02em; color: var(--brand); }
+      .beta { font-style: italic; color: var(--muted); font-size: 14px; }
+      h1 { font-size: 28px; margin: 24px 0 4px; }
+      h2 { font-size: 18px; margin: 32px 0 8px; }
+      .muted { color: var(--muted); }
+      a { color: var(--brand); }
+      ol, ul { padding-left: 20px; }
+      li { margin: 6px 0; }
+      hr { border: none; border-top: 1px solid var(--hair); margin: 32px 0; }
+      .note {
+        border: 1px solid var(--hair); background: var(--surface);
+        border-radius: 10px; padding: 12px 16px; font-size: 14px; color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="mark">VIZZIE</span><span class="beta">beta</span>
+      </header>
+      <h1>Delete your data</h1>
+      <p class="muted">Last updated: 15 August 2026</p>
+
+      <p>
+        You can delete your Vizzie account and all associated personal data at any
+        time. This applies whether you signed up with email, Google, or Facebook.
+      </p>
+
+      <h2>How to request deletion</h2>
+      <ol>
+        <li>
+          Email
+          <a href="mailto:privacy@vizzie.org?subject=Delete%20my%20Vizzie%20account">privacy@vizzie.org</a>
+          from the email address on your account, with the subject
+          <strong>"Delete my account"</strong>.
+        </li>
+        <li>We confirm the request and permanently delete your data within 30 days.</li>
+      </ol>
+
+      <h2>What gets deleted</h2>
+      <ul>
+        <li>Your account and login credentials.</li>
+        <li>Your profile (name, email) and notification preferences.</li>
+        <li>Your saved projects, maps, and the data sources you follow.</li>
+        <li>Your sign-in history and export records.</li>
+        <li>Maps you published and their visit analytics.</li>
+      </ul>
+
+      <h2>What may remain</h2>
+      <p>
+        Aggregate, non-identifying counts (for example, a total visit tally with no
+        identifiers) and records we're required to keep for legal or security
+        reasons may be retained. Anything linking data to you is removed.
+      </p>
+
+      <hr />
+      <p class="note">
+        Template notice: adapt the contact address and timelines to your setup
+        before launch. If you later add a self-service "Delete account" button in
+        the app, link it here.
+      </p>
+    </main>
+  </body>
+</html>
