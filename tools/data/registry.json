@@ -1,0 +1,1420 @@
+[
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.gov.au/data",
+    "label": "data.gov.au — Australia (national)",
+    "countryCode": "AU",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://digital.atlas.gov.au",
+    "label": "Digital Atlas of Australia — Australia (national)",
+    "countryCode": "AU",
+    "apiAccessible": true,
+    "nativeApi": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://www.data.qld.gov.au",
+    "label": "Queensland Government (data.qld.gov.au)",
+    "countryCode": "AU",
+    "region": "Queensland",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.nsw.gov.au/data",
+    "label": "New South Wales Government (data.nsw.gov.au)",
+    "countryCode": "AU",
+    "region": "New South Wales",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://discover.data.vic.gov.au",
+    "label": "Victorian Government (data.vic.gov.au)",
+    "countryCode": "AU",
+    "region": "Victoria",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.sa.gov.au/data",
+    "label": "South Australian Government (data.sa.gov.au)",
+    "countryCode": "AU",
+    "region": "South Australia",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://catalogue.data.wa.gov.au",
+    "label": "Western Australian Government (data.wa.gov.au)",
+    "countryCode": "AU",
+    "region": "Western Australia",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.nt.gov.au",
+    "label": "Northern Territory Government (data.nt.gov.au)",
+    "countryCode": "AU",
+    "region": "Northern Territory",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://www.data.act.gov.au",
+    "label": "ACT Government (data.act.gov.au)",
+    "countryCode": "AU",
+    "region": "Australian Capital Territory",
+    "city": "Canberra",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data-cityofsydney.opendata.arcgis.com",
+    "label": "City of Sydney Open Data",
+    "countryCode": "AU",
+    "region": "New South Wales",
+    "city": "Sydney",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data-logancity.opendata.arcgis.com",
+    "label": "Logan City Council Open Data",
+    "countryCode": "AU",
+    "region": "Queensland",
+    "city": "Logan City",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://opendata.transport.nsw.gov.au",
+    "label": "Transport for NSW Open Data",
+    "countryCode": "AU",
+    "region": "New South Wales",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "opendatasoft",
+    "baseUrl": "https://data.melbourne.vic.gov.au",
+    "label": "City of Melbourne Open Data",
+    "countryCode": "AU",
+    "region": "Victoria",
+    "city": "Melbourne",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "opendatasoft",
+    "baseUrl": "https://www.data.brisbane.qld.gov.au",
+    "label": "Brisbane City Council Open Data",
+    "countryCode": "AU",
+    "region": "Queensland",
+    "city": "Brisbane",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://datahub.moretonbay.qld.gov.au",
+    "label": "Moreton Bay Regional Council Open Data",
+    "tier": "regional",
+    "countryCode": "AU",
+    "region": "Queensland",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendata.launceston.tas.gov.au",
+    "label": "City of Launceston Open Data",
+    "countryCode": "AU",
+    "region": "Tasmania",
+    "city": "Launceston",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "datagov",
+    "baseUrl": "https://catalog.data.gov",
+    "label": "Data.gov — United States (national)",
+    "countryCode": "US",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.ca.gov",
+    "label": "State of California (data.ca.gov)",
+    "countryCode": "US",
+    "region": "California",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.ny.gov",
+    "label": "State of New York (data.ny.gov)",
+    "countryCode": "US",
+    "region": "New York",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.texas.gov",
+    "label": "State of Texas (data.texas.gov)",
+    "countryCode": "US",
+    "region": "Texas",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.wa.gov",
+    "label": "State of Washington (data.wa.gov)",
+    "countryCode": "US",
+    "region": "Washington",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.colorado.gov",
+    "label": "State of Colorado (data.colorado.gov)",
+    "countryCode": "US",
+    "region": "Colorado",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.ct.gov",
+    "label": "State of Connecticut (data.ct.gov)",
+    "countryCode": "US",
+    "region": "Connecticut",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.nj.gov",
+    "label": "State of New Jersey (data.nj.gov)",
+    "countryCode": "US",
+    "region": "New Jersey",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.michigan.gov",
+    "label": "State of Michigan (data.michigan.gov)",
+    "countryCode": "US",
+    "region": "Michigan",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.oregon.gov",
+    "label": "State of Oregon (data.oregon.gov)",
+    "countryCode": "US",
+    "region": "Oregon",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.pa.gov",
+    "label": "Commonwealth of Pennsylvania (data.pa.gov)",
+    "countryCode": "US",
+    "region": "Pennsylvania",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://opendata.maryland.gov",
+    "label": "State of Maryland (opendata.maryland.gov)",
+    "countryCode": "US",
+    "region": "Maryland",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.kingcounty.gov",
+    "label": "King County, WA",
+    "countryCode": "US",
+    "region": "Washington",
+    "tier": "county",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://datacatalog.cookcountyil.gov",
+    "label": "Cook County, IL",
+    "countryCode": "US",
+    "region": "Illinois",
+    "tier": "county",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.montgomerycountymd.gov",
+    "label": "Montgomery County, MD",
+    "countryCode": "US",
+    "region": "Maryland",
+    "tier": "county",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.cityofnewyork.us",
+    "label": "NYC Open Data",
+    "countryCode": "US",
+    "region": "New York",
+    "city": "New York",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.cityofchicago.org",
+    "label": "City of Chicago",
+    "countryCode": "US",
+    "region": "Illinois",
+    "city": "Chicago",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.lacity.org",
+    "label": "City of Los Angeles",
+    "countryCode": "US",
+    "region": "California",
+    "city": "Los Angeles",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.sfgov.org",
+    "label": "City & County of San Francisco",
+    "countryCode": "US",
+    "region": "California",
+    "city": "San Francisco",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.seattle.gov",
+    "label": "City of Seattle",
+    "countryCode": "US",
+    "region": "Washington",
+    "city": "Seattle",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.austintexas.gov",
+    "label": "City of Austin",
+    "countryCode": "US",
+    "region": "Texas",
+    "city": "Austin",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://www.dallasopendata.com",
+    "label": "City of Dallas",
+    "countryCode": "US",
+    "region": "Texas",
+    "city": "Dallas",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.nola.gov",
+    "label": "City of New Orleans",
+    "countryCode": "US",
+    "region": "Louisiana",
+    "city": "New Orleans",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.boston.gov",
+    "label": "City of Boston (Analyze Boston)",
+    "countryCode": "US",
+    "region": "Massachusetts",
+    "city": "Boston",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendata.dc.gov",
+    "label": "Washington, DC (Open Data DC)",
+    "countryCode": "US",
+    "region": "District of Columbia",
+    "city": "Washington",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.cdc.gov",
+    "label": "CDC (data.cdc.gov)",
+    "countryCode": "US",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data-usdot.opendata.arcgis.com",
+    "label": "US DOT — National Transportation Atlas",
+    "countryCode": "US",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://hudgis-hud.opendata.arcgis.com",
+    "label": "HUD Open Data",
+    "countryCode": "US",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://edg-epa.hub.arcgis.com",
+    "label": "EPA Environmental Dataset Gateway",
+    "countryCode": "US",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendata.mtc.ca.gov",
+    "label": "MTC/ABAG — SF Bay Area (Metropolitan Transportation Commission)",
+    "tier": "regional",
+    "countryCode": "US",
+    "region": "California",
+    "city": "San Francisco",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://gisdata-scag.opendata.arcgis.com",
+    "label": "SCAG — Southern California Association of Governments",
+    "tier": "regional",
+    "countryCode": "US",
+    "region": "California",
+    "city": "Los Angeles",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.sacog.org",
+    "label": "SACOG — Sacramento Area Council of Governments",
+    "tier": "regional",
+    "countryCode": "US",
+    "region": "California",
+    "city": "Sacramento",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://psrc-psregcncl.hub.arcgis.com",
+    "label": "PSRC — Puget Sound Regional Council",
+    "tier": "regional",
+    "countryCode": "US",
+    "region": "Washington",
+    "city": "Seattle",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data-nctcoggis.hub.arcgis.com",
+    "label": "NCTCOG — North Central Texas Council of Governments",
+    "tier": "regional",
+    "countryCode": "US",
+    "region": "Texas",
+    "city": "Dallas",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://datahub.cmap.illinois.gov",
+    "label": "CMAP — Chicago Metropolitan Agency for Planning",
+    "tier": "regional",
+    "countryCode": "US",
+    "region": "Illinois",
+    "city": "Chicago",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.illinois.gov",
+    "label": "State of Illinois (data.illinois.gov)",
+    "countryCode": "US",
+    "region": "Illinois",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.mo.gov",
+    "label": "State of Missouri (data.mo.gov)",
+    "countryCode": "US",
+    "region": "Missouri",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.delaware.gov",
+    "label": "State of Delaware (data.delaware.gov)",
+    "countryCode": "US",
+    "region": "Delaware",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://opendata.hawaii.gov",
+    "label": "State of Hawaii (opendata.hawaii.gov)",
+    "countryCode": "US",
+    "region": "Hawaii",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://geodata.vermont.gov",
+    "label": "State of Vermont (geodata.vermont.gov)",
+    "countryCode": "US",
+    "region": "Vermont",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://vgin.vdem.virginia.gov",
+    "label": "Commonwealth of Virginia (VGIN)",
+    "countryCode": "US",
+    "region": "Virginia",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://www.nconemap.gov",
+    "label": "North Carolina (NC OneMap)",
+    "countryCode": "US",
+    "region": "North Carolina",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://geodata.floridagio.gov",
+    "label": "State of Florida (Florida GeoData)",
+    "countryCode": "US",
+    "region": "Florida",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://gis.data.mass.gov",
+    "label": "Massachusetts (MassGIS)",
+    "countryCode": "US",
+    "region": "Massachusetts",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendata.gis.utah.gov",
+    "label": "Utah Geospatial Resource Center (UGRC)",
+    "countryCode": "US",
+    "region": "Utah",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.baltimorecity.gov",
+    "label": "City of Baltimore",
+    "countryCode": "US",
+    "region": "Maryland",
+    "city": "Baltimore",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.oaklandca.gov",
+    "label": "City of Oakland",
+    "countryCode": "US",
+    "region": "California",
+    "city": "Oakland",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.indy.gov",
+    "label": "City of Indianapolis",
+    "countryCode": "US",
+    "region": "Indiana",
+    "city": "Indianapolis",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.louisvilleky.gov",
+    "label": "Louisville Metro Open Data",
+    "countryCode": "US",
+    "region": "Kentucky",
+    "city": "Louisville",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendataphilly.org",
+    "label": "OpenDataPhilly (City of Philadelphia)",
+    "countryCode": "US",
+    "region": "Pennsylvania",
+    "city": "Philadelphia",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://geohub.houstontx.gov",
+    "label": "City of Houston (Houston Public Works)",
+    "countryCode": "US",
+    "region": "Texas",
+    "city": "Houston",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.honolulu.gov",
+    "label": "City & County of Honolulu",
+    "countryCode": "US",
+    "region": "Hawaii",
+    "city": "Honolulu",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.cambridgema.gov",
+    "label": "City of Cambridge, MA",
+    "countryCode": "US",
+    "region": "Massachusetts",
+    "city": "Cambridge",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.kcmo.org",
+    "label": "City of Kansas City, MO",
+    "countryCode": "US",
+    "region": "Missouri",
+    "city": "Kansas City",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.charlottenc.gov",
+    "label": "City of Charlotte",
+    "countryCode": "US",
+    "region": "North Carolina",
+    "city": "Charlotte",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.wprdc.org",
+    "label": "Western Pennsylvania Regional Data Center (Pittsburgh)",
+    "tier": "regional",
+    "countryCode": "US",
+    "region": "Pennsylvania",
+    "city": "Pittsburgh",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.buffalony.gov",
+    "label": "City of Buffalo",
+    "countryCode": "US",
+    "region": "New York",
+    "city": "Buffalo",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://gis-pdx.opendata.arcgis.com",
+    "label": "City of Portland, OR (PortlandMaps)",
+    "countryCode": "US",
+    "region": "Oregon",
+    "city": "Portland",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.detroitmi.gov",
+    "label": "City of Detroit",
+    "countryCode": "US",
+    "region": "Michigan",
+    "city": "Detroit",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendata-geospatialdenver.hub.arcgis.com",
+    "label": "City & County of Denver",
+    "countryCode": "US",
+    "region": "Colorado",
+    "city": "Denver",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.providenceri.gov",
+    "label": "City of Providence, RI",
+    "countryCode": "US",
+    "region": "Rhode Island",
+    "city": "Providence",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendata.minneapolismn.gov",
+    "label": "City of Minneapolis",
+    "countryCode": "US",
+    "region": "Minnesota",
+    "city": "Minneapolis",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.raleighnc.gov",
+    "label": "City of Raleigh",
+    "countryCode": "US",
+    "region": "North Carolina",
+    "city": "Raleigh",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://city-tampa.opendata.arcgis.com",
+    "label": "City of Tampa",
+    "countryCode": "US",
+    "region": "Florida",
+    "city": "Tampa",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://gisdata.tucsonaz.gov",
+    "label": "City of Tucson",
+    "countryCode": "US",
+    "region": "Arizona",
+    "city": "Tucson",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.milwaukee.gov",
+    "label": "City of Milwaukee",
+    "countryCode": "US",
+    "region": "Wisconsin",
+    "city": "Milwaukee",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://open-data.bouldercolorado.gov",
+    "label": "City of Boulder, CO",
+    "countryCode": "US",
+    "region": "Colorado",
+    "city": "Boulder",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.sanjoseca.gov",
+    "label": "City of San José",
+    "countryCode": "US",
+    "region": "California",
+    "city": "San Jose",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.nashville.gov",
+    "label": "Nashville / Davidson County",
+    "countryCode": "US",
+    "region": "Tennessee",
+    "city": "Nashville",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.cincinnati-oh.gov",
+    "label": "City of Cincinnati",
+    "countryCode": "US",
+    "region": "Ohio",
+    "city": "Cincinnati",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.sanantonio.gov",
+    "label": "City of San Antonio",
+    "countryCode": "US",
+    "region": "Texas",
+    "city": "San Antonio",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.cityofsacramento.org",
+    "label": "City of Sacramento",
+    "countryCode": "US",
+    "region": "California",
+    "city": "Sacramento",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://www.phoenixopendata.com",
+    "label": "City of Phoenix Open Data",
+    "countryCode": "US",
+    "region": "Arizona",
+    "city": "Phoenix",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.hartford.gov",
+    "label": "City of Hartford",
+    "countryCode": "US",
+    "region": "Connecticut",
+    "city": "Hartford",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.memphistn.gov",
+    "label": "City of Memphis",
+    "countryCode": "US",
+    "region": "Tennessee",
+    "city": "Memphis",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendata.columbus.gov",
+    "label": "City of Columbus, OH",
+    "countryCode": "US",
+    "region": "Ohio",
+    "city": "Columbus",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.richmondgov.com",
+    "label": "City of Richmond, VA",
+    "countryCode": "US",
+    "region": "Virginia",
+    "city": "Richmond",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.fortworthtexas.gov",
+    "label": "City of Fort Worth",
+    "countryCode": "US",
+    "region": "Texas",
+    "city": "Fort Worth",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "opendatasoft",
+    "baseUrl": "https://data.longbeach.gov",
+    "label": "City of Long Beach",
+    "countryCode": "US",
+    "region": "California",
+    "city": "Long Beach",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.gov.uk",
+    "label": "data.gov.uk — United Kingdom (national)",
+    "countryCode": "GB",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "os-data-hub",
+    "baseUrl": "https://api.os.uk",
+    "label": "Ordnance Survey Data Hub — United Kingdom (national reference geography)",
+    "countryCode": "GB",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://opendata.camden.gov.uk",
+    "label": "London Borough of Camden",
+    "countryCode": "GB",
+    "region": "England",
+    "city": "London",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendata.bristol.gov.uk",
+    "label": "Bristol City Council Open Data",
+    "countryCode": "GB",
+    "region": "England",
+    "city": "Bristol",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "london-datastore",
+    "baseUrl": "https://data.london.gov.uk",
+    "label": "London Datastore (Greater London Authority)",
+    "countryCode": "GB",
+    "region": "England",
+    "city": "London",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "udata",
+    "baseUrl": "https://www.data.gouv.fr",
+    "label": "data.gouv.fr — France (national)",
+    "countryCode": "FR",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "opendatasoft",
+    "baseUrl": "https://opendata.paris.fr",
+    "label": "Paris Open Data (opendata.paris.fr)",
+    "countryCode": "FR",
+    "region": "Île-de-France",
+    "city": "Paris",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "opendatasoft",
+    "baseUrl": "https://data.toulouse-metropole.fr",
+    "label": "Toulouse Métropole Open Data",
+    "countryCode": "FR",
+    "region": "Occitanie",
+    "city": "Toulouse",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "opendatasoft",
+    "baseUrl": "https://data.rennesmetropole.fr",
+    "label": "Rennes Métropole Open Data",
+    "countryCode": "FR",
+    "region": "Brittany",
+    "city": "Rennes",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "opendatasoft",
+    "baseUrl": "https://data.nantesmetropole.fr",
+    "label": "Nantes Métropole Open Data",
+    "countryCode": "FR",
+    "region": "Pays de la Loire",
+    "city": "Nantes",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "opendatasoft",
+    "baseUrl": "https://opendata.bordeaux-metropole.fr",
+    "label": "Bordeaux Métropole Open Data",
+    "countryCode": "FR",
+    "region": "Nouvelle-Aquitaine",
+    "city": "Bordeaux",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://ckan.govdata.de",
+    "label": "GovData — Germany (national)",
+    "countryCode": "DE",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://datenregister.berlin.de",
+    "label": "Berlin Open Data (daten.berlin.de)",
+    "countryCode": "DE",
+    "region": "Berlin",
+    "city": "Berlin",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://suche.transparenz.hamburg.de",
+    "label": "Hamburg Transparency Portal (transparenz.hamburg.de)",
+    "countryCode": "DE",
+    "region": "Hamburg",
+    "city": "Hamburg",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://opendata.muenchen.de",
+    "label": "Munich Open Data (opendata.muenchen.de)",
+    "countryCode": "DE",
+    "region": "Bavaria",
+    "city": "Munich",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.overheid.nl/data",
+    "label": "data.overheid.nl — Netherlands (national)",
+    "countryCode": "NL",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "opendatasoft",
+    "baseUrl": "https://data.stad.gent",
+    "label": "City of Ghent Open Data",
+    "countryCode": "BE",
+    "region": "Flanders",
+    "city": "Ghent",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://portaal-stadantwerpen.opendata.arcgis.com",
+    "label": "City of Antwerp Open Data",
+    "countryCode": "BE",
+    "region": "Flanders",
+    "city": "Antwerp",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://www.dati.gov.it/opendata",
+    "label": "dati.gov.it — Italy (national)",
+    "countryCode": "IT",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.gov.ie",
+    "label": "data.gov.ie — Ireland (national)",
+    "countryCode": "IE",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.smartdublin.ie",
+    "label": "Smart Dublin Open Data",
+    "countryCode": "IE",
+    "region": "Leinster",
+    "city": "Dublin",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "udata",
+    "baseUrl": "https://dados.gov.pt",
+    "label": "dados.gov.pt — Portugal (national)",
+    "countryCode": "PT",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://opendata.swiss",
+    "label": "opendata.swiss — Switzerland (national)",
+    "countryCode": "CH",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.stadt-zuerich.ch",
+    "label": "City of Zurich (data.stadt-zuerich.ch)",
+    "countryCode": "CH",
+    "region": "Zurich",
+    "city": "Zurich",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.gov.gr",
+    "label": "data.gov.gr — Greece (national)",
+    "countryCode": "GR",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://podatki.gov.si",
+    "label": "podatki.gov.si — Slovenia (national)",
+    "countryCode": "SI",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.gov.ro",
+    "label": "data.gov.ro — Romania (national)",
+    "countryCode": "RO",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.gov.lv",
+    "label": "data.gov.lv — Latvia (national)",
+    "countryCode": "LV",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "udata",
+    "baseUrl": "https://data.public.lu",
+    "label": "data.public.lu — Luxembourg (national)",
+    "countryCode": "LU",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "data-europa-eu",
+    "baseUrl": "https://www.data.gv.at",
+    "label": "data.gv.at — Austria (national)",
+    "countryCode": "AT",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://opendata-ajuntament.barcelona.cat/data",
+    "label": "Barcelona Open Data (Ajuntament de Barcelona)",
+    "countryCode": "ES",
+    "region": "Catalonia",
+    "city": "Barcelona",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://datos.madrid.es",
+    "label": "Madrid Open Data (datos.madrid.es)",
+    "countryCode": "ES",
+    "region": "Community of Madrid",
+    "city": "Madrid",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://hri.fi/data",
+    "label": "Helsinki Region Infoshare (hri.fi)",
+    "countryCode": "FI",
+    "region": "Uusimaa",
+    "city": "Helsinki",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://www.avoindata.fi/data",
+    "label": "avoindata.fi — Finland (national)",
+    "countryCode": "FI",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.tampere.fi/data",
+    "label": "City of Tampere Open Data",
+    "countryCode": "FI",
+    "region": "Pirkanmaa",
+    "city": "Tampere",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "data-gov-sg",
+    "baseUrl": "https://data.gov.sg",
+    "label": "data.gov.sg — Singapore (national)",
+    "countryCode": "SG",
+    "apiAccessible": true,
+    "nativeApi": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://open.canada.ca/data/en",
+    "label": "open.canada.ca — Canada (national)",
+    "countryCode": "CA",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.ontario.ca",
+    "label": "Government of Ontario (data.ontario.ca)",
+    "countryCode": "CA",
+    "region": "Ontario",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://catalogue.data.gov.bc.ca",
+    "label": "British Columbia (catalogue.data.gov.bc.ca)",
+    "countryCode": "CA",
+    "region": "British Columbia",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://www.donneesquebec.ca/recherche",
+    "label": "Données Québec",
+    "countryCode": "CA",
+    "region": "Quebec",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.novascotia.ca",
+    "label": "Nova Scotia (data.novascotia.ca)",
+    "countryCode": "CA",
+    "region": "Nova Scotia",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data.princeedwardisland.ca",
+    "label": "Prince Edward Island",
+    "countryCode": "CA",
+    "region": "Prince Edward Island",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://ckan0.cf.opendata.inter.prod-toronto.ca",
+    "label": "City of Toronto Open Data",
+    "countryCode": "CA",
+    "region": "Ontario",
+    "city": "Toronto",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://donnees.montreal.ca",
+    "label": "Ville de Montréal — Données ouvertes",
+    "countryCode": "CA",
+    "region": "Quebec",
+    "city": "Montreal",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "opendatasoft",
+    "baseUrl": "https://opendata.vancouver.ca",
+    "label": "City of Vancouver Open Data",
+    "countryCode": "CA",
+    "region": "British Columbia",
+    "city": "Vancouver",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.calgary.ca",
+    "label": "City of Calgary Open Data",
+    "countryCode": "CA",
+    "region": "Alberta",
+    "city": "Calgary",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://open.ottawa.ca",
+    "label": "City of Ottawa Open Data",
+    "countryCode": "CA",
+    "region": "Ontario",
+    "city": "Ottawa",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data-hrm.hub.arcgis.com",
+    "label": "Halifax Regional Municipality",
+    "countryCode": "CA",
+    "region": "Nova Scotia",
+    "city": "Halifax",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "socrata",
+    "baseUrl": "https://data.winnipeg.ca",
+    "label": "City of Winnipeg Open Data",
+    "countryCode": "CA",
+    "region": "Manitoba",
+    "city": "Winnipeg",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://catalogue.data.govt.nz",
+    "label": "data.govt.nz — New Zealand (national)",
+    "countryCode": "NZ",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data-aucklandcouncil.opendata.arcgis.com",
+    "label": "Auckland Council Open Data",
+    "countryCode": "NZ",
+    "region": "Auckland",
+    "city": "Auckland",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://data-wcc.opendata.arcgis.com",
+    "label": "Wellington City Council Open Data",
+    "countryCode": "NZ",
+    "region": "Wellington",
+    "city": "Wellington",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendata-christchurchcity.hub.arcgis.com",
+    "label": "Christchurch City Council Open Data",
+    "countryCode": "NZ",
+    "region": "Canterbury",
+    "city": "Christchurch",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "arcgis-hub",
+    "baseUrl": "https://opendata.canterburymaps.govt.nz",
+    "label": "Canterbury Maps (regional)",
+    "tier": "regional",
+    "countryCode": "NZ",
+    "region": "Canterbury",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.bodik.jp",
+    "label": "BODIK — Japan (national open data aggregator)",
+    "countryCode": "JP",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://catalog.data.metro.tokyo.lg.jp",
+    "label": "Tokyo Metropolitan Government Open Data",
+    "countryCode": "JP",
+    "region": "Tokyo",
+    "city": "Tokyo",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.city.yokohama.lg.jp",
+    "label": "City of Yokohama Open Data",
+    "countryCode": "JP",
+    "region": "Kanagawa",
+    "city": "Yokohama",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://datos.gob.ar",
+    "label": "datos.gob.ar — Argentina (national)",
+    "countryCode": "AR",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.opencity.in",
+    "label": "OpenCity — India (urban/civic data, multiple cities)",
+    "countryCode": "IN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "data-gov-in",
+    "baseUrl": "https://api.data.gov.in?source=data.gov.in",
+    "label": "data.gov.in — India (national OGD platform)",
+    "countryCode": "IN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "data-gov-in-dms",
+    "baseUrl": "https://karnataka.data.gov.in",
+    "label": "Karnataka Open Data",
+    "countryCode": "IN",
+    "region": "Karnataka",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "data-gov-in-dms",
+    "baseUrl": "https://tn.data.gov.in",
+    "label": "Tamil Nadu Open Data",
+    "countryCode": "IN",
+    "region": "Tamil Nadu",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "data-gov-in-dms",
+    "baseUrl": "https://smartcities.data.gov.in",
+    "label": "Smart Cities Mission Data Portal (95 cities)",
+    "countryCode": "IN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.humdata.org",
+    "label": "UN OCHA — Humanitarian Data Exchange (global)",
+    "countryCode": "UN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "ckan",
+    "baseUrl": "https://data.nasa.gov",
+    "label": "NASA Open Data (data.nasa.gov)",
+    "countryCode": "UN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "dataverse",
+    "baseUrl": "https://dataverse.harvard.edu",
+    "label": "Harvard Dataverse — research data (global)",
+    "countryCode": "UN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "world-bank",
+    "baseUrl": "https://ddh-openapi.worldbank.org",
+    "label": "World Bank Data Catalog (global development data)",
+    "countryCode": "UN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "adb",
+    "baseUrl": "https://kidb.adb.org",
+    "label": "ADB Key Indicators Database (Asia & the Pacific)",
+    "countryCode": "APAC",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "oecd",
+    "baseUrl": "https://sdmx.oecd.org/public",
+    "label": "OECD Data Portal (economy, education, health, environment)",
+    "countryCode": "UN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "unicef",
+    "baseUrl": "https://sdmx.data.unicef.org/ws/public/sdmxapi",
+    "label": "UNICEF Data Warehouse (child health, education, poverty)",
+    "countryCode": "UN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "who-gho",
+    "baseUrl": "https://ghoapi.azureedge.net",
+    "label": "WHO Global Health Observatory (health indicators, all countries)",
+    "countryCode": "UN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "dhs",
+    "baseUrl": "https://api.dhsprogram.com",
+    "label": "DHS Program (demographic & health surveys, developing world)",
+    "countryCode": "UN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "un-sdg",
+    "baseUrl": "https://unstats.un.org/sdgapi",
+    "label": "UN SDG Global Database (Sustainable Development Goals indicators)",
+    "countryCode": "UN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "owid",
+    "baseUrl": "https://ourworldindata.org",
+    "label": "Our World in Data — Oxford University (global development & health)",
+    "countryCode": "UN",
+    "apiAccessible": true
+  },
+  {
+    "connectorType": "data-europa-eu",
+    "baseUrl": "https://data.europa.eu",
+    "label": "data.europa.eu — European Data Portal (all EU member states)",
+    "countryCode": "EU",
+    "apiAccessible": true
+  }
+]

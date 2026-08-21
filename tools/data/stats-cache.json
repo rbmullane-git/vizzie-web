@@ -1,0 +1,6634 @@
+{
+ "data-sa-gov-au": {
+  "count": 1916,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0041753653444676405,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 1860
+   },
+   {
+    "cls": "cc-by-nc-nd",
+    "count": 18
+   },
+   {
+    "cls": "cc-by-nd",
+    "count": 13
+   },
+   {
+    "cls": "cc-by-nc-sa",
+    "count": 8
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 8
+   },
+   {
+    "cls": "other-open",
+    "count": 4
+   },
+   {
+    "cls": "cc-by-nc",
+    "count": 3
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Department of the Premier and Cabinet",
+    "count": 291
+   },
+   {
+    "name": "Department for Environment and Water",
+    "count": 255
+   },
+   {
+    "name": "SA Health",
+    "count": 174
+   },
+   {
+    "name": "Department for Education",
+    "count": 84
+   },
+   {
+    "name": "Attorney-General's Department",
+    "count": 77
+   },
+   {
+    "name": "City of Adelaide",
+    "count": 67
+   },
+   {
+    "name": "Department for Infrastructure and Transport",
+    "count": 61
+   },
+   {
+    "name": "Environment Protection Authority (EPA)",
+    "count": 60
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:22.959Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-nsw-gov-au": {
+  "count": 17084,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.039920393350503396,
+  "licences": [
+   {
+    "cls": "lsba",
+    "count": 10873
+   },
+   {
+    "cls": "cc-by",
+    "count": 5362
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 682
+   },
+   {
+    "cls": "cc-by-nc-nd-4.0",
+    "count": 114
+   },
+   {
+    "cls": "oeh",
+    "count": 24
+   },
+   {
+    "cls": "cc-at-3",
+    "count": 14
+   },
+   {
+    "cls": "3rd",
+    "count": 8
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 3
+   },
+   {
+    "cls": "internal",
+    "count": 2
+   },
+   {
+    "cls": "cc-nc",
+    "count": 1
+   },
+   {
+    "cls": "cc-zero",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "NSW Government",
+    "count": 8521
+   },
+   {
+    "name": "NSW Department of Climate Change, Energy, the Environment and Water",
+    "count": 2500
+   },
+   {
+    "name": "NSW Department of Planning, Housing and Infrastructure",
+    "count": 1413
+   },
+   {
+    "name": "Spatial Services (DCS)",
+    "count": 424
+   },
+   {
+    "name": "Transport for NSW",
+    "count": 271
+   },
+   {
+    "name": "Department of Customer Service",
+    "count": 210
+   },
+   {
+    "name": "City of Sydney",
+    "count": 196
+   },
+   {
+    "name": "Wollongong City Council",
+    "count": 172
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:22.959Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-qld-gov-au": {
+  "count": 188850,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "CC-BY-4.0",
+    "count": 188158
+   },
+   {
+    "cls": "CC-BY-3.0",
+    "count": 645
+   },
+   {
+    "cls": "cc-by-4",
+    "count": 8
+   },
+   {
+    "cls": "CC-BY-SA-3.0",
+    "count": 8
+   },
+   {
+    "cls": "CC-BY-ND-4.0",
+    "count": 8
+   },
+   {
+    "cls": "other-open",
+    "count": 4
+   },
+   {
+    "cls": "CC-BY-NC-ND-4.0",
+    "count": 4
+   },
+   {
+    "cls": "CC-BY-SA-4.0",
+    "count": 4
+   },
+   {
+    "cls": "CC-BY-NC-3.0",
+    "count": 3
+   },
+   {
+    "cls": "cc-by",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Geological Survey of Queensland",
+    "count": 184409
+   },
+   {
+    "name": "Environment, Tourism, Science and Innovation",
+    "count": 724
+   },
+   {
+    "name": "Queensland Health",
+    "count": 508
+   },
+   {
+    "name": "Transport and Main Roads",
+    "count": 444
+   },
+   {
+    "name": "Brisbane City Council",
+    "count": 443
+   },
+   {
+    "name": "Education",
+    "count": 189
+   },
+   {
+    "name": "Sport, Racing and Olympic and Paralympic Games",
+    "count": 178
+   },
+   {
+    "name": "Natural Resources and Mines, Manufacturing and Regional and Rural Development",
+    "count": 161
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:22.958Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gov-au": {
+  "count": 141031,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.6573732016365196,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 92710
+   },
+   {
+    "cls": "cc-by",
+    "count": 18357
+   },
+   {
+    "cls": "lsba",
+    "count": 11096
+   },
+   {
+    "cls": "cc-by-4",
+    "count": 3219
+   },
+   {
+    "cls": "other",
+    "count": 2752
+   },
+   {
+    "cls": "CC-BY-2.5-AU",
+    "count": 2705
+   },
+   {
+    "cls": "cc-by-2.5",
+    "count": 1907
+   },
+   {
+    "cls": "cc-by-4.0",
+    "count": 1883
+   },
+   {
+    "cls": "CC-BY-4.0",
+    "count": 1430
+   },
+   {
+    "cls": "CC-BY-NC-SA-3.0-AU",
+    "count": 675
+   },
+   {
+    "cls": "other-open",
+    "count": 518
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Geoscience Australia Data",
+    "count": 42411
+   },
+   {
+    "name": "Australian Ocean Data Network",
+    "count": 37918
+   },
+   {
+    "name": "NSW Government",
+    "count": 8520
+   },
+   {
+    "name": "CSIRO Marlin Data Catalogue",
+    "count": 4793
+   },
+   {
+    "name": "Terrestrial Ecosystem Research Network's Data Discovery",
+    "count": 3015
+   },
+   {
+    "name": "Government of the Commonwealth of Australia - Australian Bureau of Statistics",
+    "count": 2960
+   },
+   {
+    "name": "NSW Department of Climate Change, Energy, the Environment and Water",
+    "count": 2449
+   },
+   {
+    "name": "Spatial Services (DCS)",
+    "count": 1901
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:22.938Z",
+  "ok": true,
+  "notes": []
+ },
+ "catalogue-data-wa-gov-au": {
+  "count": 2889,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0010384215991692627,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 1627
+   },
+   {
+    "cls": "custom_other",
+    "count": 463
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 260
+   },
+   {
+    "cls": "custom_active_acceptance",
+    "count": 240
+   },
+   {
+    "cls": "cc-nc",
+    "count": 102
+   },
+   {
+    "cls": "custom_government",
+    "count": 72
+   },
+   {
+    "cls": "cc-by-nd",
+    "count": 11
+   },
+   {
+    "cls": "custom_public_domain",
+    "count": 4
+   },
+   {
+    "cls": "custom_personal_academic",
+    "count": 4
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Main Roads Western Australia",
+    "count": 659
+   },
+   {
+    "name": "Department of Energy, Mines, Industry Regulation and Safety",
+    "count": 563
+   },
+   {
+    "name": "Landgate",
+    "count": 395
+   },
+   {
+    "name": "Department of Biodiversity, Conservation and Attractions",
+    "count": 208
+   },
+   {
+    "name": "Department of Water and Environmental Regulation",
+    "count": 145
+   },
+   {
+    "name": "Western Australian Marine Science Institution",
+    "count": 141
+   },
+   {
+    "name": "Department of Primary Industries and Regional Development",
+    "count": 127
+   },
+   {
+    "name": "Department of Planning, Lands and Heritage",
+    "count": 97
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:22.960Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-nt-gov-au": {
+  "count": 1074,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.004655493482309125,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 1009
+   },
+   {
+    "cls": "other-at",
+    "count": 60
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 5
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Lands, Planning and Environment ",
+    "count": 404
+   },
+   {
+    "name": "Education and Training",
+    "count": 184
+   },
+   {
+    "name": "Attorney-General’s",
+    "count": 156
+   },
+   {
+    "name": "Tourism and Hospitality",
+    "count": 63
+   },
+   {
+    "name": "Logistics and Infrastructure",
+    "count": 46
+   },
+   {
+    "name": "Mining and Energy",
+    "count": 45
+   },
+   {
+    "name": "Health",
+    "count": 44
+   },
+   {
+    "name": "Corporate and Digital Development",
+    "count": 34
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:22.960Z",
+  "ok": true,
+  "notes": []
+ },
+ "discover-data-vic-gov-au": {
+  "count": 5596,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.00035739814152966406,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 5078
+   },
+   {
+    "cls": "other-open",
+    "count": 471
+   },
+   {
+    "cls": "cc-nc-nd",
+    "count": 30
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 11
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 2
+   },
+   {
+    "cls": "unknown",
+    "count": 1
+   },
+   {
+    "cls": "other-closed",
+    "count": 1
+   },
+   {
+    "cls": "cc-nc-sa",
+    "count": 1
+   },
+   {
+    "cls": "cc-nc",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Department of Health and Human Services",
+    "count": 1367
+   },
+   {
+    "name": "Department of Energy, Environment and Climate Action",
+    "count": 1219
+   },
+   {
+    "name": "Department of Transport and Planning ",
+    "count": 499
+   },
+   {
+    "name": "DTF - Corporate and Government Services",
+    "count": 486
+   },
+   {
+    "name": "City of Melbourne",
+    "count": 247
+   },
+   {
+    "name": "Department of Education",
+    "count": 246
+   },
+   {
+    "name": "State Revenue Office",
+    "count": 200
+   },
+   {
+    "name": "Victorian State Budget",
+    "count": 130
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:22.959Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-transport-nsw-gov-au": {
+  "count": 230,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 209
+   },
+   {
+    "cls": "odc-by",
+    "count": 2
+   },
+   {
+    "cls": "cc-nc",
+    "count": 1
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Transport Open Data Hub",
+    "count": 230
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:23.349Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-melbourne-vic-gov-au": {
+  "count": 239,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "CC BY",
+    "count": 226
+   }
+  ],
+  "publishers": [
+   {
+    "name": "data.melbourne.vic.gov.au",
+    "count": 224
+   },
+   {
+    "name": "City of Melbourne",
+    "count": 10
+   },
+   {
+    "name": "Bureau of Meteorology",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:23.418Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-brisbane-qld-gov-au": {
+  "count": 443,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "CC BY 4.0",
+    "count": 442
+   },
+   {
+    "cls": "Other",
+    "count": 1
+   }
+  ],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:23.453Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-act-gov-au": {
+  "count": 391,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:23.217Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "catalog-data-gov": {
+  "count": 552271,
+  "countSource": "datagov api/stats",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:23.742Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-ny-gov": {
+  "count": 1029,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:24.250Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-wa-gov": {
+  "count": 1060,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:24.529Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-ca-gov": {
+  "count": 4569,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0207922959072007,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 3974
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 95
+   },
+   {
+    "cls": "other-pd",
+    "count": 78
+   },
+   {
+    "cls": "cc-zero",
+    "count": 11
+   },
+   {
+    "cls": "odc-by",
+    "count": 8
+   },
+   {
+    "cls": "gfdl",
+    "count": 4
+   },
+   {
+    "cls": "other-open",
+    "count": 2
+   },
+   {
+    "cls": "odc-pddl",
+    "count": 2
+   },
+   {
+    "cls": "cc-nc",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "California Department of Fish and Wildlife",
+    "count": 2375
+   },
+   {
+    "name": "California Department of Water Resources",
+    "count": 438
+   },
+   {
+    "name": "California Energy Commission",
+    "count": 206
+   },
+   {
+    "name": "California Department of Health Care Services",
+    "count": 201
+   },
+   {
+    "name": "California State Controller's Office",
+    "count": 170
+   },
+   {
+    "name": "California Franchise Tax Board",
+    "count": 141
+   },
+   {
+    "name": "CAL FIRE",
+    "count": 134
+   },
+   {
+    "name": "Department of Health Care Access and Information",
+    "count": 129
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:23.971Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-colorado-gov": {
+  "count": 639,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:24.790Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-texas-gov": {
+  "count": 822,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:24.332Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-cityofsydney-opendata-arcgis-com": {
+  "count": 191,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.05759162303664921,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 179
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 11
+   },
+   {
+    "cls": "Free for public viewing. Copyright to City of Sydney.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Sydney",
+    "count": 191
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:23.236Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-nj-gov": {
+  "count": 114,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.073Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-michigan-gov": {
+  "count": 244,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.077Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "opendata-launceston-tas-gov-au": {
+  "count": 102,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.5588235294117647,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 57
+   },
+   {
+    "cls": "CC-BY",
+    "count": 45
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Launceston",
+    "count": 102
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:23.655Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-pa-gov": {
+  "count": 370,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.342Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "opendata-maryland-gov": {
+  "count": 1570,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.361Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "datacatalog-cookcountyil-gov": {
+  "count": 522,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.607Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-montgomerycountymd-gov": {
+  "count": 470,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.649Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-ct-gov": {
+  "count": 644,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.040Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-cityofnewyork-us": {
+  "count": 2398,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.880Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-cityofchicago-org": {
+  "count": 914,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.940Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-oregon-gov": {
+  "count": 525,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.294Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-lacity-org": {
+  "count": 360,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:26.057Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-sfgov-org": {
+  "count": 663,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:26.171Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-kingcounty-gov": {
+  "count": 268,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:25.461Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-seattle-gov": {
+  "count": 144,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:26.215Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-austintexas-gov": {
+  "count": 706,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:26.307Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "dallasopendata-com": {
+  "count": 342,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:26.351Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-nola-gov": {
+  "count": 209,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:26.448Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-cdc-gov": {
+  "count": 1078,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:26.593Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-logancity-opendata-arcgis-com": {
+  "count": 503,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.14910536779324055,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 425
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 75
+   },
+   {
+    "cls": "https://www.lgtenderbox.com.au/terms-and-conditions.vm",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Logan City Council",
+    "count": 503
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:23.268Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-boston-gov": {
+  "count": 234,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.05982905982905983,
+  "licences": [
+   {
+    "cls": "odc-pddl",
+    "count": 218
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 14
+   },
+   {
+    "cls": "odc-odbl",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Boston Maps",
+    "count": 123
+   },
+   {
+    "name": "Planning Department",
+    "count": 14
+   },
+   {
+    "name": "Public Works Department",
+    "count": 9
+   },
+   {
+    "name": "Boston Police Department",
+    "count": 9
+   },
+   {
+    "name": "Department of Innovation and Technology",
+    "count": 8
+   },
+   {
+    "name": "Boston Transportation Department",
+    "count": 7
+   },
+   {
+    "name": "Inspectional Services Department",
+    "count": 6
+   },
+   {
+    "name": "Environment Department",
+    "count": 6
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:26.481Z",
+  "ok": true,
+  "notes": []
+ },
+ "datahub-moretonbay-qld-gov-au": {
+  "count": 429,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.32634032634032634,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 289
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 140
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City Of Moreton Bay",
+    "count": 428
+   },
+   {
+    "name": "{{source}}",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:23.535Z",
+  "ok": true,
+  "notes": []
+ },
+ "gisdata-scag-opendata-arcgis-com": {
+  "count": 35,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 35
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Southern California Association of Governments",
+    "count": 35
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:27.530Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-usdot-opendata-arcgis-com": {
+  "count": 142,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9647887323943662,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 137
+   },
+   {
+    "cls": "Creative Commons Attribution 3.0 United States (CC-BY-3.0)",
+    "count": 3
+   },
+   {
+    "cls": "Creative Commons Attribution – Non-commercial 4.0 International (CC-BY-NC 4.0) license",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Bureau of Transportation Statistics (BTS)",
+    "count": 38
+   },
+   {
+    "name": "Federal Highway Administration (FHWA)",
+    "count": 25
+   },
+   {
+    "name": "Federal Railroad Administration (FRA)",
+    "count": 17
+   },
+   {
+    "name": "Environmental Protection Agency (EPA)",
+    "count": 12
+   },
+   {
+    "name": "National Highway Traffic Safety Administration (NHTSA)",
+    "count": 10
+   },
+   {
+    "name": "United States Army Corp of Engineers (USACE)",
+    "count": 10
+   },
+   {
+    "name": "U.S. Maritime Administration (MARAD)",
+    "count": 5
+   },
+   {
+    "name": "United States Census Bureau (USCB)",
+    "count": 4
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:26.627Z",
+  "ok": true,
+  "notes": []
+ },
+ "hudgis-hud-opendata-arcgis-com": {
+  "count": 112,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "CC0",
+    "count": 112
+   }
+  ],
+  "publishers": [
+   {
+    "name": "U.S. Department of Housing and Urban Development",
+    "count": 82
+   },
+   {
+    "name": "Department of Housing and Urban Development, Office of Policy Development and Research",
+    "count": 21
+   },
+   {
+    "name": "Department of Housing and Urban Development",
+    "count": 9
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:26.727Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-mtc-ca-gov": {
+  "count": 207,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9951690821256038,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 206
+   },
+   {
+    "cls": "National Transportation Atlas Database datasets are intended for public usage and are not for sale/resale.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Metropolitan Transportation Commission",
+    "count": 132
+   },
+   {
+    "name": "MTC/ABAG",
+    "count": 60
+   },
+   {
+    "name": "U.S. Department of Commerce, U.S. Census Bureau, Geography Division",
+    "count": 4
+   },
+   {
+    "name": "Metropolitan Transportation Commisison",
+    "count": 3
+   },
+   {
+    "name": "United States Department of Commerce, United States Census Bureau",
+    "count": 3
+   },
+   {
+    "name": "Caltrans",
+    "count": 1
+   },
+   {
+    "name": "Association of Bay Area Governments",
+    "count": 1
+   },
+   {
+    "name": "Metropolitan Transportation Commission, Funding Policy & Programs",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:27.279Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-illinois-gov": {
+  "count": 297,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:29.639Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-mo-gov": {
+  "count": 261,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:29.903Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-delaware-gov": {
+  "count": 174,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:30.169Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "psrc-psregcncl-hub-arcgis-com": {
+  "count": 201,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9253731343283582,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 186
+   },
+   {
+    "cls": "Data are summarized by county.",
+    "count": 5
+   },
+   {
+    "cls": "Data are summarized by jurisdiction and then by county, including county unicorporated areas.",
+    "count": 3
+   },
+   {
+    "cls": "For most current data, it is best to check with individual transit agencies",
+    "count": 2
+   },
+   {
+    "cls": "N/A",
+    "count": 2
+   },
+   {
+    "cls": "Please note that this inventory does not include data regarding the conditions or other qualities of facilities.",
+    "count": 1
+   },
+   {
+    "cls": "This dataset currently only includes the regional geographies that are inside the Urban Growth Area.",
+    "count": 1
+   },
+   {
+    "cls": "This should go in Quality:Data Quality: Report",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Puget Sound Regional Council",
+    "count": 199
+   },
+   {
+    "name": "Puget Snd Regional Cncl",
+    "count": 1
+   },
+   {
+    "name": "PSRC",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:29.187Z",
+  "ok": true,
+  "notes": []
+ },
+ "edg-epa-hub-arcgis-com": {
+  "count": 100,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.74,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 74
+   },
+   {
+    "cls": "CC0",
+    "count": 21
+   },
+   {
+    "cls": "Data provided by EPA as-is",
+    "count": 3
+   },
+   {
+    "cls": "<p>Unrestricted License</p> <p>Open Data License URL: https://edg.epa.gov/EPA_Data_License.html</p>",
+    "count": 1
+   },
+   {
+    "cls": "Citation of MoRAP",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "U.S. EPA",
+    "count": 68
+   },
+   {
+    "name": "U.S. Environmental Protection Agency, Office of Environmental Information",
+    "count": 18
+   },
+   {
+    "name": "U.S. Environmental Protection Agency, Office of Land and Emergency Management",
+    "count": 5
+   },
+   {
+    "name": "U.S. Environmental Protection Agency, Region 7",
+    "count": 5
+   },
+   {
+    "name": "EPA Region 1",
+    "count": 4
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:26.859Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-hawaii-gov": {
+  "count": 976,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0010245901639344263,
+  "licences": [
+   {
+    "cls": "ocd-by",
+    "count": 452
+   },
+   {
+    "cls": "cc-by",
+    "count": 80
+   },
+   {
+    "cls": "other-pd",
+    "count": 1
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Office of Planning and Sustainability",
+    "count": 431
+   },
+   {
+    "name": "Hawaii",
+    "count": 222
+   },
+   {
+    "name": "Health",
+    "count": 47
+   },
+   {
+    "name": "Business Economic Development and Tourism",
+    "count": 46
+   },
+   {
+    "name": "Labor & Industrial Relations",
+    "count": 37
+   },
+   {
+    "name": "Office of Information Practices",
+    "count": 23
+   },
+   {
+    "name": "Accounting and General Services",
+    "count": 21
+   },
+   {
+    "name": "Ocean Resource Management Program",
+    "count": 18
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:30.446Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-nctcoggis-hub-arcgis-com": {
+  "count": 195,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.7230769230769231,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 141
+   },
+   {
+    "cls": "There are no use constraints for this item.",
+    "count": 43
+   },
+   {
+    "cls": "There are no access or use constraints for this item.",
+    "count": 7
+   },
+   {
+    "cls": "There are no access or use constraints for this item.",
+    "count": 2
+   },
+   {
+    "cls": "None",
+    "count": 1
+   },
+   {
+    "cls": "There are no access constraints for this item.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "North Central Texas Council of Governments",
+    "count": 193
+   },
+   {
+    "name": "North Central Texas Council of Governments (NCTCOG)",
+    "count": 1
+   },
+   {
+    "name": "NCTCOG",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:29.251Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-sacog-org": {
+  "count": 726,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.7410468319559229,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 538
+   },
+   {
+    "cls": "CC-BY",
+    "count": 164
+   },
+   {
+    "cls": "https://experience.arcgis.com/experience/a98f1218330f41cca325a1d6a950523b",
+    "count": 17
+   },
+   {
+    "cls": "COS",
+    "count": 1
+   },
+   {
+    "cls": "For illustrative purposes only",
+    "count": 1
+   },
+   {
+    "cls": "For Informational Use Only",
+    "count": 1
+   },
+   {
+    "cls": "For planning purposes only",
+    "count": 1
+   },
+   {
+    "cls": "All information compiled on this website is provided as a public service and for general information purposes only.",
+    "count": 1
+   },
+   {
+    "cls": "For Illustrative purposes only",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Sacramento Area Council of Governments",
+    "count": 223
+   },
+   {
+    "name": " Sacramento County GIS",
+    "count": 177
+   },
+   {
+    "name": "City of Sacramento",
+    "count": 151
+   },
+   {
+    "name": "{{source}}",
+    "count": 121
+   },
+   {
+    "name": "West Sacramento",
+    "count": 46
+   },
+   {
+    "name": "Esri",
+    "count": 4
+   },
+   {
+    "name": "Federal Highway Administration (FHWA)",
+    "count": 1
+   },
+   {
+    "name": "Fire Hazard Severity Zone Team, CAL FIRE",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:28.902Z",
+  "ok": true,
+  "notes": []
+ },
+ "geodata-floridagio-gov": {
+  "count": 196,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9642857142857143,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 189
+   },
+   {
+    "cls": "Acknowledgment of the South Florida Water Management District would be appreciated for products derived from this file.",
+    "count": 2
+   },
+   {
+    "cls": "There are no access and use limitations for this item.",
+    "count": 1
+   },
+   {
+    "cls": "There are no access or use constraints on this document.",
+    "count": 1
+   },
+   {
+    "cls": "CC-BY",
+    "count": 1
+   },
+   {
+    "cls": "For use with the FL Peninsular LiDAR Downloads Dashboard.",
+    "count": 1
+   },
+   {
+    "cls": "This is a provision polygon boundary is subject to change as the project progresses.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "South Florida Water Management District",
+    "count": 91
+   },
+   {
+    "name": "State of Florida Geographic Information Office",
+    "count": 42
+   },
+   {
+    "name": "Florida Department of Agriculture and Consumer Services",
+    "count": 10
+   },
+   {
+    "name": "Florida Department of Environmental Protection",
+    "count": 8
+   },
+   {
+    "name": "SFWMD",
+    "count": 8
+   },
+   {
+    "name": "SFWMD, Geospatial Services, SFWMD",
+    "count": 6
+   },
+   {
+    "name": "{{source}}",
+    "count": 4
+   },
+   {
+    "name": "UF GeoPlan Center",
+    "count": 3
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:31.645Z",
+  "ok": true,
+  "notes": []
+ },
+ "datahub-cmap-illinois-gov": {
+  "count": 383,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9973890339425587,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 382
+   },
+   {
+    "cls": "Please credit the Chicago Metropolitan Agency for Planning when using this dataset.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Chicago Metropolitan Agency for Planning",
+    "count": 383
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:29.285Z",
+  "ok": true,
+  "notes": []
+ },
+ "digital-atlas-gov-au": {
+  "count": 777,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.021879021879021878,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 754
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 17
+   },
+   {
+    "cls": "Creative Commons Attribution",
+    "count": 6
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Australian Bureau of Statistics",
+    "count": 353
+   },
+   {
+    "name": "Geoscience Australia",
+    "count": 177
+   },
+   {
+    "name": "Bureau of Meteorology",
+    "count": 69
+   },
+   {
+    "name": "Digital Atlas of Australia",
+    "count": 47
+   },
+   {
+    "name": "Department of Climate Change, Energy, the Environment and Water",
+    "count": 31
+   },
+   {
+    "name": "Australian Bureau of Agricultural and Resource Economics and Sciences",
+    "count": 26
+   },
+   {
+    "name": "Digital Earth Australia",
+    "count": 13
+   },
+   {
+    "name": "National Native Title Tribunal",
+    "count": 13
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:22.958Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-oaklandca-gov": {
+  "count": 313,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:34.673Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "nconemap-gov": {
+  "count": 450,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.7177777777777777,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 323
+   },
+   {
+    "cls": "https://www.nconemap.gov/pages/terms",
+    "count": 113
+   },
+   {
+    "cls": "https://nconemap.gov/pages/terms",
+    "count": 11
+   },
+   {
+    "cls": "This web map is free to use, without restriction.",
+    "count": 1
+   },
+   {
+    "cls": "None.",
+    "count": 1
+   },
+   {
+    "cls": "Grant award locations are for informational purposes only.  All locations are subject to change.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "NC OneMap / State of North Carolina",
+    "count": 207
+   },
+   {
+    "name": "North Carolina General Assembly",
+    "count": 27
+   },
+   {
+    "name": "NC Dept. of Environmental Quality",
+    "count": 27
+   },
+   {
+    "name": "North Carolina Department of Transportation",
+    "count": 25
+   },
+   {
+    "name": "NC Dept. of Information Technology, Government Data Analytics Center, Center for Geographic Information and Analysis",
+    "count": 24
+   },
+   {
+    "name": "State of North Carolina - Emergency Management",
+    "count": 10
+   },
+   {
+    "name": "North Carolina Natural Heritage Program",
+    "count": 10
+   },
+   {
+    "name": "NC Center for Geographic Information and Analysis",
+    "count": 8
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:31.535Z",
+  "ok": true,
+  "notes": []
+ },
+ "vgin-vdem-virginia-gov": {
+  "count": 1040,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.8807692307692307,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 916
+   },
+   {
+    "cls": "CC-BY",
+    "count": 104
+   },
+   {
+    "cls": "None",
+    "count": 14
+   },
+   {
+    "cls": "https://geohub-vadeq.hub.arcgis.com/pages/terms-of-use",
+    "count": 3
+   },
+   {
+    "cls": "Application is shared with everyone for open usage.",
+    "count": 1
+   },
+   {
+    "cls": "Permission needed to access contour data. In some cases a cost is required. Contact VGIN.",
+    "count": 1
+   },
+   {
+    "cls": "CC0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Virginia Geographic Information Network",
+    "count": 183
+   },
+   {
+    "name": "{{source}}",
+    "count": 128
+   },
+   {
+    "name": "City of Charlottesville",
+    "count": 104
+   },
+   {
+    "name": "James City County, VA",
+    "count": 56
+   },
+   {
+    "name": "Bedford County GIS",
+    "count": 49
+   },
+   {
+    "name": "Prince William County Department of Information Technology, GIS Division",
+    "count": 44
+   },
+   {
+    "name": "Orange County, VA",
+    "count": 43
+   },
+   {
+    "name": "Virginia Department of Transportation",
+    "count": 41
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:31.462Z",
+  "ok": true,
+  "notes": []
+ },
+ "geodata-vermont-gov": {
+  "count": 1131,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.8346595932802829,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 944
+   },
+   {
+    "cls": "CC-BY",
+    "count": 167
+   },
+   {
+    "cls": "Planning Purposes Only",
+    "count": 3
+   },
+   {
+    "cls": "None",
+    "count": 2
+   },
+   {
+    "cls": "There are no access and use limitations for this item.",
+    "count": 2
+   },
+   {
+    "cls": "Does not include federal project locations only state.",
+    "count": 1
+   },
+   {
+    "cls": "Locations are determined by address and may not be on the location of the barn itself.",
+    "count": 1
+   },
+   {
+    "cls": "Locations were collected from multiple sources and are intended for planning purposes only.",
+    "count": 1
+   },
+   {
+    "cls": "This data is for planning purposes only.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "VT Center for Geographic Information",
+    "count": 129
+   },
+   {
+    "name": "{{source}}",
+    "count": 99
+   },
+   {
+    "name": "Vermont Geological Survey",
+    "count": 93
+   },
+   {
+    "name": "Northwest Regional Planning Commission",
+    "count": 72
+   },
+   {
+    "name": "Vermont Agency of Natural Resources",
+    "count": 72
+   },
+   {
+    "name": "Central Vermont Regional Planning Commission",
+    "count": 65
+   },
+   {
+    "name": "VTrans",
+    "count": 58
+   },
+   {
+    "name": "Addison County Regional Planning Commission",
+    "count": 51
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:31.312Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendataphilly-org": {
+  "count": 468,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.0811965811965812,
+  "licences": [
+   {
+    "cls": "https://metadata.phila.gov/#help/help-faqs/what-are-the-terms-of-use/",
+    "count": 318
+   },
+   {
+    "cls": "https://opendataphilly.org/licenses/other",
+    "count": 110
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 38
+   },
+   {
+    "cls": "https://opendefinition.org/licenses/cc-zero/",
+    "count": 1
+   },
+   {
+    "cls": "CC-BY",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Philadelphia",
+    "count": 317
+   },
+   {
+    "name": "Chester County GIS",
+    "count": 38
+   },
+   {
+    "name": "SEPTA",
+    "count": 16
+   },
+   {
+    "name": "PA Department of Transportation",
+    "count": 15
+   },
+   {
+    "name": "School District of Philadelphia",
+    "count": 15
+   },
+   {
+    "name": "PA Department of Health",
+    "count": 12
+   },
+   {
+    "name": "Volunteer",
+    "count": 5
+   },
+   {
+    "name": "Delaware Valley Regional Planning Commission (DVRPC)",
+    "count": 4
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:37.047Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-honolulu-gov": {
+  "count": 70,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:38.266Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-baltimorecity-gov": {
+  "count": 974,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9589322381930184,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 934
+   },
+   {
+    "cls": "CC-BY",
+    "count": 40
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Baltimore Neighborhood Indicators Alliance",
+    "count": 473
+   },
+   {
+    "name": "Baltimore City",
+    "count": 470
+   },
+   {
+    "name": "Esri",
+    "count": 17
+   },
+   {
+    "name": "{{source}}",
+    "count": 14
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:34.352Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-cambridgema-gov": {
+  "count": 281,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:38.544Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-indy-gov": {
+  "count": 651,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9800307219662059,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 638
+   },
+   {
+    "cls": "To be added",
+    "count": 9
+   },
+   {
+    "cls": "To be added.",
+    "count": 4
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Indianapolis and Marion County - IndyGIS",
+    "count": 651
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:35.641Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-gis-utah-gov": {
+  "count": 606,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.3465346534653465,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 372
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 210
+   },
+   {
+    "cls": "Nonne",
+    "count": 12
+   },
+   {
+    "cls": "http://www.utah.gov/disclaimer.html",
+    "count": 8
+   },
+   {
+    "cls": "https://opendatacommons.org/licenses/odbl/summary",
+    "count": 2
+   },
+   {
+    "cls": "https://www.utah.gov/disclaimer.html",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Utah Automated Geographic Reference Center (AGRC)",
+    "count": 413
+   },
+   {
+    "name": "UPlan Map Center",
+    "count": 53
+   },
+   {
+    "name": "Utah DNR Online Maps",
+    "count": 27
+   },
+   {
+    "name": "Utah Division of Water Rights",
+    "count": 25
+   },
+   {
+    "name": "Utah Division of Wildlife Resources",
+    "count": 23
+   },
+   {
+    "name": "Utah Department of Environmental Quality",
+    "count": 18
+   },
+   {
+    "name": "Utah Geological Survey",
+    "count": 12
+   },
+   {
+    "name": "Utah Division of Emergency Management",
+    "count": 9
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:33.955Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-louisvilleky-gov": {
+  "count": 518,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "https://louisville-metro-opendata-lojic.hub.arcgis.com/pages/terms-of-use-and-license",
+    "count": 518
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Louisville/Jefferson County Information Consortium",
+    "count": 430
+   },
+   {
+    "name": "LOJIC",
+    "count": 29
+   },
+   {
+    "name": "Louisville Metro Public Works",
+    "count": 9
+   },
+   {
+    "name": "Louisville Metro Planning and Design Services",
+    "count": 8
+   },
+   {
+    "name": "Codes and Regulations",
+    "count": 4
+   },
+   {
+    "name": "{{source}}",
+    "count": 4
+   },
+   {
+    "name": "Louisville Metro Parks",
+    "count": 2
+   },
+   {
+    "name": "Louisville Metro EMA/MetroSafe",
+    "count": 2
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:35.918Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-kcmo-org": {
+  "count": 202,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:38.612Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-buffalony-gov": {
+  "count": 138,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:39.448Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "opendata-dc-gov": {
+  "count": 1885,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.028116710875331564,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 1796
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 53
+   },
+   {
+    "cls": "null",
+    "count": 23
+   },
+   {
+    "cls": "CC0",
+    "count": 12
+   },
+   {
+    "cls": "StoryMap can be used as educational material.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Washington, DC",
+    "count": 458
+   },
+   {
+    "name": "Office of Information and Technology Innovation, District Department of Transportation, GIS Data Manager",
+    "count": 322
+   },
+   {
+    "name": "D.C. Office of the Chief Technology Officer",
+    "count": 269
+   },
+   {
+    "name": "District Department of Transportation",
+    "count": 236
+   },
+   {
+    "name": "Office of the Chief Technology Officer",
+    "count": 176
+   },
+   {
+    "name": "Department of Buildings",
+    "count": 45
+   },
+   {
+    "name": "Department of Energy and Environment",
+    "count": 33
+   },
+   {
+    "name": "Metropolitan Police Department",
+    "count": 29
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:26.500Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-providenceri-gov": {
+  "count": 121,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:40.188Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "geohub-houstontx-gov": {
+  "count": 185,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9837837837837838,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 182
+   },
+   {
+    "cls": "Limited",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Houston Public Works Department - AGO",
+    "count": 185
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:37.785Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-wprdc-org": {
+  "count": 371,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.2991913746630728,
+  "licences": [
+   {
+    "cls": "cc-zero",
+    "count": 123
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 111
+   },
+   {
+    "cls": "cc-by",
+    "count": 99
+   },
+   {
+    "cls": "other-pd",
+    "count": 8
+   },
+   {
+    "cls": "odc-by",
+    "count": 7
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 5
+   },
+   {
+    "cls": "cc-nc",
+    "count": 4
+   },
+   {
+    "cls": "odc-pddl",
+    "count": 3
+   },
+   {
+    "cls": "other-open",
+    "count": 1
+   },
+   {
+    "cls": "odc-odbl",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Allegheny County",
+    "count": 145
+   },
+   {
+    "name": "City of Pittsburgh",
+    "count": 132
+   },
+   {
+    "name": "Western Pennsylvania Regional Data Center",
+    "count": 21
+   },
+   {
+    "name": "University of Pittsburgh",
+    "count": 13
+   },
+   {
+    "name": "Pittsburgh Regional Transit",
+    "count": 8
+   },
+   {
+    "name": "Baldwin Borough",
+    "count": 7
+   },
+   {
+    "name": "Pittsburgh Parking Authority",
+    "count": 5
+   },
+   {
+    "name": "PWSA",
+    "count": 5
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:39.086Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-detroitmi-gov": {
+  "count": 353,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9716713881019831,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 343
+   },
+   {
+    "cls": "No restrictions",
+    "count": 7
+   },
+   {
+    "cls": "CC0",
+    "count": 2
+   },
+   {
+    "cls": "TBD",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Detroit",
+    "count": 352
+   },
+   {
+    "name": "Detroit Department of Transportation (DDOT)",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:39.622Z",
+  "ok": true,
+  "notes": []
+ },
+ "gis-pdx-opendata-arcgis-com": {
+  "count": 354,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 354
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Portland, Oregon",
+    "count": 354
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:39.533Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-minneapolismn-gov": {
+  "count": 283,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.127208480565371,
+  "licences": [
+   {
+    "cls": "CC0",
+    "count": 237
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 36
+   },
+   {
+    "cls": "CC-BY",
+    "count": 10
+   }
+  ],
+  "publishers": [
+   {
+    "name": "MapIT Minneapolis",
+    "count": 283
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:40.498Z",
+  "ok": true,
+  "notes": []
+ },
+ "city-tampa-opendata-arcgis-com": {
+  "count": 200,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.335,
+  "licences": [
+   {
+    "cls": "CC0",
+    "count": 133
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 67
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Tampa",
+    "count": 200
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:40.934Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-geospatialdenver-hub-arcgis-com": {
+  "count": 344,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 344
+   }
+  ],
+  "publishers": [
+   {
+    "name": "geospatialDENVER: Putting Denver on the map.",
+    "count": 257
+   },
+   {
+    "name": "Denver Parks and Recreation",
+    "count": 15
+   },
+   {
+    "name": "City and County of Denver, Community Planning and Development",
+    "count": 10
+   },
+   {
+    "name": "Federal Emergency Management Agency",
+    "count": 6
+   },
+   {
+    "name": "Community Planning and Development",
+    "count": 5
+   },
+   {
+    "name": "City and County of Denver - Public Works City Surveyor's Office",
+    "count": 5
+   },
+   {
+    "name": "City and County of Denver Assessment Division - GIS Section",
+    "count": 4
+   },
+   {
+    "name": "City and County of Denver - Public Works Engineering, Regulatory and Analytics",
+    "count": 3
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:39.732Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-milwaukee-gov": {
+  "count": 186,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 179
+   },
+   {
+    "cls": "other-pd",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Election Commission",
+    "count": 72
+   },
+   {
+    "name": "Information Technology and Management Division",
+    "count": 24
+   },
+   {
+    "name": "Fire and Police Commission",
+    "count": 24
+   },
+   {
+    "name": "Department of City Development",
+    "count": 13
+   },
+   {
+    "name": "Department of Public Works",
+    "count": 9
+   },
+   {
+    "name": "Milwaukee Police Department",
+    "count": 8
+   },
+   {
+    "name": "Assessor's Office",
+    "count": 8
+   },
+   {
+    "name": "Milwaukee Fire Department ",
+    "count": 6
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:42.420Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-charlottenc-gov": {
+  "count": 383,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9973890339425587,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 382
+   },
+   {
+    "cls": "Open Data",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Charlotte",
+    "count": 359
+   },
+   {
+    "name": "{{source}}",
+    "count": 20
+   },
+   {
+    "name": "Charlotte Mecklenburg Planning Department",
+    "count": 1
+   },
+   {
+    "name": "Bureau of Transportation Statistics (BTS)",
+    "count": 1
+   },
+   {
+    "name": "Federal Aviation Administration (FAA)",
+    "count": 1
+   },
+   {
+    "name": "Charlotte Regional Transportation Planning Organization",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:38.834Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-sanjoseca-gov": {
+  "count": 170,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.011764705882352941,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 152
+   },
+   {
+    "cls": "cc-zero",
+    "count": 16
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Enterprise GIS",
+    "count": 152
+   },
+   {
+    "name": "Planning Building and Code Enforcement",
+    "count": 6
+   },
+   {
+    "name": "Information Technology",
+    "count": 3
+   },
+   {
+    "name": "Police",
+    "count": 2
+   },
+   {
+    "name": "Fire",
+    "count": 2
+   },
+   {
+    "name": "Transportation",
+    "count": 1
+   },
+   {
+    "name": "Parks, Recreation and Neighborhood Services",
+    "count": 1
+   },
+   {
+    "name": "Gov AI Coalition ",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:42.899Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-cincinnati-oh-gov": {
+  "count": 102,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:43.726Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "open-data-bouldercolorado-gov": {
+  "count": 173,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.30057803468208094,
+  "licences": [
+   {
+    "cls": "CC0",
+    "count": 121
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 52
+   }
+  ],
+  "publishers": [
+   {
+    "name": "{{source}}",
+    "count": 72
+   },
+   {
+    "name": "City of Boulder, Colorado",
+    "count": 52
+   },
+   {
+    "name": "City of Boulder",
+    "count": 49
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:42.857Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-sanantonio-gov": {
+  "count": 163,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 31
+   }
+  ],
+  "publishers": [
+   {
+    "name": "GIS Data",
+    "count": 112
+   },
+   {
+    "name": "COVID-19",
+    "count": 20
+   },
+   {
+    "name": "City Government",
+    "count": 18
+   },
+   {
+    "name": "Public  Safety",
+    "count": 6
+   },
+   {
+    "name": "Land and Building Development",
+    "count": 4
+   },
+   {
+    "name": "SmartSA",
+    "count": 1
+   },
+   {
+    "name": "City Services",
+    "count": 1
+   },
+   {
+    "name": "311- City Services",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:43.886Z",
+  "ok": true,
+  "notes": []
+ },
+ "phoenixopendata-com": {
+  "count": 143,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.08391608391608392,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 101
+   },
+   {
+    "cls": "odc-by",
+    "count": 21
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 12
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Enterprise",
+    "count": 79
+   },
+   {
+    "name": "Office of Public Health",
+    "count": 15
+   },
+   {
+    "name": "Police",
+    "count": 11
+   },
+   {
+    "name": "Water Services",
+    "count": 6
+   },
+   {
+    "name": "External Data",
+    "count": 5
+   },
+   {
+    "name": "Finance",
+    "count": 4
+   },
+   {
+    "name": "Public Transit",
+    "count": 3
+   },
+   {
+    "name": "Library",
+    "count": 3
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:44.049Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-nashville-gov": {
+  "count": 168,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 168
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Nashville GIS",
+    "count": 168
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:43.379Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-raleighnc-gov": {
+  "count": 202,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.47029702970297027,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 107
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 95
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Wake County",
+    "count": 107
+   },
+   {
+    "name": "City of Raleigh",
+    "count": 95
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:40.898Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-richmondgov-com": {
+  "count": 31,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:45.527Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-cityofsacramento-org": {
+  "count": 151,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.847682119205298,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 128
+   },
+   {
+    "cls": "https://experience.arcgis.com/experience/a98f1218330f41cca325a1d6a950523b",
+    "count": 17
+   },
+   {
+    "cls": "For Informational Use Only",
+    "count": 1
+   },
+   {
+    "cls": "For Illustrative purposes only",
+    "count": 1
+   },
+   {
+    "cls": "All data use is restricted to authorized users",
+    "count": 1
+   },
+   {
+    "cls": "COS",
+    "count": 1
+   },
+   {
+    "cls": "For illustrative purposes only",
+    "count": 1
+   },
+   {
+    "cls": "All information compiled on this website is provided as a public service and for general information purposes only.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Sacramento",
+    "count": 151
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:44.033Z",
+  "ok": true,
+  "notes": []
+ },
+ "gisdata-tucsonaz-gov": {
+  "count": 194,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9948453608247423,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 193
+   },
+   {
+    "cls": "Data subject to Pima County ITD Disclaimer and Use Restrictions",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Tucson",
+    "count": 189
+   },
+   {
+    "name": "{{source}}",
+    "count": 5
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:42.196Z",
+  "ok": true,
+  "notes": []
+ },
+ "api-os-uk": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:46.737Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type os-data-hub"
+  ]
+ },
+ "data-memphistn-gov": {
+  "count": 69,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 69
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Memphis ArcGIS Online",
+    "count": 68
+   },
+   {
+    "name": "City of Memphis Engineering Division",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:45.179Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-hartford-gov": {
+  "count": 128,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.0078125,
+  "licences": [
+   {
+    "cls": "CC0",
+    "count": 127
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Hartford",
+    "count": 128
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:45.110Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-london-gov-uk": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:47.022Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type london-datastore"
+  ]
+ },
+ "data-gouv-fr": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:47.022Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type udata"
+  ]
+ },
+ "opendata-camden-gov-uk": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:46.737Z",
+  "ok": false,
+  "notes": [
+   "HTTP 404 for https://api.us.socrata.com/api/catalog/v1?domains=opendata.camden.gov.uk&search_context=opendata.camden.gov.uk&only=datasets&limit=0"
+  ]
+ },
+ "data-longbeach-gov": {
+  "count": 15,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "CC BY",
+    "count": 12
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Long Beach",
+    "count": 3
+   },
+   {
+    "name": "City of Long Beach Office of Sustainability",
+    "count": 3
+   },
+   {
+    "name": "Long Beach Police Department",
+    "count": 2
+   },
+   {
+    "name": "Technology and Innovation Department, City of Long Beach",
+    "count": 2
+   },
+   {
+    "name": "City of Long Beach - Community Development Department",
+    "count": 1
+   },
+   {
+    "name": "City of Long Beach Animal Care Services",
+    "count": 1
+   },
+   {
+    "name": "City of Long Beach Human Resources",
+    "count": 1
+   },
+   {
+    "name": "City of Long Beach Office of Sustainability and Long Beach Development Services",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:45.841Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-fortworthtexas-gov": {
+  "count": 49,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.40816326530612246,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 27
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 20
+   },
+   {
+    "cls": "Public",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Fort Worth",
+    "count": 49
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:45.729Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-columbus-gov": {
+  "count": 69,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.043478260869565216,
+  "licences": [
+   {
+    "cls": "CC0",
+    "count": 66
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Columbus Maps & Apps",
+    "count": 50
+   },
+   {
+    "name": "City of Columbus, Department of Technology",
+    "count": 13
+   },
+   {
+    "name": "City of Columbus Department of Technology",
+    "count": 5
+   },
+   {
+    "name": "City of Columbus Department of Public Safety",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:45.184Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-paris-fr": {
+  "count": 490,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "Open Database License (ODbL)",
+    "count": 434
+   },
+   {
+    "cls": "Licence Ouverte (Etalab)",
+    "count": 42
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Direction de la Voirie et des Déplacements - Ville de Paris",
+    "count": 88
+   },
+   {
+    "name": "Direction de l'Urbanisme - Ville de Paris",
+    "count": 86
+   },
+   {
+    "name": "Direction de la Démocratie, des Citoyen.ne.s et des Territoires - Ville de Paris",
+    "count": 77
+   },
+   {
+    "name": "Direction des Finances et des Achats - Ville de Paris",
+    "count": 30
+   },
+   {
+    "name": "Direction des Solidarités (DSOL)",
+    "count": 29
+   },
+   {
+    "name": "Direction des Ressources Humaines - Ville de Paris",
+    "count": 23
+   },
+   {
+    "name": "Direction de la Transition Écologique et du Climat - Ville de Paris",
+    "count": 22
+   },
+   {
+    "name": "DDCT - Direction de la Démocratie, des Citoyen.ne.s et des Territoires",
+    "count": 18
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:47.023Z",
+  "ok": true,
+  "notes": []
+ },
+ "gis-data-mass-gov": {
+  "count": 3349,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.8733950432965064,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 2925
+   },
+   {
+    "cls": "https://opendatacommons.org/licenses/pddl/summary",
+    "count": 279
+   },
+   {
+    "cls": "CC0",
+    "count": 60
+   },
+   {
+    "cls": "For planning purposes only.  Not for regulatory use.  MVC not responsible for end user's interpretation.",
+    "count": 22
+   },
+   {
+    "cls": "CC-BY",
+    "count": 16
+   },
+   {
+    "cls": "These layers  must be used together, as the jurisdiction consists of one or more of the data layers.",
+    "count": 10
+   },
+   {
+    "cls": "For planning and reference purposes only",
+    "count": 2
+   },
+   {
+    "cls": "None",
+    "count": 2
+   },
+   {
+    "cls": "null",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "MassGIS - Bureau of Geographic Information",
+    "count": 449
+   },
+   {
+    "name": "Dukes County, MA GIS",
+    "count": 283
+   },
+   {
+    "name": "MA Department of Environmental Protection (MassDEP)",
+    "count": 254
+   },
+   {
+    "name": "{{source}}",
+    "count": 243
+   },
+   {
+    "name": "City of Cambridge",
+    "count": 241
+   },
+   {
+    "name": "Massachusetts geoDOT",
+    "count": 214
+   },
+   {
+    "name": "Cape Cod Commission",
+    "count": 187
+   },
+   {
+    "name": "MassDOT",
+    "count": 142
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:33.181Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-bristol-gov-uk": {
+  "count": 223,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.5112107623318386,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 114
+   },
+   {
+    "cls": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "count": 69
+   },
+   {
+    "cls": "Copyright : © Crown Copyright and database rights [insert year of supply] Ordnance Survey 100023406.",
+    "count": 18
+   },
+   {
+    "cls": "Copyright : © Local Government Information House Limited copyright and database rights [year of supply] 100023406",
+    "count": 3
+   },
+   {
+    "cls": "Licence : Contains public sector information licenced under the Open Government Licence v3.0",
+    "count": 3
+   },
+   {
+    "cls": "© Crown Copyright and database rights 2023 Ordnance Survey AC0000807971.",
+    "count": 2
+   },
+   {
+    "cls": "Open Government Licence",
+    "count": 2
+   },
+   {
+    "cls": "© Crown Copyright and database rights 2024 Ordnance Survey AC0000807971.",
+    "count": 1
+   },
+   {
+    "cls": "<p>Open Government License</p>",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Bristol City Council",
+    "count": 222
+   },
+   {
+    "name": "Traveline South West",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:46.915Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-rennesmetropole-fr": {
+  "count": 681,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "Open Database License (ODbL)",
+    "count": 295
+   },
+   {
+    "cls": "Licence ODbL 1.0",
+    "count": 259
+   },
+   {
+    "cls": "Licence ODbL 1.0\nhttp://www.data.rennes-metropole.fr/notre-demarche/licence-odbl-ville-de-rennes-et-rennes-metropole/",
+    "count": 17
+   },
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab)",
+    "count": 10
+   },
+   {
+    "cls": "CC BY-ND",
+    "count": 5
+   },
+   {
+    "cls": "Licence Ouverte (Etalab)",
+    "count": 4
+   },
+   {
+    "cls": "Licence Ouverte https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+    "count": 4
+   },
+   {
+    "cls": "Open License v1.0",
+    "count": 2
+   },
+   {
+    "cls": "Open License v2.0",
+    "count": 2
+   },
+   {
+    "cls": "https://www.insee.fr/fr/information/2381861",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Rennes Métropole",
+    "count": 300
+   },
+   {
+    "name": "Ville de Rennes",
+    "count": 165
+   },
+   {
+    "name": "STAR",
+    "count": 37
+   },
+   {
+    "name": "Rennes Métropole - Direction de la Voirie - Services généraux Patrimoine",
+    "count": 27
+   },
+   {
+    "name": "Pays de Rennes",
+    "count": 22
+   },
+   {
+    "name": "Ville de Saint-Jacques de la Lande",
+    "count": 11
+   },
+   {
+    "name": "Ville de Cesson-Sévigné",
+    "count": 10
+   },
+   {
+    "name": "Ville de Vezin le Coquet",
+    "count": 9
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:47.307Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-toulouse-metropole-fr": {
+  "count": 844,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab)",
+    "count": 667
+   },
+   {
+    "cls": "Open Database License (ODbL)",
+    "count": 164
+   },
+   {
+    "cls": "Licence Ouverte (Etalab)",
+    "count": 2
+   },
+   {
+    "cls": "Open License v1.0",
+    "count": 1
+   },
+   {
+    "cls": "Open License v2.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Toulouse Métropole",
+    "count": 332
+   },
+   {
+    "name": "Mairie de Toulouse",
+    "count": 288
+   },
+   {
+    "name": "Ville de Blagnac",
+    "count": 154
+   },
+   {
+    "name": "Tisséo Voyageurs",
+    "count": 8
+   },
+   {
+    "name": "Météo France",
+    "count": 5
+   },
+   {
+    "name": "Mairie d'Aucamville",
+    "count": 4
+   },
+   {
+    "name": "Mairie de Balma",
+    "count": 4
+   },
+   {
+    "name": "Tisséo",
+    "count": 4
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:47.026Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gov-uk": {
+  "count": 60500,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0027438016528925618,
+  "licences": [
+   {
+    "cls": "uk-ogl",
+    "count": 21394
+   },
+   {
+    "cls": "cc-by",
+    "count": 1066
+   },
+   {
+    "cls": "OGL-UK-3.0",
+    "count": 444
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 166
+   },
+   {
+    "cls": "other-nc",
+    "count": 51
+   },
+   {
+    "cls": "other-closed",
+    "count": 27
+   },
+   {
+    "cls": "cc-zero",
+    "count": 17
+   },
+   {
+    "cls": "other-pd",
+    "count": 13
+   },
+   {
+    "cls": "unpublished",
+    "count": 9
+   },
+   {
+    "cls": "odc-odbl",
+    "count": 8
+   },
+   {
+    "cls": "other-open",
+    "count": 6
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Office for National Statistics",
+    "count": 5607
+   },
+   {
+    "name": "Natural England",
+    "count": 4785
+   },
+   {
+    "name": "British Geological Survey (BGS)",
+    "count": 4241
+   },
+   {
+    "name": "Marine Environmental Data & Information Network",
+    "count": 3995
+   },
+   {
+    "name": "OpenDataNI",
+    "count": 2955
+   },
+   {
+    "name": "Environmental Information Data Centre",
+    "count": 2260
+   },
+   {
+    "name": "Environment Agency",
+    "count": 1986
+   },
+   {
+    "name": "Scottish Government SpatialData.gov.scot",
+    "count": 1642
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:46.062Z",
+  "ok": true,
+  "notes": []
+ },
+ "datenregister-berlin-de": {
+  "count": 2623,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "dl-de-zero-2.0",
+    "count": 1508
+   },
+   {
+    "cls": "cc-by",
+    "count": 856
+   },
+   {
+    "cls": "cc-by-de/3.0",
+    "count": 73
+   },
+   {
+    "cls": "cc-zero",
+    "count": 51
+   },
+   {
+    "cls": "dl-de-by-2.0",
+    "count": 44
+   },
+   {
+    "cls": "cc-by/4.0",
+    "count": 40
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 36
+   },
+   {
+    "cls": "other-closed",
+    "count": 13
+   },
+   {
+    "cls": "cc-nc",
+    "count": 1
+   },
+   {
+    "cls": "odc-odbl",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Harvester FIS Broker",
+    "count": 1602
+   },
+   {
+    "name": "Stromnetz Berlin GmbH",
+    "count": 343
+   },
+   {
+    "name": "Datenrubrik",
+    "count": 192
+   },
+   {
+    "name": "Amt für Statistik Berlin-Brandenburg",
+    "count": 188
+   },
+   {
+    "name": "SimpleSearch",
+    "count": 87
+   },
+   {
+    "name": "Senatsverwaltung für Wirtschaft, Energie und Betriebe",
+    "count": 46
+   },
+   {
+    "name": "BerlinOnline GmbH",
+    "count": 20
+   },
+   {
+    "name": "Senatsverwaltung für Wissenschaft, Gesundheit und Pflege",
+    "count": 18
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:48.576Z",
+  "ok": true,
+  "notes": []
+ },
+ "ckan-govdata-de": {
+  "count": 156211,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+    "count": 548
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+    "count": 331
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/dl-by-de/2_0",
+    "count": 275
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/cc-zero",
+    "count": 32
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/dl-zero-de/2_0",
+    "count": 18
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/official-work",
+    "count": 14
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/geonutz/20130319",
+    "count": 8
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/cc-by/4_0",
+    "count": 5
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/other-open",
+    "count": 5
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/cc-by",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Land Schleswig-Holstein",
+    "count": 28735
+   },
+   {
+    "name": "GDI-DE",
+    "count": 27421
+   },
+   {
+    "name": "open.bydata",
+    "count": 26633
+   },
+   {
+    "name": "Open Data Brandenburg",
+    "count": 19446
+   },
+   {
+    "name": "Transparenzportal Hamburg",
+    "count": 13959
+   },
+   {
+    "name": "Open.NRW",
+    "count": 11018
+   },
+   {
+    "name": "Land Rheinland-Pfalz",
+    "count": 9140
+   },
+   {
+    "name": "Freistaat Sachsen",
+    "count": 3947
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:48.457Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-bordeaux-metropole-fr": {
+  "count": 562,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "Licence Ouverte",
+    "count": 520
+   },
+   {
+    "cls": "Open License v2.0",
+    "count": 18
+   },
+   {
+    "cls": "Open License v1.0",
+    "count": 7
+   },
+   {
+    "cls": "Open Database License (ODbL)",
+    "count": 3
+   },
+   {
+    "cls": "GNU General Public License v3.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Bordeaux Métropole",
+    "count": 351
+   },
+   {
+    "name": "Ville de Bordeaux",
+    "count": 103
+   },
+   {
+    "name": "Ville de Talence",
+    "count": 23
+   },
+   {
+    "name": "Ville Le Haillan",
+    "count": 19
+   },
+   {
+    "name": "Bureau de Recherches Géologiques et Minières",
+    "count": 8
+   },
+   {
+    "name": "CCAS de la ville de Bordeaux",
+    "count": 8
+   },
+   {
+    "name": "INSEE",
+    "count": 8
+   },
+   {
+    "name": "Ville de Mérignac",
+    "count": 8
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:47.453Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-muenchen-de": {
+  "count": 337,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "dl-by-de/2.0",
+    "count": 325
+   },
+   {
+    "cls": "CC-BY-4.0",
+    "count": 7
+   },
+   {
+    "cls": "CC0-1.0",
+    "count": 3
+   },
+   {
+    "cls": "other-open",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Mobilitätsreferat der Landeshauptstadt München",
+    "count": 113
+   },
+   {
+    "name": "Statistisches Amt München",
+    "count": 102
+   },
+   {
+    "name": "Kreisverwaltungsreferat der Landeshauptstadt München",
+    "count": 16
+   },
+   {
+    "name": " GeodatenService München",
+    "count": 15
+   },
+   {
+    "name": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "count": 12
+   },
+   {
+    "name": "IT-Referat der Landeshauptstadt München",
+    "count": 10
+   },
+   {
+    "name": "Direktorium der Landeshauptstadt München",
+    "count": 8
+   },
+   {
+    "name": "Baureferat der Landeshauptstadt München",
+    "count": 7
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:49.132Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-nantesmetropole-fr": {
+  "count": 590,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "Licence Ouverte-LO",
+    "count": 545
+   },
+   {
+    "cls": "Open Database License-ODBL",
+    "count": 43
+   },
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab)",
+    "count": 1
+   },
+   {
+    "cls": "Open License v2.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Ville de Nantes",
+    "count": 263
+   },
+   {
+    "name": "Nantes Métropole",
+    "count": 257
+   },
+   {
+    "name": "Orvault",
+    "count": 24
+   },
+   {
+    "name": "Air Pays de la Loire",
+    "count": 7
+   },
+   {
+    "name": "Semitan",
+    "count": 6
+   },
+   {
+    "name": "Ville de Saint-Herblain",
+    "count": 6
+   },
+   {
+    "name": "JCDecaux",
+    "count": 5
+   },
+   {
+    "name": "Le Pellerin",
+    "count": 4
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:47.318Z",
+  "ok": true,
+  "notes": []
+ },
+ "dados-gov-pt": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:50.835Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type udata"
+  ]
+ },
+ "suche-transparenz-hamburg-de": {
+  "count": 237068,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "dl-de-by-2.0",
+    "count": 234240
+   },
+   {
+    "cls": "cc-zero",
+    "count": 2110
+   },
+   {
+    "cls": "dl-zero-de-2.0",
+    "count": 258
+   },
+   {
+    "cls": "odbl",
+    "count": 59
+   },
+   {
+    "cls": "geoNutz-20130319",
+    "count": 48
+   },
+   {
+    "cls": "dl-de-zero-2.0",
+    "count": 4
+   }
+  ],
+  "publishers": [
+   {
+    "name": "ALLRIS",
+    "count": 32022
+   },
+   {
+    "name": "HMDKLGV",
+    "count": 24005
+   },
+   {
+    "name": "Workflows",
+    "count": 8176
+   },
+   {
+    "name": "StadtHamburg",
+    "count": 6703
+   },
+   {
+    "name": "Statistikamt",
+    "count": 4277
+   },
+   {
+    "name": "DOKRATES",
+    "count": 4040
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:49.084Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-stad-gent": {
+  "count": 307,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "Modellicentie Gratis Hergebruik",
+    "count": 296
+   },
+   {
+    "cls": "CC BY",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Mobiliteitsbedrijf Gent",
+    "count": 113
+   },
+   {
+    "name": "Dienst Milieu & Klimaat Gent",
+    "count": 21
+   },
+   {
+    "name": "Dienst Feesten en Ambulante Handel Gent",
+    "count": 20
+   },
+   {
+    "name": "Ivago",
+    "count": 14
+   },
+   {
+    "name": "North Sea Port",
+    "count": 14
+   },
+   {
+    "name": "Dienst Data en Informatie Gent",
+    "count": 12
+   },
+   {
+    "name": "Dienst Economie en Toerisme Gent",
+    "count": 10
+   },
+   {
+    "name": "Departement Onderwijs, Opvoeding en Jeugd Gent",
+    "count": 9
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:49.975Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-overheid-nl": {
+  "count": 20381,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "http://creativecommons.org/licenses/by/4.0/deed.nl",
+    "count": 8792
+   },
+   {
+    "cls": "http://creativecommons.org/publicdomain/zero/1.0/deed.nl",
+    "count": 5530
+   },
+   {
+    "cls": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl",
+    "count": 4027
+   },
+   {
+    "cls": "http://standaarden.overheid.nl/owms/terms/geslotenlicentie",
+    "count": 1376
+   },
+   {
+    "cls": "http://standaarden.overheid.nl/owms/terms/licentieonbekend",
+    "count": 611
+   },
+   {
+    "cls": "http://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "count": 41
+   },
+   {
+    "cls": "https://creativecommons.org/licenses/by-nc/4.0/deed.nl",
+    "count": 3
+   },
+   {
+    "cls": "http://standaarden.overheid.nl/owms/terms/geogedeeld",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "NationaalGeoregister.nl",
+    "count": 7536
+   },
+   {
+    "name": "CBS OpenData",
+    "count": 5961
+   },
+   {
+    "name": "Gemeente Rotterdam",
+    "count": 1422
+   },
+   {
+    "name": "CBS Microdata",
+    "count": 1313
+   },
+   {
+    "name": "DONL Dataregister",
+    "count": 1187
+   },
+   {
+    "name": "CBS DataDerden",
+    "count": 820
+   },
+   {
+    "name": "Gemeente Groningen",
+    "count": 543
+   },
+   {
+    "name": "Gemeente Utrecht",
+    "count": 309
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:49.232Z",
+  "ok": true,
+  "notes": []
+ },
+ "dati-gov-it": {
+  "count": 65865,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)",
+    "count": 56954
+   },
+   {
+    "cls": "cc-by",
+    "count": 4007
+   },
+   {
+    "cls": "Creative Commons CC0 1.0 Universale - Public Domain Dedication (CC0 1.0)",
+    "count": 3743
+   },
+   {
+    "cls": "cc-by4",
+    "count": 350
+   },
+   {
+    "cls": "iodl2",
+    "count": 59
+   },
+   {
+    "cls": "CC-BY-4.0",
+    "count": 56
+   },
+   {
+    "cls": "other-pd",
+    "count": 8
+   },
+   {
+    "cls": "cc-zero",
+    "count": 7
+   },
+   {
+    "cls": "IODL2",
+    "count": 6
+   },
+   {
+    "cls": "OtherRestrictiveClauses",
+    "count": 5
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Regione Toscana",
+    "count": 12426
+   },
+   {
+    "name": "Regione Veneto",
+    "count": 6606
+   },
+   {
+    "name": "Regione Marche",
+    "count": 5444
+   },
+   {
+    "name": "GeoDati - RNDT",
+    "count": 4054
+   },
+   {
+    "name": "Ministero dell'Economia e delle Finanze",
+    "count": 3714
+   },
+   {
+    "name": "Regione Lombardia",
+    "count": 3302
+   },
+   {
+    "name": "Comune di Milano",
+    "count": 2599
+   },
+   {
+    "name": "INPS - Istituto Nazionale della Previdenza Sociale",
+    "count": 2499
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:50.486Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-smartdublin-ie": {
+  "count": 930,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 488
+   },
+   {
+    "cls": "CC-BY-4.0",
+    "count": 412
+   },
+   {
+    "cls": "cc-zero",
+    "count": 27
+   },
+   {
+    "cls": "cc-nc",
+    "count": 2
+   },
+   {
+    "cls": "other-open",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Fingal County Council",
+    "count": 413
+   },
+   {
+    "name": "South Dublin County Council",
+    "count": 231
+   },
+   {
+    "name": "Dublin City Council",
+    "count": 159
+   },
+   {
+    "name": "Dún Laoghaire-Rathdown County Council",
+    "count": 109
+   },
+   {
+    "name": "National Transport Authority",
+    "count": 7
+   },
+   {
+    "name": "Property Services Regulatory Authority",
+    "count": 2
+   },
+   {
+    "name": "Dublinked",
+    "count": 2
+   },
+   {
+    "name": "3D Data Hack Dublin",
+    "count": 2
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:50.637Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gov-ie": {
+  "count": 22619,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.001061054865378664,
+  "licences": [
+   {
+    "cls": "CC-BY-4.0",
+    "count": 21877
+   },
+   {
+    "cls": "CC-BY-SA-4.0",
+    "count": 429
+   },
+   {
+    "cls": "cc-by-nc-nd",
+    "count": 56
+   },
+   {
+    "cls": "cc-zero",
+    "count": 28
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 24
+   },
+   {
+    "cls": "cc-by-nc",
+    "count": 13
+   },
+   {
+    "cls": "cc-by-nc-sa",
+    "count": 4
+   },
+   {
+    "cls": "me-custom",
+    "count": 4
+   },
+   {
+    "cls": "psi",
+    "count": 3
+   },
+   {
+    "cls": "other-nc",
+    "count": 1
+   },
+   {
+    "cls": "other-open",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Central Statistics Office",
+    "count": 12803
+   },
+   {
+    "name": "Met Éireann",
+    "count": 2051
+   },
+   {
+    "name": "Tusla",
+    "count": 1492
+   },
+   {
+    "name": "Marine Institute",
+    "count": 1064
+   },
+   {
+    "name": "Department of Housing, Local Government and Heritage",
+    "count": 602
+   },
+   {
+    "name": "Environmental Protection Agency",
+    "count": 450
+   },
+   {
+    "name": "Department of Health",
+    "count": 445
+   },
+   {
+    "name": "Fingal County Council",
+    "count": 414
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:50.508Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-public-lu": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:52.479Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type udata"
+  ]
+ },
+ "data-gv-at": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:52.479Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type data-europa-eu"
+  ]
+ },
+ "data-stadt-zuerich-ch": {
+  "count": 1008,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-zero",
+    "count": 978
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 16
+   },
+   {
+    "cls": "cc-by",
+    "count": 13
+   },
+   {
+    "cls": "CC-Zero (CC0)",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Stadt Zürich",
+    "count": 1008
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:51.229Z",
+  "ok": true,
+  "notes": []
+ },
+ "podatki-gov-si": {
+  "count": 9021,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.9102095111406717,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 8211
+   }
+  ],
+  "publishers": [
+   {
+    "name": "VLADA REPUBLIKE SLOVENIJE STATISTIČNI URAD REPUBLIKE SLOVENIJE",
+    "count": 4842
+   },
+   {
+    "name": "UNIVERZA V LJUBLJANI, FAKULTETA ZA DRUŽBENE VEDE",
+    "count": 656
+   },
+   {
+    "name": "NACIONALNI INŠTITUT ZA JAVNO ZDRAVJE",
+    "count": 479
+   },
+   {
+    "name": "BANKA SLOVENIJE",
+    "count": 171
+   },
+   {
+    "name": "MESTNA OBČINA NOVO MESTO",
+    "count": 98
+   },
+   {
+    "name": "REPUBLIKA SLOVENIJA, MINISTRSTVO ZA DELO, DRUŽINO, SOCIALNE ZADEVE IN ENAKE MOŽNOSTI",
+    "count": 79
+   },
+   {
+    "name": "AGENCIJA REPUBLIKE SLOVENIJE ZA OKOLJE",
+    "count": 75
+   },
+   {
+    "name": "OBČINA KAMNIK",
+    "count": 67
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:51.761Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gov-ro": {
+  "count": 5225,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.01186602870813397,
+  "licences": [
+   {
+    "cls": "CC-BY-4.0",
+    "count": 3320
+   },
+   {
+    "cls": "uk-ogl",
+    "count": 1704
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 62
+   },
+   {
+    "cls": "other-pd",
+    "count": 2
+   },
+   {
+    "cls": "other-open",
+    "count": 2
+   },
+   {
+    "cls": "ODC-PDDL-1.0",
+    "count": 1
+   },
+   {
+    "cls": "CC-BY-NC-4.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Ministerul Dezvoltării, Lucrărilor Publice și Administrației",
+    "count": 1458
+   },
+   {
+    "name": "Inspectoratul General pentru Situaţii de Urgenţă",
+    "count": 596
+   },
+   {
+    "name": "Agenția Națională pentru Protecția Mediului",
+    "count": 234
+   },
+   {
+    "name": "Agenția Națională pentru Ocuparea Forței de Muncă",
+    "count": 197
+   },
+   {
+    "name": "Institutul Naţional de Administraţie",
+    "count": 167
+   },
+   {
+    "name": "Inspectoratul General pentru Imigrări",
+    "count": 141
+   },
+   {
+    "name": "Agenția Națională a Funcționarilor Publici ",
+    "count": 140
+   },
+   {
+    "name": "Consiliul Județean Vrancea",
+    "count": 134
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:51.865Z",
+  "ok": true,
+  "notes": []
+ },
+ "portaal-stadantwerpen-opendata-arcgis-com": {
+  "count": 520,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9788461538461538,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 509
+   },
+   {
+    "cls": "Copyright: Stad Antwerpen © 2012 Gebruiksvoorwaarden: Klik hier voor meer info",
+    "count": 4
+   },
+   {
+    "cls": "https://www.antwerpen.be/nl/overzicht/open-data/over-opendata/gratis-open-data-licentie",
+    "count": 3
+   },
+   {
+    "cls": "Copyright: Stad Antwerpen © , zie: http://stad.antwerpen.be/Docushare/dscgi/ds.py/Get/File-24757/Gebruiksvoorwaarden.doc",
+    "count": 2
+   },
+   {
+    "cls": "no conditions apply to access and use",
+    "count": 1
+   },
+   {
+    "cls": "Gebruiken als referentie, niet als limitatieve lijst.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Stadsontwikkeling/Ruimte",
+    "count": 209
+   },
+   {
+    "name": "Stad Antwerpen",
+    "count": 205
+   },
+   {
+    "name": "Studiedienst/GIS",
+    "count": 13
+   },
+   {
+    "name": "Mobiliteit en Parkeren Antwerpen",
+    "count": 12
+   },
+   {
+    "name": "Zaalzoeker",
+    "count": 8
+   },
+   {
+    "name": "SW/Mobiliteit",
+    "count": 5
+   },
+   {
+    "name": "Stadshavendienst",
+    "count": 4
+   },
+   {
+    "name": "Stadsontwikkeling/Beheer_en_Operaties",
+    "count": 4
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:50.431Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gov-gr": {
+  "count": 22609,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.1619708965456234,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 3662
+   },
+   {
+    "cls": "other-open",
+    "count": 1628
+   },
+   {
+    "cls": "other-nc",
+    "count": 928
+   },
+   {
+    "cls": "odc-odbl",
+    "count": 612
+   },
+   {
+    "cls": "cc-by",
+    "count": 457
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 148
+   },
+   {
+    "cls": "other-pd",
+    "count": 118
+   },
+   {
+    "cls": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+    "count": 53
+   },
+   {
+    "cls": "cc-nc",
+    "count": 38
+   },
+   {
+    "cls": "gfdl",
+    "count": 17
+   },
+   {
+    "cls": "other-at",
+    "count": 16
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Δήμος Χανίων",
+    "count": 2224
+   },
+   {
+    "name": "Δήμος Αγρινίου",
+    "count": 1196
+   },
+   {
+    "name": "Περιφέρεια Κρήτης",
+    "count": 948
+   },
+   {
+    "name": "Δήμος Ηρακλείου Κρήτης",
+    "count": 937
+   },
+   {
+    "name": "Γενικά Αρχεία Κράτους (ΓΑΚ)",
+    "count": 890
+   },
+   {
+    "name": "Δήμος Αμαρουσίου",
+    "count": 880
+   },
+   {
+    "name": "Δήμος Καλαμάτας",
+    "count": 806
+   },
+   {
+    "name": "Δήμος Κερατσινίου – Δραπετσώνας",
+    "count": 785
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:51.669Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gov-sg": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:53.678Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type data-gov-sg"
+  ]
+ },
+ "opendata-ajuntament-barcelona-cat": {
+  "count": 555,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "CC-BY-4.0",
+    "count": 555
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Sector públic",
+    "count": 92
+   },
+   {
+    "name": "Medi ambient",
+    "count": 76
+   },
+   {
+    "name": "Transport",
+    "count": 74
+   },
+   {
+    "name": "Urbanisme i infraestructures",
+    "count": 67
+   },
+   {
+    "name": "Habitatge",
+    "count": 63
+   },
+   {
+    "name": "Demografia",
+    "count": 49
+   },
+   {
+    "name": "Cultura i oci",
+    "count": 38
+   },
+   {
+    "name": "Societat i benestar",
+    "count": 27
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:52.479Z",
+  "ok": true,
+  "notes": []
+ },
+ "hri-fi": {
+  "count": 549,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "CC-BY-4.0",
+    "count": 547
+   },
+   {
+    "cls": "other-open",
+    "count": 1
+   },
+   {
+    "cls": "CC0-1.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Helsingin kaupunginkanslia",
+    "count": 198
+   },
+   {
+    "name": "Helsingin kaupunkiympäristön toimiala",
+    "count": 93
+   },
+   {
+    "name": "Helsingin seudun ympäristöpalvelut (HSY)",
+    "count": 67
+   },
+   {
+    "name": "Espoon kaupungin kaupunkiympäristön toimiala",
+    "count": 41
+   },
+   {
+    "name": "Vantaan kaupunkiympäristön toimiala",
+    "count": 31
+   },
+   {
+    "name": "Helsingin kulttuurin ja vapaa-ajan toimiala",
+    "count": 22
+   },
+   {
+    "name": "Helsingin seudun liikenne (HSL)",
+    "count": 20
+   },
+   {
+    "name": "Vantaan konsernijohdon ja elinvoiman toimiala",
+    "count": 16
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:53.405Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gov-lv": {
+  "count": 1557,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "CC0-1.0",
+    "count": 1436
+   },
+   {
+    "cls": "CC-BY-4.0",
+    "count": 121
+   }
+  ],
+  "publishers": [
+   {
+    "name": "ĢEOLatvija.lv",
+    "count": 517
+   },
+   {
+    "name": "Rīgas dome",
+    "count": 75
+   },
+   {
+    "name": "Centrālā statistikas pārvalde",
+    "count": 59
+   },
+   {
+    "name": "Valsts zemes dienests",
+    "count": 48
+   },
+   {
+    "name": "Lauku atbalsta dienests",
+    "count": 46
+   },
+   {
+    "name": "Būvniecības valsts kontroles birojs",
+    "count": 43
+   },
+   {
+    "name": "Viedās administrācijas un reģionālās attīstības ministrija",
+    "count": 33
+   },
+   {
+    "name": "Izglītības un zinātnes ministrija",
+    "count": 32
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:51.983Z",
+  "ok": true,
+  "notes": []
+ },
+ "open-canada-ca": {
+  "count": 47796,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "ca-ogl-lgo",
+    "count": 35849
+   },
+   {
+    "cls": "yk-oglyk",
+    "count": 2918
+   },
+   {
+    "cls": "ab-ogla",
+    "count": 2897
+   },
+   {
+    "cls": "bc-oglbc",
+    "count": 1681
+   },
+   {
+    "cls": "qc-cc-by",
+    "count": 1538
+   },
+   {
+    "cls": "on-oglo",
+    "count": 988
+   },
+   {
+    "cls": "ns-oglns",
+    "count": 748
+   },
+   {
+    "cls": "sk-suudl",
+    "count": 413
+   },
+   {
+    "cls": "mb-omb",
+    "count": 262
+   },
+   {
+    "cls": "nb-oglnb",
+    "count": 221
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Natural Resources Canada | Ressources naturelles Canada",
+    "count": 10259
+   },
+   {
+    "name": "Statistics Canada | Statistique Canada",
+    "count": 10212
+   },
+   {
+    "name": "Health Canada | Santé Canada",
+    "count": 2978
+   },
+   {
+    "name": "Government of Yukon | Gouvernement du Yukon",
+    "count": 2918
+   },
+   {
+    "name": "Government of Alberta | Gouvernement de l'Alberta",
+    "count": 2897
+   },
+   {
+    "name": "Global Affairs Canada | Affaires mondiales Canada",
+    "count": 2193
+   },
+   {
+    "name": "Government of British Columbia | Gouvernment de la Colombie-Britannique",
+    "count": 1681
+   },
+   {
+    "name": "Government and Municipalities of Québec | Gouvernement et municipalités du Québec",
+    "count": 1538
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:53.678Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-swiss": {
+  "count": 16451,
+  "countSource": "ckan package_search",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "{\"de\": \"Bundesamt f\\u00fcr Statistik BFS\", \"en\": \"Federal Statistical Office FSO\", \"fr\": \"Office f\\u00e9d\\u00e9ral de la statistique OFS\", \"it\": \"Ufficio federale di statistica UST\"}",
+    "count": 3366
+   },
+   {
+    "name": "{\"en\": \"Materials Cloud\", \"de\": \"Materials Cloud\", \"fr\": \"Materials Cloud\", \"it\": \"Materials Cloud\"}",
+    "count": 1148
+   },
+   {
+    "name": "{\"de\": \"Kanton Genf\", \"en\": \"Canton of Geneva\", \"fr\": \"Canton de Gen\\u00e8ve\", \"it\": \"Cantone di Ginevra\"}",
+    "count": 1012
+   },
+   {
+    "name": "{\"de\": \"Kanton Basel-Stadt\", \"en\": \"Canton of Basel-City\", \"fr\": \"Canton de B\\u00e2le-Ville\", \"it\": \"Cantone di Basilea-Citt\\u00e0\"}",
+    "count": 772
+   },
+   {
+    "name": "{\"de\": \"AGIS Service Center Kanton Aargau\", \"en\": \"\", \"fr\": \"\", \"it\": \"\"}",
+    "count": 765
+   },
+   {
+    "name": "{\"de\": \"Stadt Z\\u00fcrich\", \"en\": \"City of Zurich\", \"fr\": \"Ville de Zurich\", \"it\": \"Cit\\u00e0 di Zurigo\"}",
+    "count": 759
+   },
+   {
+    "name": "{\"de\": \"Kanton Basel-Landschaft\", \"en\": \"Canton of Basel-Country\", \"fr\": \"Canton de B\\u00e2le-Campagne\", \"it\": \"Cantone di Basilea-Campagna\"}",
+    "count": 599
+   },
+   {
+    "name": "{\"de\": \"EnviDat: das Umwelt-Datenportal\", \"en\": \"EnviDat: the Environmental Data Portal\", \"fr\": \"EnviDat: le portail de donn\\u00e9es environnementales\", \"it\": \"EnviDat: il portale dei dati ambientali\"}",
+    "count": 586
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:50.835Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-ontario-ca": {
+  "count": 2957,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.5887724044639838,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 1741
+   },
+   {
+    "cls": "OGL-ON-1.0",
+    "count": 998
+   },
+   {
+    "cls": "other-closed",
+    "count": 92
+   },
+   {
+    "cls": "queens-printers-on",
+    "count": 58
+   },
+   {
+    "cls": "ontario.ca-tou",
+    "count": 26
+   },
+   {
+    "cls": "public-sector-sda",
+    "count": 25
+   },
+   {
+    "cls": "ministry-tou",
+    "count": 10
+   },
+   {
+    "cls": "on-opendata-tou",
+    "count": 4
+   },
+   {
+    "cls": "apache-license-2.0",
+    "count": 2
+   },
+   {
+    "cls": "other-open",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Health",
+    "count": 386
+   },
+   {
+    "name": "Children, Community and Social Services",
+    "count": 321
+   },
+   {
+    "name": "Agriculture, Food and Rural Affairs",
+    "count": 319
+   },
+   {
+    "name": "natural-resources",
+    "count": 303
+   },
+   {
+    "name": "Education",
+    "count": 179
+   },
+   {
+    "name": "Labour, Training and Skills Development",
+    "count": 153
+   },
+   {
+    "name": "Solicitor General",
+    "count": 150
+   },
+   {
+    "name": "Transportation",
+    "count": 149
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:54.000Z",
+  "ok": true,
+  "notes": []
+ },
+ "datos-madrid-es": {
+  "count": 672,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 641
+   },
+   {
+    "cls": "emt-madrid",
+    "count": 19
+   },
+   {
+    "cls": "madrid-destino",
+    "count": 8
+   },
+   {
+    "cls": "bibliotecas-madrid",
+    "count": 3
+   },
+   {
+    "cls": "podam-madrid",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Ayuntamiento de Madrid",
+    "count": 672
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:52.674Z",
+  "ok": true,
+  "notes": []
+ },
+ "catalogue-data-gov-bc-ca": {
+  "count": 3358,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "2",
+    "count": 1684
+   },
+   {
+    "cls": "22",
+    "count": 1451
+   },
+   {
+    "cls": "21",
+    "count": 84
+   },
+   {
+    "cls": "24",
+    "count": 62
+   },
+   {
+    "cls": "42",
+    "count": 19
+   },
+   {
+    "cls": "44",
+    "count": 13
+   },
+   {
+    "cls": "48",
+    "count": 12
+   },
+   {
+    "cls": "51",
+    "count": 6
+   },
+   {
+    "cls": "54",
+    "count": 6
+   },
+   {
+    "cls": "49",
+    "count": 5
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Treasury Board Staff",
+    "count": 443
+   },
+   {
+    "name": "GeoBC Branch",
+    "count": 399
+   },
+   {
+    "name": "Local Government Infrastructure and Finance",
+    "count": 198
+   },
+   {
+    "name": "Knowledge Management",
+    "count": 116
+   },
+   {
+    "name": "BC Stats",
+    "count": 96
+   },
+   {
+    "name": "Regional Operations - Thompson Okanagan",
+    "count": 71
+   },
+   {
+    "name": "GeoBC – Geospatial Services",
+    "count": 69
+   },
+   {
+    "name": "Forest Tenures Branch",
+    "count": 65
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:54.793Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-novascotia-ca": {
+  "count": 713,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:55.017Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "donneesquebec-ca": {
+  "count": 1609,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 1557
+   },
+   {
+    "cls": "CC-BY-NC-4.0",
+    "count": 18
+   },
+   {
+    "cls": "CC-BY-SA-NC-4.0",
+    "count": 13
+   },
+   {
+    "cls": "CC-BY-SA-4.0",
+    "count": 8
+   },
+   {
+    "cls": "cc-by-nc-nd",
+    "count": 5
+   },
+   {
+    "cls": "CC0-1.0",
+    "count": 4
+   },
+   {
+    "cls": "OGL-Canada-2.0",
+    "count": 2
+   },
+   {
+    "cls": "cc-by-nd",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Ville de Montréal",
+    "count": 390
+   },
+   {
+    "name": "Ville de Laval",
+    "count": 130
+   },
+   {
+    "name": "Ministère de l’Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs",
+    "count": 129
+   },
+   {
+    "name": "Ministère des Ressources naturelles et des Forêts",
+    "count": 121
+   },
+   {
+    "name": "Ville de Gatineau",
+    "count": 52
+   },
+   {
+    "name": "Ville de Repentigny",
+    "count": 39
+   },
+   {
+    "name": "Ville de Trois-Rivières",
+    "count": 38
+   },
+   {
+    "name": "Ville de Québec",
+    "count": 35
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:54.934Z",
+  "ok": true,
+  "notes": []
+ },
+ "ckan0-cf-opendata-inter-prod-toronto-ca": {
+  "count": 556,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.5215827338129496,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 290
+   },
+   {
+    "cls": "open-government-licence-toronto",
+    "count": 115
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Toronto",
+    "count": 556
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:55.128Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-calgary-ca": {
+  "count": 416,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:56.053Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "data-winnipeg-ca": {
+  "count": 232,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:56.650Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence/publisher facets available"
+  ]
+ },
+ "avoindata-fi": {
+  "count": 2560,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.03359375,
+  "licences": [
+   {
+    "cls": "cc-by-4.0",
+    "count": 2161
+   },
+   {
+    "cls": "other",
+    "count": 246
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 86
+   },
+   {
+    "cls": "cc-zero-1.0",
+    "count": 31
+   },
+   {
+    "cls": "other-at",
+    "count": 12
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 9
+   },
+   {
+    "cls": "cc-by-sa-1-fi",
+    "count": 4
+   },
+   {
+    "cls": "other-pd",
+    "count": 3
+   },
+   {
+    "cls": "other-open",
+    "count": 2
+   },
+   {
+    "cls": "ilmoitettumuualla",
+    "count": 2
+   },
+   {
+    "cls": "cc-nc",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Ulkoinen lähde: Paikkatietohakemisto",
+    "count": 248
+   },
+   {
+    "name": "Turku",
+    "count": 237
+   },
+   {
+    "name": "Valtiovarainministeriö",
+    "count": 220
+   },
+   {
+    "name": "Suomen ympäristökeskus (Syke)",
+    "count": 218
+   },
+   {
+    "name": "Väylävirasto",
+    "count": 216
+   },
+   {
+    "name": "Helsingin kaupunginkanslia",
+    "count": 198
+   },
+   {
+    "name": "Helsingin kaupunkiympäristön toimiala",
+    "count": 94
+   },
+   {
+    "name": "Oulu",
+    "count": 87
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:53.447Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-vancouver-ca": {
+  "count": 198,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "Open Government Licence - Vancouver",
+    "count": 194
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Vancouver",
+    "count": 196
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:55.661Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-princeedwardisland-ca": {
+  "count": 94,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.2978723404255319,
+  "licences": [
+   {
+    "cls": "https://www.princeedwardisland.ca/en/information/finance/open-government-licence-prince-edward-island",
+    "count": 66
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 28
+   }
+  ],
+  "publishers": [
+   {
+    "name": "{{source}}",
+    "count": 94
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:55.079Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-tampere-fi": {
+  "count": 100,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "CC-BY-4.0",
+    "count": 99
+   },
+   {
+    "cls": "CC0-1.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Paikkatieto",
+    "count": 35
+   },
+   {
+    "name": "Tampere",
+    "count": 33
+   },
+   {
+    "name": "Yleisten alueiden suunnittelu",
+    "count": 14
+   },
+   {
+    "name": "Tampereen seudun joukkoliikenne",
+    "count": 5
+   },
+   {
+    "name": "Ympäristönsuojeluyksikkö",
+    "count": 4
+   },
+   {
+    "name": "Kaupunkiympäristön suunnittelu",
+    "count": 3
+   },
+   {
+    "name": "Asemakaavoitus",
+    "count": 2
+   },
+   {
+    "name": "Viestintäyksikkö",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:53.676Z",
+  "ok": true,
+  "notes": []
+ },
+ "catalogue-data-govt-nz": {
+  "count": 31964,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0005631335252158678,
+  "licences": [
+   {
+    "cls": "CC-BY-4.0",
+    "count": 13845
+   },
+   {
+    "cls": "CC-BY-NZ-3.0",
+    "count": 8287
+   },
+   {
+    "cls": "other",
+    "count": 2692
+   },
+   {
+    "cls": "CC BY 4.0",
+    "count": 831
+   },
+   {
+    "cls": "CC-BY-NC-4.0",
+    "count": 178
+   },
+   {
+    "cls": "CC0",
+    "count": 124
+   },
+   {
+    "cls": "CC-BY-ND-4.0",
+    "count": 66
+   },
+   {
+    "cls": "CC-BY-ND-NZ-3.0",
+    "count": 40
+   },
+   {
+    "cls": "CC BY-NC-SA 4.0",
+    "count": 33
+   },
+   {
+    "cls": "CC BY-NC-ND 4.0",
+    "count": 29
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 18
+   }
+  ],
+  "publishers": [
+   {
+    "name": "GNS Science",
+    "count": 8077
+   },
+   {
+    "name": "Land Information New Zealand",
+    "count": 4000
+   },
+   {
+    "name": "Auckland Council",
+    "count": 3206
+   },
+   {
+    "name": "Auckland Transport",
+    "count": 2824
+   },
+   {
+    "name": "Ministry for Primary Industries",
+    "count": 1635
+   },
+   {
+    "name": "Ministry for the Environment",
+    "count": 1137
+   },
+   {
+    "name": "The University of Auckland",
+    "count": 978
+   },
+   {
+    "name": "Wellington City Council",
+    "count": 945
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:56.934Z",
+  "ok": true,
+  "notes": []
+ },
+ "donnees-montreal-ca": {
+  "count": 405,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 403
+   },
+   {
+    "cls": "OGL-Canada-2.0",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Ville de Montréal",
+    "count": 390
+   },
+   {
+    "name": "Société de transport de Montréal",
+    "count": 7
+   },
+   {
+    "name": "Agence de mobilité durable de Montréal",
+    "count": 3
+   },
+   {
+    "name": "Regroupement des éco-quartiers",
+    "count": 2
+   },
+   {
+    "name": "Bixi Montréal",
+    "count": 2
+   },
+   {
+    "name": "211 Grand Montréal",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:55.451Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-bodik-jp": {
+  "count": 18383,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0001631942555622042,
+  "licences": [
+   {
+    "cls": "cc-by-40-intl",
+    "count": 13673
+   },
+   {
+    "cls": "cc-by",
+    "count": 3250
+   },
+   {
+    "cls": "CC-BY-4.0",
+    "count": 393
+   },
+   {
+    "cls": "cc-by-21-jp",
+    "count": 353
+   },
+   {
+    "cls": "PDL1.0",
+    "count": 255
+   },
+   {
+    "cls": "cc-by-21",
+    "count": 207
+   },
+   {
+    "cls": "cc-by-40-intl（CC BY 4.0）",
+    "count": 122
+   },
+   {
+    "cls": "other-copyright",
+    "count": 52
+   },
+   {
+    "cls": "cc-by-nc-nd",
+    "count": 16
+   },
+   {
+    "cls": "cc-zero",
+    "count": 12
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "福岡県",
+    "count": 986
+   },
+   {
+    "name": "北九州市",
+    "count": 720
+   },
+   {
+    "name": "名古屋市",
+    "count": 616
+   },
+   {
+    "name": "船橋市",
+    "count": 606
+   },
+   {
+    "name": "鹿児島県",
+    "count": 594
+   },
+   {
+    "name": "石垣市",
+    "count": 560
+   },
+   {
+    "name": "佐賀県",
+    "count": 526
+   },
+   {
+    "name": "大津市",
+    "count": 519
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:57.347Z",
+  "ok": true,
+  "notes": []
+ },
+ "catalog-data-metro-tokyo-lg-jp": {
+  "count": 9656,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "CC-BY-4.0",
+    "count": 9653
+   },
+   {
+    "cls": "other",
+    "count": 2
+   },
+   {
+    "cls": "CC-BY-NC-ND-4.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "東京都総務局",
+    "count": 2178
+   },
+   {
+    "name": "調布市",
+    "count": 1487
+   },
+   {
+    "name": "狛江市",
+    "count": 399
+   },
+   {
+    "name": "東京都福祉局",
+    "count": 341
+   },
+   {
+    "name": "大田区",
+    "count": 278
+   },
+   {
+    "name": "港区",
+    "count": 268
+   },
+   {
+    "name": "江戸川区",
+    "count": 266
+   },
+   {
+    "name": "東京都保健医療局",
+    "count": 257
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:58.260Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-aucklandcouncil-opendata-arcgis-com": {
+  "count": 235,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.2425531914893617,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 177
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 57
+   },
+   {
+    "cls": "Please refer to the terms and conditions from the third-part website (Auckland Transport Open Data).",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Auckland Council",
+    "count": 235
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:56.985Z",
+  "ok": true,
+  "notes": []
+ },
+ "open-ottawa-ca": {
+  "count": 685,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.345985401459854,
+  "licences": [
+   {
+    "cls": "https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-version-2-0",
+    "count": 443
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 237
+   },
+   {
+    "cls": "https://open.ottawa.ca/pages/open-data-licence",
+    "count": 5
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Ottawa",
+    "count": 684
+   },
+   {
+    "name": "{{source}}",
+    "count": 1
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:56.119Z",
+  "ok": true,
+  "notes": []
+ },
+ "api-data-gov-in": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:59.740Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type data-gov-in"
+  ]
+ },
+ "karnataka-data-gov-in": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:59.741Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type data-gov-in-dms"
+  ]
+ },
+ "tn-data-gov-in": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:59.741Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type data-gov-in-dms"
+  ]
+ },
+ "smartcities-data-gov-in": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:10:59.741Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type data-gov-in-dms"
+  ]
+ },
+ "data-city-yokohama-lg-jp": {
+  "count": 654,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 654
+   }
+  ],
+  "publishers": [
+   {
+    "name": "政策経営局",
+    "count": 234
+   },
+   {
+    "name": "金沢区",
+    "count": 58
+   },
+   {
+    "name": "泉区",
+    "count": 49
+   },
+   {
+    "name": "保土ケ谷区",
+    "count": 45
+   },
+   {
+    "name": "財政局",
+    "count": 24
+   },
+   {
+    "name": "戸塚区",
+    "count": 22
+   },
+   {
+    "name": "経済局",
+    "count": 21
+   },
+   {
+    "name": "西区",
+    "count": 17
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:58.462Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-christchurchcity-hub-arcgis-com": {
+  "count": 481,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.014553014553014554,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 469
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 7
+   },
+   {
+    "cls": "Christchurch City Council",
+    "count": 5
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Christchurch City Council",
+    "count": 476
+   },
+   {
+    "name": "{{source}}",
+    "count": 5
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:57.247Z",
+  "ok": true,
+  "notes": []
+ },
+ "dataverse-harvard-edu": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:11:00.012Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type dataverse"
+  ]
+ },
+ "ddh-openapi-worldbank-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:11:00.012Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type world-bank"
+  ]
+ },
+ "kidb-adb-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:11:00.012Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type adb"
+  ]
+ },
+ "sdmx-oecd-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:11:00.012Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type oecd"
+  ]
+ },
+ "sdmx-data-unicef-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:11:00.012Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type unicef"
+  ]
+ },
+ "ghoapi-azureedge-net": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:11:00.012Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type who-gho"
+  ]
+ },
+ "api-dhsprogram-com": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:11:00.012Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type dhs"
+  ]
+ },
+ "unstats-un-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:11:00.012Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type un-sdg"
+  ]
+ },
+ "ourworldindata-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:11:00.012Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type owid"
+  ]
+ },
+ "data-europa-eu": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:11:00.012Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type data-europa-eu"
+  ]
+ },
+ "data-hrm-hub-arcgis-com": {
+  "count": 350,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.4085714285714286,
+  "licences": [
+   {
+    "cls": "https://data-hrm.hub.arcgis.com/pages/open-data-licence",
+    "count": 194
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 143
+   },
+   {
+    "cls": "https://www.halifax.ca/home/open-data/open-data-license",
+    "count": 11
+   },
+   {
+    "cls": "https://www.halifaxwater.ca/open-data-license",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Halifax Regional Municipality",
+    "count": 348
+   },
+   {
+    "name": "{{source}}",
+    "count": 2
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:56.644Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-opencity-in": {
+  "count": 1092,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.031135531135531136,
+  "licences": [
+   {
+    "cls": "other-pd",
+    "count": 735
+   },
+   {
+    "cls": "cc-nc",
+    "count": 49
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 34
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 10
+   },
+   {
+    "cls": "cc-zero",
+    "count": 7
+   },
+   {
+    "cls": "other-open",
+    "count": 3
+   },
+   {
+    "cls": "cc-by",
+    "count": 2
+   },
+   {
+    "cls": "other-nc",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Bruhat Bengaluru Mahanagara Palike (BBMP)",
+    "count": 151
+   },
+   {
+    "name": "Government of Karnataka",
+    "count": 122
+   },
+   {
+    "name": "Government of India (GoI)",
+    "count": 68
+   },
+   {
+    "name": "Greater Chennai Corporation (GCC)",
+    "count": 52
+   },
+   {
+    "name": "Academic or Research Institution",
+    "count": 51
+   },
+   {
+    "name": "Election Commission of India (ECI)",
+    "count": 44
+   },
+   {
+    "name": "Pune Municipal Corporation",
+    "count": 40
+   },
+   {
+    "name": "Brihanmumbai Municipal Corporation (BMC) (MCGM)",
+    "count": 30
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:59.662Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-wcc-opendata-arcgis-com": {
+  "count": 491,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.6863543788187373,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 337
+   },
+   {
+    "cls": "CC-BY",
+    "count": 152
+   },
+   {
+    "cls": "Creative Commons 3.0 (NZ)",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Wellington City Council",
+    "count": 488
+   },
+   {
+    "name": "{{source}}",
+    "count": 3
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:57.220Z",
+  "ok": true,
+  "notes": []
+ },
+ "datos-gob-ar": {
+  "count": 1273,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.01021209740769835,
+  "licences": [
+   {
+    "cls": "Creative Commons Attribution 4.0",
+    "count": 658
+   },
+   {
+    "cls": "CC-BY-4.0",
+    "count": 459
+   },
+   {
+    "cls": "ODbL-1.0",
+    "count": 26
+   },
+   {
+    "cls": "cc-by",
+    "count": 23
+   },
+   {
+    "cls": "other-open",
+    "count": 16
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 13
+   },
+   {
+    "cls": "odc-odbl",
+    "count": 6
+   },
+   {
+    "cls": "No se especificó la licencia",
+    "count": 6
+   },
+   {
+    "cls": "Creative Commons Attribution",
+    "count": 4
+   },
+   {
+    "cls": "cc-nc",
+    "count": 1
+   },
+   {
+    "cls": "Creative Commons Attribution 4.8",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Subsecretaría de Programación Macroeconómica",
+    "count": 262
+   },
+   {
+    "name": "Secretaría de Energía",
+    "count": 178
+   },
+   {
+    "name": "Secretaría de Agricultura, Ganadería y Pesca",
+    "count": 152
+   },
+   {
+    "name": "Secretaría de Industria, Comercio y de la Pequeña y Mediana Empresa",
+    "count": 84
+   },
+   {
+    "name": "Ministerio de Salud",
+    "count": 63
+   },
+   {
+    "name": "Ministerio de Justicia",
+    "count": 63
+   },
+   {
+    "name": "Instituto Nacional de Estadística y Censos (INDEC)",
+    "count": 52
+   },
+   {
+    "name": "Subsecretaría de Ambiente",
+    "count": 50
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:58.710Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-nasa-gov": {
+  "count": 36251,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.21042178146809742,
+  "licences": [
+   {
+    "cls": "other-license-specified",
+    "count": 21742
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 7628
+   },
+   {
+    "cls": "us-pd",
+    "count": 6880
+   },
+   {
+    "cls": "cc-zero",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "NASA",
+    "count": 36251
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:59.783Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-humdata-org": {
+  "count": 28239,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 10177
+   },
+   {
+    "cls": "hdx-other",
+    "count": 6118
+   },
+   {
+    "cls": "cc-by-igo",
+    "count": 3915
+   },
+   {
+    "cls": "hdx-odc-odbl",
+    "count": 3567
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 2411
+   },
+   {
+    "cls": "other-pd-nr",
+    "count": 851
+   },
+   {
+    "cls": "CC BY 3.0 IGO",
+    "count": 301
+   },
+   {
+    "cls": "odc-odbl",
+    "count": 232
+   },
+   {
+    "cls": "Public Domain",
+    "count": 193
+   },
+   {
+    "cls": "ODbL",
+    "count": 188
+   }
+  ],
+  "publishers": [
+   {
+    "name": "World Bank Group",
+    "count": 4796
+   },
+   {
+    "name": "Humanitarian OpenStreetMap Team (HOT)",
+    "count": 2950
+   },
+   {
+    "name": "WorldPop",
+    "count": 1569
+   },
+   {
+    "name": "United Nations Satellite Centre (UNOSAT)",
+    "count": 1460
+   },
+   {
+    "name": "UNHCR - The UN Refugee Agency",
+    "count": 1174
+   },
+   {
+    "name": "FEWS NET",
+    "count": 847
+   },
+   {
+    "name": "HeiGIT (Heidelberg Institute for Geoinformation Technology)",
+    "count": 794
+   },
+   {
+    "name": "World Health Organization",
+    "count": 683
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:59.741Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-canterburymaps-govt-nz": {
+  "count": 481,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.24532224532224534,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 363
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 118
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Canterbury Regional Council",
+    "count": 481
+   }
+  ],
+  "fetchedAt": "2026-08-21T22:10:57.270Z",
+  "ok": true,
+  "notes": []
+ }
+}
