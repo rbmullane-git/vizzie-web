@@ -3104,18 +3104,6 @@
   "ok": true,
   "notes": []
  },
- "api-os-uk": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:46.737Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type os-data-hub"
-  ]
- },
  "data-memphistn-gov": {
   "count": 69,
   "countSource": "arcgis-hub data.json",
@@ -3163,42 +3151,6 @@
   "fetchedAt": "2026-08-21T22:10:45.110Z",
   "ok": true,
   "notes": []
- },
- "data-london-gov-uk": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:47.022Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type london-datastore"
-  ]
- },
- "data-gouv-fr": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:47.022Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type udata"
-  ]
- },
- "opendata-camden-gov-uk": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:46.737Z",
-  "ok": false,
-  "notes": [
-   "HTTP 404 for https://api.us.socrata.com/api/catalog/v1?domains=opendata.camden.gov.uk&search_context=opendata.camden.gov.uk&only=datasets&limit=0"
-  ]
  },
  "data-longbeach-gov": {
   "count": 15,
@@ -4088,18 +4040,6 @@
   "ok": true,
   "notes": []
  },
- "dados-gov-pt": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:50.835Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type udata"
-  ]
- },
  "suche-transparenz-hamburg-de": {
   "count": 237068,
   "countSource": "ckan package_search",
@@ -4524,30 +4464,6 @@
   "ok": true,
   "notes": []
  },
- "data-public-lu": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:52.479Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type udata"
-  ]
- },
- "data-gv-at": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:52.479Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type data-europa-eu"
-  ]
- },
  "data-stadt-zuerich-ch": {
   "count": 1008,
   "countSource": "ckan package_search",
@@ -4855,18 +4771,6 @@
   "fetchedAt": "2026-08-21T22:10:51.669Z",
   "ok": true,
   "notes": []
- },
- "data-gov-sg": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:53.678Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type data-gov-sg"
-  ]
  },
  "opendata-ajuntament-barcelona-cat": {
   "count": 555,
@@ -6011,54 +5915,6 @@
   "ok": true,
   "notes": []
  },
- "api-data-gov-in": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:59.740Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type data-gov-in"
-  ]
- },
- "karnataka-data-gov-in": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:59.741Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type data-gov-in-dms"
-  ]
- },
- "tn-data-gov-in": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:59.741Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type data-gov-in-dms"
-  ]
- },
- "smartcities-data-gov-in": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:59.741Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type data-gov-in-dms"
-  ]
- },
  "data-city-yokohama-lg-jp": {
   "count": 654,
   "countSource": "ckan package_search",
@@ -6138,126 +5994,6 @@
   "fetchedAt": "2026-08-21T22:10:57.247Z",
   "ok": true,
   "notes": []
- },
- "dataverse-harvard-edu": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:11:00.012Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type dataverse"
-  ]
- },
- "ddh-openapi-worldbank-org": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:11:00.012Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type world-bank"
-  ]
- },
- "kidb-adb-org": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:11:00.012Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type adb"
-  ]
- },
- "sdmx-oecd-org": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:11:00.012Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type oecd"
-  ]
- },
- "sdmx-data-unicef-org": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:11:00.012Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type unicef"
-  ]
- },
- "ghoapi-azureedge-net": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:11:00.012Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type who-gho"
-  ]
- },
- "api-dhsprogram-com": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:11:00.012Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type dhs"
-  ]
- },
- "unstats-un-org": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:11:00.012Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type un-sdg"
-  ]
- },
- "ourworldindata-org": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:11:00.012Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type owid"
-  ]
- },
- "data-europa-eu": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:11:00.012Z",
-  "ok": false,
-  "notes": [
-   "count not fetched for type data-europa-eu"
-  ]
  },
  "data-hrm-hub-arcgis-com": {
   "count": 350,
@@ -6628,6 +6364,244 @@
    }
   ],
   "fetchedAt": "2026-08-21T22:10:57.270Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gov-sg": {
+  "count": 4616,
+  "countSource": "data.gov.sg",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:35.301Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-public-lu": {
+  "count": 3173,
+  "countSource": "udata",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:35.301Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-camden-gov-uk": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:35.299Z",
+  "ok": false,
+  "notes": [
+   "HTTP 404 for https://api.us.socrata.com/api/catalog/v1?domains=opendata.camden.gov.uk&search_context=opendata.camden.gov.uk&only=datasets&limit=0"
+  ]
+ },
+ "dados-gov-pt": {
+  "count": 20878,
+  "countSource": "udata",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:35.300Z",
+  "ok": true,
+  "notes": []
+ },
+ "api-data-gov-in": {
+  "count": 235100,
+  "countSource": "data.gov.in",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:35.707Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gouv-fr": {
+  "count": 73992,
+  "countSource": "udata",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:35.300Z",
+  "ok": true,
+  "notes": []
+ },
+ "ddh-openapi-worldbank-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.626Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type world-bank"
+  ]
+ },
+ "kidb-adb-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.626Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type adb"
+  ]
+ },
+ "sdmx-oecd-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.626Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type oecd"
+  ]
+ },
+ "sdmx-data-unicef-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.626Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type unicef"
+  ]
+ },
+ "ghoapi-azureedge-net": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.626Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type who-gho"
+  ]
+ },
+ "api-dhsprogram-com": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.626Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type dhs"
+  ]
+ },
+ "unstats-un-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.626Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type un-sdg"
+  ]
+ },
+ "ourworldindata-org": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.626Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type owid"
+  ]
+ },
+ "data-london-gov-uk": {
+  "count": 1299,
+  "countSource": "ckan package_search",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:35.300Z",
+  "ok": true,
+  "notes": []
+ },
+ "karnataka-data-gov-in": {
+  "count": 7742,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.274Z",
+  "ok": true,
+  "notes": []
+ },
+ "tn-data-gov-in": {
+  "count": 19580,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.360Z",
+  "ok": true,
+  "notes": []
+ },
+ "dataverse-harvard-edu": {
+  "count": 302759,
+  "countSource": "dataverse search",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.595Z",
+  "ok": true,
+  "notes": []
+ },
+ "api-os-uk": {
+  "count": 26,
+  "countSource": "OS Data Hub products",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:35.282Z",
+  "ok": true,
+  "notes": []
+ },
+ "smartcities-data-gov-in": {
+  "count": 5291,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.592Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-europa-eu": {
+  "count": 1728627,
+  "countSource": "data.europa.eu hub",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:36.626Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gv-at": {
+  "count": 73076,
+  "countSource": "data.europa.eu hub",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "fetchedAt": "2026-08-21T22:39:35.301Z",
   "ok": true,
   "notes": []
  }

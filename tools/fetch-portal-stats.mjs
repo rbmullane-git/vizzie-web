@@ -392,6 +392,100 @@ async function fetchDatagov(portal, opts, result) {
 }
 
 // ---------------------------------------------------------------------------
+// Bespoke catalog APIs (count-only; licences/publishers fall back to the
+// compliance matrix in the generator). London Datastore is CKAN-compatible and
+// routes through fetchCkan instead.
+// ---------------------------------------------------------------------------
+
+async function fetchByPath(url, path, source, result, opts = {}) {
+  const { json, note } = await fetchJson(url, { timeoutMs: opts.timeoutMs || DEFAULT_TIMEOUT_MS });
+  if (note) result.notes.push(note);
+  if (!json) return result;
+  const val = path.split('.').reduce((o, k) => (o == null ? o : o[k]), json);
+  if (typeof val === 'number' && Number.isFinite(val)) {
+    result.count = val;
+    result.countSource = source;
+    result.ok = true;
+  } else {
+    result.notes.push(`${source}: count not found at ${path}`);
+  }
+  return result;
+}
+
+// uData (data.gouv.fr, dados.gov.pt, data.public.lu)
+async function fetchUdata(portal, opts, result) {
+  const base = portal.baseUrl.replace(/\/+$/, '');
+  return fetchByPath(`${base}/api/1/datasets/?page_size=1`, 'total', 'udata', result);
+}
+
+// data.europa.eu hub search (also the harvested aggregate)
+async function fetchDataEuropa(portal, opts, result) {
+  const base = portal.baseUrl.replace(/\/+$/, '');
+  return fetchByPath(
+    `${base}/api/hub/search/search?limit=1&filter=dataset`,
+    'result.count',
+    'data.europa.eu hub',
+    result,
+    { timeoutMs: ARCGIS_TIMEOUT_MS },
+  );
+}
+
+// data.gov.sg (fixed production API host)
+async function fetchDataGovSg(portal, opts, result) {
+  return fetchByPath(
+    'https://api-production.data.gov.sg/v2/public/api/datasets?page=1',
+    'data.totalRowCount',
+    'data.gov.sg',
+    result,
+  );
+}
+
+// Dataverse (Harvard etc.) — type=dataset, never file
+async function fetchDataverse(portal, opts, result) {
+  const base = portal.baseUrl.replace(/\/+$/, '');
+  return fetchByPath(
+    `${base}/api/search?q=*&type=dataset&per_page=1`,
+    'data.total_count',
+    'dataverse search',
+    result,
+    { timeoutMs: ARCGIS_TIMEOUT_MS },
+  );
+}
+
+// data.gov.in (national) — published sample API key raises quota if replaced
+async function fetchDataGovIn(portal, opts, result) {
+  const key = process.env.DATA_GOV_IN_API_KEY ||
+    '579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b';
+  const url =
+    'https://api.data.gov.in/lists?filters%5Bactive%5D=1&filters%5Bsource%5D=data.gov.in' +
+    `&limit=0&api-key=${key}`;
+  return fetchByPath(url, 'total', 'data.gov.in', result);
+}
+
+// data.gov.in state DMS portals (karnataka/tn/smartcities)
+async function fetchDataGovInDms(portal, opts, result) {
+  let host;
+  try { host = new URL(portal.baseUrl).host; } catch { host = portal.baseUrl; }
+  const url = `https://${host}/backend/dmspublic/v1/resources?filters%5Bdomain%5D=${encodeURIComponent(host)}&limit=1`;
+  return fetchByPath(url, 'total', 'data.gov.in DMS', result);
+}
+
+// OS Data Hub (downloadable products)
+async function fetchOsDataHub(portal, opts, result) {
+  const base = portal.baseUrl.replace(/\/+$/, '');
+  const { json, note } = await fetchJson(`${base}/downloads/v1/products`, { timeoutMs: DEFAULT_TIMEOUT_MS });
+  if (note) result.notes.push(note);
+  if (Array.isArray(json)) {
+    result.count = json.length;
+    result.countSource = 'OS Data Hub products';
+    result.ok = true;
+  } else {
+    result.notes.push('os-data-hub: products response not an array');
+  }
+  return result;
+}
+
+// ---------------------------------------------------------------------------
 // Dispatcher
 // ---------------------------------------------------------------------------
 
@@ -401,6 +495,14 @@ const HANDLERS = {
   opendatasoft: fetchOpendatasoft,
   'arcgis-hub': fetchArcgisHub,
   datagov: fetchDatagov,
+  'london-datastore': fetchCkan, // CKAN-compatible: gets count + licence + publisher facets
+  udata: fetchUdata,
+  'data-europa-eu': fetchDataEuropa,
+  'data-gov-sg': fetchDataGovSg,
+  dataverse: fetchDataverse,
+  'data-gov-in': fetchDataGovIn,
+  'data-gov-in-dms': fetchDataGovInDms,
+  'os-data-hub': fetchOsDataHub,
 };
 
 export async function fetchPortalStats(portal, opts = {}) {
