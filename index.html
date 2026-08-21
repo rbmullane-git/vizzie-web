@@ -129,7 +129,7 @@
 
       /* App screenshot */
       .shot {
-        width: 100%; border-radius: 14px; border: 1px solid var(--line);
+        width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line);
         box-shadow: 0 18px 60px rgba(0, 0, 0, 0.5); display: block;
       }
 
@@ -253,20 +253,14 @@
           Search a place, pick its open-data portal, find a dataset, preview it,
           and add — then watch it map and chart itself in one click.
         </p>
-        <!-- TODO(media): replace with the recorded connector-workflow capture.
-             Falls back to the platform screenshot until the .mp4 is added. -->
-        <video
+        <img
           class="shot"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-          poster="vizzie-platform-screenshot.png"
-          aria-label="Searching Vancouver, choosing the City of Vancouver open-data portal, finding the street-trees dataset, previewing and adding it, then seeing it mapped and charted in one click"
-        >
-          <source src="vizzie-connector-workflow.mp4" type="video/mp4" />
-        </video>
+          src="vizzie-connector-workflow.gif"
+          loading="lazy"
+          width="1538"
+          height="784"
+          alt="Searching Vancouver, choosing the City of Vancouver open-data portal, finding the street-trees dataset, previewing it, then seeing it mapped and charted in one click"
+        />
 
         <!-- Animation 2 — 150,000 trees in 3D: z-axis, rotate, filter, zoom -->
         <h2 style="margin-top: 64px; margin-bottom: 8px">
@@ -277,19 +271,14 @@
           filter by species and back, then turn on the zoom filter and zoom in —
           the charts follow the map to whatever you're looking at.
         </p>
-        <!-- TODO(media): replace with the recorded 3D-interaction capture. -->
-        <video
+        <img
           class="shot"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-          poster="vizzie-platform-screenshot.png"
-          aria-label="Turning on height as a 3D z-axis, rotating the map in 3D, filtering by clicking species in the legend then clearing it, enabling the zoom filter, and zooming into an area so the charts adjust to that part of the data"
-        >
-          <source src="vizzie-vancouver-3d.mp4" type="video/mp4" />
-        </video>
+          src="vizzie-vancouver-3d.gif"
+          loading="lazy"
+          width="1538"
+          height="784"
+          alt="Turning on height as a 3D z-axis, rotating the map in 3D, filtering by clicking a species in the legend then clearing it, enabling the zoom filter, and zooming into an area so the charts adjust to that part of the data"
+        />
 
         <div class="cta-row" style="margin-top: 22px">
           <a class="btn" data-app="/#example=vancouver-street-trees">Explore this map live →</a>
