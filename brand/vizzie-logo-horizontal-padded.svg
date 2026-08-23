@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="947" height="303" viewBox="0 0 947 303" fill="none">
+  <title>Vizzie</title>
+  <!-- Horizontal lockup — mark beside wordmark, matching the app header exactly
+       (BrandMark size 32 · gap-2 · text-2xl font-extrabold tracking-wide), scaled 8x:
+       mark 256 box · 64 gap · wordmark 192px / weight 800 / letter-spacing 0.025em.
+       The wordmark's ink box is centred on the mark's ink box. Includes 40 units of clear space on all sides for slides, email and social.
+       Green is fixed #22c55e in every theme — see src/components/BrandMark.tsx. -->
+
+  <g transform="translate(28.27, 18.67)">
+    <!-- Layered mark -->
+    <g transform="scale(10.66667)">
+      <polygon points="12,2 22,7 12,12 2,7" fill="#22c55e"/>
+      <polyline points="2,12 12,17 22,12" stroke="#22c55e" stroke-width="1.8" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" opacity="0.65"/>
+      <polyline points="2,17 12,22 22,17" stroke="#22c55e" stroke-width="1.8" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+    </g>
+    <!-- Wordmark -->
+    <text x="320.0" y="203.9"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, Helvetica, Arial, sans-serif"
+          font-size="192" font-weight="800" letter-spacing="4.8" fill="#22c55e">Vizzie</text>
+  </g>
+</svg>
