@@ -229,20 +229,32 @@ const html = `<!doctype html>
           <h2>Email signature</h2>
           <p>
             Sized for a signature and served from here, so it renders in every client
-            without an attachment. Email clients don't support SVG, so these are PNG at
-            twice the display size — set <code>width</code> and <code>height</code> in the
-            markup and it stays sharp on a retina screen.
+            without an attachment. Email clients don't support SVG, so these are PNG.
+          </p>
+          <p>
+            Each file's pixel size <em>is</em> the size it renders at, because most
+            signature editors only let you paste a URL with no way to set
+            <code>width</code> and <code>height</code>. Pick the file that matches the
+            width you want and paste its address on its own.
           </p>
           <div class="sigdemo">
-            <img src="/brand/vizzie-logo-email.png" width="90" height="23" alt="Vizzie" style="display: block" />
+            <img src="/brand/vizzie-logo-email-90.png" width="90" height="23" alt="Vizzie" style="display: block" />
+            <img src="/brand/vizzie-logo-email-120.png" width="120" height="31" alt="Vizzie" style="display: block; margin-top: 14px" />
+            <img src="/brand/vizzie-logo-email.png" width="180" height="46" alt="Vizzie" style="display: block; margin-top: 14px" />
           </div>
+          <div class="dls">
+            <a class="dl" href="/brand/vizzie-logo-email-90.png" download>90 × 23 — discreet</a>
+            <a class="dl primary" href="/brand/vizzie-logo-email-120.png" download>120 × 31 — recommended</a>
+            <a class="dl" href="/brand/vizzie-logo-email.png" download>180 × 46 — prominent</a>
+          </div>
+          <p style="margin-top: 18px">
+            If your editor <em>does</em> accept markup, use the largest file and halve it
+            with <code>width</code> and <code>height</code> — that keeps it sharp on a
+            retina screen, which a URL on its own can't do.
+          </p>
           <div class="snippet"><code>&lt;a href="https://www.vizzie.org"&gt;&lt;img
   src="https://www.vizzie.org/brand/vizzie-logo-email.png"
   width="90" height="23" alt="Vizzie" style="border:0;display:block"&gt;&lt;/a&gt;</code></div>
-          <div class="dls">
-            <a class="dl primary" href="/brand/vizzie-logo-email.png" download>PNG 180 × 46 — displays at 90px</a>
-            <a class="dl" href="/brand/vizzie-logo-email-120.png" download>PNG 240 × 63 — displays at 120px</a>
-          </div>
         </section>
 
         <section>
@@ -301,6 +313,7 @@ const html = `<!doctype html>
 const missing = [
   'og-vancouver-street-trees.png',
   'brand/vizzie-logo-email.png',
+  'brand/vizzie-logo-email-90.png',
   'brand/vizzie-logo-email-120.png',
   'vizzie-vancouver-3d.gif',
   'vizzie-connector-workflow.gif',
