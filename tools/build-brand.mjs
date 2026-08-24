@@ -125,6 +125,12 @@ const extraStyle = `<style>
       .boiler { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--green);
                 border-radius: 12px; padding: 20px 22px; margin-top: 18px; max-width: 74ch; }
       .boiler p { color: var(--text); }
+      .snippet { background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+                 padding: 14px 16px; margin-top: 16px; overflow-x: auto; max-width: 74ch; }
+      .snippet code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12.5px;
+                      color: var(--text); white-space: pre; }
+      .sigdemo { background: #ffffff; border-radius: 10px; padding: 18px 20px; margin-top: 18px;
+                 display: inline-block; }
       .shot { margin-top: 20px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; max-width: 760px; }
       .shot img { display: block; width: 100%; }
       @media (max-width: 640px) { .brandpage h1 { font-size: 30px; } }
@@ -220,6 +226,26 @@ const html = `<!doctype html>
         </section>
 
         <section>
+          <h2>Email signature</h2>
+          <p>
+            Sized for a signature and served from here, so it renders in every client
+            without an attachment. Email clients don't support SVG, so these are PNG at
+            twice the display size — set <code>width</code> and <code>height</code> in the
+            markup and it stays sharp on a retina screen.
+          </p>
+          <div class="sigdemo">
+            <img src="/brand/vizzie-logo-email.png" width="180" height="47" alt="Vizzie" style="display: block" />
+          </div>
+          <div class="snippet"><code>&lt;a href="https://www.vizzie.org"&gt;&lt;img
+  src="https://www.vizzie.org/brand/vizzie-logo-email.png"
+  width="180" height="47" alt="Vizzie" style="border:0;display:block"&gt;&lt;/a&gt;</code></div>
+          <div class="dls">
+            <a class="dl primary" href="/brand/vizzie-logo-email.png" download>PNG 360 × 94 — displays at 180px</a>
+            <a class="dl" href="/brand/vizzie-logo-email-120.png" download>PNG 240 × 63 — displays at 120px</a>
+          </div>
+        </section>
+
+        <section>
           <h2>Product screenshot</h2>
           <p>
             Vizzie mapping the City of Vancouver's street-tree register — 150,000 trees
@@ -274,6 +300,8 @@ const html = `<!doctype html>
 // Fail loudly rather than shipping a page full of broken download links.
 const missing = [
   'og-vancouver-street-trees.png',
+  'brand/vizzie-logo-email.png',
+  'brand/vizzie-logo-email-120.png',
   'vizzie-vancouver-3d.gif',
   'vizzie-connector-workflow.gif',
   ...LOGOS.flatMap((l) => [`brand/${l.svg}`, `brand/${l.png}`, ...l.extra.map((e) => `brand/${e.file}`)]),
