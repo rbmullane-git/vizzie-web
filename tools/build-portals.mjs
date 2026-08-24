@@ -228,7 +228,15 @@ async function main() {
   }
 
   const { renderPortalPage, renderPortalsIndex } = await import('./render-portal.mjs');
-  const ctx = { siteUrl: SITE, appUrl: APP, generatedDate: TODAY };
+  // "Data as of" must reflect when the counts were actually fetched, not when
+  // the pages were last rendered — a meta-only rebuild must not make stale
+  // numbers look fresh.
+  const fetched = Object.values(cache)
+    .map((s) => s && s.fetchedAt)
+    .filter(Boolean)
+    .sort();
+  const dataDate = fetched.length ? fetched[fetched.length - 1].slice(0, 10) : TODAY;
+  const ctx = { siteUrl: SITE, appUrl: APP, generatedDate: dataDate };
   const outRoot = join(WEB, 'portals');
   mkdirSync(outRoot, { recursive: true });
 
@@ -253,6 +261,7 @@ async function main() {
   const urls = [
     { loc: `${SITE}/`, pr: '1.0' },
     { loc: `${SITE}/portals/`, pr: '0.8' },
+    { loc: `${SITE}/brand/`, pr: '0.3' },
     ...portals.map((p) => ({ loc: `${SITE}/portals/${p.slug}/`, pr: '0.6' })),
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls

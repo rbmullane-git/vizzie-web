@@ -5,12 +5,26 @@
 // Exports:
 //   renderPortalPage(portal, stats, ctx) -> full HTML string
 //   renderPortalsIndex(portalsByCountry, ctx) -> full HTML string
+//   styleBlock / headerBlock / footerBlock / appScript — shared chrome, also
+//   used by build-brand.mjs so every generated page matches the homepage
 //
 // Run directly (`node render-portal.mjs`) to write two sample files.
 
 import { fileURLToPath } from 'node:url';
 import { writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
+
+// ---------------------------------------------------------------------------
+// Social card
+// ---------------------------------------------------------------------------
+
+// One shared card for every generated page. LinkedIn, Slack and X all render a
+// 1.91:1 image; a real map earns the click in a way a logo never does, so this
+// is the Vancouver street-trees example — 150,000 points extruded in 3D.
+const socialImage = 'https://www.vizzie.org/og-vancouver-street-trees.png';
+const socialImageAlt =
+  'Vizzie mapping 150,000 Vancouver street trees in 3D, extruded by height ' +
+  'and coloured by species, with charts alongside';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -76,7 +90,7 @@ function trim(text, max) {
 
 /** The inline design-token stylesheet, a subset of the homepage's, plus a few
  *  portal-page extras. Root-relative page => same tokens, same classes. */
-function styleBlock() {
+export function styleBlock() {
   return `<style>
       :root {
         color-scheme: dark;
@@ -230,7 +244,7 @@ function styleBlock() {
 }
 
 /** Header brand bar (root-relative links). */
-function headerBlock() {
+export function headerBlock() {
   return `<header class="site">
       <div class="wrap">
         <a class="brand" href="/" style="text-decoration: none">
@@ -250,7 +264,7 @@ function headerBlock() {
 }
 
 /** Footer (root-relative links) with an optional "data as of" line. */
-function footerBlock(ctx) {
+export function footerBlock(ctx) {
   const asOf = ctx && ctx.generatedDate
     ? `<div class="asof">Data as of ${esc(ctx.generatedDate)}. Counts fetched live from the portal's API.</div>`
     : '';
@@ -275,7 +289,7 @@ function footerBlock(ctx) {
 }
 
 /** The data-app resolver script (mirrors the homepage). */
-function appScript(ctx) {
+export function appScript(ctx) {
   const appUrl = (ctx && ctx.appUrl) || 'https://app.vizzie.org';
   return `<script>
       var APP_URL = ${JSON.stringify(appUrl)};
@@ -500,10 +514,17 @@ export function renderPortalPage(portal, stats, ctx) {
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${esc(canonical)}" />
     <meta property="og:site_name" content="Vizzie" />
+    <meta property="og:image" content="${esc(socialImage)}" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="${esc(socialImageAlt)}" />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${esc(title)}" />
     <meta name="twitter:description" content="${esc(description)}" />
+    <meta name="twitter:image" content="${esc(socialImage)}" />
+    <meta name="twitter:image:alt" content="${esc(socialImageAlt)}" />
 
     <script type="application/ld+json">${jsonLdStr}</script>
     ${styleBlock()}
@@ -651,10 +672,17 @@ export function renderPortalsIndex(portalsByCountry, ctx) {
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${esc(canonical)}" />
     <meta property="og:site_name" content="Vizzie" />
+    <meta property="og:image" content="${esc(socialImage)}" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="${esc(socialImageAlt)}" />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${esc(title)}" />
     <meta name="twitter:description" content="${esc(description)}" />
+    <meta name="twitter:image" content="${esc(socialImage)}" />
+    <meta name="twitter:image:alt" content="${esc(socialImageAlt)}" />
 
     <script type="application/ld+json">${jsonLdStr}</script>
     ${styleBlock()}
