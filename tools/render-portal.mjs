@@ -444,6 +444,63 @@ export function renderPortalPage(portal, stats, ctx) {
     publisherSection = `<p class="prose">Publisher breakdown coming soon.</p>`;
   }
 
+  // ---- Reference boundaries ----
+  // Where Vizzie holds administrative boundaries for a country, say so on that
+  // country's portal pages. It is the one thing these pages can offer that the
+  // portal itself cannot: the searcher who lands here wants to DO something with
+  // the data, and most of this data is published as a table keyed by an area
+  // name or code, with no geometry attached. Keyed by country so the next seeded
+  // geography is a data change, not a template change.
+  // Keyed by "<country>|<region>", because coverage is seeded per region: only
+  // Tokyo prefecture is loaded, so a Kanagawa or national portal must NOT claim
+  // it — a Yokohama ward table would not join to these boundaries at all.
+  const BOUNDARY_COVERAGE = {
+    'Japan|Tokyo': {
+      heading: 'Ward-level tables, mapped automatically',
+      lead:
+        "Most of Tokyo's municipal data arrives as a <b style=\"color:var(--text)\">table keyed by ward</b> " +
+        '— land use by ward, population by ward, facilities by ward — with no geometry attached. Normally that ' +
+        'means tracking down boundary files, matching them to your rows, and fixing the codes that do not line ' +
+        'up before you can draw anything.',
+      body:
+        'Vizzie already holds the boundaries. All <b style="color:var(--text)">62 Tokyo municipalities</b> — the ' +
+        '23 special wards plus the 26 cities, 5 towns and 8 villages — are loaded, so a ward-keyed table becomes ' +
+        'a map without a join step. Vizzie matches on whichever key your data happens to use:',
+      keys: [
+        ['Ward name（千代田区）', '\u2713'],
+        ['5-digit code (13101)', '\u2713'],
+        ['6-digit code (131012)', '\u2713'],
+        ['Codes missing a leading zero', '\u2713'],
+      ],
+      credit:
+        'Boundaries: 「国土数値情報（行政区域データ）」（国土交通省）を加工して作成 — MLIT National Land ' +
+        'Numerical Information, administrative areas (Tokyo, 2024).',
+    },
+  };
+  const coverage = BOUNDARY_COVERAGE[`${country}|${portal.region || ''}`];
+  const boundarySection = !coverage
+    ? ''
+    : `
+    <section>
+      <div class="wrap">
+        <div class="kicker">Boundaries included</div>
+        <h2>${esc(coverage.heading)}</h2>
+        <p class="prose">${coverage.lead}</p>
+        <p class="prose">${coverage.body}</p>
+
+        <div class="portals" style="columns:250px 2">
+          <div class="pgrp"><div class="phdr">Keys matched automatically</div>
+            ${coverage.keys.map(([k, v]) =>
+              `<div class="prow"><span class="pn">${esc(k)}</span><span class="pc">${v}</span></div>`
+            ).join('\n            ')}
+          </div>
+        </div>
+
+        <p class="prose" style="font-size:14px;opacity:.75;margin-top:18px">${esc(coverage.credit)}</p>
+      </div>
+    </section>
+`;
+
   // ---- Example maps ----
   let exampleSection;
   if (examples.length) {
@@ -589,7 +646,7 @@ export function renderPortalPage(portal, stats, ctx) {
         <h2>Example maps built from it</h2>
         ${exampleSection}
       </div>
-    </section>
+    </section>${boundarySection}
 
     <!-- Final CTA -->
     <section class="final">
