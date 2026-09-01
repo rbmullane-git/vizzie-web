@@ -275,6 +275,27 @@
       </div>
     </section>
 
+    <!-- Boundaries / automatic joins -->
+    <section>
+      <div class="wrap">
+        <div class="kicker">Boundaries included</div>
+        <h2>Ward-level tables, mapped automatically</h2>
+        <p class="prose">Most of Tokyo's metropolitan data arrives as a <b style="color:var(--text)">table keyed by ward</b> — land use by ward, population by ward, facilities by ward — with no geometry attached. Normally that means tracking down boundary files, matching them to your rows, and fixing the codes that don't line up before you can draw anything.</p>
+        <p class="prose">Vizzie already holds the boundaries. All <b style="color:var(--text)">62 Tokyo municipalities</b> — the 23 special wards plus the 26 cities, 5 towns and 8 villages — are loaded, so a ward-keyed table becomes a map without a join step. Vizzie matches on whichever key your data happens to use:</p>
+
+        <div class="portals" style="columns:250px 2">
+          <div class="pgrp"><div class="phdr">Keys matched automatically</div>
+            <div class="prow"><span class="pn">Ward name（千代田区）</span><span class="pc">✓</span></div>
+            <div class="prow"><span class="pn">5-digit code (13101)</span><span class="pc">✓</span></div>
+            <div class="prow"><span class="pn">6-digit code (131012)</span><span class="pc">✓</span></div>
+            <div class="prow"><span class="pn">Codes missing a leading zero</span><span class="pc">✓</span></div>
+          </div>
+        </div>
+
+        <p class="prose" style="font-size:14px;opacity:.75;margin-top:18px">Boundaries: 「国土数値情報（行政区域データ）」（国土交通省）を加工して作成 — MLIT National Land Numerical Information, administrative areas (Tokyo, 2024).</p>
+      </div>
+    </section>
+
     <!-- Example maps -->
     <section>
       <div class="wrap">
