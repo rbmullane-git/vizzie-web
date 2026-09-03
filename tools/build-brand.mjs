@@ -16,6 +16,7 @@ import {
   headerBlock,
   footerBlock,
   appScript,
+  analyticsBlock,
 } from './render-portal.mjs';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
@@ -165,6 +166,7 @@ const html = `<!doctype html>
 
     ${styleBlock()}
     ${extraStyle}
+    ${analyticsBlock()}
   </head>
   <body>
     ${headerBlock()}

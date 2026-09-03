@@ -289,6 +289,15 @@ export function footerBlock(ctx) {
     </footer>`;
 }
 
+/**
+ * Analytics. One shared file rather than the inline PostHog snippet, so the 170+
+ * generated pages carry a single cached request and there is one place to change
+ * it. See ../analytics.js for why www must share the studio's PostHog project.
+ */
+export function analyticsBlock() {
+  return `<script src="/analytics.js" defer></script>`;
+}
+
 /** The data-app resolver script (mirrors the homepage). */
 export function appScript(ctx) {
   const appUrl = (ctx && ctx.appUrl) || 'https://app.vizzie.org';
@@ -586,6 +595,7 @@ export function renderPortalPage(portal, stats, ctx) {
 
     <script type="application/ld+json">${jsonLdStr}</script>
     ${styleBlock()}
+    ${analyticsBlock()}
   </head>
   <body>
     ${headerBlock()}
@@ -744,6 +754,7 @@ export function renderPortalsIndex(portalsByCountry, ctx) {
 
     <script type="application/ld+json">${jsonLdStr}</script>
     ${styleBlock()}
+    ${analyticsBlock()}
   </head>
   <body>
     ${headerBlock()}
