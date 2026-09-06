@@ -78,13 +78,27 @@ function mergeLicences(licences) {
 
 function loadJSON(p) { return JSON.parse(readFileSync(p, 'utf8')); }
 
+/**
+ * A card-sized blurb for an example: its opening sentence when that fits, else
+ * the text cut on a word boundary. The old fixed slice ended every card
+ * mid-word ("…raised off the map by how many plugs it carries — so the").
+ */
+function blurb(description) {
+  const text = String(description ?? '').trim();
+  if (text.length <= 160) return text;
+  const sentence = text.match(/^.*?[.!?](?=\s|$)/)?.[0];
+  if (sentence && sentence.length <= 160) return sentence;
+  const cut = text.slice(0, 160);
+  return `${cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:—–-]$/, '').trim()}…`;
+}
+
 function examplesByHost() {
   const map = {};
   for (const f of readdirSync(EXAMPLES_DIR).filter((f) => f.endsWith('.json'))) {
     const slug = f.replace(/\.json$/, '');
     let d; try { d = loadJSON(join(EXAMPLES_DIR, f)); } catch { continue; }
     const name = d.name || slug;
-    const blurb = (d.description || '').slice(0, 140);
+    const cardBlurb = blurb(d.description);
     // find any datasetRef.datasetId encoding "<type>|<encoded baseUrl>|<id>"
     const found = new Set();
     const walk = (o) => {
@@ -97,7 +111,7 @@ function examplesByHost() {
       }
     };
     walk(d);
-    for (const h of found) (map[h] ||= []).push({ slug, name, blurb });
+    for (const h of found) (map[h] ||= []).push({ slug, name, blurb: cardBlurb });
   }
   return map;
 }
