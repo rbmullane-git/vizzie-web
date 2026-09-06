@@ -124,7 +124,6 @@
       /* Grids */
       .grid { display: grid; gap: 20px; margin-top: 34px; }
       .g3 { grid-template-columns: repeat(3, 1fr); }
-      .g4 { grid-template-columns: repeat(2, 1fr); }
       .card {
         background: var(--panel); border: 1px solid var(--line);
         border-radius: 14px; padding: 24px;
@@ -204,7 +203,7 @@
         h1 { font-size: 38px; }
         h2 { font-size: 26px; }
         section { padding: 88px 0; }
-        .g3, .g4 { grid-template-columns: 1fr; }
+        .g3 { grid-template-columns: 1fr; }
         header.site .brand .beta { display: none; }
       }
     </style>
@@ -438,7 +437,7 @@
           Open any of these in Vizzie, <b>no sign-up needed</b>. Pan, filter,
           and edit the maps and charts to get a feel for it.
         </p>
-        <div class="grid g4">
+        <div class="grid g3">
           <a class="card example" data-app="/#example=vancouver-street-trees" style="text-decoration: none; color: inherit; display: flex; flex-direction: column">
             <div class="tag">Vancouver</div>
             <h3>Street trees</h3>
