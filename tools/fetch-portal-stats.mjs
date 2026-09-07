@@ -214,20 +214,23 @@ async function fetchSocrata(portal, opts, result) {
   result.count = count;
   result.countSource = 'socrata discovery';
   result.ok = count !== null;
-  // Discovery API gives no licence facet, and no publisher facet either — but
-  // every dataset carries `resource.attribution`, which IS the publisher. So the
-  // list is derived by walking the catalogue rather than asking for a facet.
-  result.undeclaredPct = null;
-  result.notes.push('socrata discovery: no licence facet available');
-
-  const { publishers, coverage } = await socrataPublishers(disc, host, count, headers, result);
-  if (publishers.length) result.publishers = topN(publishers, 8);
-  result.publisherCoverage = coverage;
+  // The Discovery API has no facets at all — but every dataset carries its own
+  // `resource.attribution` (the publisher) and `metadata.license`. Both come
+  // from one walk of the catalogue.
+  const walk = await socrataWalk(disc, host, count, headers, result);
+  if (walk.publishers.length) result.publishers = topN(walk.publishers, 8);
+  result.publisherCoverage = walk.publisherCoverage;
+  if (walk.licences.length) {
+    result.licences = topN(walk.licences, 12);
+    result.undeclaredPct = walk.seen > 0 ? walk.undeclared / walk.seen : null;
+  } else {
+    result.undeclaredPct = null;
+  }
   return result;
 }
 
 /**
- * Publishers for a Socrata portal, tallied from every dataset's `attribution`.
+ * One walk of a Socrata catalogue, tallying both publishers and licences.
  *
  * There is no facet to ask for, so this pages the whole catalogue. That is
  * affordable precisely because Socrata portals are small: all 38 of them hold
@@ -266,10 +269,12 @@ function cleanAttribution(raw) {
 const SOCRATA_PAGE = 100;
 const SOCRATA_PAGE_CAP = 60;
 
-async function socrataPublishers(disc, host, count, headers, result) {
+async function socrataWalk(disc, host, count, headers, result) {
   const tally = {};
+  const licences = {};
   let seen = 0;
   let named = 0;
+  let undeclared = 0;
   let pages = 0;
 
   while (pages < SOCRATA_PAGE_CAP) {
@@ -290,6 +295,13 @@ async function socrataPublishers(disc, host, count, headers, result) {
     for (const item of results) {
       seen += 1;
       const attribution = item && item.resource ? item.resource.attribution : null;
+      // Licence first: a dataset with no attribution still has a licence, and
+      // every dataset counts towards the undeclared share either way.
+      const licence = item && item.metadata ? item.metadata.license : null;
+      const lic = typeof licence === 'string' ? licence.replace(/\s+/g, ' ').trim() : '';
+      if (lic) licences[lic] = (licences[lic] || 0) + 1;
+      else undeclared += 1;
+
       const name = cleanAttribution(attribution);
       if (!name) continue;
       named += 1;
@@ -311,13 +323,24 @@ async function socrataPublishers(disc, host, count, headers, result) {
   if (!publishers.length && seen > 0) {
     result.notes.push('socrata publishers: no dataset carried an attribution');
   }
-  const coverage = seen > 0 ? named / seen : null;
-  if (coverage !== null && coverage < 1) {
+  const publisherCoverage = seen > 0 ? named / seen : null;
+  if (publisherCoverage !== null && publisherCoverage < 1) {
     result.notes.push(
       `socrata publishers: ${named} of ${seen} datasets named a publisher`,
     );
   }
-  return { publishers, coverage };
+
+  // The undeclared bucket travels as its own entry so the generator's
+  // mergeLicences can separate it, exactly as the CKAN path does.
+  const licenceList = Object.entries(licences).map(([cls, c]) => ({ cls, count: c }));
+  if (undeclared > 0) licenceList.push({ cls: 'UNDECLARED', count: undeclared });
+  if (seen > 0) {
+    result.notes.push(
+      `socrata licences: ${seen - undeclared} of ${seen} datasets declared one`,
+    );
+  }
+
+  return { publishers, publisherCoverage, licences: licenceList, undeclared, seen };
 }
 
 // ---------------------------------------------------------------------------

@@ -46,19 +46,45 @@ const norm = (u) => (u || '').replace(/\/+$/, '');
 const host = (u) => { try { return new URL(u).host; } catch { return (u || '').replace(/^https?:\/\//, '').split('/')[0]; } };
 const slugify = (u) => host(u).replace(/^www\./, '').replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase();
 
-// Merge CKAN/ArcGIS raw licence keys into canonical classes.
+// Merge raw licence keys into canonical classes.
+//
+// Two vocabularies arrive here. CKAN and ArcGIS send terse slugs ("cc-by-sa",
+// "notspecified"); Socrata sends the name written out in full ("Creative
+// Commons Attribution | Share Alike 4.0 International"). The slug rules do not
+// match the spelled-out forms — "creative commons attribution 4.0
+// international" contains neither "cc-by" nor a licenses/by URL — so without
+// the long-form rules below, every Socrata licence fell through to
+// "Other / bespoke" and a portal that is 81% CC BY looked bespoke.
+//
+// Order matters: the restrictive variants must be tested before plain
+// attribution, or "attribution | share alike" is filed as CC-BY.
 function canonLicence(raw) {
   const s = String(raw || '').toLowerCase();
   if (!s || s === 'notspecified' || s === 'undeclared' || s === 'null') return 'UNDECLARED';
-  if (s.includes('cc-by-sa') || s.includes('cc-sa')) return 'CC-BY-SA';
-  if (s.includes('cc-by-nc')) return 'CC-BY-NC';
-  if (s.includes('cc-by-nd')) return 'CC-BY-ND';
-  if (s.includes('cc-zero') || s.includes('cc0') || s.includes('cc-0') || s.includes('publicdomain') || s.includes('pddl')) return 'CC0 / Public Domain';
-  if (s.includes('cc-by') || s.includes('creativecommons.org/licenses/by')) return 'CC-BY';
-  if (s.includes('ogl')) return 'Open Government Licence';
-  if (s.includes('odbl')) return 'ODbL';
-  if (s.includes('odc')) return 'Open Data Commons';
+
+  const cc = s.includes('cc-by') || s.includes('creative commons attribution') ||
+    s.includes('creativecommons.org/licenses/by');
+  if (s.includes('cc-by-sa') || s.includes('cc-sa') || (cc && s.includes('share alike')) ||
+      (cc && s.includes('sharealike'))) return 'CC-BY-SA';
+  if (s.includes('cc-by-nc') || (cc && s.includes('noncommercial')) ||
+      (cc && s.includes('non-commercial'))) return 'CC-BY-NC';
+  if (s.includes('cc-by-nd') || (cc && s.includes('noderiv')) ||
+      (cc && s.includes('no deriv'))) return 'CC-BY-ND';
+  if (s.includes('cc-zero') || s.includes('cc0') || s.includes('cc-0') ||
+      s.includes('publicdomain') || s.includes('pddl')) return 'CC0 / Public Domain';
+  if (cc) return 'CC-BY';
+
+  if (s.includes('ogl') || s.includes('open government licence') ||
+      s.includes('open government license')) return 'Open Government Licence';
+  if (s.includes('odbl') || s.includes('open database license')) return 'ODbL';
+  if (s.includes('odc') || s.includes('open data commons')) return 'Open Data Commons';
   if (s.includes('us-pd') || s === 'other-pd' || s.includes('public domain')) return 'Public Domain';
+
+  // A portal-wide pointer to its own terms ("See Terms of Use") is a real grant,
+  // just not a standard one — so it belongs with bespoke licences rather than
+  // with UNDECLARED, which the pages define as carrying no explicit permission
+  // at all.
+  if (s.includes('terms of use') || s.includes('terms of service')) return 'Other / bespoke';
   if (s.includes('other')) return 'Other / bespoke';
   return raw.length > 24 ? 'Other / bespoke' : raw; // keep short codes as-is
 }
