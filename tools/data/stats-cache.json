@@ -634,18 +634,6 @@
   "ok": true,
   "notes": []
  },
- "data-act-gov-au": {
-  "count": 391,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:23.217Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
  "catalog-data-gov": {
   "count": 552271,
   "countSource": "datagov api/stats",
@@ -655,30 +643,6 @@
   "fetchedAt": "2026-08-21T22:10:23.742Z",
   "ok": true,
   "notes": []
- },
- "data-ny-gov": {
-  "count": 1029,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:24.250Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-wa-gov": {
-  "count": 1060,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:24.529Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
  },
  "data-ca-gov": {
   "count": 4569,
@@ -760,30 +724,6 @@
   "ok": true,
   "notes": []
  },
- "data-colorado-gov": {
-  "count": 639,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:24.790Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-texas-gov": {
-  "count": 822,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:24.332Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
  "data-cityofsydney-opendata-arcgis-com": {
   "count": 191,
   "countSource": "arcgis-hub data.json",
@@ -812,30 +752,6 @@
   "ok": true,
   "notes": []
  },
- "data-nj-gov": {
-  "count": 114,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.073Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-michigan-gov": {
-  "count": 244,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.077Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
  "opendata-launceston-tas-gov-au": {
   "count": 102,
   "countSource": "arcgis-hub data.json",
@@ -859,198 +775,6 @@
   "fetchedAt": "2026-08-21T22:10:23.655Z",
   "ok": true,
   "notes": []
- },
- "data-pa-gov": {
-  "count": 370,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.342Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "opendata-maryland-gov": {
-  "count": 1570,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.361Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "datacatalog-cookcountyil-gov": {
-  "count": 522,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.607Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-montgomerycountymd-gov": {
-  "count": 470,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.649Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-ct-gov": {
-  "count": 644,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.040Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-cityofnewyork-us": {
-  "count": 2398,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.880Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-cityofchicago-org": {
-  "count": 914,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.940Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-oregon-gov": {
-  "count": 525,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.294Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-lacity-org": {
-  "count": 360,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:26.057Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-sfgov-org": {
-  "count": 663,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:26.171Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-kingcounty-gov": {
-  "count": 268,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:25.461Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-seattle-gov": {
-  "count": 144,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:26.215Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-austintexas-gov": {
-  "count": 706,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:26.307Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "dallasopendata-com": {
-  "count": 342,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:26.351Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-nola-gov": {
-  "count": 209,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:26.448Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-cdc-gov": {
-  "count": 1078,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:26.593Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
  },
  "data-logancity-opendata-arcgis-com": {
   "count": 503,
@@ -1319,42 +1043,6 @@
   "fetchedAt": "2026-08-21T22:10:27.279Z",
   "ok": true,
   "notes": []
- },
- "data-illinois-gov": {
-  "count": 297,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:29.639Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-mo-gov": {
-  "count": 261,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:29.903Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-delaware-gov": {
-  "count": 174,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:30.169Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
  },
  "psrc-psregcncl-hub-arcgis-com": {
   "count": 201,
@@ -1804,18 +1492,6 @@
   "ok": true,
   "notes": []
  },
- "data-oaklandca-gov": {
-  "count": 313,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:34.673Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
  "nconemap-gov": {
   "count": 450,
   "countSource": "arcgis-hub data.json",
@@ -2100,18 +1776,6 @@
   "ok": true,
   "notes": []
  },
- "data-honolulu-gov": {
-  "count": 70,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:38.266Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
  "data-baltimorecity-gov": {
   "count": 974,
   "countSource": "arcgis-hub data.json",
@@ -2147,18 +1811,6 @@
   "fetchedAt": "2026-08-21T22:10:34.352Z",
   "ok": true,
   "notes": []
- },
- "data-cambridgema-gov": {
-  "count": 281,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:38.544Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
  },
  "data-indy-gov": {
   "count": 651,
@@ -2304,30 +1956,6 @@
   "ok": true,
   "notes": []
  },
- "data-kcmo-org": {
-  "count": 202,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:38.612Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-buffalony-gov": {
-  "count": 138,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:39.448Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
  "opendata-dc-gov": {
   "count": 1885,
   "countSource": "arcgis-hub data.json",
@@ -2391,18 +2019,6 @@
   "fetchedAt": "2026-08-21T22:10:26.500Z",
   "ok": true,
   "notes": []
- },
- "data-providenceri-gov": {
-  "count": 121,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:40.188Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
  },
  "geohub-houstontx-gov": {
   "count": 185,
@@ -2820,18 +2436,6 @@
   "ok": true,
   "notes": []
  },
- "data-cincinnati-oh-gov": {
-  "count": 102,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:43.726Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
  "open-data-bouldercolorado-gov": {
   "count": 173,
   "countSource": "arcgis-hub data.json",
@@ -3015,18 +2619,6 @@
   "fetchedAt": "2026-08-21T22:10:40.898Z",
   "ok": true,
   "notes": []
- },
- "data-richmondgov-com": {
-  "count": 31,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:45.527Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
  },
  "data-cityofsacramento-org": {
   "count": 151,
@@ -5259,18 +4851,6 @@
   "ok": true,
   "notes": []
  },
- "data-novascotia-ca": {
-  "count": 713,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:55.017Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
  "donneesquebec-ca": {
   "count": 1609,
   "countSource": "ckan package_search",
@@ -5370,30 +4950,6 @@
   "fetchedAt": "2026-08-21T22:10:55.128Z",
   "ok": true,
   "notes": []
- },
- "data-calgary-ca": {
-  "count": 416,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:56.053Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
- },
- "data-winnipeg-ca": {
-  "count": 232,
-  "countSource": "socrata discovery",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:56.650Z",
-  "ok": true,
-  "notes": [
-   "socrata discovery: no licence/publisher facets available"
-  ]
  },
  "avoindata-fi": {
   "count": 2560,
@@ -6377,38 +5933,6 @@
   "ok": true,
   "notes": []
  },
- "data-public-lu": {
-  "count": 3173,
-  "countSource": "udata",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:35.301Z",
-  "ok": true,
-  "notes": []
- },
- "opendata-camden-gov-uk": {
-  "count": null,
-  "countSource": "",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:35.299Z",
-  "ok": false,
-  "notes": [
-   "HTTP 404 for https://api.us.socrata.com/api/catalog/v1?domains=opendata.camden.gov.uk&search_context=opendata.camden.gov.uk&only=datasets&limit=0"
-  ]
- },
- "dados-gov-pt": {
-  "count": 20878,
-  "countSource": "udata",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:35.300Z",
-  "ok": true,
-  "notes": []
- },
  "api-data-gov-in": {
   "count": 235100,
   "countSource": "data.gov.in",
@@ -6416,16 +5940,6 @@
   "licences": [],
   "publishers": [],
   "fetchedAt": "2026-08-21T22:39:35.707Z",
-  "ok": true,
-  "notes": []
- },
- "data-gouv-fr": {
-  "count": 73992,
-  "countSource": "udata",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:35.300Z",
   "ok": true,
   "notes": []
  },
@@ -6555,16 +6069,6 @@
   "ok": true,
   "notes": []
  },
- "dataverse-harvard-edu": {
-  "count": 302759,
-  "countSource": "dataverse search",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:36.595Z",
-  "ok": true,
-  "notes": []
- },
  "api-os-uk": {
   "count": 26,
   "countSource": "OS Data Hub products",
@@ -6585,24 +6089,1968 @@
   "ok": true,
   "notes": []
  },
- "data-europa-eu": {
-  "count": 1728627,
-  "countSource": "data.europa.eu hub",
+ "data-nj-gov": {
+  "count": 114,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "DOE",
+    "count": 11
+   },
+   {
+    "name": "OLEPS",
+    "count": 11
+   },
+   {
+    "name": "Office of the State Comptroller",
+    "count": 6
+   },
+   {
+    "name": "NJ Office of Management and Budget",
+    "count": 5
+   },
+   {
+    "name": "NJ Independent Authorities",
+    "count": 3
+   },
+   {
+    "name": "NJ Department of Transportation",
+    "count": 3
+   },
+   {
+    "name": "State Ethics Commission",
+    "count": 3
+   },
+   {
+    "name": "New Jersey State Ethics Commission",
+    "count": 3
+   }
+  ],
+  "publisherCoverage": 0.9736842105263158,
+  "fetchedAt": "2026-09-07T05:19:58.097Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 111 of 114 datasets named a publisher"
+  ]
+ },
+ "data-michigan-gov": {
+  "count": 244,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Bureau of Economic Analysis",
+    "count": 4
+   },
+   {
+    "name": "Bureau of the Census",
+    "count": 3
+   },
+   {
+    "name": "St. Louis Federal Reserve",
+    "count": 2
+   },
+   {
+    "name": "US Census Bureau",
+    "count": 2
+   },
+   {
+    "name": "DNR",
+    "count": 1
+   },
+   {
+    "name": "Michigan Department of Energy, Great Lakes, and Environment",
+    "count": 1
+   },
+   {
+    "name": "US Department of Veterans Affairs",
+    "count": 1
+   },
+   {
+    "name": "US Dept. of Housing and Urban Development",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": 0.09016393442622951,
+  "fetchedAt": "2026-09-07T05:19:58.097Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 22 of 244 datasets named a publisher"
+  ]
+ },
+ "data-pa-gov": {
+  "count": 372,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Department of Health",
+    "count": 58
+   },
+   {
+    "name": "Department of Human Services",
+    "count": 26
+   },
+   {
+    "name": "Department of Community and Economic Development",
+    "count": 24
+   },
+   {
+    "name": "Department of State",
+    "count": 19
+   },
+   {
+    "name": "Pennsylvania Health Care Cost Containment Council (PHC4)",
+    "count": 19
+   },
+   {
+    "name": "Office of Vocational Rehabilitation",
+    "count": 13
+   },
+   {
+    "name": "Pennsylvania Department of Transportation",
+    "count": 12
+   },
+   {
+    "name": "Department of Environmental Protection",
+    "count": 12
+   }
+  ],
+  "publisherCoverage": 0.9811827956989247,
+  "fetchedAt": "2026-09-07T05:20:01.573Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 365 of 372 datasets named a publisher"
+  ]
+ },
+ "data-act-gov-au": {
+  "count": 391,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "ACT Government",
+    "count": 49
+   },
+   {
+    "name": "ACT ESA",
+    "count": 38
+   },
+   {
+    "name": "Access Canberra",
+    "count": 33
+   },
+   {
+    "name": "Transport Canberra",
+    "count": 32
+   },
+   {
+    "name": "ACT Government - Transport Canberra and City Services",
+    "count": 24
+   },
+   {
+    "name": "Australian Capital Territory",
+    "count": 12
+   },
+   {
+    "name": "Education and Training Directorate (ETD)",
+    "count": 9
+   },
+   {
+    "name": "Transport Canberra and City Services",
+    "count": 7
+   }
+  ],
+  "publisherCoverage": 0.7442455242966752,
+  "fetchedAt": "2026-09-07T05:19:58.076Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 291 of 391 datasets named a publisher"
+  ]
+ },
+ "data-oregon-gov": {
+  "count": 527,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Business Oregon",
+    "count": 65
+   },
+   {
+    "name": "Oregon Healthcare-Associated Infections (HAI) Program",
+    "count": 38
+   },
+   {
+    "name": "Oregon Department of Justice",
+    "count": 16
+   },
+   {
+    "name": "Oregon Health Authority",
+    "count": 13
+   },
+   {
+    "name": "Oregon Secretary of State",
+    "count": 10
+   },
+   {
+    "name": "Oregon Liquor & Cannabis Commission",
+    "count": 7
+   },
+   {
+    "name": "Oregon HAI Program",
+    "count": 7
+   },
+   {
+    "name": "Oregon Department of Energy",
+    "count": 6
+   }
+  ],
+  "publisherCoverage": 0.5426944971537002,
+  "fetchedAt": "2026-09-07T05:20:01.014Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 286 of 527 datasets named a publisher"
+  ]
+ },
+ "data-kingcounty-gov": {
+  "count": 268,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "King County Elections",
+    "count": 121
+   },
+   {
+    "name": "King County",
+    "count": 37
+   },
+   {
+    "name": "King County Metro",
+    "count": 9
+   },
+   {
+    "name": "Public Health - Seattle & King County",
+    "count": 5
+   },
+   {
+    "name": "DNRP",
+    "count": 5
+   },
+   {
+    "name": "King County Water and Land Resources Division",
+    "count": 3
+   },
+   {
+    "name": "King County Election",
+    "count": 3
+   },
+   {
+    "name": "King County Department of Adult and Juvenile Detention",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": 0.8208955223880597,
+  "fetchedAt": "2026-09-07T05:20:07.706Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 220 of 268 datasets named a publisher"
+  ]
+ },
+ "data-wa-gov": {
+  "count": 1061,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "OSPI",
+    "count": 131
+   },
+   {
+    "name": "Education Research & Data Center",
+    "count": 28
+   },
+   {
+    "name": "Washington State Department of Enterprise Services (DES)",
+    "count": 27
+   },
+   {
+    "name": "Public Disclosure Commission",
+    "count": 25
+   },
+   {
+    "name": "OSPI Student Information",
+    "count": 24
+   },
+   {
+    "name": "Washington State Department of Licensing",
+    "count": 19
+   },
+   {
+    "name": "Asotin County Auditor's Office",
+    "count": 18
+   },
+   {
+    "name": "Timberland Regional Library",
+    "count": 18
+   }
+  ],
+  "publisherCoverage": 0.5428840716305372,
+  "fetchedAt": "2026-09-07T05:19:58.096Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 576 of 1061 datasets named a publisher"
+  ]
+ },
+ "data-colorado-gov": {
+  "count": 639,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "DOLA",
+    "count": 155
+   },
+   {
+    "name": "CDOT",
+    "count": 57
+   },
+   {
+    "name": "CDOS",
+    "count": 52
+   },
+   {
+    "name": "CEO",
+    "count": 33
+   },
+   {
+    "name": "CDOR",
+    "count": 31
+   },
+   {
+    "name": "City and county of Denver",
+    "count": 29
+   },
+   {
+    "name": "CDE - Department of Education",
+    "count": 17
+   },
+   {
+    "name": "DNR - Division of Water Resources",
+    "count": 13
+   }
+  ],
+  "publisherCoverage": 0.8200312989045383,
+  "fetchedAt": "2026-09-07T05:19:58.096Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 524 of 639 datasets named a publisher"
+  ]
+ },
+ "datacatalog-cookcountyil-gov": {
+  "count": 522,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Cook County Clerk / Map Department",
+    "count": 80
+   },
+   {
+    "name": "Cook County GIS Department",
+    "count": 49
+   },
+   {
+    "name": "Cook County Department of Facilities Management",
+    "count": 31
+   },
+   {
+    "name": "Cook County Medical Examiner",
+    "count": 24
+   },
+   {
+    "name": "Cook County Assessor's Office",
+    "count": 22
+   },
+   {
+    "name": "Cook County State's Attorney Office",
+    "count": 20
+   },
+   {
+    "name": "Cook County Department of Budget and Management Services",
+    "count": 20
+   },
+   {
+    "name": "Cook County Clerk",
+    "count": 18
+   }
+  ],
+  "publisherCoverage": 0.9540229885057471,
+  "fetchedAt": "2026-09-07T05:20:08.051Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 498 of 522 datasets named a publisher"
+  ]
+ },
+ "data-ny-gov": {
+  "count": 1030,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Metropolitan Transportation Authority",
+    "count": 207
+   },
+   {
+    "name": "Division of the Budget",
+    "count": 71
+   },
+   {
+    "name": "New York State Energy Research and Development Authority (NYSERDA)",
+    "count": 47
+   },
+   {
+    "name": "New York State Department of Labor",
+    "count": 41
+   },
+   {
+    "name": "New York State Department of Taxation and Finance",
+    "count": 38
+   },
+   {
+    "name": "New York State Department of Environmental Conservation",
+    "count": 36
+   },
+   {
+    "name": "New York State Thruway Authority",
+    "count": 36
+   },
+   {
+    "name": "Authorities Budget Office",
+    "count": 26
+   }
+  ],
+  "publisherCoverage": 0.9980582524271845,
+  "fetchedAt": "2026-09-07T05:19:58.095Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 1028 of 1030 datasets named a publisher"
+  ]
+ },
+ "data-ct-gov": {
+  "count": 648,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Office of Policy and Management",
+    "count": 63
+   },
+   {
+    "name": "Department of Public Health",
+    "count": 54
+   },
+   {
+    "name": "Department of Consumer Protection",
+    "count": 43
+   },
+   {
+    "name": "Department of Revenue Services",
+    "count": 37
+   },
+   {
+    "name": "CT DPH",
+    "count": 34
+   },
+   {
+    "name": "CT State Library",
+    "count": 32
+   },
+   {
+    "name": "CT Prescription Monitoring Program",
+    "count": 27
+   },
+   {
+    "name": "Office of Early Childhood",
+    "count": 23
+   }
+  ],
+  "publisherCoverage": 0.9614197530864198,
+  "fetchedAt": "2026-09-07T05:19:58.097Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 623 of 648 datasets named a publisher"
+  ]
+ },
+ "data-seattle-gov": {
+  "count": 146,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "City of Seattle",
+    "count": 67
+   },
+   {
+    "name": "Seattle Department of Transportation",
+    "count": 20
+   },
+   {
+    "name": "OPA",
+    "count": 5
+   },
+   {
+    "name": "Seattle Department of Construction and Inspections",
+    "count": 4
+   },
+   {
+    "name": "SDOT Traffic Counts Group",
+    "count": 4
+   },
+   {
+    "name": "SPD",
+    "count": 3
+   },
+   {
+    "name": "Seattle Public Utilities",
+    "count": 3
+   },
+   {
+    "name": "Office of Civil Rights",
+    "count": 3
+   }
+  ],
+  "publisherCoverage": 0.8972602739726028,
+  "fetchedAt": "2026-09-07T05:20:12.822Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 131 of 146 datasets named a publisher"
+  ]
+ },
+ "data-montgomerycountymd-gov": {
+  "count": 471,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Montgomery County, MD",
+    "count": 214
+   },
+   {
+    "name": "Office of Agriculture",
+    "count": 10
+   },
+   {
+    "name": "Public Libraries",
+    "count": 5
+   },
+   {
+    "name": "Montgomery County, MD Government",
+    "count": 3
+   },
+   {
+    "name": "Montgomery County Department of Finance",
+    "count": 3
+   },
+   {
+    "name": "Montgomery County Public Schools Division of Long-range Planning Geographic Information System",
+    "count": 3
+   },
+   {
+    "name": "Department of Finance",
+    "count": 2
+   },
+   {
+    "name": "MCG Department of Human Resources",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": 0.5435244161358811,
+  "fetchedAt": "2026-09-07T05:20:09.761Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 256 of 471 datasets named a publisher"
+  ]
+ },
+ "data-lacity-org": {
+  "count": 361,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Port of Los Angeles",
+    "count": 26
+   },
+   {
+    "name": "Los Angeles Police Department",
+    "count": 22
+   },
+   {
+    "name": "TSB",
+    "count": 22
+   },
+   {
+    "name": "LADWP",
+    "count": 18
+   },
+   {
+    "name": "LADOT",
+    "count": 15
+   },
+   {
+    "name": "Venessa Johnson",
+    "count": 9
+   },
+   {
+    "name": "Bureau of Engineering",
+    "count": 8
+   },
+   {
+    "name": "City of Los Angeles, Department of City Planning",
+    "count": 8
+   }
+  ],
+  "publisherCoverage": 0.6565096952908587,
+  "fetchedAt": "2026-09-07T05:20:11.861Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 237 of 361 datasets named a publisher"
+  ]
+ },
+ "data-texas-gov": {
+  "count": 826,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Texas Department of Agriculture",
+    "count": 182
+   },
+   {
+    "name": "Texas Workforce Commission",
+    "count": 70
+   },
+   {
+    "name": "Texas Comptroller of Public Accounts",
+    "count": 64
+   },
+   {
+    "name": "DFPS Data and Decision Support",
+    "count": 63
+   },
+   {
+    "name": "Texas Department of Insurance",
+    "count": 40
+   },
+   {
+    "name": "TX DFPS Data and Decision Support",
+    "count": 31
+   },
+   {
+    "name": "Texas Racing Commission",
+    "count": 26
+   },
+   {
+    "name": "Texas Department of Agriculture, Food & Nutrition Division",
+    "count": 22
+   }
+  ],
+  "publisherCoverage": 0.8813559322033898,
+  "fetchedAt": "2026-09-07T05:19:58.095Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 728 of 826 datasets named a publisher"
+  ]
+ },
+ "data-nola-gov": {
+  "count": 209,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Police Department (NOPD)",
+    "count": 20
+   },
+   {
+    "name": "Orleans Parish Communications District",
+    "count": 15
+   },
+   {
+    "name": "City of New Orleans",
+    "count": 13
+   },
+   {
+    "name": "Bureau of Revenue",
+    "count": 6
+   },
+   {
+    "name": "City Planning Commission",
+    "count": 6
+   },
+   {
+    "name": "Revenue",
+    "count": 5
+   },
+   {
+    "name": "City of New Orleans - Bureau of Revenue",
+    "count": 4
+   },
+   {
+    "name": "City of New Orleans – Bureau of Revenue",
+    "count": 3
+   }
+  ],
+  "publisherCoverage": 0.5598086124401914,
+  "fetchedAt": "2026-09-07T05:20:15.799Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 117 of 209 datasets named a publisher"
+  ]
+ },
+ "dallasopendata-com": {
+  "count": 342,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Dallas Animal Services",
+    "count": 36
+   },
+   {
+    "name": "Sustainable Development & Construction",
+    "count": 18
+   },
+   {
+    "name": "311",
+    "count": 14
+   },
+   {
+    "name": "311 Customer Service",
+    "count": 13
+   },
+   {
+    "name": "Dallas Police Department",
+    "count": 12
+   },
+   {
+    "name": "City of Dallas",
+    "count": 12
+   },
+   {
+    "name": "Sustainable Development & Constructions",
+    "count": 7
+   },
+   {
+    "name": "HUD",
+    "count": 3
+   }
+  ],
+  "publisherCoverage": 0.40350877192982454,
+  "fetchedAt": "2026-09-07T05:20:14.411Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 138 of 342 datasets named a publisher"
+  ]
+ },
+ "data-cityofchicago-org": {
+  "count": 915,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "City of Chicago",
+    "count": 615
+   },
+   {
+    "name": "Chicago Public Schools",
+    "count": 130
+   },
+   {
+    "name": "Chicago Public Library",
+    "count": 32
+   },
+   {
+    "name": "Chicago Park District",
+    "count": 26
+   },
+   {
+    "name": "Chicago Transit Authority",
+    "count": 14
+   },
+   {
+    "name": "Illinois Department of Public Health (IDPH)",
+    "count": 9
+   },
+   {
+    "name": "Chicago Police Department",
+    "count": 8
+   },
+   {
+    "name": "Chicago Board of Election Commissioners",
+    "count": 5
+   }
+  ],
+  "publisherCoverage": 0.9486338797814208,
+  "fetchedAt": "2026-09-07T05:20:10.971Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 868 of 915 datasets named a publisher"
+  ]
+ },
+ "data-illinois-gov": {
+  "count": 297,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "IDPH",
+    "count": 12
+   },
+   {
+    "name": "Illinois Secretary of State",
+    "count": 9
+   },
+   {
+    "name": "Illinois Department of Labor",
+    "count": 9
+   },
+   {
+    "name": "City of Urbana",
+    "count": 5
+   },
+   {
+    "name": "Illinois Department of Revenue",
+    "count": 5
+   },
+   {
+    "name": "DoIT EAS",
+    "count": 2
+   },
+   {
+    "name": "Department of Revenue",
+    "count": 2
+   },
+   {
+    "name": "Structural Pest Control Program",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": 0.1717171717171717,
+  "fetchedAt": "2026-09-07T05:20:17.361Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 51 of 297 datasets named a publisher"
+  ]
+ },
+ "data-mo-gov": {
+  "count": 263,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Office of Administration",
+    "count": 56
+   },
+   {
+    "name": "Missouri Division of Alcohol and Tobacco Control",
+    "count": 8
+   },
+   {
+    "name": "Missouri Department of Revenue",
+    "count": 4
+   },
+   {
+    "name": "Debi Siebert",
+    "count": 4
+   },
+   {
+    "name": "Missouri Department of Agriculture",
+    "count": 3
+   },
+   {
+    "name": "Department of Natural Resources",
+    "count": 3
+   },
+   {
+    "name": "DED",
+    "count": 2
+   },
+   {
+    "name": "Missouri Office of Administration, MSDIS",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": 0.39543726235741444,
+  "fetchedAt": "2026-09-07T05:20:17.789Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 104 of 263 datasets named a publisher"
+  ]
+ },
+ "data-delaware-gov": {
+  "count": 173,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Department of Education",
+    "count": 16
+   },
+   {
+    "name": "Office of Management and Budget (OMB), Government Support Services (GSS)",
+    "count": 12
+   },
+   {
+    "name": "Department of Finance, Division of Accounting",
+    "count": 9
+   },
+   {
+    "name": "Delaware Department of Natural Resources and Environmental Control",
+    "count": 5
+   },
+   {
+    "name": "Department of Natural Resources and Environmental Control, Division of Water",
+    "count": 4
+   },
+   {
+    "name": "Department of Natural Resources and Environmental Control",
+    "count": 4
+   },
+   {
+    "name": "Department of Health and Social Services, Division of Public Health, Delaware Health Statistics Center",
+    "count": 3
+   },
+   {
+    "name": "Delaware Department of Natural Resources and Environmental Control, Division of Air Quality",
+    "count": 3
+   }
+  ],
+  "publisherCoverage": 0.6589595375722543,
+  "fetchedAt": "2026-09-07T05:20:18.553Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 114 of 173 datasets named a publisher"
+  ]
+ },
+ "data-honolulu-gov": {
+  "count": 70,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "City and County of Honolulu- Budget and Fiscal Services",
+    "count": 2
+   },
+   {
+    "name": "Department of Parks and Recreation",
+    "count": 1
+   },
+   {
+    "name": "Dept of Transportation",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": 0.05714285714285714,
+  "fetchedAt": "2026-09-07T05:20:19.803Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 4 of 70 datasets named a publisher"
+  ]
+ },
+ "opendata-maryland-gov": {
+  "count": 1538,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Maryland Department of Planning",
+    "count": 55
+   },
+   {
+    "name": "Maryland Department of the Environment",
+    "count": 41
+   },
+   {
+    "name": "Maryland Department of Health Prevention and Health Promotion Administration, MDH PHPA",
+    "count": 38
+   },
+   {
+    "name": "Maryland Department of Commerce",
+    "count": 22
+   },
+   {
+    "name": "Maryland Department of Information Technology",
+    "count": 21
+   },
+   {
+    "name": "Maryland Department of Agriculture",
+    "count": 16
+   },
+   {
+    "name": "Maryland Department of Health Vital Statistics Administration, MDH VSA",
+    "count": 12
+   },
+   {
+    "name": "Department of Housing and Community Development",
+    "count": 9
+   }
+  ],
+  "publisherCoverage": 0.288036410923277,
+  "fetchedAt": "2026-09-07T05:20:06.400Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 443 of 1538 datasets named a publisher"
+  ]
+ },
+ "data-austintexas-gov": {
+  "count": 707,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "City of Austin, Texas - data.austintexas.gov",
+    "count": 606
+   },
+   {
+    "name": "City of Austin, Texas - Austin Police - data.austintexas.gov",
+    "count": 9
+   },
+   {
+    "name": "Austin Energy Green Building",
+    "count": 9
+   },
+   {
+    "name": "City of Austin, Texas – data.austintexas.gov",
+    "count": 7
+   },
+   {
+    "name": "City of Austin, TX - data.austintexas.gov",
+    "count": 6
+   },
+   {
+    "name": "City of Austin, Texas ‐ data.austintexas.gov",
+    "count": 6
+   },
+   {
+    "name": "Austin Resource Recovery",
+    "count": 5
+   },
+   {
+    "name": "Austin Public Library",
+    "count": 5
+   }
+  ],
+  "publisherCoverage": 0.9731258840169731,
+  "fetchedAt": "2026-09-07T05:20:13.909Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 688 of 707 datasets named a publisher"
+  ]
+ },
+ "data-sfgov-org": {
+  "count": 666,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "San Francisco Ethics Commission",
+    "count": 75
+   },
+   {
+    "name": "SFMTA",
+    "count": 34
+   },
+   {
+    "name": "San Francisco Public Works",
+    "count": 30
+   },
+   {
+    "name": "City and County of San Francisco Planning Department",
+    "count": 22
+   },
+   {
+    "name": "City and County of San Francisco",
+    "count": 14
+   },
+   {
+    "name": "Ethics Commission",
+    "count": 9
+   },
+   {
+    "name": "SF Controller's Office",
+    "count": 8
+   },
+   {
+    "name": "Department of Public Health - Population Health Division",
+    "count": 5
+   }
+  ],
+  "publisherCoverage": 0.45795795795795796,
+  "fetchedAt": "2026-09-07T05:20:12.740Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 305 of 666 datasets named a publisher"
+  ]
+ },
+ "data-oaklandca-gov": {
+  "count": 313,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Oakland Police Department",
+    "count": 39
+   },
+   {
+    "name": "City of Oakland Public Ethics Commission",
+    "count": 18
+   },
+   {
+    "name": "American Community Survey, 1-year PUMS",
+    "count": 17
+   },
+   {
+    "name": "City of Oakland",
+    "count": 16
+   },
+   {
+    "name": "City of Oakland Department of Transportation",
+    "count": 12
+   },
+   {
+    "name": "Public Ethics Commission",
+    "count": 9
+   },
+   {
+    "name": "OUSD Data Dashboard",
+    "count": 7
+   },
+   {
+    "name": "City of Oakland, Bicycle & Pedestrian Program",
+    "count": 6
+   }
+  ],
+  "publisherCoverage": 0.6613418530351438,
+  "fetchedAt": "2026-09-07T05:20:19.420Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 207 of 313 datasets named a publisher"
+  ]
+ },
+ "data-providenceri-gov": {
+  "count": 121,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "City of Providence",
+    "count": 30
+   },
+   {
+    "name": "Providence Tax Assessor",
+    "count": 12
+   },
+   {
+    "name": "City of Providence Tax Assessor",
+    "count": 5
+   },
+   {
+    "name": "Department of Planning and Development",
+    "count": 4
+   },
+   {
+    "name": "City of Providence, Finance Department",
+    "count": 3
+   },
+   {
+    "name": "Forestry Division",
+    "count": 2
+   },
+   {
+    "name": "Office of Sustainability",
+    "count": 2
+   },
+   {
+    "name": "City of Providence Finance Department",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": 0.628099173553719,
+  "fetchedAt": "2026-09-07T05:20:21.164Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 76 of 121 datasets named a publisher"
+  ]
+ },
+ "data-kcmo-org": {
+  "count": 202,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "KCPD Information Technology",
+    "count": 12
+   },
+   {
+    "name": "Kansas City Planning and Development Department",
+    "count": 9
+   },
+   {
+    "name": "U.S. Census Bureau",
+    "count": 7
+   },
+   {
+    "name": "City of Kansas City Finance Department",
+    "count": 6
+   },
+   {
+    "name": "Kansas City, MO Health Department",
+    "count": 4
+   },
+   {
+    "name": "Jerry Shechter",
+    "count": 4
+   },
+   {
+    "name": "City of Kansas City, MO - Budget Office",
+    "count": 4
+   },
+   {
+    "name": "Mid-America Regional Council and Kansas City Planning and Development Department",
+    "count": 3
+   }
+  ],
+  "publisherCoverage": 0.6287128712871287,
+  "fetchedAt": "2026-09-07T05:20:20.451Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 127 of 202 datasets named a publisher"
+  ]
+ },
+ "opendata-camden-gov-uk": {
+  "count": null,
+  "countSource": "",
   "undeclaredPct": null,
   "licences": [],
   "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:36.626Z",
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-07T05:20:22.213Z",
+  "ok": false,
+  "notes": [
+   "HTTP 404 for https://api.us.socrata.com/api/catalog/v1?domains=opendata.camden.gov.uk&search_context=opendata.camden.gov.uk&only=datasets&limit=0"
+  ]
+ },
+ "data-cambridgema-gov": {
+  "count": 281,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Cambridge GIS",
+    "count": 35
+   },
+   {
+    "name": "City of Cambridge",
+    "count": 22
+   },
+   {
+    "name": "City of Cambridge Community Development Department",
+    "count": 11
+   },
+   {
+    "name": "Cambridge Department of Public Health",
+    "count": 10
+   },
+   {
+    "name": "Public Works",
+    "count": 9
+   },
+   {
+    "name": "Traffic & Parking",
+    "count": 8
+   },
+   {
+    "name": "City of Cambridge GIS",
+    "count": 8
+   },
+   {
+    "name": "City of Cambridge Assessing Department",
+    "count": 7
+   }
+  ],
+  "publisherCoverage": 0.8078291814946619,
+  "fetchedAt": "2026-09-07T05:20:19.999Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 227 of 281 datasets named a publisher"
+  ]
+ },
+ "data-richmondgov-com": {
+  "count": 31,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "RPS",
+    "count": 3
+   },
+   {
+    "name": "Finance Department",
+    "count": 2
+   },
+   {
+    "name": "Richmond Police Department",
+    "count": 2
+   },
+   {
+    "name": "Department of Economic and Community Development",
+    "count": 2
+   },
+   {
+    "name": "Planning and Development Review",
+    "count": 2
+   },
+   {
+    "name": "Dept of Public Works",
+    "count": 2
+   },
+   {
+    "name": "Department of Information Technology",
+    "count": 1
+   },
+   {
+    "name": "Department of Procurement",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": 0.7419354838709677,
+  "fetchedAt": "2026-09-07T05:20:22.158Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 23 of 31 datasets named a publisher"
+  ]
+ },
+ "data-buffalony-gov": {
+  "count": 138,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Department of Assessment & Taxation",
+    "count": 30
+   },
+   {
+    "name": "American Community Survey",
+    "count": 30
+   },
+   {
+    "name": "City of Buffalo",
+    "count": 9
+   },
+   {
+    "name": "Buffalo Police Department",
+    "count": 8
+   },
+   {
+    "name": "Bureau of the Census, Commerce",
+    "count": 7
+   },
+   {
+    "name": "Office of Strategic Planning",
+    "count": 5
+   },
+   {
+    "name": "Department of Permits & Inspection Services",
+    "count": 4
+   },
+   {
+    "name": "Department of Permit & Inspection Services",
+    "count": 3
+   }
+  ],
+  "publisherCoverage": 0.9057971014492754,
+  "fetchedAt": "2026-09-07T05:20:20.898Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 125 of 138 datasets named a publisher"
+  ]
+ },
+ "data-cincinnati-oh-gov": {
+  "count": 102,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "City of Cincinnati",
+    "count": 61
+   },
+   {
+    "name": "Cincinnati Police Department",
+    "count": 6
+   },
+   {
+    "name": "City of Cincinnati - Fleet Services Division",
+    "count": 4
+   },
+   {
+    "name": "City of Cincinnati - Department of Community & Economic Development (DCED)",
+    "count": 2
+   },
+   {
+    "name": "City of Cincinnati Division of Purchasing",
+    "count": 1
+   },
+   {
+    "name": "Office of Performance and Data Analytics",
+    "count": 1
+   },
+   {
+    "name": "Southwest Regional Transit Authority (SORTA)",
+    "count": 1
+   },
+   {
+    "name": "Citizen Complaint Authority (CCA)",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": 0.8725490196078431,
+  "fetchedAt": "2026-09-07T05:20:22.141Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 89 of 102 datasets named a publisher"
+  ]
+ },
+ "data-gouv-fr": {
+  "count": 73641,
+  "countSource": "udata",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Région Auvergne-Rhône-Alpes",
+    "count": 1966
+   },
+   {
+    "name": "Office Français de la Biodiversité",
+    "count": 1788
+   },
+   {
+    "name": "Région Île-de-France",
+    "count": 1093
+   },
+   {
+    "name": "Occitanie Pyrénées en Intelligence Géomatique",
+    "count": 1083
+   },
+   {
+    "name": "Direction Départementale des Territoires du Cher",
+    "count": 1071
+   },
+   {
+    "name": "Toulouse métropole",
+    "count": 889
+   },
+   {
+    "name": "Direction Départementale des Territoires et de la Mer de la Somme",
+    "count": 850
+   },
+   {
+    "name": "Direction Départementale des Territoires et de la Mer des Pyrénées-Atlantiques",
+    "count": 819
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-07T05:20:22.453Z",
   "ok": true,
   "notes": []
  },
- "data-gv-at": {
-  "count": 73076,
+ "dados-gov-pt": {
+  "count": 20896,
+  "countSource": "udata",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Instituto Nacional de Estatística",
+    "count": 13568
+   },
+   {
+    "name": "Agência Portuguesa do Ambiente",
+    "count": 4218
+   },
+   {
+    "name": "Câmara Municipal da Calheta",
+    "count": 654
+   },
+   {
+    "name": "Município de Lisboa",
+    "count": 530
+   },
+   {
+    "name": "Direção-Geral do Território",
+    "count": 431
+   },
+   {
+    "name": "Câmara Municipal de Oeiras",
+    "count": 361
+   },
+   {
+    "name": "Agência para a Reforma Tecnológica do Estado",
+    "count": 351
+   },
+   {
+    "name": "Câmara Municipal de Cascais",
+    "count": 334
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-07T05:20:22.462Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-public-lu": {
+  "count": 3178,
+  "countSource": "udata",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Musée national d'histoire naturelle Luxembourg",
+    "count": 450
+   },
+   {
+    "name": "SIG-GR @ Ministère du Logement et de l'Aménagement du territoire - Département de l’aménagement du territoire",
+    "count": 395
+   },
+   {
+    "name": "Géoportail",
+    "count": 353
+   },
+   {
+    "name": "STATEC Institut national de la statistique et des études économiques du Grand-Duché de Luxembourg",
+    "count": 261
+   },
+   {
+    "name": "Ministère de la Culture",
+    "count": 174
+   },
+   {
+    "name": "Administration de l'environnement",
+    "count": 149
+   },
+   {
+    "name": "Administration de la gestion de l'eau",
+    "count": 148
+   },
+   {
+    "name": "Ministère des Affaires intérieures",
+    "count": 100
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-07T05:20:22.491Z",
+  "ok": true,
+  "notes": []
+ },
+ "dataverse-harvard-edu": {
+  "count": 303349,
+  "countSource": "dataverse search",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Harvard University",
+    "count": 32956
+   },
+   {
+    "name": "Wheaton College",
+    "count": 28274
+   },
+   {
+    "name": "Department of National Defence",
+    "count": 5899
+   },
+   {
+    "name": "Harvard Law School",
+    "count": 4960
+   },
+   {
+    "name": "Yale Law School",
+    "count": 4943
+   },
+   {
+    "name": "Duke Law School",
+    "count": 4941
+   },
+   {
+    "name": "Stichting RING",
+    "count": 2083
+   },
+   {
+    "name": "University of British Columbia",
+    "count": 1768
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-07T05:20:24.613Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-winnipeg-ca": {
+  "count": 235,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "City of Winnipeg",
+    "count": 37
+   },
+   {
+    "name": "Winnipeg Transit",
+    "count": 3
+   },
+   {
+    "name": "Province of Manitoba",
+    "count": 2
+   },
+   {
+    "name": "Public Works",
+    "count": 2
+   },
+   {
+    "name": "City Clerks",
+    "count": 1
+   },
+   {
+    "name": "Manitoba Agricultural Services Corporation",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": 0.19574468085106383,
+  "fetchedAt": "2026-09-07T05:20:24.587Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 46 of 235 datasets named a publisher"
+  ]
+ },
+ "data-europa-eu": {
+  "count": 1722866,
   "countSource": "data.europa.eu hub",
   "undeclaredPct": null,
   "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:35.301Z",
+  "publishers": [
+   {
+    "name": "Zenodo",
+    "count": 26035
+   },
+   {
+    "name": "Instituto Nacional de Estadística",
+    "count": 21720
+   },
+   {
+    "name": "Instituto Canario de Estadística (ISTAC)",
+    "count": 19977
+   },
+   {
+    "name": "Statistisches Amt für Hamburg und Schleswig-Holstein A.ö.R. (Statistikamt Nord)",
+    "count": 14933
+   },
+   {
+    "name": "Instituto de Estadística de las Islas Baleares (IBESTAT)",
+    "count": 14332
+   },
+   {
+    "name": "Instituto Nacional de Estatística",
+    "count": 13164
+   },
+   {
+    "name": "Central Statistics Office",
+    "count": 12986
+   },
+   {
+    "name": "Landesvermessung und Geobasisinformation Brandenburg (LGB)",
+    "count": 12753
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-07T05:20:25.346Z",
   "ok": true,
   "notes": []
+ },
+ "data-calgary-ca": {
+  "count": 418,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "The City of Calgary",
+    "count": 338
+   },
+   {
+    "name": "Statistics Canada",
+    "count": 11
+   },
+   {
+    "name": "City of Calgary",
+    "count": 7
+   },
+   {
+    "name": "Alberta Environment and Parks",
+    "count": 2
+   },
+   {
+    "name": "Government of Alberta",
+    "count": 2
+   },
+   {
+    "name": "StatsCanada/CanadaPost",
+    "count": 2
+   },
+   {
+    "name": "Calgary Parking Authority",
+    "count": 2
+   },
+   {
+    "name": "Calgary Public Library",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": 0.8851674641148325,
+  "fetchedAt": "2026-09-07T05:20:23.930Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 370 of 418 datasets named a publisher"
+  ]
+ },
+ "data-gv-at": {
+  "count": 73339,
+  "countSource": "data.europa.eu hub",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Nationalparks Austria",
+    "count": 3750
+   },
+   {
+    "name": "Stadt Wien",
+    "count": 2256
+   },
+   {
+    "name": "Umweltbundesamt GmbH",
+    "count": 996
+   },
+   {
+    "name": "Stadt Linz",
+    "count": 823
+   },
+   {
+    "name": "Land Tirol",
+    "count": 819
+   },
+   {
+    "name": "BEV",
+    "count": 582
+   },
+   {
+    "name": "Land Oberösterreich",
+    "count": 578
+   },
+   {
+    "name": "Land Niederösterreich, Landhausplatz 1, 3100 St. Pölten",
+    "count": 575
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-07T05:20:22.808Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-cdc-gov": {
+  "count": 1078,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Division of Health Informatics and Surveillance (DHIS), Centers for Disease Control and Prevention",
+    "count": 285
+   },
+   {
+    "name": "NCHS/DVS",
+    "count": 107
+   },
+   {
+    "name": "National Center for Immunization and Respiratory Diseases (NCIRD)",
+    "count": 93
+   },
+   {
+    "name": "Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion, Division of Population Health",
+    "count": 60
+   },
+   {
+    "name": "CDC National Center for Injury Prevention and Control, Division of Unintentional Injury Prevention",
+    "count": 46
+   },
+   {
+    "name": "Centers for Disease Control and Prevention",
+    "count": 33
+   },
+   {
+    "name": "NCHS/Division of Analysis and Epidemiology",
+    "count": 28
+   },
+   {
+    "name": "Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion, Office on Smoking and Health",
+    "count": 22
+   }
+  ],
+  "publisherCoverage": 0.9406307977736549,
+  "fetchedAt": "2026-09-07T05:20:17.215Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 1014 of 1078 datasets named a publisher"
+  ]
+ },
+ "data-novascotia-ca": {
+  "count": 712,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Nova Scotia Archives",
+    "count": 3
+   },
+   {
+    "name": "Province of NS",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": 0.0056179775280898875,
+  "fetchedAt": "2026-09-07T05:20:23.343Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 4 of 712 datasets named a publisher"
+  ]
+ },
+ "data-cityofnewyork-us": {
+  "count": 2400,
+  "countSource": "socrata discovery",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Department of Education (DOE)",
+    "count": 566
+   },
+   {
+    "name": "Department of Transportation (DOT)",
+    "count": 161
+   },
+   {
+    "name": "Department of Parks and Recreation (DPR)",
+    "count": 122
+   },
+   {
+    "name": "Department of City Planning (DCP)",
+    "count": 102
+   },
+   {
+    "name": "Department of Finance (DOF)",
+    "count": 101
+   },
+   {
+    "name": "Office of Technology and Innovation (OTI)",
+    "count": 97
+   },
+   {
+    "name": "Taxi and Limousine Commission (TLC)",
+    "count": 80
+   },
+   {
+    "name": "Mayor's Office of Management and Budget (OMB)",
+    "count": 45
+   }
+  ],
+  "publisherCoverage": 0.96875,
+  "fetchedAt": "2026-09-07T05:20:10.636Z",
+  "ok": true,
+  "notes": [
+   "socrata discovery: no licence facet available",
+   "socrata publishers: 2325 of 2400 datasets named a publisher"
+  ]
  }
 }

@@ -221,6 +221,9 @@ function finalizeStats(portal, live) {
     licences: merged.declared,       // top declared, canonicalised
     undeclaredCount: merged.undeclared || null,
     publishers: (s.publishers || []).slice(0, 8),
+    // How much of the catalogue the publisher list actually speaks for; the
+    // renderer says so when it is only part of the portal.
+    publisherCoverage: s.publisherCoverage ?? null,
     ok: !!s.ok,
     fetchedAt: s.fetchedAt || null,
     countSource: s.countSource || '',

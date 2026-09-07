@@ -332,18 +332,41 @@ export function renderPortalPage(portal, stats, ctx) {
   const undeclaredWhole = undeclared === null ? null : Math.round(undeclared * 100);
   const licences = Array.isArray(stats.licences) ? stats.licences : [];
   const publishers = Array.isArray(stats.publishers) ? stats.publishers : [];
+  const pubCoverage =
+    (stats.publisherCoverage === null || stats.publisherCoverage === undefined)
+      ? null : Number(stats.publisherCoverage);
+  // Below this, a derived list describes so little of the catalogue that it
+  // misleads however it is captioned — Nova Scotia names a publisher on 1% of
+  // 713 datasets, so a "most active publishers" table there is really seven
+  // datasets wearing a hat. Treated as no list at all, the same call as the
+  // statistical APIs that have only one publisher. The stats band, the meta
+  // description and the section itself all read this one flag, so they cannot
+  // disagree about whether the page has a publisher list.
+  const PUBLISHER_COVERAGE_FLOOR = 0.1;
+  const hasPublishers =
+    publishers.length > 0 && !(pubCoverage !== null && pubCoverage < PUBLISHER_COVERAGE_FLOOR);
   const examples = Array.isArray(portal.examples) ? portal.examples : [];
 
   // ---- SEO ----
   const title = `${name} — open datasets, licences & maps · Vizzie`;
   const countStr = count === null ? 'thousands of' : num(count);
-  const undeclaredClause = undeclaredWhole === null
-    ? ''
-    : ` licence profile (${undeclaredWhole}% undeclared),`;
+  // Only promise what the page actually shows. 61 of these pages had no
+  // publisher list at all, and every one still advertised "top publishers" in
+  // the search snippet — a click that landed on "coming soon".
+  //
+  // Built as a list rather than glued-together clauses so the commas stay right
+  // however many of them survive: "count, licence profile and publishers" reads
+  // correctly, and so does a bare "count".
+  const promises = ['its live dataset count'];
+  if (undeclaredWhole !== null) promises.push(`licence profile (${undeclaredWhole}% undeclared)`);
+  if (hasPublishers) promises.push('top publishers');
+  const promised =
+    promises.length === 1
+      ? promises[0]
+      : `${promises.slice(0, -1).join(', ')} and ${promises[promises.length - 1]}`;
   const rawDesc =
     `${name} publishes ${countStr} open datasets${country ? ` (${country})` : ''}. ` +
-    `See its live dataset count,${undeclaredClause} top publishers, and turn any of it ` +
-    `into a map with Vizzie — no download.`;
+    `See ${promised}, and turn any of it into a map with Vizzie — no download.`;
   const description = trim(rawDesc, 158);
 
   // Kicker: country (+ region/city)
@@ -362,7 +385,7 @@ export function renderPortalPage(portal, stats, ctx) {
   statCells.push(
     `<div class="stat"><div class="n">${esc(num(count))}</div><div class="l">open datasets</div></div>`
   );
-  if (publishers.length) {
+  if (hasPublishers) {
     statCells.push(
       `<div class="stat"><div class="n">${esc(num(publishers.length))}+</div><div class="l">publishers</div></div>`
     );
@@ -439,18 +462,42 @@ export function renderPortalPage(portal, stats, ctx) {
 
   // ---- Top publishers ----
   let publisherSection;
-  if (publishers.length) {
+  if (hasPublishers) {
     const rows = publishers.slice(0, 8).map((p) =>
       `<div class="prow"><span class="pn">${esc(p.name)}</span><span class="pc">${esc(num(p.count))}</span></div>`
     ).join('\n            ');
+    // Where the list was tallied dataset by dataset rather than read from a
+    // facet, it only speaks for the datasets that named someone. On some portals
+    // that is 4 of 70 — presenting those as "the most active publishers" would
+    // be a confident claim about a portal we had barely sampled.
+    const thin = pubCoverage !== null && pubCoverage < 0.8;
+    const caveat = thin
+      ? `<p class="prose" style="margin-top:10px">Only <b>${Math.round(pubCoverage * 100)}%</b> of
+          datasets on ${esc(name)} name a publisher, so this covers that part of the catalogue
+          rather than all of it.</p>`
+      : '';
     publisherSection = `
         <div class="portals" style="columns:260px 2">
           <div class="pgrp"><div class="phdr">Most active publishers</div>
             ${rows}
           </div>
-        </div>`;
+        </div>${caveat}`;
+  } else if (publishers.length) {
+    // Data exists but covers too little of the catalogue to rank. Say THAT,
+    // rather than claiming the portal publishes nothing — it does, on a small
+    // fraction of its datasets, and a reader who checks will find it.
+    publisherSection =
+      `<p class="prose">Only <b>${Math.round((pubCoverage || 0) * 100)}%</b> of datasets on
+        ${esc(name)} name a publisher, which is too few to rank the catalogue by. Vizzie still
+        surfaces each dataset's own publisher as you browse.</p>`;
   } else {
-    publisherSection = `<p class="prose">Publisher breakdown coming soon.</p>`;
+    // No "coming soon": on a page meant to rank, an unkept promise is worse than
+    // an honest absence. Say what the portal does and doesn't expose, the way
+    // the licence fallback above does.
+    publisherSection =
+      `<p class="prose">${esc(name)} doesn't expose a machine-readable breakdown of who
+        publishes what, so there's no reliable publisher ranking to show here. Vizzie still
+        surfaces each dataset's own publisher as you browse.</p>`;
   }
 
   // ---- Reference boundaries ----

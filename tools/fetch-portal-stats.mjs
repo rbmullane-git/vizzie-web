@@ -21,6 +21,11 @@ function emptyResult(fetchedAt) {
     undeclaredPct: null,
     licences: [],
     publishers: [],
+    // Share of datasets that actually named a publisher, when we counted them
+    // one by one rather than reading a facet. Null when unknown. A portal where
+    // only 4 of 70 datasets name anyone must not present those 4 as if they
+    // were the portal's most active publishers.
+    publisherCoverage: null,
     fetchedAt,
     ok: false,
     notes: [],
@@ -209,10 +214,110 @@ async function fetchSocrata(portal, opts, result) {
   result.count = count;
   result.countSource = 'socrata discovery';
   result.ok = count !== null;
-  // Discovery API gives no licence/publisher facet.
+  // Discovery API gives no licence facet, and no publisher facet either — but
+  // every dataset carries `resource.attribution`, which IS the publisher. So the
+  // list is derived by walking the catalogue rather than asking for a facet.
   result.undeclaredPct = null;
-  result.notes.push('socrata discovery: no licence/publisher facets available');
+  result.notes.push('socrata discovery: no licence facet available');
+
+  const { publishers, coverage } = await socrataPublishers(disc, host, count, headers, result);
+  if (publishers.length) result.publishers = topN(publishers, 8);
+  result.publisherCoverage = coverage;
   return result;
+}
+
+/**
+ * Publishers for a Socrata portal, tallied from every dataset's `attribution`.
+ *
+ * There is no facet to ask for, so this pages the whole catalogue. That is
+ * affordable precisely because Socrata portals are small: all 38 of them hold
+ * ~18,000 datasets between them, about 200 requests, and the largest single
+ * portal (NYC) is 24 pages. Walking the whole list rather than sampling matters
+ * because the counts are rendered next to the publisher names — a sampled tally
+ * would put confident, wrong numbers on the page.
+ *
+ * PAGE_CAP is a safety net against a portal that reports a small size and then
+ * pages forever, not a sampling strategy: hitting it makes the counts partial,
+ * so it is recorded in notes rather than passing silently.
+ */
+/**
+ * Tidy a Socrata `attribution`, which is free text a publisher typed once and
+ * never revisited. Only two things are safe to do here:
+ *   - collapse whitespace;
+ *   - drop a leading copyright mark, so "© Australian Capital Territory" is
+ *     filed under the body that published it rather than as its own publisher.
+ *
+ * Deliberately NOT merged: the same agency under different spellings
+ * ("Transport Canberra" / "Transport Canberra and City Services" / "ACT
+ * Government - Transport Canberra and City Services"). Those are three real
+ * strings in the portal, and guessing which are the same body would put a name
+ * on the page that no dataset actually carries.
+ */
+function cleanAttribution(raw) {
+  if (typeof raw !== 'string') return '';
+  const name = raw
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/^(?:©|\(c\)|copyright)\s*/i, '')
+    .trim();
+  return name;
+}
+
+const SOCRATA_PAGE = 100;
+const SOCRATA_PAGE_CAP = 60;
+
+async function socrataPublishers(disc, host, count, headers, result) {
+  const tally = {};
+  let seen = 0;
+  let named = 0;
+  let pages = 0;
+
+  while (pages < SOCRATA_PAGE_CAP) {
+    const url =
+      `${disc}/api/catalog/v1?domains=${encodeURIComponent(host)}` +
+      `&search_context=${encodeURIComponent(host)}&only=datasets` +
+      `&limit=${SOCRATA_PAGE}&offset=${pages * SOCRATA_PAGE}`;
+    const { json, note } = await fetchJson(url, { timeoutMs: DEFAULT_TIMEOUT_MS, headers });
+    if (note) {
+      // A page that fails leaves what we have: a partial list beats none, as
+      // long as we say so.
+      result.notes.push(`socrata publishers: ${note}`);
+      break;
+    }
+    const results = json && Array.isArray(json.results) ? json.results : [];
+    if (results.length === 0) break;
+
+    for (const item of results) {
+      seen += 1;
+      const attribution = item && item.resource ? item.resource.attribution : null;
+      const name = cleanAttribution(attribution);
+      if (!name) continue;
+      named += 1;
+      tally[name] = (tally[name] || 0) + 1;
+    }
+
+    pages += 1;
+    if (results.length < SOCRATA_PAGE) break;
+    if (typeof count === 'number' && seen >= count) break;
+    await sleep(150); // be a good citizen; the whole run is ~200 requests
+  }
+
+  if (pages >= SOCRATA_PAGE_CAP) {
+    result.notes.push(
+      `socrata publishers: stopped at ${SOCRATA_PAGE_CAP} pages, counts are partial`,
+    );
+  }
+  const publishers = Object.entries(tally).map(([name, c]) => ({ name, count: c }));
+  if (!publishers.length && seen > 0) {
+    result.notes.push('socrata publishers: no dataset carried an attribution');
+  }
+  const coverage = seen > 0 ? named / seen : null;
+  if (coverage !== null && coverage < 1) {
+    result.notes.push(
+      `socrata publishers: ${named} of ${seen} datasets named a publisher`,
+    );
+  }
+  return { publishers, coverage };
 }
 
 // ---------------------------------------------------------------------------
@@ -415,19 +520,85 @@ async function fetchByPath(url, path, source, result, opts = {}) {
 // uData (data.gouv.fr, dados.gov.pt, data.public.lu)
 async function fetchUdata(portal, opts, result) {
   const base = portal.baseUrl.replace(/\/+$/, '');
-  return fetchByPath(`${base}/api/1/datasets/?page_size=1`, 'total', 'udata', result);
+  await fetchByPath(`${base}/api/1/datasets/?page_size=1`, 'total', 'udata', result);
+
+  // Publishers are first-class objects here, so ask the organizations endpoint
+  // for the busiest few rather than tallying datasets.
+  //
+  // The sort key is `-datasets`, NOT the `-metrics.datasets` the field is
+  // actually called in the response. udata rejects the dotted form with a 400,
+  // which is why this looked like "no publisher data available" rather than a
+  // one-word bug.
+  const orgUrl = `${base}/api/1/organizations/?page_size=8&sort=-datasets`;
+  const { json, note } = await fetchJson(orgUrl, { timeoutMs: DEFAULT_TIMEOUT_MS });
+  if (note) {
+    result.notes.push(`udata publishers: ${note}`);
+    return result;
+  }
+  const orgs = json && Array.isArray(json.data) ? json.data : [];
+  const pubs = orgs
+    .map((o) => ({
+      name: typeof (o && o.name) === 'string' ? o.name.trim() : '',
+      count: Number(o && o.metrics && o.metrics.datasets) || 0,
+    }))
+    .filter((p) => p.name && p.count > 0);
+  if (pubs.length) result.publishers = topN(pubs, 8);
+  else result.notes.push('udata publishers: organizations returned no dataset counts');
+  return result;
 }
 
 // data.europa.eu hub search (also the harvested aggregate)
 async function fetchDataEuropa(portal, opts, result) {
   const base = portal.baseUrl.replace(/\/+$/, '');
-  return fetchByPath(
-    `${base}/api/hub/search/search?limit=1&filter=dataset`,
-    'result.count',
-    'data.europa.eu hub',
-    result,
-    { timeoutMs: ARCGIS_TIMEOUT_MS },
-  );
+  // Ask for the publisher facet in the same call as the count. The hub returns
+  // every facet it has whatever you request, but naming one keeps the intent
+  // clear and the response shape stable.
+  const url =
+    `${base}/api/hub/search/search?limit=1&filter=dataset` +
+    `&facets=${encodeURIComponent('{"publisher":[]}')}`;
+
+  const { json, note } = await fetchJson(url, { timeoutMs: ARCGIS_TIMEOUT_MS });
+  if (note) result.notes.push(note);
+  if (!json || !json.result) {
+    if (!note) result.notes.push('data.europa.eu: no result payload');
+    return result;
+  }
+
+  const r = json.result;
+  if (typeof r.count === 'number') {
+    result.count = r.count;
+    result.countSource = 'data.europa.eu hub';
+    result.ok = true;
+  } else {
+    result.notes.push('data.europa.eu: result.count not found');
+  }
+
+  const facet = (Array.isArray(r.facets) ? r.facets : []).find((f) => f && f.id === 'publisher');
+  const items = facet && Array.isArray(facet.items) ? facet.items : [];
+  const pubs = items
+    .map((it) => ({ name: localisedTitle(it && it.title), count: Number(it && it.count) || 0 }))
+    .filter((p) => p.name && p.count > 0);
+  if (pubs.length) result.publishers = topN(pubs, 8);
+  else result.notes.push('data.europa.eu: no publisher facet items');
+
+  return result;
+}
+
+/**
+ * A data.europa.eu facet title, which arrives either as a plain string or as an
+ * object of 24 EU language translations. Prefer English; fall back to whatever
+ * the first key holds rather than rendering "[object Object]" on the page.
+ */
+function localisedTitle(title) {
+  if (typeof title === 'string') return title.trim();
+  if (title && typeof title === 'object') {
+    const en = typeof title.en === 'string' ? title.en : '';
+    if (en) return en.trim();
+    for (const v of Object.values(title)) {
+      if (typeof v === 'string' && v.trim()) return v.trim();
+    }
+  }
+  return '';
 }
 
 // data.gov.sg (fixed production API host)
@@ -443,13 +614,40 @@ async function fetchDataGovSg(portal, opts, result) {
 // Dataverse (Harvard etc.) — type=dataset, never file
 async function fetchDataverse(portal, opts, result) {
   const base = portal.baseUrl.replace(/\/+$/, '');
-  return fetchByPath(
-    `${base}/api/search?q=*&type=dataset&per_page=1`,
-    'data.total_count',
-    'dataverse search',
-    result,
-    { timeoutMs: ARCGIS_TIMEOUT_MS },
-  );
+  const url = `${base}/api/search?q=*&type=dataset&per_page=1&show_facets=true`;
+  const { json, note } = await fetchJson(url, { timeoutMs: ARCGIS_TIMEOUT_MS });
+  if (note) result.notes.push(note);
+  const data = json && json.data ? json.data : null;
+  if (!data) {
+    if (!note) result.notes.push('dataverse: no data payload');
+    return result;
+  }
+  if (typeof data.total_count === 'number') {
+    result.count = data.total_count;
+    result.countSource = 'dataverse search';
+    result.ok = true;
+  }
+
+  // A research repository has depositors, not publishers. The closest true
+  // equivalent it exposes is the depositing institution — `authorAffiliation_ss`
+  // — so that is what this reports. It is an approximation, and a deliberate
+  // one: "Harvard University, 32,956 datasets" tells a reader who is behind the
+  // catalogue, which is the question the section answers.
+  const facets = data.facets && data.facets['0'] ? data.facets['0'] : {};
+  const labels = facets.authorAffiliation_ss && Array.isArray(facets.authorAffiliation_ss.labels)
+    ? facets.authorAffiliation_ss.labels
+    : [];
+  const pubs = [];
+  for (const entry of labels) {
+    if (!entry || typeof entry !== 'object') continue;
+    for (const [name, c] of Object.entries(entry)) {
+      const count = Number(c) || 0;
+      if (name && count > 0) pubs.push({ name: name.trim(), count });
+    }
+  }
+  if (pubs.length) result.publishers = topN(pubs, 8);
+  else result.notes.push('dataverse: no authorAffiliation facet');
+  return result;
 }
 
 // data.gov.in (national) — published sample API key raises quota if replaced
