@@ -615,25 +615,6 @@
   "ok": true,
   "notes": []
  },
- "data-brisbane-qld-gov-au": {
-  "count": 443,
-  "countSource": "opendatasoft catalog",
-  "undeclaredPct": null,
-  "licences": [
-   {
-    "cls": "CC BY 4.0",
-    "count": 442
-   },
-   {
-    "cls": "Other",
-    "count": 1
-   }
-  ],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:10:23.453Z",
-  "ok": true,
-  "notes": []
- },
  "catalog-data-gov": {
   "count": 552271,
   "countSource": "datagov api/stats",
@@ -5923,26 +5904,6 @@
   "ok": true,
   "notes": []
  },
- "data-gov-sg": {
-  "count": 4616,
-  "countSource": "data.gov.sg",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:35.301Z",
-  "ok": true,
-  "notes": []
- },
- "api-data-gov-in": {
-  "count": 235100,
-  "countSource": "data.gov.in",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:35.707Z",
-  "ok": true,
-  "notes": []
- },
  "ddh-openapi-worldbank-org": {
   "count": null,
   "countSource": "",
@@ -6049,26 +6010,6 @@
   "ok": true,
   "notes": []
  },
- "karnataka-data-gov-in": {
-  "count": 7742,
-  "countSource": "data.gov.in DMS",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:36.274Z",
-  "ok": true,
-  "notes": []
- },
- "tn-data-gov-in": {
-  "count": 19580,
-  "countSource": "data.gov.in DMS",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:36.360Z",
-  "ok": true,
-  "notes": []
- },
  "api-os-uk": {
   "count": 26,
   "countSource": "OS Data Hub products",
@@ -6076,16 +6017,6 @@
   "licences": [],
   "publishers": [],
   "fetchedAt": "2026-08-21T22:39:35.282Z",
-  "ok": true,
-  "notes": []
- },
- "smartcities-data-gov-in": {
-  "count": 5291,
-  "countSource": "data.gov.in DMS",
-  "undeclaredPct": null,
-  "licences": [],
-  "publishers": [],
-  "fetchedAt": "2026-08-21T22:39:36.592Z",
   "ok": true,
   "notes": []
  },
@@ -8052,5 +7983,254 @@
    "socrata discovery: no licence facet available",
    "socrata publishers: 2325 of 2400 datasets named a publisher"
   ]
+ },
+ "data-brisbane-qld-gov-au": {
+  "count": 446,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "CC BY 4.0",
+    "count": 445
+   },
+   {
+    "cls": "Other",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Brisbane City Council",
+    "count": 446
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-07T05:35:52.812Z",
+  "ok": true,
+  "notes": []
+ },
+ "smartcities-data-gov-in": {
+  "count": 5291,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Pimpri Chinchwad",
+    "count": 307
+   },
+   {
+    "name": "Thane",
+    "count": 245
+   },
+   {
+    "name": "Surat",
+    "count": 200
+   },
+   {
+    "name": "Chandigarh",
+    "count": 180
+   },
+   {
+    "name": "Pune",
+    "count": 176
+   },
+   {
+    "name": "Kohima",
+    "count": 169
+   },
+   {
+    "name": "Ujjain",
+    "count": 169
+   },
+   {
+    "name": "Kalyan Dombivali",
+    "count": 129
+   }
+  ],
+  "publisherCoverage": 1,
+  "fetchedAt": "2026-09-07T05:35:52.835Z",
+  "ok": true,
+  "notes": []
+ },
+ "karnataka-data-gov-in": {
+  "count": 7747,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Agriculture Department, Karnataka",
+    "count": 5041
+   },
+   {
+    "name": "Directorate of Economics & Statistics",
+    "count": 1117
+   },
+   {
+    "name": "Energy Department, Karnataka",
+    "count": 142
+   },
+   {
+    "name": "State Remote Sensing Applications Centre",
+    "count": 134
+   },
+   {
+    "name": "Infrastructure Development Department, Karnataka",
+    "count": 80
+   },
+   {
+    "name": "Transport Department, Karnataka",
+    "count": 72
+   },
+   {
+    "name": "Police Department - Police Computer Wing",
+    "count": 65
+   },
+   {
+    "name": "Karnataka State Road Transport Corporation(KSRTC)",
+    "count": 60
+   }
+  ],
+  "publisherCoverage": 0.9994836710984898,
+  "fetchedAt": "2026-09-07T05:35:52.833Z",
+  "ok": true,
+  "notes": [
+   "data.gov.in DMS publishers: 7743 of 7747 resources named a ministry"
+  ]
+ },
+ "data-gov-sg": {
+  "count": 4616,
+  "countSource": "data.gov.sg",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Singapore Department of Statistics",
+    "count": 2279
+   },
+   {
+    "name": "Urban Redevelopment Authority",
+    "count": 357
+   },
+   {
+    "name": "Ministry of Manpower",
+    "count": 244
+   },
+   {
+    "name": "National Environment Agency",
+    "count": 208
+   },
+   {
+    "name": "National Library Board",
+    "count": 109
+   },
+   {
+    "name": "Housing & Development Board",
+    "count": 102
+   },
+   {
+    "name": "Ngee Ann Polytechnic",
+    "count": 95
+   },
+   {
+    "name": "Land Transport Authority",
+    "count": 89
+   }
+  ],
+  "publisherCoverage": 1,
+  "fetchedAt": "2026-09-07T05:35:52.832Z",
+  "ok": true,
+  "notes": []
+ },
+ "tn-data-gov-in": {
+  "count": 19580,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Department of Economics and Statistics",
+    "count": 12234
+   },
+   {
+    "name": "Public Health and Preventive Medicine",
+    "count": 6137
+   },
+   {
+    "name": "Horticulture & Plantation Crops",
+    "count": 684
+   },
+   {
+    "name": "National Health Mission, Tamil Nadu",
+    "count": 100
+   },
+   {
+    "name": "Animal Husbandry and Veterinary Services Directorate",
+    "count": 66
+   },
+   {
+    "name": "Tamil Nadu Generation and Distribution Corporation (TANGEDCO) Ltd",
+    "count": 47
+   },
+   {
+    "name": "Handlooms and Textiles Directorate",
+    "count": 21
+   },
+   {
+    "name": "Rajya Sabha",
+    "count": 17
+   }
+  ],
+  "publisherCoverage": 0.9997957099080694,
+  "fetchedAt": "2026-09-07T05:35:52.834Z",
+  "ok": true,
+  "notes": [
+   "data.gov.in DMS publishers: 19576 of 19580 resources named a ministry"
+  ]
+ },
+ "api-data-gov-in": {
+  "count": 181260,
+  "countSource": "data.gov.in",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Ministry of Health and Family Welfare",
+    "count": 68270
+   },
+   {
+    "name": "Rajya Sabha",
+    "count": 30267
+   },
+   {
+    "name": "Ministry of Jal Shakti",
+    "count": 29077
+   },
+   {
+    "name": "Ministry of Home Affairs",
+    "count": 28197
+   },
+   {
+    "name": "Ministry of Education",
+    "count": 12592
+   },
+   {
+    "name": "Department of Health and Family Welfare",
+    "count": 2311
+   },
+   {
+    "name": "Ministry of Health and Family Welfare, Department of Health and Family Welfare",
+    "count": 1935
+   },
+   {
+    "name": "Department of School Education and Literacy",
+    "count": 1595
+   }
+  ],
+  "publisherCoverage": 0.999895178197065,
+  "fetchedAt": "2026-09-07T05:35:52.833Z",
+  "ok": true,
+  "notes": []
  }
 }

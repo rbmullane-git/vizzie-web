@@ -331,6 +331,24 @@ function isUndeclaredOdsLicence(name) {
   return s.includes('no licence') || s.includes('no license') || s === 'none';
 }
 
+/**
+ * The publisher facet for an OpenDataSoft portal. Uses the one already returned
+ * alongside licences when the instance sent it, and otherwise asks separately —
+ * see the note on the facet URL above.
+ */
+async function odsPublisherFacet(base, alreadyHave, result) {
+  if (alreadyHave) return alreadyHave;
+  const { json, note } = await fetchJson(`${base}/api/v2/catalog/facets?facet=publisher`, {
+    timeoutMs: DEFAULT_TIMEOUT_MS,
+  });
+  if (note) {
+    result.notes.push(`ods publishers: ${note}`);
+    return null;
+  }
+  const facets = json && Array.isArray(json.facets) ? json.facets : [];
+  return facets.find((f) => f && f.name === 'publisher') || null;
+}
+
 async function fetchOpendatasoft(portal, opts, result) {
   const base = portal.baseUrl.replace(/\/+$/, '');
 
@@ -347,7 +365,12 @@ async function fetchOpendatasoft(portal, opts, result) {
   }
 
   // Facets
-  const facetUrl = `${base}/api/v2/catalog/facets?facet=license&facet=publisher`;
+  // One facet per request. Asking for `facet=license&facet=publisher` together
+  // makes some OpenDataSoft instances silently return only the FIRST — Brisbane
+  // answers that call with licences alone, then serves a perfectly good
+  // publisher facet when asked for it on its own. Two cheap calls beat one that
+  // quietly drops half of what was asked for.
+  const facetUrl = `${base}/api/v2/catalog/facets?facet=license`;
   const { json: facetJson, note: facetNote } = await fetchJson(facetUrl, {
     timeoutMs: DEFAULT_TIMEOUT_MS,
   });
@@ -380,7 +403,7 @@ async function fetchOpendatasoft(portal, opts, result) {
     }
 
     // Publishers
-    const pubFacet = findFacet('publisher');
+    const pubFacet = await odsPublisherFacet(base, findFacet('publisher'), result);
     if (pubFacet && Array.isArray(pubFacet.facets)) {
       const pubs = pubFacet.facets.map((item) => ({
         name: item.name,
@@ -602,13 +625,59 @@ function localisedTitle(title) {
 }
 
 // data.gov.sg (fixed production API host)
+const SG_API = 'https://api-production.data.gov.sg/v2/public/api/datasets';
+const SG_PAGE_CAP = 500;
+
 async function fetchDataGovSg(portal, opts, result) {
-  return fetchByPath(
-    'https://api-production.data.gov.sg/v2/public/api/datasets?page=1',
-    'data.totalRowCount',
-    'data.gov.sg',
-    result,
-  );
+  await fetchByPath(`${SG_API}?page=1`, 'data.totalRowCount', 'data.gov.sg', result);
+
+  // Every dataset names its `managedByAgencyName`, and there is no facet — so
+  // the list is tallied by walking the catalogue, as with Socrata.
+  //
+  // This one is expensive: the page size is fixed at 10 and cannot be raised
+  // (limit / pageSize / per_page / size are all ignored), so 4,616 datasets is
+  // ~460 requests — more than the whole Socrata sweep, for one portal. It is
+  // paid once and cached; the alternative was sampling, which would print
+  // confident wrong counts next to the agency names.
+  const tally = {};
+  let named = 0;
+  let seen = 0;
+
+  for (let page = 1; page <= SG_PAGE_CAP; page += 1) {
+    const { json, note } = await fetchJson(`${SG_API}?page=${page}`, {
+      timeoutMs: DEFAULT_TIMEOUT_MS,
+    });
+    if (note) {
+      result.notes.push(`data.gov.sg publishers: ${note}`);
+      break;
+    }
+    const datasets = json && json.data && Array.isArray(json.data.datasets)
+      ? json.data.datasets
+      : [];
+    if (datasets.length === 0) break;
+
+    for (const d of datasets) {
+      seen += 1;
+      const name = typeof (d && d.managedByAgencyName) === 'string'
+        ? d.managedByAgencyName.trim()
+        : '';
+      if (!name) continue;
+      named += 1;
+      tally[name] = (tally[name] || 0) + 1;
+    }
+
+    const pages = json.data && Number(json.data.pages);
+    if (Number.isFinite(pages) && page >= pages) break;
+    await sleep(120);
+  }
+
+  const pubs = Object.entries(tally).map(([name, count]) => ({ name, count }));
+  if (pubs.length) result.publishers = topN(pubs, 8);
+  result.publisherCoverage = seen > 0 ? named / seen : null;
+  if (seen > 0 && named < seen) {
+    result.notes.push(`data.gov.sg publishers: ${named} of ${seen} datasets named an agency`);
+  }
+  return result;
 }
 
 // Dataverse (Harvard etc.) — type=dataset, never file
@@ -651,21 +720,114 @@ async function fetchDataverse(portal, opts, result) {
 }
 
 // data.gov.in (national) — published sample API key raises quota if replaced
+const IN_PAGE = 1000;
+const IN_PAGE_CAP = 200;
+
 async function fetchDataGovIn(portal, opts, result) {
   const key = process.env.DATA_GOV_IN_API_KEY ||
     '579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b';
-  const url =
-    'https://api.data.gov.in/lists?filters%5Bactive%5D=1&filters%5Bsource%5D=data.gov.in' +
-    `&limit=0&api-key=${key}`;
-  return fetchByPath(url, 'total', 'data.gov.in', result);
+  const listUrl = (limit, offset) =>
+    'https://api.data.gov.in/lists?format=json&filters%5Bactive%5D=1' +
+    `&filters%5Bsource%5D=data.gov.in&limit=${limit}&offset=${offset}&api-key=${key}`;
+
+  await fetchByPath(listUrl(0, 0), 'total', 'data.gov.in', result);
+
+  // Each record's `org` is a hierarchy, outermost first:
+  //   ["Ministry of Agriculture and Farmers Welfare", "Department of ..."]
+  // The ministry is what makes a readable ranking on a national portal — going
+  // one level deeper splits the same body across dozens of departments and
+  // turns a top-8 list into noise.
+  const tally = {};
+  let seen = 0;
+  let named = 0;
+
+  for (let page = 0; page < IN_PAGE_CAP; page += 1) {
+    const { json, note } = await fetchJson(listUrl(IN_PAGE, page * IN_PAGE), {
+      timeoutMs: ARCGIS_TIMEOUT_MS,
+    });
+    if (note) {
+      result.notes.push(`data.gov.in publishers: ${note}`);
+      break;
+    }
+    const records = json && Array.isArray(json.records) ? json.records : [];
+    if (records.length === 0) break;
+
+    for (const rec of records) {
+      seen += 1;
+      const org = rec && rec.org;
+      const raw = Array.isArray(org) ? org[0] : org;
+      const name = typeof raw === 'string' ? raw.replace(/\s+/g, ' ').trim() : '';
+      if (!name) continue;
+      named += 1;
+      tally[name] = (tally[name] || 0) + 1;
+    }
+
+    if (records.length < IN_PAGE) break;
+    await sleep(120);
+  }
+
+  if (seen >= IN_PAGE * IN_PAGE_CAP) {
+    result.notes.push(`data.gov.in publishers: stopped at ${IN_PAGE_CAP} pages, counts are partial`);
+  }
+  const pubs = Object.entries(tally).map(([name, count]) => ({ name, count }));
+  if (pubs.length) result.publishers = topN(pubs, 8);
+  result.publisherCoverage = seen > 0 ? named / seen : null;
+  return result;
 }
 
 // data.gov.in state DMS portals (karnataka/tn/smartcities)
+const DMS_PAGE = 1000;
+const DMS_PAGE_CAP = 40;
+
 async function fetchDataGovInDms(portal, opts, result) {
   let host;
   try { host = new URL(portal.baseUrl).host; } catch { host = portal.baseUrl; }
-  const url = `https://${host}/backend/dmspublic/v1/resources?filters%5Bdomain%5D=${encodeURIComponent(host)}&limit=1`;
-  return fetchByPath(url, 'total', 'data.gov.in DMS', result);
+  const listUrl = (limit, offset) =>
+    `https://${host}/backend/dmspublic/v1/resources` +
+    `?filters%5Bdomain%5D=${encodeURIComponent(host)}&limit=${limit}&offset=${offset}`;
+
+  await fetchByPath(listUrl(1, 0), 'total', 'data.gov.in DMS', result);
+
+  // Each resource names its publishing body in `cdos_state_ministry` (an array
+  // of one). No facet, so tally by walking — cheap here because this API honours
+  // a limit of 1000, unlike data.gov.sg's fixed 10.
+  const tally = {};
+  let seen = 0;
+  let named = 0;
+
+  for (let page = 0; page < DMS_PAGE_CAP; page += 1) {
+    const { json, note } = await fetchJson(listUrl(DMS_PAGE, page * DMS_PAGE), {
+      timeoutMs: ARCGIS_TIMEOUT_MS,
+    });
+    if (note) {
+      result.notes.push(`data.gov.in DMS publishers: ${note}`);
+      break;
+    }
+    const rows = json && json.data && Array.isArray(json.data.rows) ? json.data.rows : [];
+    if (rows.length === 0) break;
+
+    for (const row of rows) {
+      seen += 1;
+      const field = row && row.cdos_state_ministry;
+      const raw = Array.isArray(field) ? field[0] : field;
+      const name = typeof raw === 'string' ? raw.replace(/\s+/g, ' ').trim() : '';
+      if (!name) continue;
+      named += 1;
+      tally[name] = (tally[name] || 0) + 1;
+    }
+
+    if (rows.length < DMS_PAGE) break;
+    if (typeof result.count === 'number' && seen >= result.count) break;
+    await sleep(150);
+  }
+
+  const pubs = Object.entries(tally).map(([name, count]) => ({ name, count }));
+  if (pubs.length) result.publishers = topN(pubs, 8);
+  result.publisherCoverage = seen > 0 ? named / seen : null;
+  if (seen > 0 && named < seen) {
+    result.notes.push(`data.gov.in DMS publishers: ${named} of ${seen} resources named a ministry`);
+  }
+  return result;
 }
 
 // OS Data Hub (downloadable products)
