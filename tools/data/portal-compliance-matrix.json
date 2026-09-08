@@ -53,6 +53,19 @@
    "ingest": "allow",
    "attribution_template": "{title} \u2014 {publisher} (CC0 1.0). Retrieved {retrieved} via Vizzie."
   },
+  "PDDL-1.0": {
+   "name": "Open Data Commons Public Domain Dedication and Licence 1.0",
+   "spdx": "PDDL-1.0",
+   "url": "https://opendatacommons.org/licenses/pddl/1-0/",
+   "commercial_ok": true,
+   "attribution_required": false,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "{title} \u2014 {publisher} (PDDL 1.0, public domain dedication). Retrieved {retrieved} via Vizzie.",
+   "note": "Public-domain dedication for DATA (the Open Data Commons counterpart to CC0). No attribution is legally required; Vizzie still renders the source line as good practice. This is the default licence of Analyze Boston (219 of its 235 datasets) and, as hdx-pddl, of a large slice of UN OCHA's HDX."
+  },
   "US-PD": {
    "name": "US Government Public Domain (17 USC \u00a7105)",
    "spdx": "US-PD",
@@ -101,6 +114,19 @@
    "indicate_changes": true,
    "ingest": "allow",
    "attribution_template": "{title} \u2014 {publisher}, Datenlizenz Deutschland \u2013 Namensnennung 2.0. Retrieved {retrieved} via Vizzie."
+  },
+  "ODC-BY-1.0": {
+   "name": "Open Data Commons Attribution License 1.0",
+   "spdx": "ODC-By-1.0",
+   "url": "https://opendatacommons.org/licenses/by/1-0/",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "{title} \u2014 {publisher}, licensed ODC-BY 1.0. Retrieved {retrieved} via Vizzie.",
+   "note": "Attribution-only ODC licence \u2014 same permissions as CC-BY, no share-alike. Distinct from ODbL, which does carry share-alike."
   },
   "ODbL-1.0": {
    "name": "Open Database License 1.0",
@@ -221,7 +247,24 @@
   "http://standaarden.overheid.nl/owms/terms/licentieonbekend": "UNDECLARED",
   "http://standaarden.overheid.nl/owms/terms/geslotenlicentie": "UNDECLARED",
   "lsba": "UNDECLARED",
-  "custom_active_acceptance": "UNDECLARED"
+  "custom_active_acceptance": "UNDECLARED",
+  "odc-pddl": "PDDL-1.0",
+  "pddl": "PDDL-1.0",
+  "pddl-1.0": "PDDL-1.0",
+  "hdx-pddl": "PDDL-1.0",
+  "http://opendatacommons.org/licenses/pddl/1-0": "PDDL-1.0",
+  "https://opendatacommons.org/licenses/pddl/1-0": "PDDL-1.0",
+  "open data commons public domain dedication and license (pddl)": "PDDL-1.0",
+  "odc-by": "ODC-BY-1.0",
+  "odc-by-1.0": "ODC-BY-1.0",
+  "http://opendatacommons.org/licenses/by/1-0": "ODC-BY-1.0",
+  "https://opendatacommons.org/licenses/by/1-0": "ODC-BY-1.0",
+  "http://opendatacommons.org/licenses/pddl/summary": "PDDL-1.0",
+  "https://opendatacommons.org/licenses/pddl/summary": "PDDL-1.0",
+  "http://opendatacommons.org/licenses/by/summary": "ODC-BY-1.0",
+  "https://opendatacommons.org/licenses/by/summary": "ODC-BY-1.0",
+  "http://opendatacommons.org/licenses/odbl/summary": "ODbL-1.0",
+  "https://opendatacommons.org/licenses/odbl/summary": "ODbL-1.0"
  },
  "platforms": {
   "ckan": {
@@ -1530,7 +1573,8 @@
    "licence_source": "Per-dataset `license_id` field via package_search / package_show",
    "default_licence": null,
    "observed_licences": {
-    "UNDECLARED": 230,
+    "PDDL-1.0": 219,
+    "UNDECLARED": 14,
     "ODbL-1.0": 1
    },
    "undeclared_share": null,
@@ -1542,7 +1586,7 @@
     "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default. data.gov.uk explicitly states no API key and no rate limit."
    },
    "auth": "None required",
-   "notes": null,
+   "notes": "93% PDDL-1.0 (219/235), measured live 8 Sep 2026. The earlier reading of 230 UNDECLARED was an artefact of PDDL having no alias in this matrix, not the portal's own metadata.",
    "dataset_overrides": []
   },
   {
