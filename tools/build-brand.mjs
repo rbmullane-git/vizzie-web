@@ -18,6 +18,14 @@ import {
   appScript,
   analyticsBlock,
 } from './render-portal.mjs';
+import { portalFacts } from './portal-facts.mjs';
+
+// The press boilerplate below is meant to be copied verbatim into articles, so
+// its figures come from the same place as the rest of the site rather than
+// being retyped — a reviewer quoting "170 portals across 28 countries" months
+// after it stopped being true is the worst version of this drift.
+const FACTS = portalFacts();
+const millions = (n) => (Math.floor(n / 1e5) / 10).toFixed(1);
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const WEB = join(__dir, '..');
@@ -282,8 +290,9 @@ const html = `<!doctype html>
           <div class="boiler">
             <p>
               Vizzie is a mapping and analytics platform that connects people to the
-              world's open data. It reaches 170 open-data portals across 28 countries
-              and more than 4.1 million datasets, and turns any of them into maps,
+              world's open data. It reaches ${FACTS.portalCount} open-data portals across
+              ${FACTS.countryCount} countries and regions and more than
+              ${millions(FACTS.datasetTotal)} million datasets, and turns any of them into maps,
               charts and data stories in the browser — with nothing to download and no
               GIS specialist required. Vizzie is in beta at
               <a href="https://www.vizzie.org" style="color: var(--green)">vizzie.org</a>.

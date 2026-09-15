@@ -20,6 +20,12 @@ import {
   footerBlock,
   analyticsBlock,
 } from './render-portal.mjs';
+import { portalFacts } from './portal-facts.mjs';
+
+// The landing pages quote the same connected-data numbers as the homepage, so
+// they read them from the same place rather than being retyped. See
+// portal-facts.mjs for why.
+const FACTS = portalFacts();
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const WEB = join(__dir, '..');
@@ -73,8 +79,9 @@ const SHARED = {
   proof: [
     {
       h: 'Nothing to download',
-      p: `Connect straight to 170+ open data portals across 28 countries and pull a dataset
-          onto a map in a couple of clicks. No shapefiles, no ETL, no waiting on a data team.`,
+      p: `Connect straight to ${FACTS.portalCount} open data portals across ${FACTS.countryCount}
+          countries and regions and pull a dataset onto a map in a couple of clicks. No shapefiles,
+          no ETL, no waiting on a data team.`,
     },
     {
       h: 'No GIS specialist needed',
