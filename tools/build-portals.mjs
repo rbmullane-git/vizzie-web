@@ -440,11 +440,22 @@ async function main() {
   for (const g of groups) g.portals.sort((a, b) => (b.count || 0) - (a.count || 0));
   writeFileSync(join(outRoot, 'index.html'), renderPortalsIndex(groups, ctx));
 
-  // sitemap
+  // sitemap. The geography pages are written by build-geography.mjs, but the
+  // sitemap has a single writer — this one — so they are discovered from disk
+  // rather than listed here. Either build order then produces a complete map,
+  // and a page that has been deleted cannot linger in it.
+  const geographyDir = join(WEB, 'geography');
+  const geographySlugs = existsSync(geographyDir)
+    ? readdirSync(geographyDir, { withFileTypes: true })
+        .filter((d) => d.isDirectory() && existsSync(join(geographyDir, d.name, 'index.html')))
+        .map((d) => d.name)
+        .sort()
+    : [];
   const urls = [
     { loc: `${SITE}/`, pr: '1.0' },
     { loc: `${SITE}/portals/`, pr: '0.8' },
     { loc: `${SITE}/brand/`, pr: '0.3' },
+    ...geographySlugs.map((slug) => ({ loc: `${SITE}/geography/${slug}/`, pr: '0.7' })),
     ...portals.map((p) => ({ loc: `${SITE}/portals/${p.slug}/`, pr: '0.6' })),
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
@@ -452,7 +463,7 @@ async function main() {
     .join('\n')}\n</urlset>\n`;
   writeFileSync(join(WEB, 'sitemap.xml'), sitemap);
 
-  process.stderr.write(`wrote ${portals.length} portal pages + index + sitemap (${urls.length} urls)\n`);
+  process.stderr.write(`wrote ${portals.length} portal pages + index + sitemap (${urls.length} urls, incl. ${geographySlugs.length} geography)\n`);
 
   // Surface what the alias table missed. These are licences a portal really
   // declares that the compliance matrix has no class for, so they render as a

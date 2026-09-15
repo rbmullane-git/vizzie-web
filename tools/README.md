@@ -27,6 +27,31 @@ Independent of the above: `sync-legal.mjs` copies Terms/Privacy/Data-deletion
 from the app repo, and `indexnow-submit.mjs` pings search engines after a
 deploy.
 
+## Geography pages
+
+`/geography/<slug>/` — one page per boundary set Vizzie holds, for the analyst
+with a spreadsheet of area codes and no way to map it. Two steps, and they are
+not part of the portal pipeline above:
+
+| # | Command | What it does | Network |
+| - | ------- | ------------ | ------- |
+| 1 | `node tools/fetch-geography-facts.mjs [slug]` | Reads counts, vintages, area sizes, licences, attributions, worked examples and the sample boundaries out of the **production connector database** into `tools/data/geography-facts.json`. Needs the Render CLI and `RENDER_API_KEY`. | yes |
+| 2 | `node tools/build-geography.mjs [slug]` | Renders the pages from that file. | no |
+
+Same rule as the portal pages: **every number is read from the database**, which
+is the same table the product joins your data against, so a page cannot claim a
+boundary set Vizzie does not hold. The hand-written half is the editorial block
+in `build-geography.mjs` — what the geography *is* and what its codes mean,
+which no database can supply. Adding a level is one entry in `GEOGRAPHY_LEVELS`
+(fetch) and one in `EDITORIAL` (build).
+
+The fetch step refuses to write a level whose `reference_geography_sources` row
+is missing or whose licence is unconfirmed, rather than publish geometry with no
+credit line.
+
+`sitemap.xml` has a single writer, `build-portals.mjs`, which discovers
+`geography/*/` from disk — so the two builds can run in either order.
+
 ## Where the numbers come from
 
 `portal-facts.mjs` is the single reader of the generated data under
