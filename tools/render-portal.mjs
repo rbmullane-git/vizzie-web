@@ -346,6 +346,8 @@ export function renderPortalPage(portal, stats, ctx) {
   const hasPublishers =
     publishers.length > 0 && !(pubCoverage !== null && pubCoverage < PUBLISHER_COVERAGE_FLOOR);
   const examples = Array.isArray(portal.examples) ? portal.examples : [];
+  const rights = stats.rights && stats.rights.classified ? stats.rights : null;
+  const dominant = stats.dominantLicence || null;
 
   // ---- SEO ----
   const title = `${name} — open datasets, licences & maps · Vizzie`;
@@ -436,6 +438,28 @@ export function renderPortalPage(portal, stats, ctx) {
           </div>
         </div>`
       : '';
+    // What the declared licences permit. This is the question that brings people
+    // to a licence page at all, and it is answerable now only because the
+    // compliance matrix learned the display-name licence vocabularies — before
+    // that, most of these catalogues read as "unknown".
+    let rightsClause = '';
+    if (rights) {
+      const share = (n) => Math.round((n / rights.classified) * 100);
+      const parts = [];
+      if (rights.commercial) {
+        parts.push(share(rights.commercial) >= 99
+          ? `<b>essentially all of them can be used commercially</b>`
+          : `<b>${share(rights.commercial)}% can be used commercially</b>`);
+      }
+      if (rights.shareAlike) parts.push(`${share(rights.shareAlike)}% carry a share-alike condition, so work built on them has to be published under the same terms`);
+      if (rights.nonCommercial) parts.push(`${share(rights.nonCommercial)}% are non-commercial only`);
+      if (rights.noDerivatives) parts.push(`${share(rights.noDerivatives)}% forbid derivatives, which rules out remapping them`);
+      if (parts.length) {
+        rightsClause = `<p class="prose">Of the ${num(rights.classified)} datasets here whose licence
+          Vizzie can identify, ${parts.join('; ')}. Attribution is required by almost every open
+          licence — Vizzie writes the attribution line for you when you export or publish.</p>`;
+      }
+    }
     const noteClause = portal.notes
       ? `<p class="prose">${esc(trim(portal.notes, 220))}</p>`
       : '';
@@ -449,6 +473,7 @@ export function renderPortalPage(portal, stats, ctx) {
           treat it cautiously and check with the publisher before relying on it. Vizzie flags each
           dataset's licence (or its absence) so you can see this before you build.</p>
         ${licenceRows}
+        ${rightsClause}
         ${noteClause}`;
   } else {
     const src = portal.licenceSource || 'each dataset';
@@ -607,6 +632,13 @@ export function renderPortalPage(portal, stats, ctx) {
           `${name} is the open-data portal for ${country || 'its region'}` +
           `${platform ? `, running on ${platform}` : ''}` +
           `${count !== null ? `, with ${num(count)} datasets` : ''}.`,
+        // The licence most of this catalogue carries. schema.org wants one
+        // canonical URL, so this is the dominant class rather than the mix —
+        // and it is only emitted when the compliance matrix recognised the
+        // licence, never inferred from a portal saying nothing.
+        ...(dominant && dominant.url ? { license: dominant.url } : {}),
+        ...(stats.fetchedAt ? { dateModified: String(stats.fetchedAt).slice(0, 10) } : {}),
+        ...(country ? { spatialCoverage: country } : {}),
       },
     ],
   };
@@ -733,11 +765,21 @@ export function renderPortalsIndex(portalsByCountry, ctx) {
   const siteUrl = ctx.siteUrl || 'https://www.vizzie.org';
   const canonical = `${siteUrl}/portals/`;
 
+  // Counted from what was actually built, not typed in. The hardcoded "170
+  // portals across 28 countries" outlived two rounds of additions and was
+  // wrong on the day it shipped the third.
+  const portalCount = portalsByCountry.reduce((n, g) => n + (g.portals?.length || 0), 0);
+  const countryCount = portalsByCountry.length;
+  const datasetTotal = portalsByCountry.reduce(
+    (n, g) => n + (g.portals || []).reduce((m, p) => m + (p.count || 0), 0),
+    0
+  );
+
   const title = 'Open data portals — the full list · Vizzie';
   const description = trim(
-    'Browse every open-data portal Vizzie connects to — 170 national and city ' +
-      'catalogues across 28 countries. See each portal\'s live dataset count and ' +
-      'licence profile, and turn any of it into a map. No download.',
+    `Browse every open-data portal Vizzie connects to — ${portalCount} national and city ` +
+      `catalogues across ${countryCount} countries and regions. See each portal's live dataset ` +
+      'count and licence profile, and turn any of it into a map. No download.',
     158
   );
 
@@ -812,10 +854,11 @@ export function renderPortalsIndex(portalsByCountry, ctx) {
         <div class="kicker">Open data portals</div>
         <h1>Open data portals</h1>
         <p class="lead">
-          Vizzie connects to <b style="color:var(--text)">170 open-data portals</b> across
-          28 countries — national catalogues, state and city portals, and global sources.
-          Pick one to see its live dataset count, licence profile, and top publishers, then
-          turn any dataset into a map. Nothing to download.
+          Vizzie connects to <b style="color:var(--text)">${portalCount} open-data portals</b> across
+          ${countryCount} countries and regions — national catalogues, state and city portals, and
+          global statistical sources. Together they publish <b style="color:var(--text)">${num(datasetTotal)}</b>
+          datasets. Pick one to see its live dataset count, licence profile, and top publishers,
+          then turn any dataset into a map. Nothing to download.
         </p>
         <div class="cta-row">
           <a class="btn" data-app="/#signup">Sign up free</a>

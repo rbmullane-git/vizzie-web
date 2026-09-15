@@ -21,72 +21,177 @@ const __dir = dirname(fileURLToPath(import.meta.url));
 const WEB = join(__dir, '..');
 const DATA = join(__dir, 'data');
 const CACHE = join(DATA, 'stats-cache.json');
+const BESPOKE_COUNTS = join(DATA, 'bespoke-counts.json');
 const EXAMPLES_DIR = '/Users/rich/vizzie/src/examples/data';
 
 const SITE = 'https://www.vizzie.org';
 const APP = 'https://app.vizzie.org';
 const TODAY = process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
 
-const COUNTRY_LABELS = {
-  AU: 'Australia', US: 'United States', GB: 'United Kingdom', FR: 'France', DE: 'Germany',
-  NL: 'Netherlands', AT: 'Austria', ES: 'Spain', FI: 'Finland', SG: 'Singapore', BE: 'Belgium',
-  IT: 'Italy', IE: 'Ireland', PT: 'Portugal', CH: 'Switzerland', GR: 'Greece', SI: 'Slovenia',
-  RO: 'Romania', LV: 'Latvia', LU: 'Luxembourg', CA: 'Canada', NZ: 'New Zealand', JP: 'Japan',
-  AR: 'Argentina', IN: 'India', UN: 'Global', APAC: 'Asia-Pacific (regional)', EU: 'European Union',
-};
+// Country labels come from the connector's own registry (synced by
+// sync-connector-data.mjs), so a newly connected country names itself here
+// without a second list to remember — "PACIFIC" and "NC" arrived that way.
+const COUNTRY_LABELS = loadJSON(join(DATA, 'country-labels.json'));
 const PLATFORM_LABEL = {
   ckan: 'CKAN', socrata: 'Socrata', 'arcgis-hub': 'ArcGIS Hub', opendatasoft: 'OpenDataSoft',
   datagov: 'CKAN (data.gov)', 'data-europa-eu': 'data.europa.eu', udata: 'uData', dataverse: 'Dataverse',
   'data-gov-sg': 'data.gov.sg', 'data-gov-in': 'data.gov.in', 'data-gov-in-dms': 'data.gov.in',
   'os-data-hub': 'OS Data Hub', 'london-datastore': 'London Datastore', 'world-bank': 'World Bank',
   oecd: 'OECD', 'who-gho': 'WHO GHO', unicef: 'UNICEF', 'un-sdg': 'UN SDG', adb: 'ADB', dhs: 'DHS', owid: 'Our World in Data',
+  eurostat: 'Eurostat dissemination API', census: 'US Census Bureau API',
 };
 
 const norm = (u) => (u || '').replace(/\/+$/, '');
 const host = (u) => { try { return new URL(u).host; } catch { return (u || '').replace(/^https?:\/\//, '').split('/')[0]; } };
 const slugify = (u) => host(u).replace(/^www\./, '').replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase();
 
-// Merge raw licence keys into canonical classes.
+// Resolve what a portal *says* a licence is into a real licence class.
 //
-// Two vocabularies arrive here. CKAN and ArcGIS send terse slugs ("cc-by-sa",
-// "notspecified"); Socrata sends the name written out in full ("Creative
-// Commons Attribution | Share Alike 4.0 International"). The slug rules do not
-// match the spelled-out forms — "creative commons attribution 4.0
-// international" contains neither "cc-by" nor a licenses/by URL — so without
-// the long-form rules below, every Socrata licence fell through to
-// "Other / bespoke" and a portal that is 81% CC BY looked bespoke.
+// The authority is the compliance matrix's `licence_aliases` table, which the
+// connector uses for the same job when it decides whether a dataset may be
+// ingested at all. Using it here rather than a second set of string rules is
+// the whole point: these pages and the product must not disagree about what a
+// licence is.
 //
-// Order matters: the restrictive variants must be tested before plain
-// attribution, or "attribution | share alike" is filed as CC-BY.
-function canonLicence(raw) {
-  const s = String(raw || '').toLowerCase();
-  if (!s || s === 'notspecified' || s === 'undeclared' || s === 'null') return 'UNDECLARED';
+// Three vocabularies arrive. CKAN and ArcGIS send terse machine ids
+// ("cc-by-sa", "notspecified"); OpenDataSoft and Socrata send the display name
+// written out ("CC BY", "Open Database License (ODbL)"). The matrix carries all
+// three — as of 15 Sep 2026 it resolves 93.6% of the datasets in the stats
+// cache. Before that, the site's own rules matched only the slug forms, so
+// Paris showed "Open Database License (ODbL)" and "ODbL" as two unrelated
+// licences and Melbourne's 226 CC BY datasets sat in a bucket of their own.
+//
+// The heuristics below run only on what the matrix has no alias for — mostly
+// real licences in versions it hasn't classified (CC-BY-NZ-3.0, the Canadian
+// provincial OGLs, CC-BY-2.5). They group for *display* only; they never
+// decide that anything is permissive, which is the matrix's job alone.
+const normLicence = (raw) => String(raw ?? '').trim().toLowerCase().replace(/\/+$/, '');
 
-  const cc = s.includes('cc-by') || s.includes('creative commons attribution') ||
-    s.includes('creativecommons.org/licenses/by');
-  if (s.includes('cc-by-sa') || s.includes('cc-sa') || (cc && s.includes('share alike')) ||
-      (cc && s.includes('sharealike'))) return 'CC-BY-SA';
-  if (s.includes('cc-by-nc') || (cc && s.includes('noncommercial')) ||
-      (cc && s.includes('non-commercial'))) return 'CC-BY-NC';
-  if (s.includes('cc-by-nd') || (cc && s.includes('noderiv')) ||
-      (cc && s.includes('no deriv'))) return 'CC-BY-ND';
+const MATRIX = loadJSON(join(DATA, 'portal-compliance-matrix.json'));
+
+const ALIAS_INDEX = (() => {
+  const idx = new Map();
+  for (const [alias, cls] of Object.entries(MATRIX.licence_aliases || {})) idx.set(normLicence(alias), cls);
+  // A class id is its own alias — portals that already speak SPDX hit this.
+  for (const cls of Object.keys(MATRIX.licences || {})) if (!idx.has(normLicence(cls))) idx.set(normLicence(cls), cls);
+  return idx;
+})();
+
+// Short forms for a two-column list; the matrix's own `name` field is written
+// for a compliance report ("Open Data Commons Public Domain Dedication and
+// Licence 1.0") and wraps to three lines in a 230px column.
+const CLASS_LABEL = {
+  'CC-BY-4.0': 'CC BY 4.0', 'CC-BY-3.0-AU': 'CC BY 3.0 (AU)', 'CC0-1.0': 'CC0 1.0',
+  'PDDL-1.0': 'ODC PDDL 1.0', 'US-PD': 'US public domain', 'OGL-UK-3.0': 'OGL v3.0 (UK)',
+  'OGL-Canada-2.0': 'OGL 2.0 (Canada)', 'DL-DE-BY-2.0': 'DL-DE BY 2.0', 'ODC-BY-1.0': 'ODC BY 1.0',
+  'ODbL-1.0': 'ODbL 1.0', 'CC-BY-SA-4.0': 'CC BY-SA 4.0', 'CC-BY-NC': 'CC BY-NC',
+  'CC-BY-ND': 'CC BY-ND', 'LO-2.0': 'Licence Ouverte 2.0', 'LO-1.0': 'Licence Ouverte 1.0',
+  'PDL-1.0-JP': 'PDL 1.0 (Japan)', 'CC-BY-IGO': 'CC BY 3.0 IGO', 'PUBLIC-DOMAIN': 'Public domain',
+  'CLOSED': 'Closed / restricted', UNDECLARED: 'UNDECLARED',
+};
+
+// Licence strings the matrix could not map, collected across the whole build so
+// the alias table can be improved through use — the same reason the connector's
+// resolver emits a warning rather than swallowing an unknown string.
+const unmapped = new Map();
+
+/** The matrix licence class a raw string resolves to, or null if unmapped. */
+function licenceClassOf(raw) {
+  const s = normLicence(raw);
+  if (!s || s === 'notspecified' || s === 'null' || s === 'none') return 'UNDECLARED';
+  return ALIAS_INDEX.get(s) || null;
+}
+
+function canonLicence(raw) {
+  const s = normLicence(raw);
+  if (!s || s === 'notspecified' || s === 'null' || s === 'none') return 'UNDECLARED';
+
+  const cls = ALIAS_INDEX.get(s);
+  if (cls) return CLASS_LABEL[cls] || cls;
+
+  unmapped.set(raw, (unmapped.get(raw) || 0) + 1);
+
+  // A bare number is a portal's internal licence id leaking through its facet
+  // (Hamburg and BODIK both do this). It grants nothing that can be read, so it
+  // belongs with UNDECLARED rather than being printed as a licence called "22".
+  if (/^\d+$/.test(s)) return 'UNDECLARED';
+
+  const cc = s.includes('cc-by') || s.includes('cc by') ||
+    s.includes('creative commons attribution') || s.includes('creativecommons.org/licenses/by');
+  if (s.includes('cc-by-sa') || s.includes('cc by-sa') || s.includes('cc-sa') ||
+      (cc && (s.includes('share alike') || s.includes('sharealike')))) return 'CC BY-SA (other version)';
+  if (s.includes('cc-by-nc') || s.includes('cc by-nc') ||
+      (cc && (s.includes('noncommercial') || s.includes('non-commercial')))) return 'CC BY-NC';
+  if (s.includes('cc-by-nd') || s.includes('cc by-nd') ||
+      (cc && (s.includes('noderiv') || s.includes('no deriv')))) return 'CC BY-ND';
   if (s.includes('cc-zero') || s.includes('cc0') || s.includes('cc-0') ||
-      s.includes('publicdomain') || s.includes('pddl')) return 'CC0 / Public Domain';
-  if (cc) return 'CC-BY';
+      s.includes('publicdomain') || s.includes('pddl')) return 'CC0 / public domain';
+  if (cc) return 'CC BY (other version)';
 
   if (s.includes('ogl') || s.includes('open government licence') ||
       s.includes('open government license')) return 'Open Government Licence';
-  if (s.includes('odbl') || s.includes('open database license')) return 'ODbL';
+  if (s.includes('odbl') || s.includes('open database license')) return 'ODbL 1.0';
   if (s.includes('odc') || s.includes('open data commons')) return 'Open Data Commons';
-  if (s.includes('us-pd') || s === 'other-pd' || s.includes('public domain')) return 'Public Domain';
+  if (s.includes('us-pd') || s === 'other-pd' || s.includes('public domain')) return 'Public domain';
 
   // A portal-wide pointer to its own terms ("See Terms of Use") is a real grant,
   // just not a standard one — so it belongs with bespoke licences rather than
   // with UNDECLARED, which the pages define as carrying no explicit permission
   // at all.
   if (s.includes('terms of use') || s.includes('terms of service')) return 'Other / bespoke';
-  if (s.includes('other')) return 'Other / bespoke';
-  return raw.length > 24 ? 'Other / bespoke' : raw; // keep short codes as-is
+  if (s.includes('other') || s.includes('custom')) return 'Other / bespoke';
+  return String(raw).length > 24 ? 'Other / bespoke' : raw; // keep short codes as-is
+}
+
+/**
+ * What the declared licences on a portal actually permit.
+ *
+ * This is the question a planner or analyst has when they land on one of these
+ * pages — "can I use this in work I get paid for?" — and until the licence
+ * vocabulary was mapped (15 Sep 2026) it could not be answered: most ODS and
+ * Socrata datasets resolved to UNDECLARED, so the honest answer was "unknown"
+ * for catalogues that are in fact almost entirely open.
+ *
+ * Only datasets whose licence resolved to a real matrix class are counted, and
+ * `classified` says how many that was. A licence the matrix has no class for is
+ * not evidence of anything, so it is left out of the denominator rather than
+ * being assumed permissive.
+ */
+function rightsProfile(licences) {
+  let classified = 0, commercial = 0, shareAlike = 0, nonCommercial = 0, noDerivatives = 0;
+  for (const l of licences || []) {
+    const cls = licenceClassOf(l.cls);
+    if (!cls || cls === 'UNDECLARED') continue;
+    const entry = MATRIX.licences?.[cls];
+    if (!entry) continue;
+    const n = l.count || 0;
+    classified += n;
+    if (entry.commercial_ok === true) commercial += n;
+    if (entry.commercial_ok === false) nonCommercial += n;
+    if (entry.share_alike) shareAlike += n;
+    if (entry.no_derivatives) noDerivatives += n;
+  }
+  if (!classified) return null;
+  return { classified, commercial, shareAlike, nonCommercial, noDerivatives };
+}
+
+/**
+ * The licence the largest share of this portal's classified datasets carries,
+ * as a matrix entry. Used for the DataCatalog structured data, where
+ * schema.org's `license` wants one canonical URL rather than a distribution.
+ */
+function dominantLicence(licences) {
+  const by = new Map();
+  for (const l of licences || []) {
+    const cls = licenceClassOf(l.cls);
+    if (!cls || cls === 'UNDECLARED' || !MATRIX.licences?.[cls]) continue;
+    by.set(cls, (by.get(cls) || 0) + (l.count || 0));
+  }
+  if (!by.size) return null;
+  const [cls, count] = [...by.entries()].sort((a, b) => b[1] - a[1])[0];
+  const entry = MATRIX.licences[cls];
+  const share = [...by.values()].reduce((a, b) => a + b, 0);
+  return { cls, name: entry.name, url: entry.url || null, commercialOk: entry.commercial_ok, share: count / share };
 }
 
 function mergeLicences(licences) {
@@ -99,7 +204,7 @@ function mergeLicences(licences) {
   by.delete('UNDECLARED');
   const declared = [...by.entries()].map(([cls, count]) => ({ cls, count })).sort((a, b) => b.count - a.count);
   const total = declared.reduce((s, x) => s + x.count, 0) + undeclared;
-  return { declared, undeclared, total };
+  return { declared, undeclared, total, rights: rightsProfile(licences), dominant: dominantLicence(licences) };
 }
 
 function loadJSON(p) { return JSON.parse(readFileSync(p, 'utf8')); }
@@ -208,7 +313,10 @@ function fromMatrix(portal) {
 }
 
 async function getStats(portals, { forceFetch }) {
-  const cache = existsSync(CACHE) && !forceFetch ? loadJSON(CACHE) : {};
+  // Always load the cache, even on a forced refetch — it is the fallback when
+  // a probe fails, not just a way to skip work.
+  const cache = existsSync(CACHE) ? loadJSON(CACHE) : {};
+  const stale = [];
   const todo = portals.filter((p) => forceFetch || !cache[p.slug]);
   if (todo.length) {
     process.stderr.write(`fetching ${todo.length} portals (concurrency 8)…\n`);
@@ -218,18 +326,48 @@ async function getStats(portals, { forceFetch }) {
         { connectorType: p.connectorType, baseUrl: p.baseUrl, label: p.label, countryCode: p.countryCode },
         { socrataToken: process.env.SOCRATA_APP_TOKEN },
       );
-      cache[p.slug] = s;
+      // Don't let a portal that happens to be down today delete what it told
+      // us last time. A refetch only overwrites when it actually learned
+      // something: a failed probe against a portal we already have a count for
+      // keeps the count (and its original fetchedAt, so the page still dates
+      // the number honestly).
+      const had = cache[p.slug];
+      const learnedNothing = !s.ok && s.count == null && !s.licences?.length;
+      if (!(learnedNothing && had && (had.count != null || had.licences?.length))) {
+        cache[p.slug] = s;
+      } else {
+        stale.push(p.slug);
+      }
       done++;
       if (done % 10 === 0 || done === todo.length) process.stderr.write(`  ${done}/${todo.length}\n`);
     });
     writeFileSync(CACHE, JSON.stringify(cache, null, 1));
+    if (stale.length) {
+      process.stderr.write(`  ${stale.length} portals failed this probe; kept their previous figures: ${stale.join(', ')}\n`);
+    }
   }
   return cache;
 }
 
+// Counts for the bespoke statistical APIs the site's fetcher cannot speak,
+// taken from the connector's own catalogTotal(). See fetch-bespoke-counts.mjs.
+const bespokeCounts = existsSync(BESPOKE_COUNTS) ? loadJSON(BESPOKE_COUNTS) : {};
+const bespokeByUrl = new Map(Object.entries(bespokeCounts).map(([u, v]) => [norm(u), v]));
+
 // Combine live stats + matrix fallback into the shape the renderer wants.
 function finalizeStats(portal, live) {
   let s = live;
+  // A count from the connector outranks no count at all, but never a live one:
+  // the portal's own catalogue API is closer to the truth than our reading of it.
+  const bespoke = bespokeByUrl.get(norm(portal.baseUrl));
+  if (bespoke && s.count == null) {
+    s = {
+      ...s,
+      count: bespoke.count,
+      countSource: bespoke.source,
+      fetchedAt: s.fetchedAt || `${bespoke.measured}T00:00:00.000Z`,
+    };
+  }
   // If live licence data missing but matrix has it, splice matrix licence stats in.
   if ((s.undeclaredPct == null || !s.licences?.length) && portal.matrixObserved) {
     const mx = fromMatrix(portal);
@@ -250,6 +388,8 @@ function finalizeStats(portal, live) {
     // How much of the catalogue the publisher list actually speaks for; the
     // renderer says so when it is only part of the portal.
     publisherCoverage: s.publisherCoverage ?? null,
+    rights: merged.rights,
+    dominantLicence: merged.dominant,
     ok: !!s.ok,
     fetchedAt: s.fetchedAt || null,
     countSource: s.countSource || '',
@@ -313,6 +453,18 @@ async function main() {
   writeFileSync(join(WEB, 'sitemap.xml'), sitemap);
 
   process.stderr.write(`wrote ${portals.length} portal pages + index + sitemap (${urls.length} urls)\n`);
+
+  // Surface what the alias table missed. These are licences a portal really
+  // declares that the compliance matrix has no class for, so they render as a
+  // display-grouped approximation here and resolve to UNDECLARED in the
+  // connector — which is the conservative answer, but a worse one than adding
+  // the alias.
+  if (unmapped.size) {
+    const top = [...unmapped.entries()].sort((a, b) => b[1] - a[1]).slice(0, 15);
+    process.stderr.write(`\n${unmapped.size} licence strings had no alias in the matrix (top 15):\n`);
+    for (const [raw, n] of top) process.stderr.write(`  ${String(n).padStart(4)}x  ${JSON.stringify(raw)}\n`);
+    process.stderr.write('  -> add these to licence_aliases in vizzie-connector, then re-sync.\n');
+  }
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
