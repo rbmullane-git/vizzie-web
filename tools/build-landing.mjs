@@ -33,6 +33,37 @@ const SITE = 'https://www.vizzie.org';
 const APP = 'https://app.vizzie.org';
 
 /**
+ * Google Ads tag — deliberately scoped to these two pages ONLY.
+ *
+ * It is not in analytics.js, because that file is loaded by the ~180 generated
+ * portal and geography pages, and an advertising tag has no business on organic
+ * search surfaces. It is not in the studio either, so no ad tracker runs inside
+ * the authenticated product and privacy.html stays accurate.
+ *
+ * It records NO conversions, by design. The sign-up completes on
+ * app.vizzie.org, which carries no Google tag, so Google Ads' Conversions
+ * column stays at zero for the whole test. That costs nothing: the message
+ * decision is read from ad CTR (free, and measured before the click), and the
+ * headline number is cost per ACTIVATED user — a dataset connected and a styled
+ * map on screen — which Google Ads could never see. PostHog carries that.
+ *
+ * What it buys is the first-party click cookie, so conversion import or
+ * remarketing remain available later without retrofitting a tag mid-campaign.
+ */
+const GOOGLE_ADS_ID = 'AW-18456414784';
+
+function googleAdsBlock() {
+  return `<!-- Google tag (gtag.js) — Google Ads, landing pages only -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', ${JSON.stringify(GOOGLE_ADS_ID)});
+    </script>`;
+}
+
+/**
  * The only thing that differs between the two pages.
  *
  * `h1` is raw HTML because the coloured span is part of the design, and it is
@@ -181,6 +212,7 @@ function render(v) {
       @media (max-width: 860px) { .lp-grid { grid-template-columns: 1fr; } }
     </style>
     ${analyticsBlock()}
+    ${googleAdsBlock()}
   </head>
   <body>
     <!-- Deliberately minimal: brand and one action. A landing page with the full
