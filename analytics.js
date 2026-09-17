@@ -42,6 +42,12 @@
    * ------------------------------------------------------------------- */
   var ATTR_COOKIE = 'vizzie_attr';
   var ATTR_MAX_AGE_DAYS = 90;
+  // Mirrors PARAM_KEYS in vizzie/src/lib/attribution.ts — change both together.
+  // All three Google click ids, not just `gclid`: `wbraid` (web-to-web) and
+  // `gbraid` (app-to-web) are what Google sends on iOS, where tracking
+  // prevention limits `gclid`. The paid test uses "carries a click id" to tell
+  // a real ad click from the scrapers that fetch the landing page directly, so
+  // dropping the iOS ones would understate genuine ad traffic.
   var PARAM_KEYS = [
     'utm_source',
     'utm_medium',
@@ -49,6 +55,8 @@
     'utm_term',
     'utm_content',
     'gclid',
+    'wbraid',
+    'gbraid',
   ];
 
   function cookieDomain() {
