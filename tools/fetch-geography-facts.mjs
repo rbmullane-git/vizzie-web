@@ -33,6 +33,48 @@ export const GEOGRAPHY_LEVELS = [
     // national outline into an HTML page.
     sample: { match: 'Oxford %', label: 'Oxford' },
   },
+  // Most geographies do not carry their place in the name the way an LSOA does.
+  // A US census tract is called "Census Tract 5.04" and there are dozens of
+  // those; a Canadian one is called "0725.04". What locates them is the code —
+  // the first five digits of a tract code are its county FIPS — so these levels
+  // sample on `codeMatch` instead. One or the other, never both.
+  {
+    slug: 'us-tract',
+    country: 'US',
+    level: 'TRACT',
+    sample: { codeMatch: '06075%', label: 'San Francisco County' },
+  },
+  {
+    slug: 'us-county',
+    country: 'US',
+    level: 'COUNTY',
+    simplify: 0.004,
+    sample: { codeMatch: '06%', label: 'California' },
+  },
+  {
+    slug: 'uk-lad',
+    country: 'UK',
+    level: 'LAD',
+    simplify: 0.002,
+    // W06 is every Welsh principal area: a complete, self-contained country's
+    // worth at 22 areas, where an English region would be an arbitrary slice.
+    sample: { codeMatch: 'W06%', label: 'Wales' },
+  },
+  {
+    slug: 'au-sa2',
+    country: 'AU',
+    level: 'SA2',
+    simplify: 0.0005,
+    // 801 is the ACT: the one Australian state or territory small enough to
+    // draw whole at SA2 grain.
+    sample: { codeMatch: '801%', label: 'Australian Capital Territory' },
+  },
+  {
+    slug: 'eu-nuts3',
+    country: 'EU',
+    level: 'NUTS3',
+    sample: { codeMatch: 'PT%', label: 'Portugal' },
+  },
 ];
 
 function psql(sql) {
@@ -84,18 +126,34 @@ function factsFor(cfg) {
     ORDER BY md5(code) LIMIT 4;`).map(([code, name]) => ({ code, name }));
 
   process.stderr.write(`  ${cfg.slug}: sample boundaries (${cfg.sample.label})…\n`);
+  // One tolerance does not fit every scale. 0.00015 degrees keeps an LSOA's
+  // shape honest, but applied to a county it ships a coastline: California's 58
+  // counties came back as 895 KB of GeoJSON, which is most of a page's weight
+  // spent on detail nobody can see at the size these maps draw. Coarser
+  // geographies get a coarser tolerance, and the cost was measured in PostGIS
+  // rather than guessed: the shipped tolerances move a boundary by at most
+  // 445 m (US county), 222 m (UK LAD) and 56 m (AU SA2), against thumbnails
+  // that draw California at roughly 3 km per pixel. These are locator maps for
+  // the page, not the geometry the product joins against — that comes from the
+  // database at full resolution.
+  const simplify = cfg.simplify ?? 0.00015;
+  const sampleWhere = cfg.sample.codeMatch
+    ? `code LIKE ${q(cfg.sample.codeMatch)}`
+    : `name LIKE ${q(cfg.sample.match)}`;
   const [sample] = psql(`
     SELECT json_build_object(
       'type','FeatureCollection',
       'features', coalesce(json_agg(json_build_object(
         'type','Feature',
         'properties', json_build_object('code', code, 'name', name),
-        'geometry', ST_AsGeoJSON(ST_SimplifyPreserveTopology(geom, 0.00015))::json
+        'geometry', ST_AsGeoJSON(ST_SimplifyPreserveTopology(geom, ${simplify}))::json
       )), '[]'::json))::text
     FROM reference_geographies
-    WHERE ${where} AND name LIKE ${q(cfg.sample.match)};`);
+    WHERE ${where} AND ${sampleWhere};`);
   const sampleGeo = JSON.parse(sample[0]);
-  if (!sampleGeo.features.length) throw new Error(`${cfg.slug}: sample match ${cfg.sample.match} returned no areas`);
+  if (!sampleGeo.features.length) {
+    throw new Error(`${cfg.slug}: sample match ${cfg.sample.codeMatch ?? cfg.sample.match} returned no areas`);
+  }
 
   return {
     slug: cfg.slug,
