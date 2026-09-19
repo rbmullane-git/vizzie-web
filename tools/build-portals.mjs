@@ -88,6 +88,9 @@ const CLASS_LABEL = {
   'CC-BY-ND': 'CC BY-ND', 'LO-2.0': 'Licence Ouverte 2.0', 'LO-1.0': 'Licence Ouverte 1.0',
   'PDL-1.0-JP': 'PDL 1.0 (Japan)', 'CC-BY-IGO': 'CC BY 3.0 IGO', 'PUBLIC-DOMAIN': 'Public domain',
   'SEMCOG-CLA': 'SEMCOG Copyright License Agreement',
+  'CC-BY-3.0-NZ': 'CC BY 3.0 (NZ)', 'CC-BY-3.0': 'CC BY 3.0', 'CC-BY-2.5': 'CC BY 2.5',
+  'CC-BY-2.5-AU': 'CC BY 2.5 (AU)', 'CC-BY-2.1-JP': 'CC BY 2.1 (JP)',
+  'DL-DE-0-2.0': 'DL-DE Zero 2.0', 'OGL-CA-PROVINCIAL': 'OGL (Canadian province)',
   'CLOSED': 'Closed / restricted', UNDECLARED: 'UNDECLARED',
 };
 
