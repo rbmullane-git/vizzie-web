@@ -203,6 +203,41 @@
   "nativeApi": true
  },
  {
+  "connectorType": "esri-server",
+  "baseUrl": "https://services.thelist.tas.gov.au/arcgis/rest/services",
+  "label": "the LIST — Tasmanian Government spatial services",
+  "countryCode": "AU",
+  "region": "Tasmania",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "wfs-server",
+  "baseUrl": "https://geoserver-123.aodn.org.au/geoserver/wfs",
+  "label": "AODN — Australian Ocean Data Network",
+  "countryCode": "AU",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "wfs-server",
+  "baseUrl": "https://maps.eatlas.org.au/maps/wfs",
+  "label": "eAtlas — Great Barrier Reef & tropical Australia",
+  "countryCode": "AU",
+  "region": "Queensland",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "wfs-server",
+  "baseUrl": "https://geoserver.imas.utas.edu.au/geoserver/wfs",
+  "label": "IMAS — Institute for Marine and Antarctic Studies",
+  "countryCode": "AU",
+  "region": "Tasmania",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
   "connectorType": "arcgis-hub",
   "baseUrl": "https://city-plan-stakeholder-engagement-AdelaideCity.hub.arcgis.com",
   "label": "City of Adelaide — City Plan data hub",
@@ -2235,6 +2270,60 @@
   "connectorType": "data-gov-in-dms",
   "baseUrl": "https://smartcities.data.gov.in",
   "label": "Smart Cities Mission Data Portal (95 cities)",
+  "countryCode": "IN",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "data-gov-in-dms",
+  "baseUrl": "https://punjab.data.gov.in",
+  "label": "Punjab Open Data",
+  "countryCode": "IN",
+  "region": "Punjab",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "data-gov-in-dms",
+  "baseUrl": "https://kerala.data.gov.in",
+  "label": "Kerala Open Data",
+  "countryCode": "IN",
+  "region": "Kerala",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "data-gov-in-dms",
+  "baseUrl": "https://sikkim.data.gov.in",
+  "label": "Sikkim Open Data",
+  "countryCode": "IN",
+  "region": "Sikkim",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "data-gov-in-dms",
+  "baseUrl": "https://odisha.data.gov.in",
+  "label": "Odisha Open Data",
+  "countryCode": "IN",
+  "region": "Odisha",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "data-gov-in-dms",
+  "baseUrl": "https://ap.data.gov.in",
+  "label": "Andhra Pradesh Open Data",
+  "countryCode": "IN",
+  "region": "Andhra Pradesh",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://ckan.indiadataportal.com",
+  "label": "IndiaDataPortal — ISB (district & state indicators)",
+  "countryCode": "IN",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://justicehub.in",
+  "label": "JusticeHub — India (justice-sector data)",
   "countryCode": "IN",
   "apiAccessible": true
  },

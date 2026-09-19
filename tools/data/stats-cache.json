@@ -13856,5 +13856,303 @@
   "notes": [
    "count not fetched for type esri-server"
   ]
+ },
+ "geoserver-123-aodn-org-au": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T21:58:49.878Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type wfs-server"
+  ]
+ },
+ "geoserver-imas-utas-edu-au": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T21:58:49.878Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type wfs-server"
+  ]
+ },
+ "maps-eatlas-org-au": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T21:58:49.878Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type wfs-server"
+  ]
+ },
+ "services-thelist-tas-gov-au": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T21:58:49.878Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type esri-server"
+  ]
+ },
+ "justicehub-in": {
+  "count": 201,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "CC-BY-4.0",
+    "count": 172
+   },
+   {
+    "cls": "PDDL-1.0",
+    "count": 7
+   },
+   {
+    "cls": "CC0 License",
+    "count": 6
+   },
+   {
+    "cls": "CC0-1.0",
+    "count": 4
+   },
+   {
+    "cls": "ODC-BY-1.0",
+    "count": 3
+   },
+   {
+    "cls": "CC-BY-SA-4.0",
+    "count": 3
+   },
+   {
+    "cls": "CC-BY-NC-ND-4.0",
+    "count": 2
+   },
+   {
+    "cls": "Public Sharing Licence",
+    "count": 1
+   },
+   {
+    "cls": "CC-BY-NC-SA-4.0",
+    "count": 1
+   },
+   {
+    "cls": "CC-BY-ND-4.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Vidhi Centre for Legal Policy",
+    "count": 1
+   },
+   {
+    "name": "Studio Nilima",
+    "count": 1
+   },
+   {
+    "name": "Project 39A",
+    "count": 1
+   },
+   {
+    "name": "National Institute Of Public Finance And Policy (NIPFP)",
+    "count": 1
+   },
+   {
+    "name": "LegalMind",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T21:58:49.896Z",
+  "ok": true,
+  "notes": []
+ },
+ "ckan-indiadataportal-com": {
+  "count": 92,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.30434782608695654,
+  "licences": [
+   {
+    "cls": "odc-by",
+    "count": 39
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 28
+   },
+   {
+    "cls": "Open Data Commons Attribution License",
+    "count": 25
+   }
+  ],
+  "publishers": [
+   {
+    "name": "IDP organization",
+    "count": 72
+   },
+   {
+    "name": "High-Value-Datasets",
+    "count": 15
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T21:58:49.878Z",
+  "ok": true,
+  "notes": []
+ },
+ "sikkim-data-gov-in": {
+  "count": 89,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Department of Economics, Statistics, Monitoring & Evaluation",
+    "count": 35
+   },
+   {
+    "name": "Human Resource Development Department, Sikkim",
+    "count": 34
+   },
+   {
+    "name": "Health Care, Human Services and Family Welfare Department, Sikkim",
+    "count": 11
+   },
+   {
+    "name": "Rural Management and Development Department, Sikkim",
+    "count": 5
+   },
+   {
+    "name": "Information Technology Department, Sikkim",
+    "count": 4
+   }
+  ],
+  "publisherCoverage": 1,
+  "fetchedAt": "2026-09-19T21:58:49.897Z",
+  "ok": true,
+  "notes": []
+ },
+ "odisha-data-gov-in": {
+  "count": 19,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Rajya Sabha",
+    "count": 11
+   },
+   {
+    "name": "Information Technology Department, Odisha",
+    "count": 8
+   }
+  ],
+  "publisherCoverage": 1,
+  "fetchedAt": "2026-09-19T21:58:49.898Z",
+  "ok": true,
+  "notes": []
+ },
+ "ap-data-gov-in": {
+  "count": 7,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "AP Markfed",
+    "count": 3
+   },
+   {
+    "name": "Mines & Geology",
+    "count": 3
+   },
+   {
+    "name": "RTGS",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": 1,
+  "fetchedAt": "2026-09-19T21:58:49.898Z",
+  "ok": true,
+  "notes": []
+ },
+ "kerala-data-gov-in": {
+  "count": 34,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Kerala",
+    "count": 12
+   },
+   {
+    "name": "Election Department, Kerala",
+    "count": 8
+   },
+   {
+    "name": "Revenue and Land Reforms Department, Kerala",
+    "count": 4
+   },
+   {
+    "name": "Labour, Employment and Training and Rehabilitation Department, Kerala",
+    "count": 3
+   },
+   {
+    "name": "Transport Department, Kerala",
+    "count": 3
+   },
+   {
+    "name": "Kerala State IT Mission (KSITM)",
+    "count": 2
+   },
+   {
+    "name": "Agriculture Department, Kerala",
+    "count": 1
+   },
+   {
+    "name": "Finance Department, Kerala",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": 1,
+  "fetchedAt": "2026-09-19T21:58:49.898Z",
+  "ok": true,
+  "notes": []
+ },
+ "punjab-data-gov-in": {
+  "count": 1407,
+  "countSource": "data.gov.in DMS",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [
+   {
+    "name": "Department of Economic and Statistical Organization, Punjab",
+    "count": 1403
+   },
+   {
+    "name": "Rajya Sabha",
+    "count": 4
+   }
+  ],
+  "publisherCoverage": 1,
+  "fetchedAt": "2026-09-19T21:58:49.897Z",
+  "ok": true,
+  "notes": []
  }
 }

@@ -82,5 +82,33 @@
   "source": "the connector's own catalogTotal()",
   "label": "QSpatial — Queensland Government spatial services",
   "connectorType": "esri-server"
+ },
+ "https://geoserver-123.aodn.org.au/geoserver/wfs": {
+  "count": 398,
+  "measured": "2026-09-19",
+  "source": "the connector's own catalogTotal()",
+  "label": "AODN — Australian Ocean Data Network",
+  "connectorType": "wfs-server"
+ },
+ "https://maps.eatlas.org.au/maps/wfs": {
+  "count": 1342,
+  "measured": "2026-09-19",
+  "source": "the connector's own catalogTotal()",
+  "label": "eAtlas — Great Barrier Reef & tropical Australia",
+  "connectorType": "wfs-server"
+ },
+ "https://geoserver.imas.utas.edu.au/geoserver/wfs": {
+  "count": 404,
+  "measured": "2026-09-19",
+  "source": "the connector's own catalogTotal()",
+  "label": "IMAS — Institute for Marine and Antarctic Studies",
+  "connectorType": "wfs-server"
+ },
+ "https://services.thelist.tas.gov.au/arcgis/rest/services": {
+  "count": 980,
+  "measured": "2026-09-19",
+  "source": "the connector's own catalogTotal()",
+  "label": "the LIST — Tasmanian Government spatial services",
+  "connectorType": "esri-server"
  }
 }
