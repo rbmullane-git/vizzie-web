@@ -236,6 +236,104 @@ const EDITORIAL = {
       <p>Vizzie holds the 2024 edition, the same one the Eurostat connector reads, so statistics pulled
          through Vizzie and boundaries held by Vizzie agree by construction.</p>`,
   },
+
+  'in-state-name': {
+    name: 'Indian states and union territories',
+    abbr: 'state',
+    keyNoun: 'names',
+    keyVerb: 'matched',
+    plural: 'states and union territories',
+    publisher: 'geoBoundaries, from DataMeet',
+    licenceUrl: 'https://creativecommons.org/licenses/by/2.5/in/',
+    coverage: 'All 28 states and 8 union territories',
+    keywords: ['India states', 'state boundaries India', 'India shapefile', 'India choropleth', 'LGD code', 'NFHS', 'India map'],
+    intro:
+      `The level almost every Indian dataset can be rolled up to. Census tables, NFHS rounds, ` +
+      `MoSPI's survey releases and most ministry publications are published state-wise, and they ` +
+      `identify the state by its name rather than by any code — which is exactly why a spreadsheet ` +
+      `of Indian states is easy to read and hard to map.`,
+    codeFormat: `
+      <p><b>There is no code here, and that is deliberate.</b> India's own identifier for a state is
+         its LGD code — <code>32</code> is Kerala, <code>27</code> is Maharashtra — and no openly
+         licensed boundary file carries LGD codes at all. The other candidate, ISO 3166-2
+         (<code>IN-KL</code>), is carried by the boundaries but written by almost no Indian
+         publisher. So the key is the name, and the ISO code rides along as an attribute for anyone
+         who has it.</p>
+      <p>Spelling is the thing that would normally break a name join, and here it does not.
+         Transliteration varies — Mahārāshtra, Maharastra, Maharashtra; Tamil Nādu against Tamil
+         Nadu — so the match folds diacritics, case and punctuation before comparing. A column
+         written either way lands on the same state.</p>
+      <p>One real miss is worth naming: Delhi is published as <code>NCT of Delhi</code> by several
+         national sources and as <code>Delhi</code> in the boundary set, and those are not the same
+         string. It is the single state-level mismatch in the national health survey.</p>`,
+    rollup: [
+      'Village or ward — the smallest unit LGD numbers',
+      'Sub-district (tehsil, taluk, block)',
+      'District',
+      'State or union territory',
+      'India',
+    ],
+    rollupIndex: 3,
+    vintages: `
+      <p>India's first-level map has changed three times in a decade, and a boundary file older than
+         the change is simply wrong: Telangana was separated from Andhra Pradesh in 2014, Jammu and
+         Kashmir was reorganised into two union territories in 2019, and Dadra and Nagar Haveli was
+         merged with Daman and Diu in 2020.</p>
+      <p>Vizzie holds the current 36, including Ladakh and the merged union territory — so a dataset
+         published before 2014 will report Telangana's districts against Andhra Pradesh, which is
+         what the source said at the time rather than an error in the join.</p>`,
+  },
+
+  'in-district-name': {
+    name: 'Indian districts',
+    abbr: 'district',
+    keyNoun: 'names',
+    keyVerb: 'matched',
+    plural: 'districts',
+    publisher: 'geoBoundaries',
+    licenceUrl: 'https://opendatacommons.org/licenses/odbl/1-0/',
+    coverage: 'Every state and union territory',
+    keywords: ['India districts', 'district boundaries India', 'district map India', 'district shapefile', 'LGD district code', 'NFHS district', 'India choropleth'],
+    intro:
+      `The unit India's best data is published at. The National Family Health Survey, most scheme ` +
+      `monitoring and a great deal of state statistics are district-wise — and a district map is ` +
+      `the one an analyst usually cannot make, because the district names in the data and the ` +
+      `district names on the map have drifted apart.`,
+    codeFormat: `
+      <p>As with states, the key is the <b>name</b>: Indian data carries an LGD district code, no open
+         boundary source carries one, so there is nothing to join a code to. Matching folds
+         diacritics, case and punctuation, so <code>Chhindwāra</code> and <code>Chhindwara</code> are
+         the same district.</p>
+      <p><b>The renames are the real problem, and they are not spelling.</b> Karnataka renamed
+         Bangalore to Bengaluru, Bellary to Ballari and Belgaum to Belagavi; Uttar Pradesh renamed
+         Faizabad to Ayodhya; Maharashtra renamed Ahmednagar to Ahilyanagar. These are different
+         words, not different transliterations, and no normaliser will reconcile them. On top of
+         that, states create districts constantly — several dozen since 2021 — and a district that
+         did not exist when the boundaries were drawn has nowhere to land.</p>
+      <p>Measured against the National Family Health Survey's district file, <b>605 of its 718
+         districts match — 84.3%</b>. Vizzie reports that as a partial match rather than drawing a
+         map with silent holes in it.</p>`,
+    rollup: [
+      'Village or ward',
+      'Sub-district (tehsil, taluk, block)',
+      'District',
+      'State or union territory',
+      'India',
+    ],
+    rollupIndex: 2,
+    vintages: `
+      <p>Districts are not a census-cycle geography the way tracts or LSOAs are — a state can create
+         one at any time, by notification, and several do most years. There is no national vintage to
+         hold on to.</p>
+      <p>The two dates on this page are both real and they are not the same. The boundaries were
+         published in 2023, which is the vintage above; the districts they draw are India's as of
+         2021, which is what governs whether your data matches. Two consequences worth knowing
+         before you map: districts created since 2021 will not match, and seven district names
+         repeat across states (Aurangabad,
+         Bilaspur, Hamirpur, Pratapgarh among them) so those arrive as a single merged area rather
+         than two. Where a dataset carries the state alongside the district, that context is the way
+         to tell them apart.</p>`,
+  },
 };
 
 const facts = JSON.parse(readFileSync(FACTS, 'utf8'));

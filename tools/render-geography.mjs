@@ -61,10 +61,19 @@ export function boundariesSvg(geojson, { width = 760, height = 520, pad = 8 } = 
 export function renderGeographyPage(facts, editorial, ctx = {}) {
   const siteUrl = ctx.siteUrl || 'https://www.vizzie.org';
   const url = `${siteUrl}/geography/${facts.slug}/`;
-  const title = `${editorial.name} (${editorial.abbr}) — boundaries, codes and how to map them | Vizzie`;
+  // What the level is keyed BY. Every level up to India was keyed by a code, so
+  // the pages could say "codes" throughout; India's states and districts are
+  // keyed by name, and "paste a column of district codes" would be advice to
+  // paste the one column that cannot join. Defaults to 'codes' so no existing
+  // page moves.
+  const keyNoun = editorial.keyNoun || 'codes';
+  // Codes are built; names are matched. Two words rather than one so the
+  // sentence stays English either way.
+  const keyVerb = editorial.keyVerb || 'built';
+  const title = `${editorial.name} (${editorial.abbr}) — boundaries, ${keyNoun} and how to map them | Vizzie`;
   const description =
     `${num(facts.areas)} ${editorial.plural} in the ${facts.vintage} boundary set: what they are, ` +
-    `how the codes are built, what they roll up into, and how to map a spreadsheet of them.`;
+    `how the ${keyNoun} are ${keyVerb}, what they roll up into, and how to map a spreadsheet of them.`;
 
   // Dataset schema — Google Dataset Search indexes it, which is free
   // distribution on exactly the data-intent queries these pages target.
@@ -82,9 +91,15 @@ export function renderGeographyPage(facts, editorial, ctx = {}) {
     keywords: editorial.keywords,
   };
 
-  const examples = facts.examples
-    .map((e) => `<tr><td><code>${esc(e.code)}</code></td><td>${esc(e.name)}</td></tr>`)
-    .join('');
+  // A name-keyed level (India's states and districts) has no code to put beside
+  // the name — the name IS the key — so `examples` comes back empty and the
+  // table is omitted rather than rendered blank. The editorial codeFormat block
+  // carries the explanation on those pages.
+  const examples = facts.examples.length
+    ? `<table class="codes">${facts.examples
+        .map((e) => `<tr><td><code>${esc(e.code)}</code></td><td>${esc(e.name)}</td></tr>`)
+        .join('')}</table>`
+    : '';
 
   const rollup = editorial.rollup
     .map((step, i) => `<li${i === editorial.rollupIndex ? ' class="is-this"' : ''}>${esc(step)}</li>`)
@@ -146,9 +161,9 @@ ${headerBlock()}
   <p class="geocap">The ${num(facts.sample.areas)} ${esc(editorial.plural)} of ${esc(facts.sample.label)}, drawn from
      the exact boundaries Vizzie joins your data to — not a picture of them.</p>
 
-  <h2 style="margin-top:44px">How the codes are built</h2>
+  <h2 style="margin-top:44px">How the ${keyNoun} are ${keyVerb}</h2>
   ${editorial.codeFormat}
-  <table class="codes">${examples}</table>
+  ${examples}
 
   <h2 style="margin-top:44px">What it rolls up into</h2>
   <ol class="rollup">${rollup}</ol>
@@ -157,8 +172,8 @@ ${headerBlock()}
   ${editorial.vintages}
 
   <h2 style="margin-top:44px">Map a spreadsheet of these</h2>
-  <p>Paste a column of ${esc(editorial.abbr)} codes into Vizzie with whatever you measured beside it.
-     Vizzie recognises the code format, joins it to the boundaries above and draws the map — no
+  <p>Paste a column of ${esc(editorial.abbr)} ${keyNoun} into Vizzie with whatever you measured beside it.
+     Vizzie recognises the ${keyNoun === 'names' ? 'names' : 'code format'}, joins ${keyNoun === 'names' ? 'them' : 'it'} to the boundaries above and draws the map — no
      shapefile, no download, no GIS install.</p>
   <p><a class="btn" href="https://app.vizzie.org/">Open Vizzie</a></p>
 

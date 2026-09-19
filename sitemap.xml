@@ -31,6 +31,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.vizzie.org/geography/in-district-name/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vizzie.org/geography/in-state-name/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.vizzie.org/geography/uk-lad/</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>

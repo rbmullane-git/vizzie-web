@@ -75,6 +75,31 @@ export const GEOGRAPHY_LEVELS = [
     level: 'NUTS3',
     sample: { codeMatch: 'PT%', label: 'Portugal' },
   },
+  // India is keyed by NAME, not by a code, because no open boundary source
+  // carries the LGD codes Indian data is published with. That makes the whole
+  // country the only honest sample at state level — there is no code prefix to
+  // slice on — and it is small enough to draw: 36 areas.
+  {
+    slug: 'in-state-name',
+    country: 'IN',
+    level: 'STATE_NAME',
+    simplify: 0.02,
+    precision: 4,
+    sample: { match: '%', label: 'India' },
+  },
+  {
+    slug: 'in-district-name',
+    country: 'IN',
+    level: 'DISTRICT_NAME',
+    simplify: 0.001,
+    precision: 4,
+    // And at district grain the name key bites: with no state in the code there
+    // is no prefix that means "one state's districts", the way W06 means Wales.
+    // So this sample is selected SPATIALLY, against the state boundaries in the
+    // same table. Kerala is the Welsh-LAD of India here — 14 districts, a
+    // complete self-contained state, recognisable at thumbnail size.
+    sample: { within: { level: 'STATE_NAME', name: 'Kerala' }, label: 'Kerala' },
+  },
 ];
 
 function psql(sql) {
@@ -137,16 +162,34 @@ function factsFor(cfg) {
   // the page, not the geometry the product joins against — that comes from the
   // database at full resolution.
   const simplify = cfg.simplify ?? 0.00015;
+  // Coordinate precision, in decimal places. PostGIS defaults to 9 (~0.1 mm),
+  // which is pure waste once a geometry has been simplified to kilometres:
+  // India's 36 states came back as 983 KB, five times any other page, because
+  // of its island chains. Trimming to 4 places (~11 m) against a 0.02 degree
+  // (~2.2 km) tolerance took that to 190 KB with no state dropped and no seams
+  // between neighbours — which is what SimplifyPreserveTopology buys and plain
+  // ST_Simplify, which does drop whole islands, does not. Left at the PostGIS
+  // default where a level does not ask, so existing pages do not move.
+  const precision = cfg.precision ?? 9;
   const sampleWhere = cfg.sample.codeMatch
     ? `code LIKE ${q(cfg.sample.codeMatch)}`
-    : `name LIKE ${q(cfg.sample.match)}`;
+    : cfg.sample.within
+      // A name-keyed level has no parent in its code, so "one state's
+      // districts" can only be asked geometrically. PointOnSurface rather than
+      // Centroid: a centroid can fall outside a coastal or crescent-shaped
+      // district and drop it from its own state.
+      ? `EXISTS (SELECT 1 FROM reference_geographies p
+                  WHERE p.country=${q(cfg.country)} AND p.level=${q(cfg.sample.within.level)}
+                    AND p.name=${q(cfg.sample.within.name)}
+                    AND ST_Contains(p.geom, ST_PointOnSurface(reference_geographies.geom)))`
+      : `name LIKE ${q(cfg.sample.match)}`;
   const [sample] = psql(`
     SELECT json_build_object(
       'type','FeatureCollection',
       'features', coalesce(json_agg(json_build_object(
         'type','Feature',
         'properties', json_build_object('code', code, 'name', name),
-        'geometry', ST_AsGeoJSON(ST_SimplifyPreserveTopology(geom, ${simplify}))::json
+        'geometry', ST_AsGeoJSON(ST_SimplifyPreserveTopology(geom, ${simplify}), ${precision})::json
       )), '[]'::json))::text
     FROM reference_geographies
     WHERE ${where} AND ${sampleWhere};`);
