@@ -134,6 +134,172 @@
   "apiAccessible": true
  },
  {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://spatial-brisbane.opendata.arcgis.com",
+  "label": "Brisbane City Council — Open Spatial Data",
+  "countryCode": "AU",
+  "region": "Queensland",
+  "city": "Brisbane",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data.sunshinecoast.qld.gov.au",
+  "label": "Sunshine Coast Council Open Data",
+  "countryCode": "AU",
+  "region": "Queensland",
+  "city": "Sunshine Coast",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://portal-mainroads.opendata.arcgis.com",
+  "label": "Main Roads Western Australia — Open Data",
+  "countryCode": "AU",
+  "region": "Western Australia",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://actmapi-ACTGOV.opendata.arcgis.com",
+  "label": "ACTmapi — ACT Government Geospatial Data",
+  "countryCode": "AU",
+  "region": "Australian Capital Territory",
+  "city": "Canberra",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://datasets.seed.nsw.gov.au",
+  "label": "NSW SEED — Environmental Data (seed.nsw.gov.au)",
+  "countryCode": "AU",
+  "region": "New South Wales",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://city-plan-stakeholder-engagement-AdelaideCity.hub.arcgis.com",
+  "label": "City of Adelaide — City Plan data hub",
+  "countryCode": "AU",
+  "region": "South Australia",
+  "city": "Adelaide",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://geohub-perth.opendata.arcgis.com",
+  "label": "City of Perth — Open Data Initiative",
+  "countryCode": "AU",
+  "region": "Western Australia",
+  "city": "Perth",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.casey.vic.gov.au",
+  "label": "City of Casey Open Data",
+  "countryCode": "AU",
+  "region": "Victoria",
+  "city": "Narre Warren",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.ballarat.vic.gov.au",
+  "label": "City of Ballarat Open Data",
+  "countryCode": "AU",
+  "region": "Victoria",
+  "city": "Ballarat",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.cumberland.nsw.gov.au",
+  "label": "Cumberland City Council Open Data",
+  "countryCode": "AU",
+  "region": "New South Wales",
+  "city": "Merrylands",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.liverpool.nsw.gov.au",
+  "label": "Liverpool City Council Open Data",
+  "countryCode": "AU",
+  "region": "New South Wales",
+  "city": "Liverpool",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://cow-open-data-hub-CityOfWodonga.hub.arcgis.com",
+  "label": "City of Wodonga — GIS Open Resources",
+  "countryCode": "AU",
+  "region": "Victoria",
+  "city": "Wodonga",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://city-maps-and-data-AlbanyWA.hub.arcgis.com",
+  "label": "City of Albany — City Maps and Data",
+  "countryCode": "AU",
+  "region": "Western Australia",
+  "city": "Albany",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data-tweed.opendata.arcgis.com",
+  "label": "Tweed Shire Council — Open Data Hub",
+  "countryCode": "AU",
+  "region": "New South Wales",
+  "city": "Tweed Heads",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://opendata.redland.qld.gov.au",
+  "label": "Redland City Council — Open Data",
+  "countryCode": "AU",
+  "region": "Queensland",
+  "city": "Cleveland",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://opendata.unley.sa.gov.au",
+  "label": "City of Unley — Open Data Portal",
+  "countryCode": "AU",
+  "region": "South Australia",
+  "city": "Unley",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data-melbournewater.opendata.arcgis.com",
+  "label": "Melbourne Water — Open Data Hub",
+  "tier": "regional",
+  "countryCode": "AU",
+  "region": "Victoria",
+  "city": "Melbourne",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://library-mdba.opendata.arcgis.com",
+  "label": "Murray–Darling Basin Authority — Spatial Library",
+  "countryCode": "AU",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://artc-spatial-hub-ARTC.hub.arcgis.com",
+  "label": "Australian Rail Track Corporation — Spatial Data",
+  "countryCode": "AU",
+  "apiAccessible": true
+ },
+ {
   "connectorType": "datagov",
   "baseUrl": "https://catalog.data.gov",
   "label": "Data.gov — United States (national)",

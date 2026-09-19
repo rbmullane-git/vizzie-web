@@ -13142,5 +13142,680 @@
   "fetchedAt": "2026-09-19T08:55:20.877Z",
   "ok": true,
   "notes": []
+ },
+ "data-tweed-opendata-arcgis-com": {
+  "count": 85,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.5529411764705883,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 47
+   },
+   {
+    "cls": "CC-BY",
+    "count": 38
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Tweed Shire Council",
+    "count": 54
+   },
+   {
+    "name": "{{source}}",
+    "count": 31
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:53.303Z",
+  "ok": true,
+  "notes": []
+ },
+ "city-maps-and-data-albanywa-hub-arcgis-com": {
+  "count": 102,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.7549019607843137,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 77
+   },
+   {
+    "cls": "CC-BY",
+    "count": 24
+   },
+   {
+    "cls": "This story's description and tags were created with the assistance of Generative AI",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Albany ArcGIS Online",
+    "count": 102
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:53.302Z",
+  "ok": true,
+  "notes": []
+ },
+ "city-plan-stakeholder-engagement-adelaidecity-hub-arcgis-com": {
+  "count": 101,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 101
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Adelaide City Council",
+    "count": 101
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:53.303Z",
+  "ok": true,
+  "notes": []
+ },
+ "geohub-perth-opendata-arcgis-com": {
+  "count": 67,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.29850746268656714,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 47
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 20
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Perth",
+    "count": 67
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:55.390Z",
+  "ok": true,
+  "notes": []
+ },
+ "actmapi-actgov-opendata-arcgis-com": {
+  "count": 344,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.5697674418604651,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 196
+   },
+   {
+    "cls": "CC-BY",
+    "count": 148
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Australian Capital Territory Government",
+    "count": 254
+   },
+   {
+    "name": "City and Environment Directorate | ACT Government",
+    "count": 85
+   },
+   {
+    "name": "City and Environment Directorate",
+    "count": 2
+   },
+   {
+    "name": "Environment, Planning, and Sustainable Directorate | ACT Government",
+    "count": 2
+   },
+   {
+    "name": "ACT Environment, Planning and Sustainable Development Directorate",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:53.302Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-melbournewater-opendata-arcgis-com": {
+  "count": 45,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "Creative Commons Attribution Share-Alike 4.0 International",
+    "count": 44
+   },
+   {
+    "cls": "CC-BY",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Melbourne Water Corporation",
+    "count": 45
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:56.433Z",
+  "ok": true,
+  "notes": []
+ },
+ "artc-spatial-hub-artc-hub-arcgis-com": {
+  "count": 18,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.4444444444444444,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 10
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 8
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Australian Rail Track Corporation",
+    "count": 18
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:57.984Z",
+  "ok": true,
+  "notes": []
+ },
+ "library-mdba-opendata-arcgis-com": {
+  "count": 27,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.18518518518518517,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 20
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 5
+   },
+   {
+    "cls": "CCby 4.0",
+    "count": 1
+   },
+   {
+    "cls": "CC-BY 3.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Murray—Darling Basin Authority",
+    "count": 16
+   },
+   {
+    "name": "Murray–Darling Basin Authority",
+    "count": 7
+   },
+   {
+    "name": "Murray-Darling Basin Authority",
+    "count": 2
+   },
+   {
+    "name": "Digital Earth Australia",
+    "count": 1
+   },
+   {
+    "name": "{{source}}",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:57.930Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-casey-vic-gov-au": {
+  "count": 137,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.1386861313868613,
+  "licences": [
+   {
+    "cls": "CC BY 3",
+    "count": 118
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 19
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Casey",
+    "count": 81
+   },
+   {
+    "name": "Curated and Published by City of Casey, sourced from data.vic.gov.au",
+    "count": 17
+   },
+   {
+    "name": "Curated and Published by City of Casey, sourced from Australian Bureau of Statistics",
+    "count": 12
+   },
+   {
+    "name": "City of Casey ",
+    "count": 6
+   },
+   {
+    "name": "Curated and Published by City of Casey, sourced from Public Transport Victoria",
+    "count": 6
+   },
+   {
+    "name": "Curated and Published by City of Casey",
+    "count": 1
+   },
+   {
+    "name": "The City of Casey",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:59.279Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-ballarat-vic-gov-au": {
+  "count": 118,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.4745762711864407,
+  "licences": [
+   {
+    "cls": "CC BY 3",
+    "count": 61
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 56
+   },
+   {
+    "cls": "Creative Commons Attribution 3.0 Australia",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Ballarat",
+    "count": 49
+   },
+   {
+    "name": "Australian Bureau of Statistics",
+    "count": 9
+   },
+   {
+    "name": "Tourism Research Australia",
+    "count": 2
+   },
+   {
+    "name": "DELWP, informed decisions (id)",
+    "count": 1
+   },
+   {
+    "name": "National Institute of Economic and Industry Research",
+    "count": 1
+   },
+   {
+    "name": "Regional Australia Institute",
+    "count": 1
+   },
+   {
+    "name": "Vicroads",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:59.536Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-cumberland-nsw-gov-au": {
+  "count": 25,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.8,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 20
+   },
+   {
+    "cls": "Creative Commons Attribution 4.0",
+    "count": 5
+   }
+  ],
+  "publishers": [
+   {
+    "name": "ABS",
+    "count": 9
+   },
+   {
+    "name": "Cumberland City Council",
+    "count": 8
+   },
+   {
+    "name": "NSW Department of Planning, Housing and Infrastructure",
+    "count": 2
+   },
+   {
+    "name": "NSW Local Government",
+    "count": 1
+   },
+   {
+    "name": "SEED The Central Resource for Sharing and Enabling Environmental Data in NSW",
+    "count": 1
+   },
+   {
+    "name": "https://data.nsw.gov.au/",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:59.658Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-sunshinecoast-qld-gov-au": {
+  "count": 772,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.25259067357512954,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 576
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 195
+   },
+   {
+    "cls": ".",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Sunshine Coast Council Public Access Hub",
+    "count": 752
+   },
+   {
+    "name": "Sunshine Coast Council",
+    "count": 20
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:53.301Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-liverpool-nsw-gov-au": {
+  "count": 20,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.5,
+  "licences": [
+   {
+    "cls": "CC BY",
+    "count": 10
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 10
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Liverpool City Council",
+    "count": 13
+   },
+   {
+    "name": "Sydney Water",
+    "count": 2
+   },
+   {
+    "name": "Western Parkland Councils",
+    "count": 2
+   },
+   {
+    "name": "Western Parklands",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:59.918Z",
+  "ok": true,
+  "notes": []
+ },
+ "datasets-seed-nsw-gov-au": {
+  "count": 6874,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0005819028222286878,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 4525
+   },
+   {
+    "cls": "3rd",
+    "count": 2192
+   },
+   {
+    "cls": "cc-by-nc-nd-4.0",
+    "count": 113
+   },
+   {
+    "cls": "oeh",
+    "count": 22
+   },
+   {
+    "cls": "cc-at-3",
+    "count": 15
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 4
+   },
+   {
+    "cls": "internal",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "NSW Department of Climate Change, Energy, the Environment and Water",
+    "count": 2482
+   },
+   {
+    "name": "NSW Department of Planning, Housing and Infrastructure",
+    "count": 1343
+   },
+   {
+    "name": "Shoalhaven City Council",
+    "count": 133
+   },
+   {
+    "name": "Department of Primary Industries and Regional Development (DPIRD)",
+    "count": 127
+   },
+   {
+    "name": "Central Coast Council",
+    "count": 98
+   },
+   {
+    "name": "Wollongong City Council",
+    "count": 74
+   },
+   {
+    "name": "Federation Council",
+    "count": 71
+   },
+   {
+    "name": "Wingecarribee Shire Council",
+    "count": 64
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:39:00.321Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-redland-qld-gov-au": {
+  "count": 43,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.046511627906976744,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 41
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Redland City Council",
+    "count": 43
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:57.221Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-unley-sa-gov-au": {
+  "count": 33,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 33
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Unley GIS Portal",
+    "count": 33
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:57.639Z",
+  "ok": true,
+  "notes": []
+ },
+ "cow-open-data-hub-cityofwodonga-hub-arcgis-com": {
+  "count": 188,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.05851063829787234,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 176
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 11
+   },
+   {
+    "cls": "https://opendatacommons.org/licenses/odbl/summary",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "{{source}}",
+    "count": 104
+   },
+   {
+    "name": "Wodonga City Council",
+    "count": 82
+   },
+   {
+    "name": "Albury City Council (AGOL)",
+    "count": 1
+   },
+   {
+    "name": "GIS_CityOfWodonga",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:53.302Z",
+  "ok": true,
+  "notes": []
+ },
+ "portal-mainroads-opendata-arcgis-com": {
+  "count": 695,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.007194244604316547,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 690
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 5
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Main Roads Western Australia",
+    "count": 695
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:53.301Z",
+  "ok": true,
+  "notes": []
+ },
+ "spatial-brisbane-opendata-arcgis-com": {
+  "count": 3397,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 3397
+   }
+  ],
+  "publishers": [
+   {
+    "name": "{{source}}",
+    "count": 1795
+   },
+   {
+    "name": "brisbaneopendata",
+    "count": 1407
+   },
+   {
+    "name": "BrisMAP Public",
+    "count": 195
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:38:53.278Z",
+  "ok": true,
+  "notes": []
  }
 }

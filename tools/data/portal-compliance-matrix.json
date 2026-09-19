@@ -463,6 +463,7 @@
   "creative commons attribuzione 4.0 internazionale (cc by 4.0)": "CC-BY-4.0",
   "http://creativecommons.org/licenses/by/4.0/deed.nl": "CC-BY-4.0",
   "https://creativecommons.org/licenses/by/4.0/": "CC-BY-4.0",
+  "http://creativecommons.org/licenses/by/4.0/": "CC-BY-4.0",
   "cc-by-int": "CC-BY-4.0",
   "creative-commons-attribution-40": "CC-BY-4.0",
   "http://dcat-ap.de/def/licenses/cc-by/4.0": "CC-BY-4.0",
@@ -499,6 +500,8 @@
   "licence odbl: https://opendatacommons.org/licenses/odbl/summary": "ODbL-1.0",
   "cc-by-sa": "CC-BY-SA-4.0",
   "cc-by-sa-4.0": "CC-BY-SA-4.0",
+  "https://creativecommons.org/licenses/by-sa/4.0": "CC-BY-SA-4.0",
+  "creative commons attribution share-alike 4.0 international": "CC-BY-SA-4.0",
   "cc by-sa": "CC-BY-SA-4.0",
   "cc by-sa 4.0": "CC-BY-SA-4.0",
   "by-sa": "CC-BY-SA-3.0-ES",
@@ -512,6 +515,7 @@
   "cc-by-nc-nd-4.0": "CC-BY-NC",
   "cc-by-nc-nd": "CC-BY-NC",
   "cc-by-nc-sa": "CC-BY-NC",
+  "https://creativecommons.org/licenses/by-nc-sa/4.0": "CC-BY-NC",
   "cc-by-nd-4.0": "CC-BY-ND",
   "cc-by-nd": "CC-BY-ND",
   "cc by-nd": "CC-BY-ND",
@@ -606,6 +610,8 @@
   "creative commons attribution 3.0 new zealand": "CC-BY-3.0-NZ",
   "https://creativecommons.org/licenses/by/3.0/nz": "CC-BY-3.0-NZ",
   "cc-by-3.0": "CC-BY-3.0",
+  "https://creativecommons.org/licenses/by/3.0": "CC-BY-3.0",
+  "cc by 3": "CC-BY-3.0",
   "creative commons attribution 3.0": "CC-BY-3.0",
   "cc-by-2.5-au": "CC-BY-2.5-AU",
   "creative commons attribution 2.5 australia": "CC-BY-2.5-AU",
@@ -1258,8 +1264,12 @@
    "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
    "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
    "default_licence": null,
-   "observed_licences": null,
-   "undeclared_share": null,
+   "observed_licences": {
+    "CC-BY-4.0": 171,
+    "UNDECLARED": 18,
+    "CC-BY-SA-4.0": 2
+   },
+   "undeclared_share": 0.094,
    "rate_limit": {
     "published": false,
     "requests_per_sec": 2,
@@ -1268,7 +1278,7 @@
     "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
    },
    "auth": "None for public items",
-   "notes": null,
+   "notes": "Measured for the first time 19 Sep 2026, during the AU batch. 92 of these datasets were resolving UNDECLARED purely because they write the CC BY 4.0 deed with an http:// scheme and only the https:// form was aliased; adding the http:// alias moved them to CC-BY-4.0. Reachable at two host names — this one and data.cityofsydney.nsw.gov.au, which serves the identical DCAT feed and is deliberately not a second registry entry.",
    "dataset_overrides": []
   },
   {
@@ -1416,6 +1426,517 @@
    },
    "auth": "None for public items",
    "notes": null,
+   "dataset_overrides": []
+  },
+  {
+   "id": "spatial-brisbane.opendata.arcgis.com",
+   "label": "Brisbane City Council — Open Spatial Data",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://spatial-brisbane.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 3397
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "The largest single-publisher catalogue in Australia on any platform Vizzie speaks, and the cleanest: all 3,397 datasets carry the bare string 'https://creativecommons.org/licenses/by/4.0' and every one is a feature service (measured 19 Sep 2026). Distinct from www.data.brisbane.qld.gov.au, the council's OpenDataSoft portal already in this matrix — that one is tabular council data, this is the spatial layer catalogue, and they do not overlap. 5 of 6 sampled datasets ingested; the failure was a superseded City Plan 2000 layer whose feature service is gone.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.sunshinecoast.qld.gov.au",
+   "label": "Sunshine Coast Council Open Data",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://data.sunshinecoast.qld.gov.au",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-3.0": 559,
+    "UNDECLARED": 196,
+    "CC-BY-4.0": 17
+   },
+   "undeclared_share": 0.254,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "559 datasets declare CC BY 3.0 as the bare URL and 17 declare 4.0 — both now alias. The 196 undeclared are StoryMaps, apps and a repeated accuracy disclaimer that grants nothing, so no portal default is set: the disclaimer is a warranty exclusion, not a licence.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "portal-mainroads.opendata.arcgis.com",
+   "label": "Main Roads Western Australia — Open Data",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://portal-mainroads.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 690,
+    "UNDECLARED": 5
+   },
+   "undeclared_share": 0.007,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "The state road authority's own catalogue: road network, bridges, heavy-vehicle route networks. 690 of 695 declare CC BY 4.0 and 6 of 6 sampled datasets ingested.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "actmapi-ACTGOV.opendata.arcgis.com",
+   "label": "ACTmapi — ACT Government Geospatial Data Catalogue",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://actmapi-ACTGOV.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://www.actmapi.act.gov.au/terms-and-conditions",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "CC-BY-4.0",
+   "observed_licences": {
+    "CC-BY-4.0": 344
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Measured 100% UNDECLARED on the first pass and is in fact 100% CC BY 4.0. 148 datasets declare the plain URL; the other 196 carry the SAME sentence wrapped in five different HTML markups — 'Creative Commons By Attribution 4.0 (Australian Capital Territory)', sometimes followed by a pointer to the ACTmapi terms page. Every distinct licence text on the portal was enumerated (19 Sep 2026) and all 196 say that, which is what justifies the portal default rather than an alias per markup variant. The terms page confirms it: 'ACT Government utilises the Creative Commons Attribution 4.0 licence' plus attribution guidelines. Complements data.act.gov.au (Socrata), which carries the ACT's tabular data and none of its geospatial layers.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "cow-open-data-hub-CityOfWodonga.hub.arcgis.com",
+   "label": "City of Wodonga — GIS Open Resources",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://cow-open-data-hub-CityOfWodonga.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 165,
+    "UNDECLARED": 12,
+    "CC-BY-NC": 10,
+    "ODbL-1.0": 1
+   },
+   "undeclared_share": 0.064,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "10 datasets are CC BY-NC-SA and so resolve to the CC-BY-NC block class — ingestable only while the free-beta exception is active (see NC_FREE_BETA_EXCEPTION in licence.ts and report:nc-exposure). One dataset is CC BY-SA 3.0, which has no class here and stays UNDECLARED.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "city-maps-and-data-AlbanyWA.hub.arcgis.com",
+   "label": "City of Albany — City Maps and Data",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://city-maps-and-data-AlbanyWA.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 78,
+    "CC-BY-4.0": 24
+   },
+   "undeclared_share": 0.765,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "24 datasets declare CC BY 4.0; the rest declare a per-item accuracy disclaimer or nothing. The org publishes no Hub page carrying a site-wide licence (searched 19 Sep 2026), so there is nothing to make a portal default out of and the majority stay UNDECLARED.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "city-plan-stakeholder-engagement-AdelaideCity.hub.arcgis.com",
+   "label": "City of Adelaide — City Plan data hub",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://city-plan-stakeholder-engagement-AdelaideCity.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 101
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "100% UNDECLARED and connected anyway, because the data is city-analysis staple — ABS meshblocks, GTFS stops and routes, libraries, public open space — and UNDECLARED is ingested with the unverified-rights warning rather than refused. The chase was run and came up empty: the council's org publishes three Hub pages and the only plausible one, 'Disclaimer', contains no grant language. Note the odd base URL: this engagement microsite is the only Adelaide City Council site with a populated DCAT feed; the council's 'CityPlan' site serves zero datasets.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data-tweed.opendata.arcgis.com",
+   "label": "Tweed Shire Council — Open Data Hub",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://data-tweed.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 47,
+    "CC-BY-4.0": 38
+   },
+   "undeclared_share": 0.553,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "38 datasets declare CC BY 4.0 per-item. No portal default despite a footer nav link labelled 'Creative Commons' pointing at the CC BY 4.0 deed: a bare link states no scope, and the site's own 'Terms of Use' PDF (tweed.nsw.gov.au/Documents/GIS/open-data-hub-terms-of-use.pdf) answers HTTP 403, so the grant cannot be read. Same call as Durham in the Canadian batch. One dataset declares the Esri Master License Agreement and stays UNDECLARED.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "geohub-perth.opendata.arcgis.com",
+   "label": "City of Perth — Open Data Initiative",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://geohub-perth.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 47,
+    "UNDECLARED": 20
+   },
+   "undeclared_share": 0.299,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "CBD-scale city data: car parks, planning scheme plot-ratio plans, road seal. 47 of 67 declare CC BY 4.0; 6 of 6 sampled datasets ingested.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data-melbournewater.opendata.arcgis.com",
+   "label": "Melbourne Water — Open Data Hub",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://data-melbournewater.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-SA-4.0": 44,
+    "UNDECLARED": 1
+   },
+   "undeclared_share": 0.022,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Declares its licence as the DISPLAY NAME 'Creative Commons Attribution Share-Alike 4.0 International' on 44 of 45 datasets — aliased 19 Sep 2026. Share-alike, so anything derived from these catchment and waterway layers carries the SA obligation.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.redland.qld.gov.au",
+   "label": "Redland City Council — Open Data",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://opendata.redland.qld.gov.au",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-SA-4.0": 41,
+    "UNDECLARED": 2
+   },
+   "undeclared_share": 0.047,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Declares CC BY-SA 4.0 as a bare URL on 41 of 43 datasets (aliased 19 Sep 2026). Mostly City Plan overlays — landslide hazard, environmental significance, airport environs.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.unley.sa.gov.au",
+   "label": "City of Unley — Open Data Portal",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://opendata.unley.sa.gov.au",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://opendata.unley.sa.gov.au/pages/help-and-support",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "CC-BY-4.0",
+   "observed_licences": {
+    "CC-BY-4.0": 33
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Measured 100% UNDECLARED and is in fact a blanket CC BY 4.0 portal. The grant is on the site's own 'Help and support' Hub page, which is JS-rendered and had to be pulled through the ArcGIS item API: 'All data available on our open data portal is licensed under the Creative Commons Attribution 4.0 license', followed by the CC BY conditions in full. That is a site-wide statement, so it is the portal default.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "library-mdba.opendata.arcgis.com",
+   "label": "Murray–Darling Basin Authority — Spatial Library",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://library-mdba.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 15,
+    "UNDECLARED": 7,
+    "CC-BY-3.0": 5
+   },
+   "undeclared_share": 0.259,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Small but cross-jurisdictional: Basin Plan regions, water resource plan areas, hydrologic indicator sites — the geography the Basin is argued over in, spanning QLD/NSW/VIC/SA. One dataset declares CC BY-ND 3.0, which has no class here and stays UNDECLARED.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "artc-spatial-hub-ARTC.hub.arcgis.com",
+   "label": "Australian Rail Track Corporation — Spatial Data Hub",
+   "country": "AU",
+   "connector": "arcgis-hub",
+   "base_url": "https://artc-spatial-hub-ARTC.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 10,
+    "UNDECLARED": 8
+   },
+   "undeclared_share": 0.444,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "The interstate rail network centreline, tunnels and network control boards, from the Commonwealth-owned operator — national coverage from a small catalogue. 10 of 18 declare CC BY 4.0.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.casey.vic.gov.au",
+   "label": "City of Casey Open Data",
+   "country": "AU",
+   "connector": "opendatasoft",
+   "base_url": "https://data.casey.vic.gov.au",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2.1",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-3.0": 118,
+    "UNDECLARED": 19
+   },
+   "undeclared_share": 0.139,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "None required",
+   "notes": "Found through the ArcGIS Hub index and connected as OpenDataSoft instead: it serves a Project Open Data /data.json feed (which is how the Hub sweep saw it) but is an ODS portal, and the ODS API is strictly better here — the DCAT feed carries NO licence at all while the ODS metadata declares one on 118 of 137 datasets. Licence arrives as the ODS display name 'CC BY 3', aliased to CC-BY-3.0 (unported, not the AU port — Ballarat's portal distinguishes the two, declaring 'Creative Commons Attribution 3.0 Australia' separately).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.ballarat.vic.gov.au",
+   "label": "City of Ballarat Open Data",
+   "country": "AU",
+   "connector": "opendatasoft",
+   "base_url": "https://data.ballarat.vic.gov.au",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2.1",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-3.0": 61,
+    "UNDECLARED": 56,
+    "CC-BY-3.0-AU": 1
+   },
+   "undeclared_share": 0.475,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "None required",
+   "notes": "Same ODS-behind-a-DCAT-feed case as Casey. Strong on sensor and time-series data — solar radiation, noise observations, traffic lights, building permits — which is unusual for a council portal of this size.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.cumberland.nsw.gov.au",
+   "label": "Cumberland City Council Open Data",
+   "country": "AU",
+   "connector": "opendatasoft",
+   "base_url": "https://data.cumberland.nsw.gov.au",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2.1",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 20,
+    "CC-BY-4.0": 5
+   },
+   "undeclared_share": 0.8,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "None required",
+   "notes": "Small Western Sydney portal; only 5 of 25 datasets declare a licence. Connected for the Greater Sydney derivatives it republishes at LGA scale (heat vulnerability index, tree canopy to SA2) alongside its own smart-city feeds.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.liverpool.nsw.gov.au",
+   "label": "Liverpool City Council Open Data",
+   "country": "AU",
+   "connector": "opendatasoft",
+   "base_url": "https://data.liverpool.nsw.gov.au",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2.1",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 10,
+    "UNDECLARED": 10
+   },
+   "undeclared_share": 0.5,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "None required",
+   "notes": "Half the catalogue declares CC BY 4.0. Liverpool also runs a separate ArcGIS Hub site (open-data-LivCC.hub.arcgis.com, 14 datasets) which is NOT connected: it declares nothing but a liability disclaimer and its content is a subset of what this portal serves.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "datasets.seed.nsw.gov.au",
+   "label": "NSW SEED — Sharing and Enabling Environmental Data",
+   "country": "AU",
+   "connector": "ckan",
+   "base_url": "https://datasets.seed.nsw.gov.au",
+   "platform": "CKAN",
+   "tos_url": "https://www.seed.nsw.gov.au/copyright",
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 4525,
+    "UNDECLARED": 2236,
+    "CC-BY-NC": 113
+   },
+   "undeclared_share": 0.325,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default. data.gov.uk explicitly states no API key and no rate limit."
+   },
+   "auth": "None required",
+   "notes": "NSW's environmental data catalogue and the largest AU addition outside the Esri hubs: 6,874 datasets, 666 of them carrying a format the ingest pipeline reads. 4,525 declare cc-by. The 2,236 UNDECLARED are dominated by license_id '3rd' (2,192) — the portal's own marker for third-party rights, which is a statement that SEED cannot grant the licence, so it is correctly left unmapped rather than aliased. Ingest is lumpier than the Esri hubs: 9 of 15 sampled datasets fetched, with the failures being flood-study ZIPs hosted on flooddata.ses.nsw.gov.au (HTTP 403 to every client, browser UA included — not a UA block) and two archives over the 200MB body cap.",
    "dataset_overrides": []
   },
   {
