@@ -405,13 +405,25 @@ function finalizeStats(portal, live) {
   // rather than silently folded into "declared", because the distinction is
   // real: nobody wrote a licence on the dataset, the portal wrote one over all
   // of them.
-  const blanket = portal.defaultLicence && merged.undeclared > 0
-    ? { cls: CLASS_LABEL[portal.defaultLicence] || portal.defaultLicence, count: merged.undeclared }
+  //
+  // The blanket licence also governs when there are NO licence statistics at
+  // all — a portal on a connector this site's fetcher cannot speak (PXWeb, for
+  // one, where the API exposes no per-table licence field to count). Requiring
+  // `undeclared > 0` missed that case and sent those portals down the generic
+  // branch, which warns the reader that "an undeclared licence is not the same
+  // as public-domain". Statistics Sweden read that way on 19 Sep 2026 while
+  // licensing its entire database CC0 — the page understating its rights as
+  // badly as SEMCOG's did, just by a different route. Measuring zero undeclared
+  // datasets is not evidence that none are undeclared.
+  const hasLicenceStats = (s.licences || []).length > 0;
+  const blanketCount = merged.undeclared > 0 ? merged.undeclared : null;
+  const blanket = portal.defaultLicence && (blanketCount !== null || !hasLicenceStats)
+    ? { cls: CLASS_LABEL[portal.defaultLicence] || portal.defaultLicence, count: blanketCount }
     : null;
-  if (blanket) {
+  if (blanket && blanketCount !== null) {
     merged = mergeLicences([
       ...(s.licences || []).filter((l) => canonLicence(l.cls) !== 'UNDECLARED'),
-      { cls: portal.defaultLicence, count: merged.undeclared },
+      { cls: portal.defaultLicence, count: blanketCount },
     ]);
     undeclaredPct = 0;
   }

@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>US Census Bureau — open datasets, licences &amp; maps · Vizzie</title>
-    <meta name="description" content="US Census Bureau publishes 318 open datasets (United States). See its live dataset count, and turn any of it into a map with Vizzie — no download." />
+    <meta name="description" content="US Census Bureau publishes 318 open datasets (United States). See its live dataset count and its portal-wide licence (US public domain), and turn any of it…" />
     <link rel="canonical" href="https://www.vizzie.org/portals/api-census-gov/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta property="og:title" content="US Census Bureau — open datasets, licences &amp; maps · Vizzie" />
-    <meta property="og:description" content="US Census Bureau publishes 318 open datasets (United States). See its live dataset count, and turn any of it into a map with Vizzie — no download." />
+    <meta property="og:description" content="US Census Bureau publishes 318 open datasets (United States). See its live dataset count and its portal-wide licence (US public domain), and turn any of it…" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.vizzie.org/portals/api-census-gov/" />
     <meta property="og:site_name" content="Vizzie" />
@@ -21,11 +21,11 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="US Census Bureau — open datasets, licences &amp; maps · Vizzie" />
-    <meta name="twitter:description" content="US Census Bureau publishes 318 open datasets (United States). See its live dataset count, and turn any of it into a map with Vizzie — no download." />
+    <meta name="twitter:description" content="US Census Bureau publishes 318 open datasets (United States). See its live dataset count and its portal-wide licence (US public domain), and turn any of it…" />
     <meta name="twitter:image" content="https://www.vizzie.org/og-vancouver-street-trees.png" />
     <meta name="twitter:image:alt" content="Vizzie mapping 150,000 Vancouver street trees in 3D, extruded by height and coloured by species, with charts alongside" />
 
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.vizzie.org/portals/api-census-gov/","url":"https://www.vizzie.org/portals/api-census-gov/","name":"US Census Bureau — open datasets, licences & maps · Vizzie","description":"US Census Bureau publishes 318 open datasets (United States). See its live dataset count, and turn any of it into a map with Vizzie — no download.","isPartOf":{"@type":"WebSite","name":"Vizzie","url":"https://www.vizzie.org"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.vizzie.org/"},{"@type":"ListItem","position":2,"name":"Open data portals","item":"https://www.vizzie.org/portals/"},{"@type":"ListItem","position":3,"name":"US Census Bureau","item":"https://www.vizzie.org/portals/api-census-gov/"}]},{"@type":"DataCatalog","name":"US Census Bureau","url":"https://api.census.gov","description":"US Census Bureau is the open-data portal for United States, running on US Census Bureau API, with 318 datasets.","dateModified":"2026-09-19","spatialCoverage":"United States"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.vizzie.org/portals/api-census-gov/","url":"https://www.vizzie.org/portals/api-census-gov/","name":"US Census Bureau — open datasets, licences & maps · Vizzie","description":"US Census Bureau publishes 318 open datasets (United States). See its live dataset count and its portal-wide licence (US public domain), and turn any of it…","isPartOf":{"@type":"WebSite","name":"Vizzie","url":"https://www.vizzie.org"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.vizzie.org/"},{"@type":"ListItem","position":2,"name":"Open data portals","item":"https://www.vizzie.org/portals/"},{"@type":"ListItem","position":3,"name":"US Census Bureau","item":"https://www.vizzie.org/portals/api-census-gov/"}]},{"@type":"DataCatalog","name":"US Census Bureau","url":"https://api.census.gov","description":"US Census Bureau is the open-data portal for United States, running on US Census Bureau API, with 318 datasets.","dateModified":"2026-09-19","spatialCoverage":"United States"}]}</script>
     <style>
       :root {
         color-scheme: dark;
@@ -234,10 +234,15 @@
         <div class="kicker">Licence profile</div>
         <h2 style="margin-bottom:20px">Can you reuse the data?</h2>
         
-        <p class="prose">Licences here are declared per dataset via US federal statistical data; public domain (17 U.S.C. §105). A machine-readable
-          summary of the licence mix isn't available yet, but Vizzie surfaces each dataset's declared
-          licence (or notes when none is given) as you browse — remember that an <b>undeclared</b>
-          licence is not the same as public-domain or free-to-use, so check before you reuse.</p>
+        <div class="callout">
+          <div class="big">Licensed <b>portal-wide</b>: US public domain</div>
+        </div>
+        <p class="prose">US Census Bureau publishes one licence across its whole catalogue, so
+          every dataset here is covered by it. That is a stronger position than an undeclared catalogue, where nothing grants
+          permission at all — but the portal's terms are what govern, so read them before you rely on
+          the data. Vizzie resolves each dataset to the same licence and writes the attribution line
+          for you when you export or publish.</p>
+        
         <p class="prose">Aggregate ACS/Decennial tables only — no microdata. Added 2026-09-15 to close the registry⊆matrix gap: this portal was in WIZARD_SOURCE_REGISTRY with no matrix row, so it silently ran on DEFAULT_RATE_LIMIT with no…</p>
       </div>
     </section>

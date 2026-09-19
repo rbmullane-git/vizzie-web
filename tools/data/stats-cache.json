@@ -10160,5 +10160,2987 @@
   "fetchedAt": "2026-09-19T00:59:52.036Z",
   "ok": true,
   "notes": []
+ },
+ "opendata-gov-nt-ca": {
+  "count": 341,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.002932551319648094,
+  "licences": [
+   {
+    "cls": "GNWT",
+    "count": 340
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Bureau of Statistics",
+    "count": 290
+   },
+   {
+    "name": "Environment and Climate Change",
+    "count": 12
+   },
+   {
+    "name": "Justice",
+    "count": 10
+   },
+   {
+    "name": "Infrastructure",
+    "count": 9
+   },
+   {
+    "name": "Executive and Indigenous Affairs",
+    "count": 7
+   },
+   {
+    "name": "Education, Culture and Employment",
+    "count": 4
+   },
+   {
+    "name": "Industry, Tourism and Investment",
+    "count": 3
+   },
+   {
+    "name": "Municipal and Community Affairs",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:09.099Z",
+  "ok": true,
+  "notes": []
+ },
+ "open-yukon-ca": {
+  "count": 3841,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0002603488674824265,
+  "licences": [
+   {
+    "cls": "OGL-Yukon-2.0",
+    "count": 3840
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Yukon Geological Survey",
+    "count": 1932
+   },
+   {
+    "name": "Geomatics Yukon",
+    "count": 420
+   },
+   {
+    "name": "Health and Social Services",
+    "count": 196
+   },
+   {
+    "name": "Environment",
+    "count": 184
+   },
+   {
+    "name": "Finance",
+    "count": 170
+   },
+   {
+    "name": "ATIPP Office",
+    "count": 145
+   },
+   {
+    "name": "Highways and Public Works",
+    "count": 129
+   },
+   {
+    "name": "Economic Development, Tourism and Culture",
+    "count": 117
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:09.079Z",
+  "ok": true,
+  "notes": []
+ },
+ "gos-initiative-saskatchewan-hub-arcgis-com": {
+  "count": 456,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.2631578947368421,
+  "licences": [
+   {
+    "cls": "https://gisappl.saskatchewan.ca/Html5Ext/Resources/GOS_Standard_Unrestricted_Use_Data_Licence_v2.0.pdf",
+    "count": 334
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 120
+   },
+   {
+    "cls": "https://saskatchewan.maps.arcgis.com/sharing/rest/content/items/4b988b454f8c4b06900a7e24c442ee3f/data",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Government of Saskatchewan",
+    "count": 376
+   },
+   {
+    "name": "Saskatchewan Ministry of Environment",
+    "count": 58
+   },
+   {
+    "name": "Saskatchewan Ministry of Highways, Information Management Branch",
+    "count": 14
+   },
+   {
+    "name": "{{source}}",
+    "count": 5
+   },
+   {
+    "name": "Saskatchewan Ministry of Highways and Infrastructure, Information Management Branch",
+    "count": 2
+   },
+   {
+    "name": "Saskatchewan Geological Survey",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:09.099Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-victoria-ca": {
+  "count": 504,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.16468253968253968,
+  "licences": [
+   {
+    "cls": "http://opendata.victoria.ca/pages/open-data-licence",
+    "count": 222
+   },
+   {
+    "cls": "https://opendata.victoria.ca/pages/open-data-licence",
+    "count": 174
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 83
+   },
+   {
+    "cls": "http://www.victoria.ca/EN/main/online-services/open-data-catalogue/open-data-licence.html",
+    "count": 16
+   },
+   {
+    "cls": "https://www.victoria.ca/EN/main/online-services/open-data-catalogue/open-data-licence.html",
+    "count": 6
+   },
+   {
+    "cls": "https://www.statcan.gc.ca/eng/reference/licence",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Victoria",
+    "count": 504
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:10.968Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-markham-opendata-arcgis-com": {
+  "count": 540,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.5740740740740741,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 310
+   },
+   {
+    "cls": "Please refer to \"York Region Open Data Licence\", searchable on this website.",
+    "count": 181
+   },
+   {
+    "cls": "Please refer to &quot;York Region Open Data Licence&quot;, searchable on this website.",
+    "count": 24
+   },
+   {
+    "cls": "<div>Please refer to &quot;York Region Open Data License&quot;, searchable on this website.</div><div><br /></div>",
+    "count": 23
+   },
+   {
+    "cls": "null",
+    "count": 1
+   },
+   {
+    "cls": "Please refer to &quot;York Region Open Data Licence&quot;, searchable on this website",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "The Regional Municipality of York",
+    "count": 497
+   },
+   {
+    "name": "City of Markham",
+    "count": 41
+   },
+   {
+    "name": "York Region, Data, Analytics and Visualization Services Branch",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:09.101Z",
+  "ok": true,
+  "notes": []
+ },
+ "insights-york-opendata-arcgis-com": {
+  "count": 546,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.5787545787545788,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 316
+   },
+   {
+    "cls": "Please refer to \"York Region Open Data Licence\", searchable on this website.",
+    "count": 181
+   },
+   {
+    "cls": "Please refer to &quot;York Region Open Data Licence&quot;, searchable on this website.",
+    "count": 24
+   },
+   {
+    "cls": "<div>Please refer to &quot;York Region Open Data License&quot;, searchable on this website.</div><div><br /></div>",
+    "count": 23
+   },
+   {
+    "cls": "null",
+    "count": 1
+   },
+   {
+    "cls": "Please refer to &quot;York Region Open Data Licence&quot;, searchable on this website",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "The Regional Municipality of York",
+    "count": 498
+   },
+   {
+    "name": "City of Markham",
+    "count": 41
+   },
+   {
+    "name": "York Regional Police GIS",
+    "count": 3
+   },
+   {
+    "name": "York Regional Police Business Intelligence and Data Analytics",
+    "count": 2
+   },
+   {
+    "name": "York Region, Data, Analytics and Visualization Services Branch",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:09.100Z",
+  "ok": true,
+  "notes": []
+ },
+ "open-hamilton-ca": {
+  "count": 463,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.15550755939524838,
+  "licences": [
+   {
+    "cls": "https://www.hamilton.ca/city-initiatives/strategies-actions/open-data-licence-terms-and-conditions",
+    "count": 391
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 72
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Hamilton",
+    "count": 402
+   },
+   {
+    "name": "City of Hamilton; Corporate Services; Information Technology",
+    "count": 23
+   },
+   {
+    "name": "City of Hamilton;Planning and Economic Development;Planning",
+    "count": 11
+   },
+   {
+    "name": "City of Hamilton;Public Works;Transportation Operations & Maintenance",
+    "count": 10
+   },
+   {
+    "name": "City of Hamilton, Corporate Services, Information Technology, Business Applications, Spatial Solutions and Data Services",
+    "count": 4
+   },
+   {
+    "name": "City of Hamilton;Public Works;Hamilton Water",
+    "count": 3
+   },
+   {
+    "name": "City of Hamilton;Public Works;Engineering Services",
+    "count": 3
+   },
+   {
+    "name": "City of Hamilton;Planning and Economic Development;Transportation Planning and Parking",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:12.150Z",
+  "ok": true,
+  "notes": []
+ },
+ "open-kitchenergis-opendata-arcgis-com": {
+  "count": 566,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.911660777385159,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 516
+   },
+   {
+    "cls": "https://maps.cambridge.ca/images/opendata/Open data licence.pdf",
+    "count": 37
+   },
+   {
+    "cls": "https://data.waterloo.ca/pages/open-data-licence",
+    "count": 12
+   },
+   {
+    "cls": "http://maps.cambridge.ca/images/opendata/Open data licence.pdf",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Kitchener",
+    "count": 224
+   },
+   {
+    "name": "City of Waterloo",
+    "count": 136
+   },
+   {
+    "name": "Region of Waterloo",
+    "count": 124
+   },
+   {
+    "name": "Cambridge, Ontario",
+    "count": 82
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:09.100Z",
+  "ok": true,
+  "notes": []
+ },
+ "geohub-brampton-ca": {
+  "count": 617,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.17341977309562398,
+  "licences": [
+   {
+    "cls": "CC-BY",
+    "count": 391
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 107
+   },
+   {
+    "cls": "https://www.statcan.gc.ca/eng/reference/licence",
+    "count": 60
+   },
+   {
+    "cls": "http://www.statcan.gc.ca/eng/reference/licence",
+    "count": 56
+   },
+   {
+    "cls": "Creative Commons By-Law",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Brampton",
+    "count": 617
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:09.100Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-durham-ca": {
+  "count": 385,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.2805194805194805,
+  "licences": [
+   {
+    "cls": "https://www.durham.ca/en/regional-government/resources/Documents/OpenDataLicenceAgreement.pdf",
+    "count": 269
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 108
+   },
+   {
+    "cls": "https://www.ontario.ca/page/open-government-licence-ontario",
+    "count": 7
+   },
+   {
+    "cls": "CC-BY-SA",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Regional Municipality of Durham",
+    "count": 346
+   },
+   {
+    "name": "Region of Durham",
+    "count": 28
+   },
+   {
+    "name": "Ontario Ministry of Natural Resources and Forestry",
+    "count": 6
+   },
+   {
+    "name": "{{source}}",
+    "count": 1
+   },
+   {
+    "name": "Township of Brock",
+    "count": 1
+   },
+   {
+    "name": "Township of Uxbridge",
+    "count": 1
+   },
+   {
+    "name": "Township of Scugog",
+    "count": 1
+   },
+   {
+    "name": "Ontario Aviation, Forest Fire and Emergency Services",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:12.533Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-kelowna-ca": {
+  "count": 282,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.574468085106383,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 162
+   },
+   {
+    "cls": "http://apps.kelowna.ca/images/opendata/opengovernmentlicence.pdf",
+    "count": 98
+   },
+   {
+    "cls": "https://apps.kelowna.ca/images/opendata/opengovernmentlicence.pdf",
+    "count": 19
+   },
+   {
+    "cls": "https://www.kelowna.ca/site-disclaimer",
+    "count": 2
+   },
+   {
+    "cls": "For information purposes only.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Kelowna",
+    "count": 282
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:14.313Z",
+  "ok": true,
+  "notes": []
+ },
+ "open-niagarafalls-ca": {
+  "count": 349,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.10601719197707736,
+  "licences": [
+   {
+    "cls": "https://open.niagarafalls.ca/pages/terms-of-use",
+    "count": 305
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 37
+   },
+   {
+    "cls": "{{license}}",
+    "count": 7
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Niagara Falls",
+    "count": 296
+   },
+   {
+    "name": "City Of Niagara Falls",
+    "count": 53
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:13.265Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-mississauga-ca": {
+  "count": 328,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.49085365853658536,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 161
+   },
+   {
+    "cls": "http://www5.mississauga.ca/research_catalogue/CityofMississauga_TermsofUse.pdf",
+    "count": 124
+   },
+   {
+    "cls": "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+    "count": 33
+   },
+   {
+    "cls": "https://smartcity.mississauga.ca/wp-content/uploads/2021/04/CityofMississauga_TermsofUse.pdf",
+    "count": 5
+   },
+   {
+    "cls": "https://www5.mississauga.ca/research_catalogue/CityofMississauga_TermsofUse.pdf",
+    "count": 3
+   },
+   {
+    "cls": "https://www.statcan.gc.ca/en/reference/licence",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Mississauga",
+    "count": 327
+   },
+   {
+    "name": "City Of Mississauga",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:14.236Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-coquitlam-ca": {
+  "count": 257,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 257
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Coquitlam",
+    "count": 257
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:14.749Z",
+  "ok": true,
+  "notes": []
+ },
+ "mydata-kamloops-opendata-arcgis-com": {
+  "count": 225,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 225
+   }
+  ],
+  "publishers": [
+   {
+    "name": "  City of Kamloops",
+    "count": 224
+   },
+   {
+    "name": "{{source}}",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:14.880Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-surrey-hub-arcgis-com": {
+  "count": 225,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 225
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Surrey",
+    "count": 224
+   },
+   {
+    "name": "Ministry of Education",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:15.732Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-london-ca": {
+  "count": 232,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9568965517241379,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 222
+   },
+   {
+    "cls": "https://london.maps.arcgis.com/sharing/rest/content/items/e31458fd0c7e41dd9f93144a9550781d/data",
+    "count": 10
+   }
+  ],
+  "publishers": [
+   {
+    "name": "{{source}}",
+    "count": 232
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:14.874Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-abbotsford-hub-arcgis-com": {
+  "count": 192,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.5677083333333334,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 109
+   },
+   {
+    "cls": "https://opendata-abbotsford.hub.arcgis.com/pages/city-of-abbotsford-open-data-licence",
+    "count": 83
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Abbotsford",
+    "count": 192
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:16.344Z",
+  "ok": true,
+  "notes": []
+ },
+ "portal-exploreoakville-opendata-arcgis-com": {
+  "count": 166,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9939759036144579,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 165
+   },
+   {
+    "cls": "Internal Use Only",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Town of Oakville",
+    "count": 99
+   },
+   {
+    "name": "Open Data Team",
+    "count": 65
+   },
+   {
+    "name": "{{source}}",
+    "count": 1
+   },
+   {
+    "name": "The Region of Halton",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:16.504Z",
+  "ok": true,
+  "notes": []
+ },
+ "explore-guelph-ca": {
+  "count": 79,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.3670886075949367,
+  "licences": [
+   {
+    "cls": "https://explore.guelph.ca/pages/open-data-license",
+    "count": 49
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 29
+   },
+   {
+    "cls": "https://geohub.guelph.ca/pages/open-data-license",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Guelph",
+    "count": 79
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:17.797Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-burnaby-ca": {
+  "count": 73,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.0410958904109589,
+  "licences": [
+   {
+    "cls": "https://data.burnaby.ca/pages/open-government-licence",
+    "count": 70
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Burnaby",
+    "count": 69
+   },
+   {
+    "name": "Derived and Amended from BC Watershed Atlas",
+    "count": 3
+   },
+   {
+    "name": "{{source}}",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:17.896Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-barrie-ca": {
+  "count": 131,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 131
+   }
+  ],
+  "publishers": [
+   {
+    "name": "The City of Barrie",
+    "count": 131
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:17.460Z",
+  "ok": true,
+  "notes": []
+ },
+ "open-niagararegion-ca": {
+  "count": 45,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 1,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 45
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Niagara Region",
+    "count": 45
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:18.203Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-peelregion-ca": {
+  "count": 154,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.19480519480519481,
+  "licences": [
+   {
+    "cls": "https://data.peelregion.ca/pages/license",
+    "count": 55
+   },
+   {
+    "cls": "https://www.statcan.gc.ca/eng/reference/licence",
+    "count": 42
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 30
+   },
+   {
+    "cls": "https://www.statcan.gc.ca/en/reference/licence",
+    "count": 18
+   },
+   {
+    "cls": "https://www.peelregion.ca/privacy/terms-of-use.asp",
+    "count": 4
+   },
+   {
+    "cls": "https://www.ontario.ca/page/open-government-licence-ontario",
+    "count": 2
+   },
+   {
+    "cls": "https://www.cmhc-schl.gc.ca/en/data-and-research/cmhc-licence-agreement-use-of-data",
+    "count": 2
+   },
+   {
+    "cls": "&copy; Region of Peel",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Region of Peel - Corporate Services",
+    "count": 53
+   },
+   {
+    "name": "Statistics Canada",
+    "count": 49
+   },
+   {
+    "name": "Regional Municipality of Peel",
+    "count": 31
+   },
+   {
+    "name": "Region of Peel - Human Services",
+    "count": 6
+   },
+   {
+    "name": "Region of Peel - Regional Planning & Growth Management",
+    "count": 4
+   },
+   {
+    "name": "Region of Peel - Public Works",
+    "count": 2
+   },
+   {
+    "name": "Canada Mortgage and Housing Corporation",
+    "count": 2
+   },
+   {
+    "name": "Region of Peel - Information Management",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:17.300Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-edmonton-ca": {
+  "count": 1421,
+  "countSource": "socrata discovery",
+  "undeclaredPct": 0.08726249120337791,
+  "licences": [
+   {
+    "cls": "See Terms of Use",
+    "count": 1294
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 124
+   },
+   {
+    "cls": "Canada Open Government Licence",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Edmonton",
+    "count": 973
+   },
+   {
+    "name": "EPCOR",
+    "count": 32
+   },
+   {
+    "name": "Statistics Canada",
+    "count": 27
+   },
+   {
+    "name": "Alberta Health Services",
+    "count": 17
+   },
+   {
+    "name": "Alberta Environment and Parks",
+    "count": 5
+   },
+   {
+    "name": "Edmonton Public School Board",
+    "count": 4
+   },
+   {
+    "name": "Government of Canada - Environment Canada",
+    "count": 3
+   },
+   {
+    "name": "Edmonton Catholic School District",
+    "count": 3
+   }
+  ],
+  "publisherCoverage": 0.7741027445460943,
+  "fetchedAt": "2026-09-19T08:53:09.099Z",
+  "ok": true,
+  "notes": [
+   "socrata publishers: 1100 of 1421 datasets named a publisher",
+   "socrata licences: 1297 of 1421 datasets declared one"
+  ]
+ },
+ "open-nrw": {
+  "count": 11099,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.00036039282818271914,
+  "licences": [
+   {
+    "cls": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+    "count": 4363
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+    "count": 3225
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/other-closed",
+    "count": 2430
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/cc-zero",
+    "count": 332
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+    "count": 234
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/dl-de-zero-2.0",
+    "count": 143
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/dl-by-de/1.0",
+    "count": 88
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/cc-by-de/3.0",
+    "count": 79
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/odbl",
+    "count": 31
+   },
+   {
+    "cls": "http://dcat-ap.de/def/licenses/cc-by",
+    "count": 26
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 4
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Landesdatenbank NRW",
+    "count": 2373
+   },
+   {
+    "name": "Geoportal",
+    "count": 2223
+   },
+   {
+    "name": "RVR",
+    "count": 1343
+   },
+   {
+    "name": "Dortmund",
+    "count": 774
+   },
+   {
+    "name": "Landesbehörden",
+    "count": 699
+   },
+   {
+    "name": "Köln",
+    "count": 499
+   },
+   {
+    "name": "Offenesdatenportal",
+    "count": 462
+   },
+   {
+    "name": "Neuss",
+    "count": 428
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:19.482Z",
+  "ok": true,
+  "notes": []
+ },
+ "dati-emilia-romagna-it": {
+  "count": 2908,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0020632737276478678,
+  "licences": [
+   {
+    "cls": "Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)",
+    "count": 1901
+   },
+   {
+    "cls": "CC BY 4.0 (Creative Commons - Attribuzione)",
+    "count": 544
+   },
+   {
+    "cls": "A2.1",
+    "count": 210
+   },
+   {
+    "cls": "CC BY 3.0 (Creative Commons - Attribuzione)",
+    "count": 44
+   },
+   {
+    "cls": "cc-by",
+    "count": 36
+   },
+   {
+    "cls": "CC-0-1.0",
+    "count": 23
+   },
+   {
+    "cls": "Pubblico Dominio",
+    "count": 22
+   },
+   {
+    "cls": "cc-zero",
+    "count": 12
+   },
+   {
+    "cls": "CC-BY-2.5",
+    "count": 11
+   },
+   {
+    "cls": "IODL-1.0",
+    "count": 10
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 6
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Comune di Bologna",
+    "count": 701
+   },
+   {
+    "name": "Regione Emilia-Romagna",
+    "count": 657
+   },
+   {
+    "name": "Unione dei Comuni Valle del Savio",
+    "count": 525
+   },
+   {
+    "name": "Comune di Ferrara",
+    "count": 259
+   },
+   {
+    "name": "Comune di Reggio nell'Emilia",
+    "count": 247
+   },
+   {
+    "name": "Comune di Modena",
+    "count": 111
+   },
+   {
+    "name": "Comune di Rimini",
+    "count": 72
+   },
+   {
+    "name": "Comune di Imola",
+    "count": 33
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:19.614Z",
+  "ok": true,
+  "notes": []
+ },
+ "datosabiertos-malaga-eu": {
+  "count": 1377,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "by-sa-40",
+    "count": 1295
+   },
+   {
+    "cls": "by-sa",
+    "count": 79
+   },
+   {
+    "cls": "cc-by",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "ECONOMÍA, HACIENDA Y PERSONAL",
+    "count": 468
+   },
+   {
+    "name": "ORDENACIÓN DEL TERRITORIO Y VIVIENDA",
+    "count": 282
+   },
+   {
+    "name": "PROMOCIÓN EMPRESARIAL Y DEL EMPLEO",
+    "count": 209
+   },
+   {
+    "name": "PRESIDENCIA",
+    "count": 151
+   },
+   {
+    "name": "MEDIO AMBIENTE Y SOSTENIBILIDAD",
+    "count": 150
+   },
+   {
+    "name": "CULTURA, TURISMO, DEPORTE, EDUCACIÓN Y JUVENTUD",
+    "count": 50
+   },
+   {
+    "name": "ACCESIBILIDAD Y MOVILIDAD",
+    "count": 50
+   },
+   {
+    "name": "SEGURIDAD Y RELACIONES INSTITUCIONALES INTERNACIONALES",
+    "count": 10
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:19.795Z",
+  "ok": true,
+  "notes": []
+ },
+ "otwartedane-gdynia-pl": {
+  "count": 260,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 260
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Urząd Miasta Gdyni",
+    "count": 100
+   },
+   {
+    "name": "Zarząd Dróg i Zieleni",
+    "count": 39
+   },
+   {
+    "name": "Wydział Strategii",
+    "count": 33
+   },
+   {
+    "name": "Laboratorium Innowacji Społecznych",
+    "count": 27
+   },
+   {
+    "name": "Straż Miejska",
+    "count": 11
+   },
+   {
+    "name": "Miejski Ośrodek Pomocy Społecznej",
+    "count": 11
+   },
+   {
+    "name": "Zarząd Komunikacji Miejskiej",
+    "count": 7
+   },
+   {
+    "name": "Wydział Energetyki",
+    "count": 6
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:20.418Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gov-ua": {
+  "count": 36966,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.020532381106963156,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 34381
+   },
+   {
+    "cls": "other-open",
+    "count": 943
+   },
+   {
+    "cls": "CC-BY-4.0",
+    "count": 828
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 759
+   },
+   {
+    "cls": "odc-by",
+    "count": 24
+   },
+   {
+    "cls": "other-pd",
+    "count": 15
+   },
+   {
+    "cls": "other-closed",
+    "count": 11
+   },
+   {
+    "cls": "gfdl",
+    "count": 1
+   },
+   {
+    "cls": "other-at",
+    "count": 1
+   },
+   {
+    "cls": "other-nc",
+    "count": 1
+   },
+   {
+    "cls": "odc-odbl",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Вінницька міська рада",
+    "count": 3531
+   },
+   {
+    "name": "Дніпровська міська рада",
+    "count": 1405
+   },
+   {
+    "name": "Львівська міська рада",
+    "count": 1139
+   },
+   {
+    "name": "Львівська обласна державна адміністрація",
+    "count": 1064
+   },
+   {
+    "name": "Дрогобицька міська рада",
+    "count": 599
+   },
+   {
+    "name": "Коломийська міська рада",
+    "count": 519
+   },
+   {
+    "name": "Дубенська міська рада",
+    "count": 461
+   },
+   {
+    "name": "Державна служба статистики України",
+    "count": 388
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:18.848Z",
+  "ok": true,
+  "notes": []
+ },
+ "dati-toscana-it": {
+  "count": 12451,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.008192113083286483,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 7554
+   },
+   {
+    "cls": "cc-by-4.0",
+    "count": 1957
+   },
+   {
+    "cls": "Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)",
+    "count": 1257
+   },
+   {
+    "cls": "CC-BY",
+    "count": 983
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 476
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 102
+   },
+   {
+    "cls": "iodl2",
+    "count": 32
+   },
+   {
+    "cls": "other-pd",
+    "count": 26
+   },
+   {
+    "cls": "other-nc",
+    "count": 17
+   },
+   {
+    "cls": "cc-nc",
+    "count": 12
+   },
+   {
+    "cls": "other-open",
+    "count": 10
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Lamma Toscana",
+    "count": 6443
+   },
+   {
+    "name": "Comune di Firenze",
+    "count": 1992
+   },
+   {
+    "name": "Comune di Arezzo",
+    "count": 983
+   },
+   {
+    "name": "Regione Toscana",
+    "count": 440
+   },
+   {
+    "name": "Comune di Siena",
+    "count": 328
+   },
+   {
+    "name": "Comune di Prato",
+    "count": 277
+   },
+   {
+    "name": "Città metropolitana di Firenze",
+    "count": 168
+   },
+   {
+    "name": "Comune di Monsummano Terme",
+    "count": 162
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:19.004Z",
+  "ok": true,
+  "notes": []
+ },
+ "aperto-comune-torino-it": {
+  "count": 2118,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.0009442870632672333,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 2113
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 3
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Comune di Torino",
+    "count": 2076
+   },
+   {
+    "name": "SORIS ",
+    "count": 9
+   },
+   {
+    "name": "Osservatorio Culturale del Piemonte",
+    "count": 8
+   },
+   {
+    "name": "Amiat - Azienda Multiservizi Igiene Ambientale Torino S.p.A.",
+    "count": 8
+   },
+   {
+    "name": "Turismo Torino e Provincia s.c.r.l.",
+    "count": 7
+   },
+   {
+    "name": "SMAT - Società Metropolitana Acque Torino S.p.A.",
+    "count": 4
+   },
+   {
+    "name": "GTT - Gruppo Torinese Trasporti",
+    "count": 3
+   },
+   {
+    "name": "5T S.r.l.",
+    "count": 3
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:19.718Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-corkcity-ie": {
+  "count": 34,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.029411764705882353,
+  "licences": [
+   {
+    "cls": "cc-by",
+    "count": 30
+   },
+   {
+    "cls": "cc-by-sa",
+    "count": 3
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Cork City Council",
+    "count": 19
+   },
+   {
+    "name": "Strategic Planning and Heritage",
+    "count": 11
+   },
+   {
+    "name": "Cork City Library",
+    "count": 3
+   },
+   {
+    "name": "Cork Bikes",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:22.774Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-stuttgart-de": {
+  "count": 139,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+    "count": 139
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Statistisches Amt",
+    "count": 120
+   },
+   {
+    "name": "Stadtmessungsamt",
+    "count": 16
+   },
+   {
+    "name": "Amt für Umweltschutz",
+    "count": 2
+   },
+   {
+    "name": "Amt für Stadtplanung und Wohnen",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:21.539Z",
+  "ok": true,
+  "notes": []
+ },
+ "odwb-be": {
+  "count": 1282,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.07410296411856475,
+  "licences": [
+   {
+    "cls": "CC BY",
+    "count": 645
+   },
+   {
+    "cls": "Creative Commons - CC0",
+    "count": 271
+   },
+   {
+    "cls": "CC-BY",
+    "count": 102
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 95
+   },
+   {
+    "cls": "Open licentie CC0 - Universeel",
+    "count": 93
+   },
+   {
+    "cls": "CC BY-NC 4.0",
+    "count": 19
+   },
+   {
+    "cls": "Licence non spécifiée",
+    "count": 17
+   },
+   {
+    "cls": "Belgian NGI - ngi-standard-open",
+    "count": 8
+   },
+   {
+    "cls": "Service public de Wallonie - Terms of Use",
+    "count": 6
+   },
+   {
+    "cls": "CC-by 4.0",
+    "count": 5
+   },
+   {
+    "cls": "Licence Personnalisée (voir le lien Référence)",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Ville de Namur",
+    "count": 191
+   },
+   {
+    "name": "IWEPS WalStat",
+    "count": 148
+   },
+   {
+    "name": "BEP",
+    "count": 103
+   },
+   {
+    "name": "Ville de Liège",
+    "count": 98
+   },
+   {
+    "name": "Infrabel",
+    "count": 93
+   },
+   {
+    "name": "SPW ARNE",
+    "count": 81
+   },
+   {
+    "name": "Fédération Wallonie-Bruxelles",
+    "count": 62
+   },
+   {
+    "name": "Ville de Verviers",
+    "count": 41
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:23.511Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-iledefrance-fr": {
+  "count": 1033,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.015488867376573089,
+  "licences": [
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab)",
+    "count": 736
+   },
+   {
+    "cls": "Licence ouverte (Etalab)",
+    "count": 106
+   },
+   {
+    "cls": "Licence Ouverte (Etalab)",
+    "count": 50
+   },
+   {
+    "cls": "Open Database License (ODbL)",
+    "count": 45
+   },
+   {
+    "cls": "Licence ODbL Version Française",
+    "count": 31
+   },
+   {
+    "cls": "ODbL",
+    "count": 23
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 16
+   },
+   {
+    "cls": "Open License v2.0",
+    "count": 8
+   },
+   {
+    "cls": "https://www.insee.fr/fr/information/2381863",
+    "count": 5
+   },
+   {
+    "cls": "CC BY-NC-ND 4.0",
+    "count": 4
+   },
+   {
+    "cls": "Licence Mobilité",
+    "count": 3
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Région Île-de-France",
+    "count": 435
+   },
+   {
+    "name": "L'Institut Paris Region",
+    "count": 118
+   },
+   {
+    "name": "Île-de-France Mobilités",
+    "count": 68
+   },
+   {
+    "name": "INSEE",
+    "count": 43
+   },
+   {
+    "name": "Région Île-de-France, L'Institut Paris Region",
+    "count": 32
+   },
+   {
+    "name": "Département des Hauts-de-Seine",
+    "count": 27
+   },
+   {
+    "name": "Ministère de l'intérieur",
+    "count": 27
+   },
+   {
+    "name": "Agence des espaces verts d'Île de France (AEV)",
+    "count": 22
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:23.657Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-comune-bologna-it": {
+  "count": 704,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "CC BY 4.0",
+    "count": 694
+   },
+   {
+    "cls": "CC BY 3.0 IT",
+    "count": 4
+   },
+   {
+    "cls": "CC BY 1.0",
+    "count": 2
+   },
+   {
+    "cls": "Open Database License",
+    "count": 2
+   },
+   {
+    "cls": "CC BY-NC 3.0 IT",
+    "count": 1
+   },
+   {
+    "cls": "CC0 1.0 Universal (CC0 1.0)",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Comune di Bologna",
+    "count": 360
+   },
+   {
+    "name": "Comune di Bologna - Settore mobilità sostenibile e Infrastrutture",
+    "count": 84
+   },
+   {
+    "name": "Comune di Bologna - U.I. Ufficio Comunale di Statistica",
+    "count": 40
+   },
+   {
+    "name": "Comune di Bologna - Sistema Informativo Territoriale (SIT)",
+    "count": 23
+   },
+   {
+    "name": "Comune di Bologna - Segreteria Generale",
+    "count": 15
+   },
+   {
+    "name": "Comune di Bologna - Staff del Consiglio e Gabinetto del Sindaco",
+    "count": 11
+   },
+   {
+    "name": "Comune di Bologna - Innovazione Digitale e Dati",
+    "count": 10
+   },
+   {
+    "name": "Comune di Bologna - Area Educazione e Formazione",
+    "count": 9
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:24.340Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-tg-ch": {
+  "count": 456,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "CC0 1.0",
+    "count": 208
+   },
+   {
+    "cls": "CC By 4.0",
+    "count": 204
+   },
+   {
+    "cls": "CC BY 4.0",
+    "count": 44
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Amt für Daten und Statistik Kanton Thurgau",
+    "count": 134
+   },
+   {
+    "name": "Kanton Thurgau, Amt für Umwelt",
+    "count": 29
+   },
+   {
+    "name": "Finanzverwaltung Kanton Thurgau",
+    "count": 28
+   },
+   {
+    "name": "Amt für Volksschule Kanton Thurgau",
+    "count": 24
+   },
+   {
+    "name": "Amt für Umwelt Kanton Thurgau",
+    "count": 20
+   },
+   {
+    "name": "Staatskanzlei Kanton Thurgau",
+    "count": 20
+   },
+   {
+    "name": "MeteoSchweiz Kanton Thurgau",
+    "count": 17
+   },
+   {
+    "name": "Strassenverkehrsamt Kanton Thurgau",
+    "count": 17
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:25.088Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-grandparissud-fr": {
+  "count": 422,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.5924170616113744,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 250
+   },
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab)",
+    "count": 82
+   },
+   {
+    "cls": "Open License v2.0",
+    "count": 35
+   },
+   {
+    "cls": "Licence Ouverte (Etalab)",
+    "count": 16
+   },
+   {
+    "cls": "Données sous licence gratuite de repartage",
+    "count": 13
+   },
+   {
+    "cls": "Open Database License (ODbL)",
+    "count": 12
+   },
+   {
+    "cls": "Licence ouverte / Open Licence",
+    "count": 6
+   },
+   {
+    "cls": "Open License v1.0",
+    "count": 4
+   },
+   {
+    "cls": "Licence Ouverte version 2.0",
+    "count": 2
+   },
+   {
+    "cls": "Licence ODbL Version Française",
+    "count": 1
+   },
+   {
+    "cls": "Licence ouverte (Etalab)",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "INSEE",
+    "count": 36
+   },
+   {
+    "name": "Grand Paris Sud",
+    "count": 27
+   },
+   {
+    "name": "Numérique @ Grand Paris Sud",
+    "count": 7
+   },
+   {
+    "name": "Infogreffe",
+    "count": 6
+   },
+   {
+    "name": "Ministère de l'Intérieur",
+    "count": 6
+   },
+   {
+    "name": "OpenStreetMap",
+    "count": 6
+   },
+   {
+    "name": "Ministère de l'intérieur",
+    "count": 5
+   },
+   {
+    "name": "infogreffe",
+    "count": 5
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:25.370Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-bs-ch": {
+  "count": 361,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "CC BY 4.0",
+    "count": 266
+   },
+   {
+    "cls": "CC BY 4.0 + OpenStreetMap",
+    "count": 47
+   },
+   {
+    "cls": "CC BY",
+    "count": 25
+   },
+   {
+    "cls": "CC0 1.0",
+    "count": 14
+   },
+   {
+    "cls": "Freie Nutzung. Quellenangabe ist Pflicht. Kommerzielle Nutzung nur mit Bewilligung des Datenlieferanten zulässig.",
+    "count": 8
+   },
+   {
+    "cls": "GNU General Public License 3",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Statistisches Amt",
+    "count": 94
+   },
+   {
+    "name": "Amt für Umwelt und Energie",
+    "count": 43
+   },
+   {
+    "name": "Staatskanzlei",
+    "count": 40
+   },
+   {
+    "name": "Amt für Mobilität",
+    "count": 30
+   },
+   {
+    "name": "Kantonspolizei",
+    "count": 15
+   },
+   {
+    "name": "Medizinische Dienste",
+    "count": 13
+   },
+   {
+    "name": "Parlamentsdienst des Grossen Rates",
+    "count": 12
+   },
+   {
+    "name": "Tiefbauamt",
+    "count": 12
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:25.656Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-strasbourg-eu": {
+  "count": 401,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.022443890274314215,
+  "licences": [
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab)",
+    "count": 289
+   },
+   {
+    "cls": "Licence Ouverte (Etalab)",
+    "count": 94
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 9
+   },
+   {
+    "cls": "Open License v2.0",
+    "count": 4
+   },
+   {
+    "cls": "Open Database License (ODbL)",
+    "count": 3
+   },
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab) ou Open Database License (ODbL) - suivant l'enregistrement (cf. info dans colonne \"Licence\")",
+    "count": 2
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Ville et eurométropole de Strasbourg",
+    "count": 290
+   },
+   {
+    "name": "Ville de Strasbourg",
+    "count": 46
+   },
+   {
+    "name": "Eurométropole de Strasbourg",
+    "count": 45
+   },
+   {
+    "name": "Chambre de commerce et d'industrie (CCI) Alsace Eurométropole et Chambre d'agriculture (CA) Alsace",
+    "count": 2
+   },
+   {
+    "name": "IGN",
+    "count": 2
+   },
+   {
+    "name": "OpenStreetMap",
+    "count": 2
+   },
+   {
+    "name": "Ville et Eurométropole de Strasbourg - Données produites avec le soutien du FEDER et de DataGrandEst",
+    "count": 2
+   },
+   {
+    "name": "ATMO Grand Est",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:25.477Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-laregion-fr": {
+  "count": 203,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.0049261083743842365,
+  "licences": [
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab)",
+    "count": 194
+   },
+   {
+    "cls": "Licence Ouverte (Etalab)",
+    "count": 4
+   },
+   {
+    "cls": "Open Database License (ODbL)",
+    "count": 3
+   },
+   {
+    "cls": "Open License v2.0",
+    "count": 1
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Région Occitanie",
+    "count": 185
+   },
+   {
+    "name": "Ministère de la Culture",
+    "count": 16
+   },
+   {
+    "name": "Ministère de l'Intérieur",
+    "count": 1
+   },
+   {
+    "name": "Occitanie Pyrénées en Intelligence Géomatique",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:27.179Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-bretagne-bzh": {
+  "count": 191,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.015706806282722512,
+  "licences": [
+   {
+    "cls": "Licence ouverte : https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+    "count": 91
+   },
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab)",
+    "count": 71
+   },
+   {
+    "cls": "Licence ODBL: https://opendatacommons.org/licenses/odbl/summary/",
+    "count": 9
+   },
+   {
+    "cls": "Open License v2.0",
+    "count": 8
+   },
+   {
+    "cls": "Open Database License (ODbL)",
+    "count": 4
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 3
+   },
+   {
+    "cls": "Open License v1.0",
+    "count": 2
+   },
+   {
+    "cls": "LICENCE OUVERTE 2.0",
+    "count": 1
+   },
+   {
+    "cls": "Licence Creative Common By-CA : https://creativecommons.org/licenses/by-sa/4.0/",
+    "count": 1
+   },
+   {
+    "cls": "Licence Ouverte (Etalab)",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Région Bretagne",
+    "count": 157
+   },
+   {
+    "name": "DEPP – Ministère chargé de l’éducation nationale",
+    "count": 3
+   },
+   {
+    "name": "Santé Publique France",
+    "count": 3
+   },
+   {
+    "name": "Etalab",
+    "count": 2
+   },
+   {
+    "name": "Région Bretagne / CRT",
+    "count": 2
+   },
+   {
+    "name": "BDI - Bretagne Développement Innovation 1,bis route de Fougères, Cesson Sévigné, 35510, France",
+    "count": 1
+   },
+   {
+    "name": "Bretagne Mobilité",
+    "count": 1
+   },
+   {
+    "name": "Communauté Lannion-Trégor",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:27.459Z",
+  "ok": true,
+  "notes": []
+ },
+ "api-scb-se": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:29.901Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type pxweb"
+  ]
+ },
+ "pxdata-stat-fi": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:29.901Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type pxweb"
+  ]
+ },
+ "data-ssb-no": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:29.901Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type pxweb"
+  ]
+ },
+ "dati-lombardia-it": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:29.614Z",
+  "ok": false,
+  "notes": [
+   "HTTP 404 for https://api.us.socrata.com/api/catalog/v1?domains=dati.lombardia.it&search_context=dati.lombardia.it&only=datasets&limit=0"
+  ]
+ },
+ "data-angers-fr": {
+  "count": 151,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "Open Database License (ODbL)",
+    "count": 143
+   },
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab)",
+    "count": 8
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Ville d'Angers",
+    "count": 89
+   },
+   {
+    "name": "Angers Loire Métropole",
+    "count": 47
+   },
+   {
+    "name": "Université d'Angers",
+    "count": 4
+   },
+   {
+    "name": "Air Pays de la Loire",
+    "count": 3
+   },
+   {
+    "name": "RD Angers",
+    "count": 3
+   },
+   {
+    "name": "ALTER",
+    "count": 1
+   },
+   {
+    "name": "Angers Loire Restauration",
+    "count": 1
+   },
+   {
+    "name": "CITIZ",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:28.644Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-rdw-nl": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:29.774Z",
+  "ok": false,
+  "notes": [
+   "HTTP 404 for https://api.us.socrata.com/api/catalog/v1?domains=opendata.rdw.nl&search_context=opendata.rdw.nl&only=datasets&limit=0"
+  ]
+ },
+ "portal-opendata-dk": {
+  "count": 631,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.09667194928684628,
+  "licences": [
+   {
+    "cls": "CC-BY-4.0",
+    "count": 559
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 61
+   },
+   {
+    "cls": "CC0-1.0",
+    "count": 8
+   },
+   {
+    "cls": "other-open",
+    "count": 1
+   },
+   {
+    "cls": "ODC-BY-1.0",
+    "count": 1
+   },
+   {
+    "cls": "CC-BY-NC-4.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Københavns Kommune",
+    "count": 216
+   },
+   {
+    "name": "Aarhus Kommune",
+    "count": 121
+   },
+   {
+    "name": "Vejle Kommune",
+    "count": 87
+   },
+   {
+    "name": "Syddjurs Kommune",
+    "count": 29
+   },
+   {
+    "name": "Hedensted Kommune",
+    "count": 29
+   },
+   {
+    "name": "Randers Kommune",
+    "count": 26
+   },
+   {
+    "name": "Ballerup Kommune",
+    "count": 21
+   },
+   {
+    "name": "Open Data DK",
+    "count": 20
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:19.797Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-reseaux-energies-fr": {
+  "count": 187,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": 0.0053475935828877,
+  "licences": [
+   {
+    "cls": "Licence Ouverte v2.0 (Etalab)",
+    "count": 186
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "RTE",
+    "count": 73
+   },
+   {
+    "name": "NaTran",
+    "count": 26
+   },
+   {
+    "name": "RTE, Enedis, EDF SEI, ELD",
+    "count": 19
+   },
+   {
+    "name": "NaTran, Teréga",
+    "count": 18
+   },
+   {
+    "name": "NaTran, Teréga, GRDF",
+    "count": 14
+   },
+   {
+    "name": "NaTran, RTE, Teréga",
+    "count": 9
+   },
+   {
+    "name": "France Mobilité Biogaz",
+    "count": 7
+   },
+   {
+    "name": "NaTran, GRDF, Ademe",
+    "count": 3
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:28.061Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-brno-cz": {
+  "count": 610,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.17049180327868851,
+  "licences": [
+   {
+    "cls": "{{licenseInfo}}",
+    "count": 303
+   },
+   {
+    "cls": "CC BY",
+    "count": 174
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 104
+   },
+   {
+    "cls": "CC BY-SA",
+    "count": 13
+   },
+   {
+    "cls": "CC-BY",
+    "count": 11
+   },
+   {
+    "cls": "CC BY 4.0",
+    "count": 3
+   },
+   {
+    "cls": "doplnene",
+    "count": 1
+   },
+   {
+    "cls": "Otevřená data; zdroj: KORDIS JMK / mapa.idsjmk.cz.",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Statutární město Brno",
+    "count": 412
+   },
+   {
+    "name": "Oddělení dat, analýz a evaluací, Magistrát města Brna",
+    "count": 75
+   },
+   {
+    "name": "Odbor životního prostředí (OŽP)",
+    "count": 31
+   },
+   {
+    "name": "Odbor dopravy (OD)",
+    "count": 19
+   },
+   {
+    "name": "Odbor městské informatiky (OMI)",
+    "count": 18
+   },
+   {
+    "name": "Oddělení řízení ITI a metropolitní spolupráce",
+    "count": 10
+   },
+   {
+    "name": "Odbor vodního a lesního hospodářství a zemědělství (OVLHZ)",
+    "count": 6
+   },
+   {
+    "name": "Odbor školství a mládeže (OŠML)",
+    "count": 4
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:29.138Z",
+  "ok": true,
+  "notes": []
+ },
+ "opendata-bruxelles-be": {
+  "count": 208,
+  "countSource": "opendatasoft catalog",
+  "undeclaredPct": null,
+  "licences": [
+   {
+    "cls": "CC0 1.0",
+    "count": 107
+   },
+   {
+    "cls": "CC BY 4.0",
+    "count": 85
+   },
+   {
+    "cls": "Statbel Open Data",
+    "count": 11
+   },
+   {
+    "cls": "CC BY-NC 4.0",
+    "count": 2
+   },
+   {
+    "cls": "CC BY-NC 4.0 Recupel",
+    "count": 1
+   },
+   {
+    "cls": "CC BY-ND 4.0",
+    "count": 1
+   },
+   {
+    "cls": "Custom License (see reference link)",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Ville de Bruxelles/Data Management",
+    "count": 162
+   },
+   {
+    "name": "Ville de Bruxelles/Data management",
+    "count": 21
+   },
+   {
+    "name": "Ville de Bruxelles/Développement urbain",
+    "count": 5
+   },
+   {
+    "name": "Center for Systems Science and Engineering (CSSE) at Johns Hopkins University",
+    "count": 1
+   },
+   {
+    "name": "cycloparking.brussels",
+    "count": 1
+   },
+   {
+    "name": "Fédération Wallonie-Bruxelles",
+    "count": 1
+   },
+   {
+    "name": "heritage.brussels",
+    "count": 1
+   },
+   {
+    "name": "Institut Belge des Services Postaux et des Télécommunications (IBPT)",
+    "count": 1
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:53:26.550Z",
+  "ok": true,
+  "notes": []
+ },
+ "odp-cctegis-opendata-arcgis-com": {
+  "count": 258,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.6705426356589147,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 173
+   },
+   {
+    "cls": "https://www.capetown.gov.za/General/Terms-of-use-open-data",
+    "count": 85
+   }
+  ],
+  "publishers": [
+   {
+    "name": "City of Cape Town",
+    "count": 258
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:55:20.878Z",
+  "ok": true,
+  "notes": []
+ },
+ "rwanda-africageoportal-com": {
+  "count": 364,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.8901098901098901,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 324
+   },
+   {
+    "cls": "CC-BY",
+    "count": 18
+   },
+   {
+    "cls": "https://opendatacommons.org/licenses/odbl/summary",
+    "count": 12
+   },
+   {
+    "cls": "CC0",
+    "count": 3
+   },
+   {
+    "cls": "The data is created for reference only, there is no warranty about accuracy and updates",
+    "count": 1
+   },
+   {
+    "cls": "This data is created for reference only, there is no warranty about accuracy and update.",
+    "count": 1
+   },
+   {
+    "cls": "OK to use freely with appropriate credit to Esri as author",
+    "count": 1
+   },
+   {
+    "cls": "The data is created for reference only, there is no warranty about accuracy and update",
+    "count": 1
+   },
+   {
+    "cls": "Data available to the public",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "{{source}}",
+    "count": 155
+   },
+   {
+    "name": "Esri",
+    "count": 126
+   },
+   {
+    "name": "Africa GeoPortal",
+    "count": 38
+   },
+   {
+    "name": "Esri Eastern Africa Mapping and Application Portal",
+    "count": 12
+   },
+   {
+    "name": "South African Environmental Observation Network (SAEON)",
+    "count": 10
+   },
+   {
+    "name": "Urban Observatory by Esri",
+    "count": 3
+   },
+   {
+    "name": "City of Cape Town",
+    "count": 2
+   },
+   {
+    "name": "David Rumsey Map Collection",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:55:20.878Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-gov-il": {
+  "count": 1199,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.31526271893244373,
+  "licences": [
+   {
+    "cls": "other-open",
+    "count": 582
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 378
+   },
+   {
+    "cls": "cc-by",
+    "count": 238
+   },
+   {
+    "cls": "other-nc",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "משרד התחבורה והבטיחות בדרכים",
+    "count": 188
+   },
+   {
+    "name": "המרכז למיפוי ישראל",
+    "count": 116
+   },
+   {
+    "name": "המשרד להגנת הסביבה",
+    "count": 85
+   },
+   {
+    "name": "משרד המשפטים",
+    "count": 81
+   },
+   {
+    "name": "משרד האוצר",
+    "count": 60
+   },
+   {
+    "name": "משרד הבריאות",
+    "count": 54
+   },
+   {
+    "name": "הרשות הממשלתית למים ולביוב",
+    "count": 49
+   },
+   {
+    "name": "עיריית באר שבע",
+    "count": 44
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:55:20.877Z",
+  "ok": true,
+  "notes": []
+ },
+ "catalogodatos-gub-uy": {
+  "count": 2717,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0.008833271991166729,
+  "licences": [
+   {
+    "cls": "odc-uy",
+    "count": 2663
+   },
+   {
+    "cls": "UNDECLARED",
+    "count": 24
+   },
+   {
+    "cls": "CC0-1.0",
+    "count": 14
+   },
+   {
+    "cls": "CC-BY-4.0",
+    "count": 12
+   },
+   {
+    "cls": "other-open",
+    "count": 2
+   },
+   {
+    "cls": "CC-BY-NC-4.0",
+    "count": 1
+   },
+   {
+    "cls": "CC-BY-SA-4.0",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "MIDES",
+    "count": 1875
+   },
+   {
+    "name": "Intendencia de Montevideo",
+    "count": 159
+   },
+   {
+    "name": "ANCAP",
+    "count": 60
+   },
+   {
+    "name": "Correo Uruguayo",
+    "count": 43
+   },
+   {
+    "name": "OSE",
+    "count": 28
+   },
+   {
+    "name": "AGESIC",
+    "count": 27
+   },
+   {
+    "name": "Ministerio de Industria, Energía y Minería",
+    "count": 25
+   },
+   {
+    "name": "Parlamento del Uruguay",
+    "count": 24
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:55:20.857Z",
+  "ok": true,
+  "notes": []
+ },
+ "data-esrihk-opendata-arcgis-com": {
+  "count": 3217,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0.9996891513832763,
+  "licences": [
+   {
+    "cls": "UNDECLARED",
+    "count": 3216
+   },
+   {
+    "cls": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "count": 1
+   }
+  ],
+  "publishers": [
+   {
+    "name": "Esri China (Hong Kong) Ltd.",
+    "count": 3212
+   },
+   {
+    "name": "Zero Carbon Building",
+    "count": 3
+   },
+   {
+    "name": "Highways Department",
+    "count": 2
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:55:20.878Z",
+  "ok": true,
+  "notes": []
+ },
+ "datos-gov-py": {
+  "count": 434,
+  "countSource": "arcgis-hub data.json",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "https://www.paraguay.gov.py/datos-abiertos/licencias",
+    "count": 434
+   }
+  ],
+  "publishers": [
+   {
+    "name": "INSTITUTO NACIONAL DE ESTADISTICA (INE)",
+    "count": 191
+   },
+   {
+    "name": "Ministerio de Tecnologías de la Información y Comunicación (MITIC)",
+    "count": 34
+   },
+   {
+    "name": "Ministerio de Educación y Ciencias (MEC)",
+    "count": 34
+   },
+   {
+    "name": "Ministerio de Agricultura y Ganadería (MAG)",
+    "count": 32
+   },
+   {
+    "name": "Ministerio de Economia y Finanzas (MEF)",
+    "count": 31
+   },
+   {
+    "name": "Tribunal Superior de Justicia Electoral (TSJE)",
+    "count": 21
+   },
+   {
+    "name": "Corte Suprema de Justicia (CSJ)",
+    "count": 14
+   },
+   {
+    "name": "www.datos.gov.py",
+    "count": 10
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T08:55:20.877Z",
+  "ok": true,
+  "notes": []
  }
 }

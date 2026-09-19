@@ -154,6 +154,19 @@
    "attribution_template": "{title} © {publisher}, licensed CC BY-SA 4.0. Retrieved {retrieved} via Vizzie. Reformatted and geocoded.",
    "note": "SHARE-ALIKE — adapted material must be licensed alike. Surface a warning on export."
   },
+  "CC-BY-SA-3.0-ES": {
+   "name": "Creative Commons Attribution-ShareAlike 3.0 Spain",
+   "spdx": "CC-BY-SA-3.0-ES",
+   "url": "https://creativecommons.org/licenses/by-sa/3.0/es/",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": true,
+   "no_derivatives": false,
+   "indicate_changes": true,
+   "ingest": "allow_with_flag",
+   "attribution_template": "{title} © {publisher}, licensed CC BY-SA 3.0 ES. Retrieved {retrieved} via Vizzie. Reformatted and geocoded.",
+   "note": "SHARE-ALIKE — adapted material must be licensed alike. The Spanish port of CC BY-SA 3.0, declared by datosabiertos.malaga.eu as id `by-sa` with licence URL creativecommons.org/licenses/by-sa/3.0/es/ (55 of 200 sampled, 19 Sep 2026). Its own class, not an alias of CC-BY-SA-4.0: a different instrument, and the attribution line has to name the licence the publisher actually granted."
+  },
   "CC-BY-NC": {
    "name": "Creative Commons Attribution-NonCommercial (any version)",
    "spdx": "CC-BY-NC-4.0",
@@ -360,7 +373,72 @@
    "indicate_changes": false,
    "ingest": "allow",
    "attribution_template": "Contains information licensed under the Open Government Licence – {publisher}. Retrieved {retrieved} via Vizzie.",
-   "note": "Alberta, British Columbia, Ontario, Nova Scotia, New Brunswick and Yukon each publish their own Open Government Licence, all modelled on the federal OGL 2.0. Ontario's text was read in full (19 Sep 2026) as the family exemplar: reuse for any lawful purpose, explicitly including commercial purposes, conditional on acknowledging the source and linking the licence. The other five rest on open.canada.ca's own licence register, which gives each one's official title and URL; Alberta's and Yukon's pages 403 a server fetch and were not read. One class rather than six because they differ only in the licensor, and the attribution wording each mandates — 'Contains information licensed under the Open Government Licence – <licensor>' — is exactly what {publisher} fills in. ~10,500 datasets (19 Sep 2026). Deliberately NOT here: Manitoba's OpenMB Information and Data Use License and Saskatchewan's SUUDL, which are different instruments rather than OGLs, and Vancouver's and Toronto's municipal licences, whose texts are still unreachable — see the resolve.test.ts case that keeps them UNDECLARED."
+   "note": "Alberta, British Columbia, Ontario, Nova Scotia, New Brunswick, Yukon and the Northwest Territories each publish their own Open Government Licence, all modelled on the federal OGL 2.0. Three texts have now been read in full: Ontario's (19 Sep 2026) and the NWT's (20 Sep 2026) both grant a worldwide, royalty-free, perpetual licence to copy, modify, publish, adapt and distribute for any lawful purpose, explicitly including commercial purposes, conditional on acknowledging the source. Yukon's and NWT's own portals declare the licence by name and URL on every dataset (open.yukon.ca: 3,840 of 3,841; opendata.gov.nt.ca: 340 of 341); Alberta's and BC's rest on open.canada.ca's licence register, and Alberta's page 403s a server fetch. One class rather than seven because they differ only in the licensor, and the attribution wording each mandates — 'Contains information licensed under the Open Government Licence – <licensor>' — is exactly what {publisher} fills in. Deliberately NOT here: Manitoba's OpenMB licence and Saskatchewan's SUUDL, which are differently-named instruments (SUUDL has its own class), and Vancouver's and Toronto's municipal licences, whose texts are still unreachable — see the resolve.test.ts case that keeps them UNDECLARED."
+  },
+  "SK-SUUDL-2.0": {
+   "name": "Government of Saskatchewan Standard Unrestricted Use Data Licence 2.0",
+   "spdx": null,
+   "url": "https://gisappl.saskatchewan.ca/Html5Ext/Resources/GOS_Standard_Unrestricted_Use_Data_Licence_v2.0.pdf",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "{title} — Contains information licensed under the Government of Saskatchewan Standard Unrestricted Use Data Licence (Version 2.0). Retrieved {retrieved} via Vizzie.",
+   "note": "Read in full from the licence PDF (20 Sep 2026): a worldwide, royalty-free, perpetual, non-exclusive licence to copy, modify, publish, translate, adapt and distribute 'for any lawful purpose', explicitly 'including for commercial purposes'. The one condition is the attribution statement, which the licence dictates verbatim and which this template reproduces. Not folded into OGL-CA-PROVINCIAL: despite near-identical wording it is a differently-named instrument, and the attribution it mandates names itself rather than an Open Government Licence. Covers 334 of the 456 datasets on Saskatchewan's hub plus 413 on open.canada.ca."
+  },
+  "STATCAN-OPEN": {
+   "name": "Statistics Canada Open Licence",
+   "spdx": null,
+   "url": "https://www.statcan.gc.ca/en/reference/licence",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "{title} — Source: Statistics Canada, {publisher}. Reproduced and distributed on an \"as is\" basis with the permission of Statistics Canada. Retrieved {retrieved} via Vizzie.",
+   "note": "Read in full 20 Sep 2026: a worldwide, royalty-free, non-exclusive licence to use, reproduce, publish, distribute or SELL the Information and value-added products, and to sublicence. Its conditions are accuracy, no implication of StatCan endorsement, no misrepresentation of the source, and no re-identification. Attribution is marked required here because 'not misrepresent the Information or its source' plus StatCan's standard citation practice amount to a source-credit obligation. It turns up on Canadian municipal hubs wherever census-derived layers are republished — 116 datasets on Brampton and 60 on Peel alone."
+  },
+  "KITCHENER-ODL": {
+   "name": "City of Kitchener Open Data Licence",
+   "spdx": null,
+   "url": "https://www.kitchener.ca/en/council-and-city-administration/open-data-licence.aspx",
+   "commercial_ok": true,
+   "attribution_required": false,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "{title} — {publisher}, City of Kitchener Open Data Licence. Retrieved {retrieved} via Vizzie.",
+   "note": "Read in full 20 Sep 2026: a worldwide, royalty-free, perpetual, non-exclusive licence covering copying, modifying, publishing, translating, adapting and distributing in any medium or format, and it says explicitly 'This includes for commercial purposes'. Unusually it also says 'you are not required to credit the City of Kitchener', which is why attribution_required is false — the template still offers a credit line. Not folded into OGL-CA-PROVINCIAL precisely because of that: the OGL family's one condition is the attribution this licence waives."
+  },
+  "MISSISSAUGA-TOU": {
+   "name": "City of Mississauga Open Data Terms of Use",
+   "spdx": null,
+   "url": "http://www5.mississauga.ca/research_catalogue/CityofMississauga_TermsofUse.pdf",
+   "commercial_ok": true,
+   "attribution_required": false,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "{title} — {publisher}, City of Mississauga Open Data Terms of Use. Retrieved {retrieved} via Vizzie.",
+   "note": "Read in full from the terms PDF (20 Sep 2026): a world-wide, royalty-free, non-exclusive, REVOCABLE licence to use, modify and distribute the datasets in all current and future media and formats for any lawful purpose. Credit is encouraged but not required. The revocability is the reason this is its own class rather than an alias of anything: the grant can be withdrawn, which nothing in the CC or OGL families does. Compare Moncton's near-identical template, which omits the right to modify entirely — see the sources.ts note on why Moncton is not connected."
+  },
+  "LDA-UY-0.1": {
+   "name": "Licencia de Datos Abiertos – Uruguay 0.1",
+   "spdx": null,
+   "url": "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/sites/agencia-gobierno-electronico-sociedad-informacion-conocimiento/files/documentos/publicaciones/licencia_de_datos_abiertos_0.pdf",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": true,
+   "ingest": "allow",
+   "attribution_template": "{title} — {publisher}, Licencia de Datos Abiertos – Uruguay. Retrieved {retrieved} via Vizzie. Reformatted and geocoded.",
+   "note": "Read in full from AGESIC's licence PDF (20 Sep 2026). The grant is explicit about commercial use ('para uso comercial y no comercial') and covers reproduction, distribution, publication, translation, adaptation and transformation, and merging with other data to form new independent datasets. Its condition is the 'Nota de Origen': cite the provider's name, name the Licencia de Datos Abiertos – Uruguay, and identify the dataset — and changes, edits or redesigns must be stated, which is why indicate_changes is true. Covers 2,663 of the 2,717 datasets on catalogodatos.gub.uy under the licence id 'odc-uy'."
   },
   "CLOSED": {
    "name": "Publisher declares the data closed or restricted",
@@ -387,6 +465,8 @@
   "https://creativecommons.org/licenses/by/4.0/": "CC-BY-4.0",
   "cc-by-int": "CC-BY-4.0",
   "creative-commons-attribution-40": "CC-BY-4.0",
+  "http://dcat-ap.de/def/licenses/cc-by/4.0": "CC-BY-4.0",
+  "https://creativecommons.org/licenses/by/4.0/deed.cs": "CC-BY-4.0",
   "cc-by-3.0-au": "CC-BY-3.0-AU",
   "cc-by-au": "CC-BY-3.0-AU",
   "cc-by-sa-au": "CC-BY-3.0-AU",
@@ -397,13 +477,17 @@
   "http://creativecommons.org/publicdomain/zero/1.0/deed.nl": "CC0-1.0",
   "creative-commons-cczero": "CC0-1.0",
   "publicdomain": "CC0-1.0",
+  "creative commons - cc0": "CC0-1.0",
+  "cc0 1.0 universal (cc0 1.0)": "CC0-1.0",
+  "creative commons cc0 1.0 universale - public domain dedication (cc0 1.0)": "CC0-1.0",
   "us-pd": "US-PD",
-  "other-pd": "US-PD",
+  "other-pd": "PUBLIC-DOMAIN",
   "public-domain": "US-PD",
   "public domain u.s. government": "US-PD",
   "uk-ogl": "OGL-UK-3.0",
   "ogl-uk-3.0": "OGL-UK-3.0",
   "https://www.ons.gov.uk/methodology/geography/licences": "OGL-UK-3.0",
+  "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3": "OGL-UK-3.0",
   "ca-ogl-lgo": "OGL-Canada-2.0",
   "open-government-licence-canada": "OGL-Canada-2.0",
   "canada open government licence": "OGL-Canada-2.0",
@@ -411,12 +495,16 @@
   "dl-de-by-2-0": "DL-DE-BY-2.0",
   "odc-odbl": "ODbL-1.0",
   "odbl": "ODbL-1.0",
-  "other-open": "ODbL-1.0",
+  "licence odbl version française": "ODbL-1.0",
+  "licence odbl: https://opendatacommons.org/licenses/odbl/summary": "ODbL-1.0",
   "cc-by-sa": "CC-BY-SA-4.0",
   "cc-by-sa-4.0": "CC-BY-SA-4.0",
   "cc by-sa": "CC-BY-SA-4.0",
   "cc by-sa 4.0": "CC-BY-SA-4.0",
+  "by-sa": "CC-BY-SA-3.0-ES",
   "creative commons attribution | share alike 4.0 international": "CC-BY-SA-4.0",
+  "https://creativecommons.org/licenses/by-sa/4.0/deed.cs": "CC-BY-SA-4.0",
+  "by-sa-40": "CC-BY-SA-4.0",
   "other-nc": "CC-BY-NC",
   "cc-nc": "CC-BY-NC",
   "cc-by-nc-4.0": "CC-BY-NC",
@@ -478,6 +566,7 @@
   "licence ouverte https://www.etalab.gouv.fr/licence-ouverte-open-licence": "LO-2.0",
   "fr-lo": "LO-2.0",
   "lov2": "LO-2.0",
+  "licence ouverte : https://www.etalab.gouv.fr/licence-ouverte-open-licence": "LO-2.0",
   "sprep-public-license": "CC-BY-NC",
   "cc-nc-sa-4.0": "CC-BY-NC",
   "cc_by-nc-sa_4.0": "CC-BY-NC",
@@ -512,6 +601,7 @@
   "cc-by-3.0-igo": "CC-BY-IGO",
   "public domain": "PUBLIC-DOMAIN",
   "none. this dataset is public domain under the minnesota government data practices act (minnesota statutes chapter 13).": "PUBLIC-DOMAIN",
+  "pubblico dominio": "PUBLIC-DOMAIN",
   "cc-by-nz-3.0": "CC-BY-3.0-NZ",
   "creative commons attribution 3.0 new zealand": "CC-BY-3.0-NZ",
   "https://creativecommons.org/licenses/by/3.0/nz": "CC-BY-3.0-NZ",
@@ -525,6 +615,7 @@
   "dl-de-zero-2.0": "DL-DE-0-2.0",
   "dl-zero-de-2.0": "DL-DE-0-2.0",
   "dl-de-0-2.0": "DL-DE-0-2.0",
+  "http://dcat-ap.de/def/licenses/dl-zero-de/2.0": "DL-DE-0-2.0",
   "dl-by-de/2.0": "DL-DE-BY-2.0",
   "http://dcat-ap.de/def/licenses/dl-by-de/2.0": "DL-DE-BY-2.0",
   "hdx-odc-odbl": "ODbL-1.0",
@@ -535,6 +626,35 @@
   "cc-by-40-intl（cc by 4.0）": "CC-BY-4.0",
   "cc by 3.0 igo": "CC-BY-IGO",
   "cc-by-nc-sa-3.0-au": "CC-BY-NC",
+  "ogl-yukon-2.0": "OGL-CA-PROVINCIAL",
+  "open government licence - yukon": "OGL-CA-PROVINCIAL",
+  "https://yukon.ca/en/your-government/open-government/open-government-licence-yukon": "OGL-CA-PROVINCIAL",
+  "gnwt": "OGL-CA-PROVINCIAL",
+  "open government licence - northwest territories": "OGL-CA-PROVINCIAL",
+  "open government licence -  northwest territories": "OGL-CA-PROVINCIAL",
+  "https://www.gov.nt.ca/en/open-government-licence-northwest-territories": "OGL-CA-PROVINCIAL",
+  "sk-suudl": "SK-SUUDL-2.0",
+  "government of saskatchewan standard unrestricted use data licence": "SK-SUUDL-2.0",
+  "https://gisappl.saskatchewan.ca/html5ext/resources/gos_standard_unrestricted_use_data_licence_v2.0.pdf": "SK-SUUDL-2.0",
+  "https://www.statcan.gc.ca/eng/reference/licence": "STATCAN-OPEN",
+  "http://www.statcan.gc.ca/eng/reference/licence": "STATCAN-OPEN",
+  "https://www.statcan.gc.ca/en/reference/licence": "STATCAN-OPEN",
+  "http://www.statcan.gc.ca/en/reference/licence": "STATCAN-OPEN",
+  "statistics canada open licence": "STATCAN-OPEN",
+  "https://www.hamilton.ca/city-initiatives/strategies-actions/open-data-licence-terms-and-conditions": "OGL-CA-PROVINCIAL",
+  "http://apps.kelowna.ca/images/opendata/opengovernmentlicence.pdf": "OGL-CA-PROVINCIAL",
+  "https://apps.kelowna.ca/images/opendata/opengovernmentlicence.pdf": "OGL-CA-PROVINCIAL",
+  "https://www.coquitlam.ca/894/open-government-licence": "OGL-CA-PROVINCIAL",
+  "https://www.oakville.ca/town-hall/town-studies-plans-projects/town-initiatives/open-data/open-data-licence": "OGL-CA-PROVINCIAL",
+  "http://opendata.victoria.ca/pages/open-data-licence": "OGL-CA-PROVINCIAL",
+  "https://opendata.victoria.ca/pages/open-data-licence": "OGL-CA-PROVINCIAL",
+  "https://open.niagarafalls.ca/pages/terms-of-use": "OGL-CA-PROVINCIAL",
+  "https://opendata-abbotsford.hub.arcgis.com/pages/city-of-abbotsford-open-data-licence": "OGL-CA-PROVINCIAL",
+  "https://explore.guelph.ca/pages/open-data-license": "OGL-CA-PROVINCIAL",
+  "https://data.burnaby.ca/pages/open-government-licence": "OGL-CA-PROVINCIAL",
+  "https://data.peelregion.ca/pages/license": "OGL-CA-PROVINCIAL",
+  "odc-uy": "LDA-UY-0.1",
+  "licencia de dag de uruguay": "LDA-UY-0.1",
   "qc-cc-by": "CC-BY-4.0",
   "yk-oglyk": "OGL-CA-PROVINCIAL",
   "ab-ogla": "OGL-CA-PROVINCIAL",
@@ -846,6 +966,18 @@
    },
    "auth": "None",
    "tos_note": "Reuse permitted for commercial and non-commercial purposes with attribution (CC BY 4.0)."
+  },
+  "pxweb": {
+   "platform": "PXWeb statistics database",
+   "licence_source": "Blanket terms published by each statistical institute — PXWeb carries NO per-table licence field, so the portal default_licence is the only source",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 2,
+    "verified": true,
+    "note": "Every instance publishes its own limits at `{base}?config` (maxCalls/timeWindow) and they differ by an order of magnitude — so the per-portal rate_limit below is the real one and this is only a floor. NOTE Statistics Sweden answers a rate-limit violation with HTTP 400 'Bad Request', NOT 429, so backoff keyed on 429 alone will not see it (measured 19 Sep 2026 by exceeding 30 calls/10s)."
+   },
+   "auth": "None",
+   "tos_note": "Official statistics; each institute publishes blanket reuse terms for its whole database rather than per-table licences."
   },
   "sdmx-common": {
    "platform": "SDMX",
@@ -5049,6 +5181,667 @@
    "dataset_overrides": []
   },
   {
+   "id": "open.yukon.ca",
+   "label": "Government of Yukon (open.yukon.ca)",
+   "country": "CA",
+   "connector": "ckan",
+   "base_url": "https://open.yukon.ca",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 3840,
+    "UNDECLARED": 1
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default. data.gov.uk explicitly states no API key and no rate limit."
+   },
+   "auth": "None required",
+   "notes": "The largest Canadian portal after open.canada.ca itself, and the cleanest licence profile of any portal in the September batches: 3,840 of 3,841 datasets declare OGL-Yukon-2.0 by id, name and URL (measured 20 Sep 2026).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "gos-initiative-saskatchewan.hub.arcgis.com",
+   "label": "Government of Saskatchewan Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://gos-initiative-saskatchewan.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "SK-SUUDL-2.0": 334,
+    "UNDECLARED": 122
+   },
+   "undeclared_share": 0.268,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Saskatchewan's statewide hub. 334 of 456 datasets point their licence field at the SUUDL 2.0 PDF, which was read in full and given its own class; the remaining 122 are empty or Esri boilerplate (measured 20 Sep 2026). An older hub at geohub-old-saskatchewan.opendata.arcgis.com is superseded and not connected. Five of the 456 titles are the literal template string \"{{name}}\", unrendered on the publisher's side.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.gov.nt.ca",
+   "label": "Northwest Territories (opendata.gov.nt.ca)",
+   "country": "CA",
+   "connector": "ckan",
+   "base_url": "https://opendata.gov.nt.ca",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 340,
+    "UNDECLARED": 1
+   },
+   "undeclared_share": 0.003,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default. data.gov.uk explicitly states no API key and no rate limit."
+   },
+   "auth": "None required",
+   "notes": "340 of 341 datasets declare the Open Government Licence – Northwest Territories under the licence id 'GNWT'. Its text was read in full (20 Sep 2026) and is the standard OGL grant, which is the evidence behind naming the NWT in OGL-CA-PROVINCIAL.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.edmonton.ca",
+   "label": "City of Edmonton Open Data",
+   "country": "CA",
+   "connector": "socrata",
+   "base_url": "https://data.edmonton.ca",
+   "platform": "Socrata / Tyler Data & Insights",
+   "tos_url": null,
+   "tos_note": "Socrata developer terms apply in addition to the publisher's licence.",
+   "licence_source": "Per-dataset metadata via api/catalog/v1 (`license` field)",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 1418,
+    "OGL-Canada-2.0": 3
+   },
+   "undeclared_share": 0.998,
+   "rate_limit": {
+    "published": true,
+    "requests_per_hour": 1000,
+    "verified": true,
+    "requires_app_token": true,
+    "throttle_status": 429,
+    "note": "1,000 requests per rolling hour WITH a registered app token; without a token throttling is by shared IP pool and much tighter. Higher quotas by request. REGISTER AN APP TOKEN PER PORTAL."
+   },
+   "auth": "App token strongly recommended (X-App-Token header)",
+   "notes": "Every dataset but three says 'See Terms of Use' — the same pointer Chicago uses, which names no terms and so resolves UNDECLARED by design. Edmonton's terms page is a Socrata story rendered in JavaScript and its API route 404s, so the terms could not be read (20 Sep 2026). If someone reads them and finds them permissive, that belongs in this row's default_licence, not in an alias.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "geohub.brampton.ca",
+   "label": "City of Brampton GeoHub",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://geohub.brampton.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 356,
+    "UNDECLARED": 145,
+    "STATCAN-OPEN": 116
+   },
+   "undeclared_share": 0.235,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "356 of 617 datasets declare CC BY 4.0 outright and another 116 carry the Statistics Canada Open Licence on census-derived layers; the rest are unlabelled (measured 20 Sep 2026).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "open-kitchenergis.opendata.arcgis.com",
+   "label": "City of Kitchener GeoHub",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://open-kitchenergis.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://www.kitchener.ca/en/council-and-city-administration/open-data-licence.aspx",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "KITCHENER-ODL",
+   "observed_licences": {
+    "KITCHENER-ODL": 566
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Kitchener's own licence was read in full and is permissive to the point of waiving attribution, so it is set as the portal default. A minority of datasets point at the Region of Waterloo's licence instead, whose page 404s and which therefore stays unresolved.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "insights-york.opendata.arcgis.com",
+   "label": "York Region Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://insights-york.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 546
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Most datasets say only 'Please refer to \"York Region Open Data Licence\", searchable on this website' — a pointer with no URL, and the hub lists no licence page to read, so the catalogue stays rights-unknown (checked 20 Sep 2026).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data-markham.opendata.arcgis.com",
+   "label": "City of Markham Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://data-markham.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 540
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Shares York Region's licence pointer and its unreadable licence page; same rights-unknown position (checked 20 Sep 2026).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.victoria.ca",
+   "label": "City of Victoria Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://opendata.victoria.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://opendata.victoria.ca/pages/open-data-licence",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "OGL-CA-PROVINCIAL",
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 501,
+    "STATCAN-OPEN": 3
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Victoria's licence page was read through the Hub's page item (20 Sep 2026) and is the standard OGL grant, so it is the portal default.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "open.hamilton.ca",
+   "label": "City of Hamilton Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://open.hamilton.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://www.hamilton.ca/city-initiatives/strategies-actions/open-data-licence-terms-and-conditions",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "OGL-CA-PROVINCIAL",
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 463
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "391 of 463 datasets point at Hamilton's licence page, which was read in full: worldwide, royalty-free, perpetual, 'including for commercial purposes', attribution required. Set as the portal default so the remaining datasets resolve to it too.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.durham.ca",
+   "label": "Regional Municipality of Durham Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://opendata.durham.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 384,
+    "CC-BY-SA-4.0": 1
+   },
+   "undeclared_share": 0.997,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "269 of 385 datasets point at Durham's own licence agreement PDF, which 404s (checked 20 Sep 2026), so the terms could not be read and the catalogue stays rights-unknown. Seven datasets carry Ontario's OGL and resolve on their own.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "open.niagarafalls.ca",
+   "label": "City of Niagara Falls Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://open.niagarafalls.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://open.niagarafalls.ca/pages/terms-of-use",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "OGL-CA-PROVINCIAL",
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 349
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Terms page read through the Hub's page item (20 Sep 2026): standard OGL grant.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.mississauga.ca",
+   "label": "City of Mississauga Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://data.mississauga.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "http://www5.mississauga.ca/research_catalogue/CityofMississauga_TermsofUse.pdf",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "MISSISSAUGA-TOU",
+   "observed_licences": {
+    "MISSISSAUGA-TOU": 326,
+    "STATCAN-OPEN": 2
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "The terms PDF was read in full and grants use, modification and distribution for any lawful purpose — revocably, which is why it has its own class. Two further datasets carry the Statistics Canada Open Licence.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.kelowna.ca",
+   "label": "City of Kelowna Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://opendata.kelowna.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "http://apps.kelowna.ca/images/opendata/opengovernmentlicence.pdf",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "OGL-CA-PROVINCIAL",
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 282
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Kelowna's licence PDF was read in full (20 Sep 2026): the standard OGL text.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.coquitlam.ca",
+   "label": "City of Coquitlam Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://data.coquitlam.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://www.coquitlam.ca/894/Open-Government-Licence",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "OGL-CA-PROVINCIAL",
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 257
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "207 of 257 datasets embed Coquitlam's OGL as HTML; the licence page itself was read and is the standard OGL grant.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.london.ca",
+   "label": "City of London Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://opendata.london.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 232
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Datasets point at an ArcGIS item holding the city's licence text; the item fetches but carries none of the OGL grant language, so nothing could be confirmed (checked 20 Sep 2026).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "mydata-kamloops.opendata.arcgis.com",
+   "label": "City of Kamloops Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://mydata-kamloops.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 225
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "175 of 225 datasets name an 'Open Government Licence - Kamloops' in free text but give no URL, and no licence page is published on the hub — a named licence whose text cannot be read is not evidence, so it stays UNDECLARED (checked 20 Sep 2026).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata-surrey.hub.arcgis.com",
+   "label": "City of Surrey Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://opendata-surrey.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 225
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "224 of 225 datasets carry no licence value at all and the hub publishes no licence page (checked 20 Sep 2026).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata-abbotsford.hub.arcgis.com",
+   "label": "City of Abbotsford Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://opendata-abbotsford.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://opendata-abbotsford.hub.arcgis.com/pages/city-of-abbotsford-open-data-licence",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "OGL-CA-PROVINCIAL",
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 192
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Licence page read through the Hub's page item (20 Sep 2026): standard OGL grant.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "portal-exploreoakville.opendata.arcgis.com",
+   "label": "Town of Oakville Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://portal-exploreoakville.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://www.oakville.ca/town-hall/town-studies-plans-projects/town-initiatives/open-data/open-data-licence/",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "OGL-CA-PROVINCIAL",
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 166
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Oakville's licence page was read in full (20 Sep 2026): standard OGL grant.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.peelregion.ca",
+   "label": "Regional Municipality of Peel Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://data.peelregion.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://data.peelregion.ca/pages/license",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "OGL-CA-PROVINCIAL",
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 94,
+    "STATCAN-OPEN": 60
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Peel's licence page was read through the Hub's page item (20 Sep 2026). It is the UK-OGL wording rather than the Canadian one — 'exploit the Information commercially' — but the same grant-plus-attribution shape, so it maps to the same class. 60 further datasets carry the Statistics Canada Open Licence.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.barrie.ca",
+   "label": "City of Barrie Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://opendata.barrie.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 131
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Licence fields here are copyright notices and internal housekeeping text ('DO NOT DELETE OR MODIFY THIS ITEM'), not grants (checked 20 Sep 2026).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "explore.guelph.ca",
+   "label": "City of Guelph Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://explore.guelph.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://explore.guelph.ca/pages/open-data-license",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "OGL-CA-PROVINCIAL",
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 79
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Licence page read through the Hub's page item (20 Sep 2026): standard OGL grant.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.burnaby.ca",
+   "label": "City of Burnaby Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://data.burnaby.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://data.burnaby.ca/pages/open-government-licence",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "OGL-CA-PROVINCIAL",
+   "observed_licences": {
+    "OGL-CA-PROVINCIAL": 73
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "70 of 73 datasets point at Burnaby's licence page, which was read through the Hub's page item (20 Sep 2026): standard OGL grant.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "open.niagararegion.ca",
+   "label": "Niagara Region Open Data",
+   "country": "CA",
+   "connector": "arcgis-hub",
+   "base_url": "https://open.niagararegion.ca",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 45
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "All 45 datasets carry an empty licence field and the hub publishes no licence page (checked 20 Sep 2026).",
+   "dataset_overrides": []
+  },
+  {
    "id": "catalogue.data.govt.nz",
    "label": "data.govt.nz — New Zealand (national)",
    "country": "NZ",
@@ -5361,6 +6154,171 @@
    },
    "auth": "None required",
    "notes": null,
+   "dataset_overrides": []
+  },
+  {
+   "id": "catalogodatos.gub.uy",
+   "label": "Catálogo de Datos Abiertos — Uruguay (national)",
+   "country": "UY",
+   "connector": "ckan",
+   "base_url": "https://catalogodatos.gub.uy",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "LDA-UY-0.1": 2663,
+    "UNDECLARED": 26,
+    "CC0-1.0": 14,
+    "CC-BY-4.0": 12,
+    "CC-BY-NC": 1,
+    "CC-BY-SA-4.0": 1
+   },
+   "undeclared_share": 0.01,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default. data.gov.uk explicitly states no API key and no rate limit."
+   },
+   "auth": "None required",
+   "notes": "AGESIC's national catalogue. 2,663 of 2,717 datasets carry licence id 'odc-uy', the Licencia de Datos Abiertos – Uruguay, whose PDF was read in full (20 Sep 2026) — commercial use explicit, attribution via the Nota de Origen, changes must be stated. One dataset is CC BY-NC and rides on the free-beta exception.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "www.datos.gov.py",
+   "label": "datos.gov.py — Paraguay (national)",
+   "country": "PY",
+   "connector": "arcgis-hub",
+   "base_url": "https://www.datos.gov.py",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 434
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "All 434 datasets point their licence field at https://www.paraguay.gov.py/datos-abiertos/licencias, which returns a 3KB shell to a server fetch with no licence text in it (checked 20 Sep 2026), so nothing could be read and the catalogue stays rights-unknown.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.gov.il",
+   "label": "data.gov.il — Israel (national)",
+   "country": "IL",
+   "connector": "ckan",
+   "base_url": "https://data.gov.il",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 960,
+    "CC-BY-4.0": 238,
+    "CC-BY-NC": 1
+   },
+   "undeclared_share": 0.801,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default. data.gov.uk explicitly states no API key and no rate limit."
+   },
+   "auth": "None required",
+   "notes": "Israel's national CKAN. 582 datasets declare CKAN's generic 'other-open' bucket, which names no terms and so resolves UNDECLARED — until 20 Sep 2026 the matrix mis-aliased that id to ODbL-1.0 and this portal is what surfaced it. Metadata is Hebrew-only, so shared/language.ts maps IL to Hebrew for search translation.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "rwanda.africageoportal.com",
+   "label": "Rwanda GeoPortal",
+   "country": "RW",
+   "connector": "arcgis-hub",
+   "base_url": "https://rwanda.africageoportal.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 345,
+    "ODbL-1.0": 12,
+    "CC-BY-4.0": 7
+   },
+   "undeclared_share": 0.948,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Esri's Rwanda GeoPortal, the only African country site in the africageoportal network with real depth — South Africa's holds 17 datasets, Kenya's 14, Nigeria's 40, Ghana's 42. Most licence fields here are Esri marketing HTML rather than terms (measured 20 Sep 2026).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "odp-cctegis.opendata.arcgis.com",
+   "label": "City of Cape Town Open Data",
+   "country": "ZA",
+   "connector": "arcgis-hub",
+   "base_url": "https://odp-cctegis.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://www.capetown.gov.za/General/Terms-of-use-open-data",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 258
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "85 datasets point at the City's open-data terms page, which was read (20 Sep 2026): it is a disclaimer plus the Esri Master Agreement and grants no reuse rights of its own, so the catalogue stays rights-unknown. The City's Open Data Policy may grant more, but the terms it links do not.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data-esrihk.opendata.arcgis.com",
+   "label": "Hong Kong Open Geospatial Data (Esri China)",
+   "country": "HK",
+   "connector": "arcgis-hub",
+   "base_url": "https://data-esrihk.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 3217
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Run by Esri China (Hong Kong) rather than the government. Every licence field is the same disclaimer pointing at the government's CSDI portal (portal.csdi.gov.hk) for terms, so the grant lives somewhere this row does not reach; reading those terms is the next step and would belong in default_licence. Metadata is English.",
    "dataset_overrides": []
   },
   {
@@ -5863,6 +6821,760 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "380 datasets, 58 of them map-enabled — the best-served Pacific territory by a factor of three, and the source of 232 of the Pacific Data Hub's geospatial records. 287 datasets under Licence Ouverte v2.0, which is why the LO-2.0 class exists. Measured 10 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.gov.ua",
+   "label": "data.gov.ua — Ukraine (national)",
+   "country": "UA",
+   "connector": "ckan",
+   "base_url": "https://data.gov.ua",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 200
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None required",
+   "notes": "36,966 datasets, 200 of 200 sampled cc-by — the cleanest licence story in the 19 Sep 2026 European batch and its largest addition.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "dati.toscana.it",
+   "label": "Regione Toscana Open Data",
+   "country": "IT",
+   "connector": "ckan",
+   "base_url": "https://dati.toscana.it",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 198,
+    "CC0-1.0": 1,
+    "ODC-BY-1.0": 1
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None required",
+   "notes": "12449 datasets, 200 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "open.nrw",
+   "label": "Open.NRW — North Rhine-Westphalia",
+   "country": "DE",
+   "connector": "ckan",
+   "base_url": "https://open.nrw",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "DL-DE-0-2.0": 182,
+    "DL-DE-BY-2.0": 18
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None required",
+   "notes": "Declares licences as DCAT-AP.de URIs, not CKAN ids: 182 of 200 sampled are http://dcat-ap.de/def/licenses/dl-zero-de/2.0 and 18 are dl-by-de/2.0. Both URI forms are aliased; without them this portal resolved 91% UNDECLARED.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "dati.emilia-romagna.it",
+   "label": "Regione Emilia-Romagna Open Data",
+   "country": "IT",
+   "connector": "ckan",
+   "base_url": "https://dati.emilia-romagna.it",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 177,
+    "PUBLIC-DOMAIN": 15,
+    "UNDECLARED": 6,
+    "CC0-1.0": 2
+   },
+   "undeclared_share": 0.03,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None required",
+   "notes": "2908 datasets, 200 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "aperto.comune.torino.it",
+   "label": "Città di Torino — Aperto",
+   "country": "IT",
+   "connector": "ckan",
+   "base_url": "https://aperto.comune.torino.it",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 196,
+    "UNDECLARED": 2,
+    "CC-BY-SA-4.0": 2
+   },
+   "undeclared_share": 0.01,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None required",
+   "notes": "2118 datasets, 200 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "datosabiertos.malaga.eu",
+   "label": "Málaga Open Data",
+   "country": "ES",
+   "connector": "ckan",
+   "base_url": "https://datosabiertos.malaga.eu",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-SA-4.0": 143,
+    "CC-BY-SA-3.0-ES": 55,
+    "CC-BY-4.0": 2
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None required",
+   "notes": "The portal contradicts itself on its own licences: id `by-sa-40` carries licence URL creativecommons.org/licenses/by-sa/4.0/ but a title reading \"CC BY 4.0\". Id and URL agree on share-alike and the title does not, so it resolves CC-BY-SA-4.0 — the restrictive reading — rather than dropping a share-alike obligation. `by-sa` is CC BY-SA 3.0 España (its own class). 58% of the catalogue carries an ingestible resource; the rest is filtered out of search by hasIngestibleResource.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "portal.opendata.dk",
+   "label": "Open Data DK — Danish municipalities",
+   "country": "DK",
+   "connector": "ckan",
+   "base_url": "https://portal.opendata.dk",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 149,
+    "UNDECLARED": 45,
+    "CC0-1.0": 6
+   },
+   "undeclared_share": 0.225,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None required",
+   "notes": "A shared CKAN run by a municipal association, not a government portal — one connection covers the Danish city tier (Copenhagen, Aarhus, Aalborg and others), which has no per-city portal to connect. 45 of 200 sampled declare no licence at all and stay link-only.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "otwartedane.gdynia.pl",
+   "label": "Gdynia Open Data",
+   "country": "PL",
+   "connector": "ckan",
+   "base_url": "https://otwartedane.gdynia.pl",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 200
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None required",
+   "notes": "260 datasets, 200 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.stuttgart.de",
+   "label": "Stuttgart Open Data",
+   "country": "DE",
+   "connector": "ckan",
+   "base_url": "https://opendata.stuttgart.de",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 139
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None required",
+   "notes": "139 datasets, 139 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.corkcity.ie",
+   "label": "Cork City Council Open Data",
+   "country": "IE",
+   "connector": "ckan",
+   "base_url": "https://data.corkcity.ie",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 30,
+    "CC-BY-SA-4.0": 3,
+    "UNDECLARED": 1
+   },
+   "undeclared_share": 0.029,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None required",
+   "notes": "34 datasets, 34 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "www.odwb.be",
+   "label": "Open Data Wallonie-Bruxelles (ODWB)",
+   "country": "BE",
+   "connector": "opendatasoft",
+   "base_url": "https://www.odwb.be",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 47,
+    "CC0-1.0": 29,
+    "UNDECLARED": 22,
+    "CC-BY-NC": 2
+   },
+   "undeclared_share": 0.22,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "Covers Wallonia and the French Community. Sample includes 2 CC BY-NC 4.0 (block class, refused). 22 of 100 declare no licence or a non-instrument string and stay link-only.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.iledefrance.fr",
+   "label": "Île-de-France Region Open Data",
+   "country": "FR",
+   "connector": "opendatasoft",
+   "base_url": "https://data.iledefrance.fr",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "LO-2.0": 76,
+    "ODbL-1.0": 22,
+    "CC-BY-NC": 1,
+    "UNDECLARED": 1
+   },
+   "undeclared_share": 0.01,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "Sample includes 1 CC BY-NC-ND 4.0, which resolves to the CC-BY-NC block class and is refused. Note that class names CC BY-NC rather than CC BY-NC-ND; the ingest decision is identical (block, never attributed), but the class is not a precise description of the instrument.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.comune.bologna.it",
+   "label": "Comune di Bologna Open Data",
+   "country": "IT",
+   "connector": "opendatasoft",
+   "base_url": "https://opendata.comune.bologna.it",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 98,
+    "CC0-1.0": 1,
+    "UNDECLARED": 1
+   },
+   "undeclared_share": 0.01,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "704 datasets, 100 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.tg.ch",
+   "label": "Canton of Thurgau Open Data",
+   "country": "CH",
+   "connector": "opendatasoft",
+   "base_url": "https://data.tg.ch",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 68,
+    "CC0-1.0": 32
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "456 datasets, 100 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.grandparissud.fr",
+   "label": "Grand Paris Sud Open Data",
+   "country": "FR",
+   "connector": "opendatasoft",
+   "base_url": "https://data.grandparissud.fr",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 61,
+    "LO-2.0": 35,
+    "ODbL-1.0": 3,
+    "LO-1.0": 1
+   },
+   "undeclared_share": 0.61,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "61 of 100 sampled declare no licence and stay link-only; the licensed remainder is Licence Ouverte v2.0 and ODbL. Connected for the licensed portion — check undeclared_share before relying on it.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.strasbourg.eu",
+   "label": "Strasbourg / Eurométropole Open Data",
+   "country": "FR",
+   "connector": "opendatasoft",
+   "base_url": "https://data.strasbourg.eu",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "LO-2.0": 96,
+    "UNDECLARED": 3,
+    "ODbL-1.0": 1
+   },
+   "undeclared_share": 0.03,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "401 datasets, 100 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.bs.ch",
+   "label": "Canton of Basel-Stadt Open Data",
+   "country": "CH",
+   "connector": "opendatasoft",
+   "base_url": "https://data.bs.ch",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 85,
+    "UNDECLARED": 14,
+    "CC0-1.0": 1
+   },
+   "undeclared_share": 0.14,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "361 datasets, 100 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.bruxelles.be",
+   "label": "City of Brussels Open Data",
+   "country": "BE",
+   "connector": "opendatasoft",
+   "base_url": "https://opendata.bruxelles.be",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "CC0-1.0": 49,
+    "CC-BY-4.0": 40,
+    "UNDECLARED": 8,
+    "CC-BY-NC": 2,
+    "CC-BY-ND": 1
+   },
+   "undeclared_share": 0.08,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "Sample includes 2 CC BY-NC 4.0 and 1 CC BY-ND 4.0 — both block classes, correctly refused rather than ingested-and-flagged. Also 7 datasets under \"Statbel Open Data\", a named but unread instrument, left UNDECLARED.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.laregion.fr",
+   "label": "Occitanie Region Open Data",
+   "country": "FR",
+   "connector": "opendatasoft",
+   "base_url": "https://data.laregion.fr",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "LO-2.0": 97,
+    "ODbL-1.0": 2,
+    "UNDECLARED": 1
+   },
+   "undeclared_share": 0.01,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "203 datasets, 100 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.bretagne.bzh",
+   "label": "Brittany Region Open Data",
+   "country": "FR",
+   "connector": "opendatasoft",
+   "base_url": "https://data.bretagne.bzh",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "LO-2.0": 88,
+    "ODbL-1.0": 6,
+    "UNDECLARED": 4,
+    "LO-1.0": 2
+   },
+   "undeclared_share": 0.04,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "191 datasets, 100 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.reseaux-energies.fr",
+   "label": "Open Data Réseaux Énergies — France (energy networks)",
+   "country": "FR",
+   "connector": "opendatasoft",
+   "base_url": "https://opendata.reseaux-energies.fr",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "LO-2.0": 100
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "187 datasets, 100 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.angers.fr",
+   "label": "Angers Loire Métropole Open Data",
+   "country": "FR",
+   "connector": "opendatasoft",
+   "base_url": "https://data.angers.fr",
+   "platform": "OpenDataSoft",
+   "tos_url": null,
+   "tos_note": "Publisher's own terms; ODS platform terms secondary.",
+   "licence_source": "Dataset metadata `license` / `license_url` via Explore API v2",
+   "default_licence": null,
+   "observed_licences": {
+    "ODbL-1.0": 96,
+    "LO-2.0": 4
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_min": null,
+    "verified": false,
+    "note": "ODS enforces per-domain quotas that vary by the publisher's plan; anonymous calls are limited. Back off on 429."
+   },
+   "auth": "Optional API key raises quota",
+   "notes": "96 of 100 sampled are ODbL-1.0 — share-alike, so nearly the whole catalogue carries the export warning.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.brno.cz",
+   "label": "City of Brno Open Data",
+   "country": "CZ",
+   "connector": "arcgis-hub",
+   "base_url": "https://data.brno.cz",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `license` field in the DCAT-US /data.json feed — free text, often HTML",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 227,
+    "CC-BY-4.0": 160,
+    "CC-BY-SA-4.0": 13
+   },
+   "undeclared_share": 0.568,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Serves its DCAT at both /data.json and /api/feed/dcat-us/1.1.json. 149 of 400 sampled declare the literal unrendered template string \"{{licenseInfo}}\" — a portal-side templating bug, deliberately NOT aliased; a further 14 are HTML fragments wrapping a licence name. Those resolve UNDECLARED and stay link-only, which is why undeclared_share is 0.568 despite the portal intending CC BY.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "dati.lombardia.it",
+   "label": "Regione Lombardia Open Data",
+   "country": "IT",
+   "connector": "socrata",
+   "base_url": "https://dati.lombardia.it",
+   "platform": "Socrata / Tyler Data & Insights",
+   "tos_url": null,
+   "tos_note": "Socrata developer terms apply in addition to the publisher's licence.",
+   "licence_source": "Per-dataset metadata via api/catalog/v1 (`license` field)",
+   "default_licence": null,
+   "observed_licences": {
+    "CC0-1.0": 63,
+    "CC-BY-4.0": 34,
+    "UNDECLARED": 3
+   },
+   "undeclared_share": 0.03,
+   "rate_limit": {
+    "published": true,
+    "requests_per_hour": 1000,
+    "verified": true,
+    "requires_app_token": true,
+    "throttle_status": 429,
+    "note": "1,000 requests per rolling hour WITH a registered app token; without a token throttling is by shared IP pool and much tighter. REGISTER AN APP TOKEN PER PORTAL."
+   },
+   "auth": "App token strongly recommended (X-App-Token header)",
+   "notes": "4270 datasets, 100 sampled live 19 Sep 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opendata.rdw.nl",
+   "label": "RDW Open Data — Netherlands (vehicle registry)",
+   "country": "NL",
+   "connector": "socrata",
+   "base_url": "https://opendata.rdw.nl",
+   "platform": "Socrata / Tyler Data & Insights",
+   "tos_url": null,
+   "tos_note": "Socrata developer terms apply in addition to the publisher's licence.",
+   "licence_source": "Per-dataset metadata via api/catalog/v1 (`license` field)",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 51,
+    "PUBLIC-DOMAIN": 49
+   },
+   "undeclared_share": 0.51,
+   "rate_limit": {
+    "published": true,
+    "requests_per_hour": 1000,
+    "verified": true,
+    "requires_app_token": true,
+    "throttle_status": 429,
+    "note": "1,000 requests per rolling hour WITH a registered app token; without a token throttling is by shared IP pool and much tighter. REGISTER AN APP TOKEN PER PORTAL."
+   },
+   "auth": "App token strongly recommended (X-App-Token header)",
+   "notes": "The Dutch vehicle authority's national thematic portal. Half the sampled catalogue declares no licence at all (link-only); the other half is a bare \"Public Domain\" assertion (PUBLIC-DOMAIN class).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "api.scb.se/OV0104/v1/doris/en/ssd",
+   "label": "Statistics Sweden (SCB) — Statistical Database",
+   "country": "SE",
+   "connector": "pxweb",
+   "base_url": "https://api.scb.se/OV0104/v1/doris/en/ssd",
+   "platform": "PXWeb statistics database",
+   "tos_url": "https://www.scb.se/en/services/open-data-api/",
+   "tos_note": "Official statistics; blanket reuse terms for the whole database.",
+   "licence_source": "Portal default only — PXWeb exposes no per-table licence field",
+   "default_licence": "CC0-1.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 3,
+    "verified": true,
+    "note": "Published by the instance itself at ?config: maxCalls=30 per timeWindow=10s (= 3.0/s), maxCells=150000. Read live 19 Sep 2026."
+   },
+   "auth": "None required",
+   "notes": "CC0 verified 19 Sep 2026 on SCB's own open-data page: \"We use the licence CC0 for this data, which means that you may use and disseminate or provide such data without any requirement to state the source.\" Attribution is recommended, not required. Region codes join GISCO LAU 2021 at 290/290 — but SE municipalities are deliberately NOT seeded as a reference geography (4-digit codes; see LAU_COUNTRIES), so this lands chart-ready, not map-ready.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "pxdata.stat.fi/PXWeb/api/v1/en/StatFin",
+   "label": "Statistics Finland — StatFin database",
+   "country": "FI",
+   "connector": "pxweb",
+   "base_url": "https://pxdata.stat.fi/PXWeb/api/v1/en/StatFin",
+   "platform": "PXWeb statistics database",
+   "tos_url": "https://stat.fi/org/lainsaadanto/copyright_en.html",
+   "tos_note": "Official statistics; blanket reuse terms for the whole database.",
+   "licence_source": "Portal default only — PXWeb exposes no per-table licence field",
+   "default_licence": "CC-BY-4.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 0.67,
+    "verified": true,
+    "note": "Published by the instance itself at ?config: maxCalls=40 per timeWindow=60s (= 0.67/s), maxCells=120000. Read live 19 Sep 2026."
+   },
+   "auth": "None required",
+   "notes": "CC BY 4.0 verified 19 Sep 2026 on Statistics Finland's copyright page. The tightest rate limit of the connected instances — 40 calls per 60s — which is what makes the cached catalogue mandatory rather than an optimisation. Municipality codes join GISCO LAU 2021 at 287/288.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.ssb.no/api/v0/en/table",
+   "label": "Statistics Norway (SSB) — StatBank",
+   "country": "NO",
+   "connector": "pxweb",
+   "base_url": "https://data.ssb.no/api/v0/en/table",
+   "platform": "PXWeb statistics database",
+   "tos_url": "https://www.ssb.no/en/api",
+   "tos_note": "Official statistics; blanket reuse terms for the whole database.",
+   "licence_source": "Portal default only — PXWeb exposes no per-table licence field",
+   "default_licence": "CC-BY-4.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 5,
+    "verified": true,
+    "note": "Published by the instance itself at ?config: maxCalls=300 per timeWindow=60s (= 5.0/s), maxCells=800000. Read live 19 Sep 2026."
+   },
+   "auth": "None required",
+   "notes": "CC BY 4.0 verified 19 Sep 2026 on SSB's API page. GEOGRAPHY IS THE WEAKEST OF THE THREE HERE and the figure is easy to overstate: SSB's Region dimension carries 952 codes, 356 of which appear in GISCO LAU 2021 — but 114 of those 356 are codes SSB itself labels as historical (Halden 2020-2023), leaving only ~242 CURRENT municipalities that join. The gap is Norway's 2024 county split, which recoded the 30xx range (Halden moved 3001 → 3101, and 3101 is absent from the 2021 vintage). A newer boundary vintage than GISCO 2021 is needed before Norwegian data joins cleanly; Sweden (290/290) and Finland (287/288) have no such problem.",
    "dataset_overrides": []
   }
  ]

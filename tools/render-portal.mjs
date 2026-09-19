@@ -350,24 +350,35 @@ export function renderPortalPage(portal, stats, ctx) {
   const dominant = stats.dominantLicence || null;
 
   // ---- SEO ----
+  const blanketLicence = stats.blanketLicence || null;
   const title = `${name} — open datasets, licences & maps · Vizzie`;
-  const countStr = count === null ? 'thousands of' : num(count);
   // Only promise what the page actually shows. 61 of these pages had no
   // publisher list at all, and every one still advertised "top publishers" in
   // the search snippet — a click that landed on "coming soon".
   //
+  // The count is subject to the same rule, and was not: a portal whose count
+  // this site cannot fetch still claimed to publish "thousands of" datasets and
+  // still promised "its live dataset count" in the snippet. Neither was on the
+  // page. Statistics Sweden read that way on 19 Sep 2026 — PXWeb exposes no
+  // catalogue total the site can cheaply read, so there is no number to show.
+  //
   // Built as a list rather than glued-together clauses so the commas stay right
   // however many of them survive: "count, licence profile and publishers" reads
   // correctly, and so does a bare "count".
-  const promises = ['its live dataset count'];
-  if (undeclaredWhole !== null) promises.push(`licence profile (${undeclaredWhole}% undeclared)`);
+  const promises = [];
+  if (count !== null) promises.push('its live dataset count');
+  if (blanketLicence) promises.push(`its portal-wide licence (${blanketLicence.cls})`);
+  else if (undeclaredWhole !== null) promises.push(`licence profile (${undeclaredWhole}% undeclared)`);
   if (hasPublishers) promises.push('top publishers');
+  if (promises.length === 0) promises.push('what it publishes and on what terms');
   const promised =
     promises.length === 1
       ? promises[0]
       : `${promises.slice(0, -1).join(', ')} and ${promises[promises.length - 1]}`;
   const rawDesc =
-    `${name} publishes ${countStr} open datasets${country ? ` (${country})` : ''}. ` +
+    (count === null
+      ? `${name} is an open-data portal${country ? ` (${country})` : ''} connected live in Vizzie. `
+      : `${name} publishes ${num(count)} open datasets${country ? ` (${country})` : ''}. `) +
     `See ${promised}, and turn any of it into a map with Vizzie — no download.`;
   const description = trim(rawDesc, 158);
 
@@ -420,7 +431,7 @@ export function renderPortalPage(portal, stats, ctx) {
   // from one whose datasets each carry a licence: for a blanket-licensed portal
   // "0% declare no licence" is as misleading as "100% do" — both are literally
   // true, and neither is what a reuser needs to know.
-  const blanket = stats.blanketLicence || null;
+  const blanket = blanketLicence;
   let licenceSection;
   if (blanket) {
     const declaredOwn = licences
@@ -440,8 +451,10 @@ export function renderPortalPage(portal, stats, ctx) {
           <div class="big">Licensed <b>portal-wide</b>: ${esc(blanket.cls)}</div>
         </div>
         <p class="prose">${esc(name)} publishes one licence across its whole catalogue, so
-          ${esc(num(blanket.count))} datasets here are covered by it even though they carry no licence
-          of their own. That is a stronger position than an undeclared catalogue, where nothing grants
+          ${blanket.count === null
+            ? `every dataset here is covered by it`
+            : `${esc(num(blanket.count))} datasets here are covered by it even though they carry no licence
+          of their own`}. That is a stronger position than an undeclared catalogue, where nothing grants
           permission at all — but the portal's terms are what govern, so read them before you rely on
           the data. Vizzie resolves each dataset to the same licence and writes the attribution line
           for you when you export or publish.</p>

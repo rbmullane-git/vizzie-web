@@ -1087,6 +1087,67 @@
   "apiAccessible": true
  },
  {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.iledefrance.fr",
+  "label": "Île-de-France Region Open Data",
+  "tier": "state",
+  "countryCode": "FR",
+  "region": "Île-de-France",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.laregion.fr",
+  "label": "Occitanie Region Open Data",
+  "tier": "state",
+  "countryCode": "FR",
+  "region": "Occitanie",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.bretagne.bzh",
+  "label": "Brittany Region Open Data",
+  "tier": "state",
+  "countryCode": "FR",
+  "region": "Brittany",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.grandparissud.fr",
+  "label": "Grand Paris Sud Open Data",
+  "tier": "regional",
+  "countryCode": "FR",
+  "region": "Île-de-France",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.strasbourg.eu",
+  "label": "Strasbourg / Eurométropole Open Data",
+  "countryCode": "FR",
+  "region": "Grand Est",
+  "city": "Strasbourg",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.angers.fr",
+  "label": "Angers Loire Métropole Open Data",
+  "countryCode": "FR",
+  "region": "Pays de la Loire",
+  "city": "Angers",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://opendata.reseaux-energies.fr",
+  "label": "Open Data Réseaux Énergies — France (energy networks)",
+  "countryCode": "FR",
+  "apiAccessible": true
+ },
+ {
   "connectorType": "ckan",
   "baseUrl": "https://ckan.govdata.de",
   "label": "GovData — Germany (national)",
@@ -1122,8 +1183,33 @@
  },
  {
   "connectorType": "ckan",
+  "baseUrl": "https://open.nrw",
+  "label": "Open.NRW — North Rhine-Westphalia",
+  "tier": "state",
+  "countryCode": "DE",
+  "region": "North Rhine-Westphalia",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://opendata.stuttgart.de",
+  "label": "Stuttgart Open Data",
+  "countryCode": "DE",
+  "region": "Baden-Württemberg",
+  "city": "Stuttgart",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
   "baseUrl": "https://data.overheid.nl/data",
   "label": "data.overheid.nl — Netherlands (national)",
+  "countryCode": "NL",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "socrata",
+  "baseUrl": "https://opendata.rdw.nl",
+  "label": "RDW Open Data — Netherlands (vehicle registry)",
   "countryCode": "NL",
   "apiAccessible": true
  },
@@ -1146,10 +1232,73 @@
   "apiAccessible": true
  },
  {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://www.odwb.be",
+  "label": "Open Data Wallonie-Bruxelles (ODWB)",
+  "tier": "state",
+  "countryCode": "BE",
+  "region": "Wallonia",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://opendata.bruxelles.be",
+  "label": "City of Brussels Open Data",
+  "countryCode": "BE",
+  "region": "Brussels-Capital Region",
+  "city": "Brussels",
+  "apiAccessible": true
+ },
+ {
   "connectorType": "ckan",
   "baseUrl": "https://www.dati.gov.it/opendata",
   "label": "dati.gov.it — Italy (national)",
   "countryCode": "IT",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://dati.toscana.it",
+  "label": "Regione Toscana Open Data",
+  "tier": "state",
+  "countryCode": "IT",
+  "region": "Tuscany",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "socrata",
+  "baseUrl": "https://dati.lombardia.it",
+  "label": "Regione Lombardia Open Data",
+  "tier": "state",
+  "countryCode": "IT",
+  "region": "Lombardy",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://dati.emilia-romagna.it",
+  "label": "Regione Emilia-Romagna Open Data",
+  "tier": "state",
+  "countryCode": "IT",
+  "region": "Emilia-Romagna",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://aperto.comune.torino.it",
+  "label": "Città di Torino — Aperto",
+  "countryCode": "IT",
+  "region": "Piedmont",
+  "city": "Turin",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://opendata.comune.bologna.it",
+  "label": "Comune di Bologna Open Data",
+  "countryCode": "IT",
+  "region": "Emilia-Romagna",
+  "city": "Bologna",
   "apiAccessible": true
  },
  {
@@ -1166,6 +1315,15 @@
   "countryCode": "IE",
   "region": "Leinster",
   "city": "Dublin",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.corkcity.ie",
+  "label": "Cork City Council Open Data",
+  "countryCode": "IE",
+  "region": "Munster",
+  "city": "Cork",
   "apiAccessible": true
  },
  {
@@ -1189,6 +1347,24 @@
   "countryCode": "CH",
   "region": "Zurich",
   "city": "Zurich",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.bs.ch",
+  "label": "Canton of Basel-Stadt Open Data",
+  "tier": "state",
+  "countryCode": "CH",
+  "region": "Basel-Stadt",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "opendatasoft",
+  "baseUrl": "https://data.tg.ch",
+  "label": "Canton of Thurgau Open Data",
+  "tier": "state",
+  "countryCode": "CH",
+  "region": "Thurgau",
   "apiAccessible": true
  },
  {
@@ -1253,6 +1429,15 @@
  },
  {
   "connectorType": "ckan",
+  "baseUrl": "https://datosabiertos.malaga.eu",
+  "label": "Málaga Open Data",
+  "countryCode": "ES",
+  "region": "Andalusia",
+  "city": "Málaga",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
   "baseUrl": "https://hri.fi/data",
   "label": "Helsinki Region Infoshare (hri.fi)",
   "countryCode": "FI",
@@ -1274,6 +1459,59 @@
   "countryCode": "FI",
   "region": "Pirkanmaa",
   "city": "Tampere",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.gov.ua",
+  "label": "data.gov.ua — Ukraine (national)",
+  "countryCode": "UA",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://portal.opendata.dk",
+  "label": "Open Data DK — Danish municipalities",
+  "countryCode": "DK",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://otwartedane.gdynia.pl",
+  "label": "Gdynia Open Data",
+  "countryCode": "PL",
+  "region": "Pomeranian Voivodeship",
+  "city": "Gdynia",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data.brno.cz",
+  "label": "City of Brno Open Data",
+  "countryCode": "CZ",
+  "region": "South Moravian Region",
+  "city": "Brno",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "pxweb",
+  "baseUrl": "https://api.scb.se/OV0104/v1/doris/en/ssd",
+  "label": "Statistics Sweden (SCB) — Statistical Database",
+  "countryCode": "SE",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "pxweb",
+  "baseUrl": "https://pxdata.stat.fi/PXWeb/api/v1/en/StatFin",
+  "label": "Statistics Finland — StatFin database",
+  "countryCode": "FI",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "pxweb",
+  "baseUrl": "https://data.ssb.no/api/v0/en/table",
+  "label": "Statistics Norway (SSB) — StatBank",
+  "countryCode": "NO",
   "apiAccessible": true
  },
  {
@@ -1396,6 +1634,228 @@
  },
  {
   "connectorType": "ckan",
+  "baseUrl": "https://open.yukon.ca",
+  "label": "Government of Yukon (open.yukon.ca)",
+  "countryCode": "CA",
+  "region": "Yukon",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://gos-initiative-saskatchewan.hub.arcgis.com",
+  "label": "Government of Saskatchewan Open Data",
+  "countryCode": "CA",
+  "region": "Saskatchewan",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://opendata.gov.nt.ca",
+  "label": "Northwest Territories (opendata.gov.nt.ca)",
+  "countryCode": "CA",
+  "region": "Northwest Territories",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "socrata",
+  "baseUrl": "https://data.edmonton.ca",
+  "label": "City of Edmonton Open Data",
+  "countryCode": "CA",
+  "region": "Alberta",
+  "city": "Edmonton",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://geohub.brampton.ca",
+  "label": "City of Brampton GeoHub",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "city": "Brampton",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://open-kitchenergis.opendata.arcgis.com",
+  "label": "City of Kitchener GeoHub",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "city": "Kitchener",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://insights-york.opendata.arcgis.com",
+  "label": "York Region Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "tier": "county",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data-markham.opendata.arcgis.com",
+  "label": "City of Markham Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "city": "Markham",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://open.hamilton.ca",
+  "label": "City of Hamilton Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "city": "Hamilton",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://opendata.durham.ca",
+  "label": "Regional Municipality of Durham Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "tier": "county",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://open.niagarafalls.ca",
+  "label": "City of Niagara Falls Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "city": "Niagara Falls",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data.mississauga.ca",
+  "label": "City of Mississauga Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "city": "Mississauga",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://opendata.london.ca",
+  "label": "City of London Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "city": "London",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://portal-exploreoakville.opendata.arcgis.com",
+  "label": "Town of Oakville Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "city": "Oakville",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data.peelregion.ca",
+  "label": "Regional Municipality of Peel Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "tier": "county",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://opendata.barrie.ca",
+  "label": "City of Barrie Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "city": "Barrie",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://explore.guelph.ca",
+  "label": "City of Guelph Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "city": "Guelph",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://open.niagararegion.ca",
+  "label": "Niagara Region Open Data",
+  "countryCode": "CA",
+  "region": "Ontario",
+  "tier": "county",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://opendata.victoria.ca",
+  "label": "City of Victoria Open Data",
+  "countryCode": "CA",
+  "region": "British Columbia",
+  "city": "Victoria",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://opendata.kelowna.ca",
+  "label": "City of Kelowna Open Data",
+  "countryCode": "CA",
+  "region": "British Columbia",
+  "city": "Kelowna",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data.coquitlam.ca",
+  "label": "City of Coquitlam Open Data",
+  "countryCode": "CA",
+  "region": "British Columbia",
+  "city": "Coquitlam",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://mydata-kamloops.opendata.arcgis.com",
+  "label": "City of Kamloops Open Data",
+  "countryCode": "CA",
+  "region": "British Columbia",
+  "city": "Kamloops",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://opendata-surrey.hub.arcgis.com",
+  "label": "City of Surrey Open Data",
+  "countryCode": "CA",
+  "region": "British Columbia",
+  "city": "Surrey",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://opendata-abbotsford.hub.arcgis.com",
+  "label": "City of Abbotsford Open Data",
+  "countryCode": "CA",
+  "region": "British Columbia",
+  "city": "Abbotsford",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data.burnaby.ca",
+  "label": "City of Burnaby Open Data",
+  "countryCode": "CA",
+  "region": "British Columbia",
+  "city": "Burnaby",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
   "baseUrl": "https://catalogue.data.govt.nz",
   "label": "data.govt.nz — New Zealand (national)",
   "countryCode": "NZ",
@@ -1503,6 +1963,50 @@
   "baseUrl": "https://datos.gob.ar",
   "label": "datos.gob.ar — Argentina (national)",
   "countryCode": "AR",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://catalogodatos.gub.uy",
+  "label": "Catálogo de Datos Abiertos — Uruguay (national)",
+  "countryCode": "UY",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://www.datos.gov.py",
+  "label": "datos.gov.py — Paraguay (national)",
+  "countryCode": "PY",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.gov.il",
+  "label": "data.gov.il — Israel (national)",
+  "countryCode": "IL",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://rwanda.africageoportal.com",
+  "label": "Rwanda GeoPortal",
+  "countryCode": "RW",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://odp-cctegis.opendata.arcgis.com",
+  "label": "City of Cape Town Open Data",
+  "countryCode": "ZA",
+  "region": "Western Cape",
+  "city": "Cape Town",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data-esrihk.opendata.arcgis.com",
+  "label": "Hong Kong Open Geospatial Data (Esri China)",
+  "countryCode": "HK",
   "apiAccessible": true
  },
  {

@@ -56,10 +56,9 @@
   "connectorType": "un-sdg"
  },
  "https://ec.europa.eu/eurostat/api/dissemination": {
-  "count": 4753,
-  "measured": "2026-09-15",
-  "source": "connector catalogue filter (dataflows under the 50k-observation sync limit)",
-  "note": "The full SDMX catalogue is ~8,150 dataflows; the rest queue as async extractions.",
+  "count": 4751,
+  "measured": "2026-09-19",
+  "source": "the connector's own catalogTotal()",
   "label": "Eurostat — EU statistics by NUTS region (all member states)",
   "connectorType": "eurostat"
  }
