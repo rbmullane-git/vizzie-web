@@ -258,6 +258,19 @@
    "attribution_template": "{title} — {publisher}, released into the public domain. Retrieved {retrieved} via Vizzie.",
    "note": "A publisher's bare 'Public Domain' declaration, which is the single most common licence value on the Socrata network (260 of 911 sampled datasets, 15 Sep 2026 — NYC, Seattle and CDC all use it). Deliberately its own class rather than an alias of US-PD or CC0-1.0: US-PD is specifically the 17 USC §105 federal-works carve-out and does not describe a city portal, and CC0 is a specific legal instrument the publisher did not necessarily execute. This class claims only what the publisher actually said — no rights reserved — so attribution is not required, though the template still offers one."
   },
+  "SEMCOG-CLA": {
+   "name": "SEMCOG Copyright License Agreement",
+   "spdx": null,
+   "url": "https://maps-semcog.opendata.arcgis.com/pages/copyright-license-agreement",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "{title} — Copyright © SEMCOG. All Rights Reserved. Reproduction or Use Without Permission is Prohibited. Retrieved {retrieved} via Vizzie.",
+   "note": "A bespoke agreement, read in full 2026-09-19, covering everything on SEMCOG's Hub: clause 1(a) grants a perpetual, non-exclusive, royalty-free licence to use, reproduce, modify, distribute, publish, transmit, display and create derivative works, so it is more permissive than its name suggests and commercial use is not restricted. The condition is clause 2(a): every use must carry the copyright notice verbatim, in a reasonably prominent position — which is why this is a class with a fixed attribution_template rather than UNDECLARED. The agreement's example notice carries a year ('Copyright © 2019 SEMCOG'); the template omits it because the year belongs to the work, not the retrieval, and SEMCOG does not publish a per-dataset copyright year. Clause 1(b) excludes third-party rights, so a dataset SEMCOG merely redistributes is not covered by this grant."
+  },
   "CLOSED": {
    "name": "Publisher declares the data closed or restricted",
    "spdx": null,
@@ -406,7 +419,8 @@
   "cc-by-igo": "CC-BY-IGO",
   "cc by igo": "CC-BY-IGO",
   "cc-by-3.0-igo": "CC-BY-IGO",
-  "public domain": "PUBLIC-DOMAIN"
+  "public domain": "PUBLIC-DOMAIN",
+  "none. this dataset is public domain under the minnesota government data practices act (minnesota statutes chapter 13).": "PUBLIC-DOMAIN"
  },
  "platforms": {
   "ckan": {
@@ -2288,6 +2302,491 @@
    },
    "auth": "None for public items",
    "notes": null,
+   "dataset_overrides": []
+  },
+  {
+   "id": "gis.data.mn.gov",
+   "label": "Minnesota Geospatial Commons",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://gis.data.mn.gov",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 2138,
+    "PUBLIC-DOMAIN": 416,
+    "ODbL-1.0": 7,
+    "CC-BY-4.0": 1,
+    "CC0-1.0": 1
+   },
+   "undeclared_share": 0.834,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Statewide catalogue (MnGeo). Licences measured against the full DCAT feed 2026-09-19: 416 datasets carry the MGDPA public-domain sentence, aliased to PUBLIC-DOMAIN; the remainder are free-text liability disclaimers that resolve UNDECLARED. The DNR's 'General Geographic Data License Agreement' (61 datasets) is a named agreement that has not been read — deliberately left UNDECLARED rather than guessed at.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "gis-odnr.opendata.arcgis.com",
+   "label": "Ohio Department of Natural Resources — GIS Open Data",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://gis-odnr.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 1827
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Ohio's largest open catalogue; the state has no whole-of-government portal (data.ohio.gov and the OGRIP hub are both dead). Every dataset's `license` is the same HTML liability statement, so 100% resolve UNDECLARED (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "azgeo.az.gov",
+   "label": "Arizona Geospatial Hub (AZGeo)",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://azgeo.az.gov",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 1372,
+    "CC-BY-4.0": 166,
+    "CC-BY-SA-4.0": 1
+   },
+   "undeclared_share": 0.891,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Statewide hub run by the Arizona State Land Department. 167 of 1,539 datasets declare a CC licence by URL; the rest are free-text disclaimers (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "mainegeolibrary-maine.hub.arcgis.com",
+   "label": "Maine GeoLibrary",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://mainegeolibrary-maine.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 1665,
+    "PUBLIC-DOMAIN": 1
+   },
+   "undeclared_share": 0.999,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Statewide catalogue. Most datasets say 'Access: Public. Use: User accepts risk.' — an access statement, not a licence grant, so they resolve UNDECLARED (measured 2026-09-19). Worth revisiting if Maine publishes blanket terms that would justify a default_licence.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "www.indianamap.org",
+   "label": "IndianaMap",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://www.indianamap.org",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 790,
+    "CC0-1.0": 46,
+    "CC-BY-4.0": 4
+   },
+   "undeclared_share": 0.94,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "The state's framework-data catalogue (IGIC/IU). 50 of 840 datasets declare a CC licence; the rest are warranty disclaimers (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "hub.kansasgis.org",
+   "label": "Kansas Geoportal (DASC)",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://hub.kansasgis.org",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 507,
+    "CC0-1.0": 148
+   },
+   "undeclared_share": 0.774,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Kansas Data Access & Support Center. 148 of 655 datasets declare CC0 by URL (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "opengisdata.ky.gov",
+   "label": "Kentucky Geoportal (KyGeoNet)",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://opengisdata.ky.gov",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "CC0-1.0": 390,
+    "UNDECLARED": 160,
+    "CC-BY-4.0": 15,
+    "ODbL-1.0": 1
+   },
+   "undeclared_share": 0.283,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "The best-licensed of the 2026-09 state batch: 72% of datasets carry a machine-readable licence, 390 of them CC0 (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.ok.gov",
+   "label": "State of Oklahoma (data.ok.gov)",
+   "country": "US",
+   "connector": "ckan",
+   "base_url": "https://data.ok.gov",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Portal-specific terms page; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` field via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 331,
+    "CC-BY-4.0": 64
+   },
+   "undeclared_share": 0.838,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Most CKAN instances publish no formal limit. 2 req/s is a conservative self-imposed default. data.gov.uk explicitly states no API key and no rate limit."
+   },
+   "auth": "None required",
+   "notes": "The only CKAN in the 2026-09 state batch, so licences arrive as machine ids rather than free text; 64 of 395 datasets declare CC-BY-4.0 and the rest are unset (measured 2026-09-19 over all 395 packages).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "gishubdata-ndgov.hub.arcgis.com",
+   "label": "North Dakota GIS Hub Data Portal",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://gishubdata-ndgov.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 404
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Statewide hub (NDIT). Every dataset carries a state compilation disclaimer rather than a licence, so 100% resolve UNDECLARED (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "alic-algeohub.hub.arcgis.com",
+   "label": "Alabama Location Intelligence Collaboration Hub (ALIC)",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://alic-algeohub.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 417
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Alabama's statewide hub. 404 of 417 datasets carry no `license` value at all and the remainder are copyright notices, so 100% resolve UNDECLARED (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "geohub.lacity.org",
+   "label": "City of Los Angeles GeoHub",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://geohub.lacity.org",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 1679,
+    "CC-BY-4.0": 17
+   },
+   "undeclared_share": 0.99,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "The city's spatial catalogue, distinct from the Socrata data.lacity.org: the two overlap barely at all. Measured 2026-09-19 — 17 of 1,696 datasets declare CC BY, the rest carry Esri free-text disclaimers. Six titles are the literal template string \"{{name}}\", unrendered on the publisher's side.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "egis-lacounty.hub.arcgis.com",
+   "label": "Los Angeles County (eGIS Open Data)",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://egis-lacounty.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 965
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "County-tier parcels, districts and service areas for 9.7m people. Every one of the 965 datasets carries the County's informational-purposes disclaimer rather than a licence (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data-ocpw.opendata.arcgis.com",
+   "label": "Orange County, CA (OC Public Works)",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://data-ocpw.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 876,
+    "CC0-1.0": 57
+   },
+   "undeclared_share": 0.939,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "OC Public Works' catalogue, 933 datasets for 3.2m people; 57 declare CC0 (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "gishub-h-gac.hub.arcgis.com",
+   "label": "H-GAC — Houston-Galveston Area Council",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://gishub-h-gac.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 260
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "The MPO for the 13-county Houston region — land use, travel demand and regional boundaries the City of Houston's own hub does not carry. 126 of 260 datasets have an empty `license`, the rest an informational-purposes disclaimer (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data-wfrc.opendata.arcgis.com",
+   "label": "WFRC — Wasatch Front Regional Council",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://data-wfrc.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 134,
+    "CC0-1.0": 3
+   },
+   "undeclared_share": 0.978,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Salt Lake City region MPO. Pairs with the already-connected UGRC state hub (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data-bmc.opendata.arcgis.com",
+   "label": "BMC — Baltimore Metropolitan Council",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://data-bmc.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 73
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Baltimore region MPO. Several datasets are marked 'For planning use only' with a link to a BMC white paper — a caveat on fitness for purpose, not a licence grant, so they stay UNDECLARED (measured 2026-09-19).",
+   "dataset_overrides": []
+  },
+  {
+   "id": "maps-semcog.opendata.arcgis.com",
+   "label": "SEMCOG — Southeast Michigan Council of Governments",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://maps-semcog.opendata.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": "https://maps-semcog.opendata.arcgis.com/pages/copyright-license-agreement",
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": "SEMCOG-CLA",
+   "observed_licences": {
+    "SEMCOG-CLA": 66
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Detroit region MPO, and the only portal in either 2026-09 US batch with a real licence rather than a disclaimer. The site-wide Copyright License Agreement is permissive (see the SEMCOG-CLA class), so it is set as the portal default and all 66 datasets resolve to it rather than UNDECLARED. The per-dataset `license` values are a mix of links to that same agreement and Esri boilerplate, which is why the default does the work here.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "public-morpc.hub.arcgis.com",
+   "label": "MORPC — Mid-Ohio Regional Planning Commission",
+   "country": "US",
+   "connector": "arcgis-hub",
+   "base_url": "https://public-morpc.hub.arcgis.com",
+   "platform": "Esri ArcGIS Hub",
+   "tos_url": null,
+   "tos_note": "Esri terms apply to the Hub platform; publisher licence governs the data. licenseInfo is free-text — treat as UNDECLARED unless it maps cleanly.",
+   "licence_source": "Item `licenseInfo` field — free text, often HTML; needs parsing",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 59
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "Esri applies limits per organisation subscription; unpublished for anonymous access. Conservative default."
+   },
+   "auth": "None for public items",
+   "notes": "Columbus region MPO. 50 of 59 datasets have an empty `license`; two say 'Public data', which is too vague to map (measured 2026-09-19).",
    "dataset_overrides": []
   },
   {

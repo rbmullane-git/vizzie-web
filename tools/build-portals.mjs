@@ -87,6 +87,7 @@ const CLASS_LABEL = {
   'ODbL-1.0': 'ODbL 1.0', 'CC-BY-SA-4.0': 'CC BY-SA 4.0', 'CC-BY-NC': 'CC BY-NC',
   'CC-BY-ND': 'CC BY-ND', 'LO-2.0': 'Licence Ouverte 2.0', 'LO-1.0': 'Licence Ouverte 1.0',
   'PDL-1.0-JP': 'PDL 1.0 (Japan)', 'CC-BY-IGO': 'CC BY 3.0 IGO', 'PUBLIC-DOMAIN': 'Public domain',
+  'SEMCOG-CLA': 'SEMCOG Copyright License Agreement',
   'CLOSED': 'Closed / restricted', UNDECLARED: 'UNDECLARED',
 };
 
@@ -279,6 +280,7 @@ function buildPortals() {
       auth: p.auth || '',
       notes: p.notes || '',
       matrixObserved: p.observed_licences || null,
+      defaultLicence: p.default_licence || null,
       dataAppValue: `/#portal=${p.connector}:${p.base_url.replace(/^https?:\/\//, '')}`,
       examples: exMap[host(p.base_url)] || [],
     };
@@ -369,7 +371,13 @@ function finalizeStats(portal, live) {
     };
   }
   // If live licence data missing but matrix has it, splice matrix licence stats in.
-  if ((s.undeclaredPct == null || !s.licences?.length) && portal.matrixObserved) {
+  // Not when the probe found the licences live on the distributions: the
+  // matrix's observed sample was read from the same package-level field that
+  // is empty on those portals, so splicing it back in would re-assert the
+  // "99% undeclared" claim the probe exists to prevent (ckan.govdata.de).
+  if (s.licenceAtDistribution) {
+    // leave undeclaredPct null — the page says the mix can't be summarised
+  } else if ((s.undeclaredPct == null || !s.licences?.length) && portal.matrixObserved) {
     const mx = fromMatrix(portal);
     s = {
       ...s,
@@ -378,12 +386,39 @@ function finalizeStats(portal, live) {
       count: s.count ?? mx.count,
     };
   }
-  const merged = mergeLicences(s.licences || []);
+  let merged = mergeLicences(s.licences || []);
+  let undeclaredPct = s.undeclaredPct ?? (merged.total ? merged.undeclared / merged.total : null);
+
+  // Step 2 of the matrix's own resolution order: where a dataset declares
+  // nothing and the PORTAL publishes a blanket licence, that licence governs.
+  // The connector has always done this; these pages did not, so a portal with
+  // site-wide terms was published as if its data carried no permission at all
+  // — SEMCOG read "100% of datasets here declare no licence" on 19 Sep 2026
+  // when every dataset is in fact under a permissive agreement, and Ontario,
+  // NASA and the ONS Geoportal were all overstating their undeclared shares
+  // the same way. Ten portals carry a default_licence today.
+  //
+  // The re-attributed datasets are marked as covered by a blanket licence
+  // rather than silently folded into "declared", because the distinction is
+  // real: nobody wrote a licence on the dataset, the portal wrote one over all
+  // of them.
+  const blanket = portal.defaultLicence && merged.undeclared > 0
+    ? { cls: CLASS_LABEL[portal.defaultLicence] || portal.defaultLicence, count: merged.undeclared }
+    : null;
+  if (blanket) {
+    merged = mergeLicences([
+      ...(s.licences || []).filter((l) => canonLicence(l.cls) !== 'UNDECLARED'),
+      { cls: portal.defaultLicence, count: merged.undeclared },
+    ]);
+    undeclaredPct = 0;
+  }
+
   return {
     count: s.count ?? null,
-    undeclaredPct: s.undeclaredPct ?? (merged.total ? merged.undeclared / merged.total : null),
+    undeclaredPct,
     licences: merged.declared,       // top declared, canonicalised
     undeclaredCount: merged.undeclared || null,
+    blanketLicence: blanket,
     publishers: (s.publishers || []).slice(0, 8),
     // How much of the catalogue the publisher list actually speaks for; the
     // renderer says so when it is only part of the portal.

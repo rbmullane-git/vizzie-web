@@ -416,8 +416,38 @@ export function renderPortalPage(portal, stats, ctx) {
     `${baseLink ? ` You can browse it directly at ${baseLink}.` : ''}${tosClause}</p>`;
 
   // ---- Licence profile ----
+  // A portal that licenses its whole catalogue at once needs different words
+  // from one whose datasets each carry a licence: for a blanket-licensed portal
+  // "0% declare no licence" is as misleading as "100% do" — both are literally
+  // true, and neither is what a reuser needs to know.
+  const blanket = stats.blanketLicence || null;
   let licenceSection;
-  if (undeclaredWhole !== null) {
+  if (blanket) {
+    const declaredOwn = licences
+      .filter((l) => l && String(l.cls) !== String(blanket.cls))
+      .sort((a, b) => (b.count || 0) - (a.count || 0));
+    const declaredRows = declaredOwn.length
+      ? `<div class="portals" style="columns:230px 2">
+          <div class="pgrp"><div class="phdr">Licences declared on individual datasets</div>
+            ${declaredOwn.slice(0, 10).map((l) =>
+              `<div class="prow"><span class="pn">${esc(l.cls)}</span><span class="pc">${esc(num(l.count))}</span></div>`
+            ).join('\n            ')}
+          </div>
+        </div>`
+      : '';
+    licenceSection = `
+        <div class="callout">
+          <div class="big">Licensed <b>portal-wide</b>: ${esc(blanket.cls)}</div>
+        </div>
+        <p class="prose">${esc(name)} publishes one licence across its whole catalogue, so
+          ${esc(num(blanket.count))} datasets here are covered by it even though they carry no licence
+          of their own. That is a stronger position than an undeclared catalogue, where nothing grants
+          permission at all — but the portal's terms are what govern, so read them before you rely on
+          the data. Vizzie resolves each dataset to the same licence and writes the attribution line
+          for you when you export or publish.</p>
+        ${declaredRows}
+        ${portal.notes ? `<p class="prose">${esc(trim(portal.notes, 220))}</p>` : ''}`;
+  } else if (undeclaredWhole !== null) {
     let framing;
     if (undeclaredWhole > 50) {
       framing = `a <b>majority</b> of datasets here declare no licence at all`;

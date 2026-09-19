@@ -442,6 +442,56 @@
   "apiAccessible": true
  },
  {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://gishub-h-gac.hub.arcgis.com",
+  "label": "H-GAC — Houston-Galveston Area Council",
+  "tier": "regional",
+  "countryCode": "US",
+  "region": "Texas",
+  "city": "Houston",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data-wfrc.opendata.arcgis.com",
+  "label": "WFRC — Wasatch Front Regional Council",
+  "tier": "regional",
+  "countryCode": "US",
+  "region": "Utah",
+  "city": "Salt Lake City",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data-bmc.opendata.arcgis.com",
+  "label": "BMC — Baltimore Metropolitan Council",
+  "tier": "regional",
+  "countryCode": "US",
+  "region": "Maryland",
+  "city": "Baltimore",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://maps-semcog.opendata.arcgis.com",
+  "label": "SEMCOG — Southeast Michigan Council of Governments",
+  "tier": "regional",
+  "countryCode": "US",
+  "region": "Michigan",
+  "city": "Detroit",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://public-morpc.hub.arcgis.com",
+  "label": "MORPC — Mid-Ohio Regional Planning Commission",
+  "tier": "regional",
+  "countryCode": "US",
+  "region": "Ohio",
+  "city": "Columbus",
+  "apiAccessible": true
+ },
+ {
   "connectorType": "socrata",
   "baseUrl": "https://data.illinois.gov",
   "label": "State of Illinois (data.illinois.gov)",
@@ -519,6 +569,113 @@
   "label": "Utah Geospatial Resource Center (UGRC)",
   "countryCode": "US",
   "region": "Utah",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://gis.data.mn.gov",
+  "label": "Minnesota Geospatial Commons",
+  "countryCode": "US",
+  "region": "Minnesota",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://gis-odnr.opendata.arcgis.com",
+  "label": "Ohio Department of Natural Resources — GIS Open Data",
+  "countryCode": "US",
+  "region": "Ohio",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://azgeo.az.gov",
+  "label": "Arizona Geospatial Hub (AZGeo)",
+  "countryCode": "US",
+  "region": "Arizona",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://mainegeolibrary-maine.hub.arcgis.com",
+  "label": "Maine GeoLibrary",
+  "countryCode": "US",
+  "region": "Maine",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://www.indianamap.org",
+  "label": "IndianaMap",
+  "countryCode": "US",
+  "region": "Indiana",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://hub.kansasgis.org",
+  "label": "Kansas Geoportal (DASC)",
+  "countryCode": "US",
+  "region": "Kansas",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://opengisdata.ky.gov",
+  "label": "Kentucky Geoportal (KyGeoNet)",
+  "countryCode": "US",
+  "region": "Kentucky",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.ok.gov",
+  "label": "State of Oklahoma (data.ok.gov)",
+  "countryCode": "US",
+  "region": "Oklahoma",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://gishubdata-ndgov.hub.arcgis.com",
+  "label": "North Dakota GIS Hub Data Portal",
+  "countryCode": "US",
+  "region": "North Dakota",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://alic-algeohub.hub.arcgis.com",
+  "label": "Alabama Location Intelligence Collaboration Hub (ALIC)",
+  "countryCode": "US",
+  "region": "Alabama",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://geohub.lacity.org",
+  "label": "City of Los Angeles GeoHub",
+  "countryCode": "US",
+  "region": "California",
+  "city": "Los Angeles",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://egis-lacounty.hub.arcgis.com",
+  "label": "Los Angeles County (eGIS Open Data)",
+  "countryCode": "US",
+  "region": "California",
+  "tier": "county",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "arcgis-hub",
+  "baseUrl": "https://data-ocpw.opendata.arcgis.com",
+  "label": "Orange County, CA (OC Public Works)",
+  "countryCode": "US",
+  "region": "California",
+  "tier": "county",
   "apiAccessible": true
  },
  {

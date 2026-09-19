@@ -129,6 +129,31 @@ function isUndeclaredCkanLicence(name) {
   return s === '' || s === 'notspecified';
 }
 
+/**
+ * Does this portal keep its licences on the distributions rather than the
+ * package? Samples packages that have no package-level licence and looks for
+ * one on their resources. See the shortfall reasoning in fetchCkan.
+ *
+ * Conservative on every failure: a portal we cannot sample is treated as
+ * distribution-licensed, so the page declines to claim a percentage rather than
+ * risk asserting that licensed data carries no permission.
+ */
+async function ckanLicencesLiveOnDistributions(base, result) {
+  const url = `${base}/api/3/action/package_search?rows=25`;
+  const { json, note } = await fetchJson(url, { timeoutMs: DEFAULT_TIMEOUT_MS });
+  if (note) result.notes.push(`licence-home probe: ${note}`);
+  const packages = json && json.result && Array.isArray(json.result.results) ? json.result.results : null;
+  if (!packages || !packages.length) return true;
+
+  const bare = packages.filter((p) => isUndeclaredCkanLicence(p && p.license_id));
+  if (!bare.length) return false; // nothing to explain — the facet already covers these
+
+  const withResourceLicence = bare.filter((p) =>
+    (p.resources || []).some((r) => r && typeof r.license === 'string' && r.license.trim() !== ''),
+  ).length;
+  return withResourceLicence / bare.length >= 0.2;
+}
+
 async function fetchCkan(portal, opts, result) {
   const base = portal.baseUrl.replace(/\/+$/, '');
   const url =
@@ -164,11 +189,45 @@ async function fetchCkan(portal, opts, result) {
         declared[key] = (declared[key] || 0) + c;
       }
     }
-    const licences = topN(bucketsToArray(declared), 10);
-    if (undeclared > 0) licences.push({ cls: 'UNDECLARED', count: undeclared });
-    result.licences = topN(licences, 12);
-    if (count && count > 0) {
-      result.undeclaredPct = undeclared / count;
+    // CKAN's license_id facet only counts packages that HAVE the field. A
+    // package with no `license_id` at all is absent from the facet entirely,
+    // not reported as "notspecified" — so the facet total can fall short of the
+    // catalogue count. Measured on data.ok.gov 19 Sep 2026: the facet returned
+    // 64 cc-by against a catalogue of 395, and the page published "0% of
+    // datasets here declare no licence" when the true figure is 84%.
+    //
+    // But a shortfall has two possible meanings, and they are opposites. On
+    // data.ok.gov the missing packages declare nothing anywhere (sampled: 25 of
+    // 25 have no licence on any resource either). On DCAT-AP harvesters like
+    // ckan.govdata.de the package field is empty by design and the licence sits
+    // on each distribution — 165,363 of its 166,549 packages are missing from
+    // the facet, yet their resources carry DL-DE-BY 2.0. Attributing that
+    // shortfall to "undeclared" would have published "99% of GovData declares
+    // no licence" about a catalogue that is almost entirely licensed.
+    //
+    // So the shortfall is only counted as undeclared once a sample says the
+    // packages really are bare. If the licence lives on the distributions, no
+    // percentage is claimed at all and the page falls back to saying a
+    // machine-readable summary isn't available — which is the truth.
+    const facetTotal = licItems.reduce((sum, item) => sum + (typeof item.count === 'number' ? item.count : 0), 0);
+    const shortfall = count && count > facetTotal ? count - facetTotal : 0;
+    if (shortfall > 0) {
+      const onDistributions = await ckanLicencesLiveOnDistributions(base, result);
+      if (onDistributions) {
+        result.licenceAtDistribution = true;
+        result.notes.push('ckan: licences are declared per distribution, not per package — licence mix not summarised');
+      } else {
+        undeclared += shortfall;
+      }
+    }
+
+    if (!result.licenceAtDistribution) {
+      const licences = topN(bucketsToArray(declared), 10);
+      if (undeclared > 0) licences.push({ cls: 'UNDECLARED', count: undeclared });
+      result.licences = topN(licences, 12);
+      if (count && count > 0) {
+        result.undeclaredPct = undeclared / count;
+      }
     }
   }
 
@@ -415,6 +474,12 @@ async function fetchOpendatasoft(portal, opts, result) {
           declared[item.name] = (declared[item.name] || 0) + c;
         }
       }
+      // Same shortfall as CKAN above: a dataset with no `license` value is
+      // missing from the facet rather than counted in it, so anything the facet
+      // does not account for declares nothing.
+      const facetTotal = licFacet.facets.reduce((sum, item) => sum + (typeof item.count === 'number' ? item.count : 0), 0);
+      if (result.count && result.count > facetTotal) undeclared += result.count - facetTotal;
+
       const licences = topN(bucketsToArray(declared), 10);
       if (undeclared > 0) {
         licences.push({ cls: 'UNDECLARED', count: undeclared });
