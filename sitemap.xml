@@ -271,6 +271,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.vizzie.org/portals/spatial-gis-information-qld-gov-au/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.vizzie.org/portals/portal-spatial-nsw-gov-au/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.vizzie.org/portals/catalog-data-gov/</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>

@@ -68,5 +68,19 @@
   "source": "the connector's own catalogTotal()",
   "label": "Australian Bureau of Statistics — Data by region & SEIFA",
   "connectorType": "abs"
+ },
+ "https://portal.spatial.nsw.gov.au/server/rest/services": {
+  "count": 211,
+  "measured": "2026-09-19",
+  "source": "the connector's own catalogTotal()",
+  "label": "NSW Spatial Services",
+  "connectorType": "esri-server"
+ },
+ "https://spatial-gis.information.qld.gov.au/arcgis/rest/services": {
+  "count": 1835,
+  "measured": "2026-09-19",
+  "source": "the connector's own catalogTotal()",
+  "label": "QSpatial — Queensland Government spatial services",
+  "connectorType": "esri-server"
  }
 }

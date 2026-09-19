@@ -961,6 +961,19 @@
    "auth": "Varies",
    "tos_note": "Check the capabilities document for licence/fees constraints."
   },
+  "esri-server": {
+   "platform": "ArcGIS Server REST (no Hub site)",
+   "licence_source": "None. Services carry `copyrightText`, which is an ownership notice, not a grant — see each portal's notes.",
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 4,
+    "burst": 6,
+    "verified": false,
+    "note": "No published limit. The cost here is the one-off catalogue crawl (a request per folder and per service), not steady traffic; it is cached in the database so a portal is crawled on a release cycle, not per search."
+   },
+   "auth": "None for public folders; an ArcGIS Server lists its private folders too and answers 'Token Required' for them.",
+   "tos_note": "Publisher's own terms; Esri terms cover the software, not the data."
+  },
   "abs": {
    "platform": "ABS Data API (SDMX 2.1)",
    "licence_source": "Blanket CC BY 4.0 (ABS website copyright statement)",
@@ -1972,6 +1985,58 @@
    },
    "auth": "None",
    "notes": "Added 19 Sep 2026. The host is data.api.abs.gov.au; api.data.abs.gov.au — the address in the ABS's own documentation — does not resolve. The catalogue unit is a (measure × region type) pair rather than a dataflow, because a dataflow is up to 985 measures across 43 geography levels and only the pair yields one value per area. ~4,700 datasets from three flows (Data by region, SEIFA 2021 by SA2 and by LGA). SA2, LGA and STE join to seeded AU boundaries by area code; SA3/SA4/GCCSA chart but do not yet draw.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "spatial-gis.information.qld.gov.au",
+   "label": "QSpatial — Queensland Government spatial services",
+   "country": "AU",
+   "connector": "esri-server",
+   "base_url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services",
+   "platform": "ArcGIS Server REST (no Hub site)",
+   "tos_url": "https://www.qld.gov.au/legal/copyright",
+   "tos_note": "Queensland Government's whole-of-government copyright page. It licenses material 'on or through this website' CC BY 4.0 — a statement about www.qld.gov.au, not about this services host.",
+   "licence_source": "None declared on the services. 156 of 158 services carry a copyrightText, every one an ownership notice (© State of Queensland (Department of Resources) 2024) with no grant.",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 1835
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 4,
+    "burst": 6,
+    "verified": false,
+    "note": "No published limit. The cost is the one-off catalogue crawl (a request per folder and per service), not steady traffic; the crawl is cached in the database."
+   },
+   "auth": "None for public folders. 34 of 57 folders are internal applications and answer 'Token Required'; the connector skips them.",
+   "notes": "Added 19 Sep 2026: the largest Esri publisher in Australia, 1,835 public queryable layers across 23 open folders, and invisible to the arcgis-hub connector because QSpatial runs no Hub site and publishes no DCAT feed. Left UNDECLARED deliberately rather than defaulted to CC BY 4.0. The evidence for a grant is real but indirect — qld.gov.au licenses its own site CC BY 4.0, and many of these same layers are republished with an explicit CC-BY-4.0 license_id on data.qld.gov.au (already connected, 188,161 datasets) — and neither statement is made about this host. A user who needs a clear licence should take the data.qld.gov.au copy; this connection is for the layers that only exist here.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "portal.spatial.nsw.gov.au",
+   "label": "NSW Spatial Services — spatial data services",
+   "country": "AU",
+   "connector": "esri-server",
+   "base_url": "https://portal.spatial.nsw.gov.au/server/rest/services",
+   "platform": "ArcGIS Server REST (no Hub site)",
+   "tos_url": "https://www.spatial.nsw.gov.au/copyright",
+   "tos_note": "Spatial Services copyright page; no Creative Commons grant appears on it (read 19 Sep 2026).",
+   "licence_source": "None declared on the services.",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 211
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 4,
+    "burst": 6,
+    "verified": false,
+    "note": "No published limit. The cost is the one-off catalogue crawl (a request per folder and per service), not steady traffic; the crawl is cached in the database."
+   },
+   "auth": "None for public folders; four of six folders answer 'Token Required'.",
+   "notes": "Added 19 Sep 2026. 211 public queryable layers — the NSW themes (administrative boundaries, cadastre history, elevation, transport, emergency service facilities) rather than the whole SIX estate, most of which sits in the token-protected folders. Smaller than QSpatial and, like it, declares no licence: the Spatial Services copyright page asserts Crown copyright without granting reuse. data.nsw.gov.au (connected) carries licensed copies of some of the same themes.",
    "dataset_overrides": []
   },
   {

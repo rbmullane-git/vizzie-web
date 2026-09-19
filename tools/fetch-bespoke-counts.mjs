@@ -32,7 +32,7 @@ const CONNECTOR = process.env.VIZZIE_CONNECTOR || '/Users/rich/vizzie-connector'
 // The connector types fetch-portal-stats.mjs has no handler for.
 const BESPOKE = [
   'census', 'eurostat', 'world-bank', 'adb', 'oecd', 'unicef',
-  'who-gho', 'dhs', 'un-sdg', 'owid', 'abs',
+  'who-gho', 'dhs', 'un-sdg', 'owid', 'abs', 'esri-server',
 ];
 
 /**

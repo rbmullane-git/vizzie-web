@@ -185,6 +185,24 @@
   "apiAccessible": true
  },
  {
+  "connectorType": "esri-server",
+  "baseUrl": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services",
+  "label": "QSpatial — Queensland Government spatial services",
+  "countryCode": "AU",
+  "region": "Queensland",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "esri-server",
+  "baseUrl": "https://portal.spatial.nsw.gov.au/server/rest/services",
+  "label": "NSW Spatial Services",
+  "countryCode": "AU",
+  "region": "New South Wales",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
   "connectorType": "arcgis-hub",
   "baseUrl": "https://city-plan-stakeholder-engagement-AdelaideCity.hub.arcgis.com",
   "label": "City of Adelaide — City Plan data hub",

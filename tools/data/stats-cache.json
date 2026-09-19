@@ -13830,5 +13830,31 @@
   "notes": [
    "count not fetched for type abs"
   ]
+ },
+ "spatial-gis-information-qld-gov-au": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T12:05:37.482Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type esri-server"
+  ]
+ },
+ "portal-spatial-nsw-gov-au": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T12:05:37.482Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type esri-server"
+  ]
  }
 }
