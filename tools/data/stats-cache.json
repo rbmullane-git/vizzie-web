@@ -13817,5 +13817,18 @@
   "fetchedAt": "2026-09-19T11:38:53.278Z",
   "ok": true,
   "notes": []
+ },
+ "data-api-abs-gov-au": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-19T11:50:34.087Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type abs"
+  ]
  }
 }

@@ -15,6 +15,14 @@
   "nativeApi": true
  },
  {
+  "connectorType": "abs",
+  "baseUrl": "https://data.api.abs.gov.au",
+  "label": "Australian Bureau of Statistics — Data by region & SEIFA",
+  "countryCode": "AU",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
   "connectorType": "ckan",
   "baseUrl": "https://www.data.qld.gov.au",
   "label": "Queensland Government (data.qld.gov.au)",

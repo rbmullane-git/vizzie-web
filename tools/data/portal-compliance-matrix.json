@@ -961,6 +961,18 @@
    "auth": "Varies",
    "tos_note": "Check the capabilities document for licence/fees constraints."
   },
+  "abs": {
+   "platform": "ABS Data API (SDMX 2.1)",
+   "licence_source": "Blanket CC BY 4.0 (ABS website copyright statement)",
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "verified": false,
+    "note": "No published limit. The ABS asks clients not to run parallel mass extractions; 2 req/s is a conservative self-imposed default."
+   },
+   "auth": "None",
+   "tos_note": "Reuse permitted for commercial and non-commercial purposes with attribution (CC BY 4.0)."
+  },
   "eurostat": {
    "platform": "Eurostat dissemination API",
    "licence_source": "Blanket CC BY 4.0 (Eurostat reuse policy, Decision 2011/833/EU + CC BY 4.0 adoption 2020)",
@@ -1937,6 +1949,29 @@
    },
    "auth": "None required",
    "notes": "NSW's environmental data catalogue and the largest AU addition outside the Esri hubs: 6,874 datasets, 666 of them carrying a format the ingest pipeline reads. 4,525 declare cc-by. The 2,236 UNDECLARED are dominated by license_id '3rd' (2,192) — the portal's own marker for third-party rights, which is a statement that SEED cannot grant the licence, so it is correctly left unmapped rather than aliased. Ingest is lumpier than the Esri hubs: 9 of 15 sampled datasets fetched, with the failures being flood-study ZIPs hosted on flooddata.ses.nsw.gov.au (HTTP 403 to every client, browser UA included — not a UA block) and two archives over the 200MB body cap.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.api.abs.gov.au",
+   "label": "Australian Bureau of Statistics — Data API",
+   "country": "AU",
+   "connector": "abs",
+   "base_url": "https://data.api.abs.gov.au",
+   "platform": "ABS Data API (SDMX 2.1)",
+   "tos_url": "https://www.abs.gov.au/website-privacy-copyright-and-disclaimer",
+   "tos_note": "\"All material presented on this website is provided under a Creative Commons Attribution 4.0 International licence\" — read 19 Sep 2026. Narrow exceptions are flagged on the affected material (the Commonwealth Coat of Arms, some third-party content).",
+   "licence_source": "Portal-wide reuse policy (CC BY 4.0); SDMX carries no per-dataset licence field",
+   "default_licence": "CC-BY-4.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "verified": false,
+    "note": "No published limit. The constraint that bites is query size, not rate: one measure at SA2 across all years is ~12,000 observations and streams in about a second, while the unfiltered dataflow is 5.4 million. The connector never issues an unfiltered query."
+   },
+   "auth": "None",
+   "notes": "Added 19 Sep 2026. The host is data.api.abs.gov.au; api.data.abs.gov.au — the address in the ABS's own documentation — does not resolve. The catalogue unit is a (measure × region type) pair rather than a dataflow, because a dataflow is up to 985 measures across 43 geography levels and only the pair yields one value per area. ~4,700 datasets from three flows (Data by region, SEIFA 2021 by SA2 and by LGA). SA2, LGA and STE join to seeded AU boundaries by area code; SA3/SA4/GCCSA chart but do not yet draw.",
    "dataset_overrides": []
   },
   {

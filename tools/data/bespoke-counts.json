@@ -61,5 +61,12 @@
   "source": "the connector's own catalogTotal()",
   "label": "Eurostat — EU statistics by NUTS region (all member states)",
   "connectorType": "eurostat"
+ },
+ "https://data.api.abs.gov.au": {
+  "count": 4297,
+  "measured": "2026-09-19",
+  "source": "the connector's own catalogTotal()",
+  "label": "Australian Bureau of Statistics — Data by region & SEIFA",
+  "connectorType": "abs"
  }
 }
