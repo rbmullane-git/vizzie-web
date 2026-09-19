@@ -88,6 +88,9 @@ const CLASS_LABEL = {
   'CC-BY-ND': 'CC BY-ND', 'LO-2.0': 'Licence Ouverte 2.0', 'LO-1.0': 'Licence Ouverte 1.0',
   'PDL-1.0-JP': 'PDL 1.0 (Japan)', 'CC-BY-IGO': 'CC BY 3.0 IGO', 'PUBLIC-DOMAIN': 'Public domain',
   'SEMCOG-CLA': 'SEMCOG Copyright License Agreement',
+  'SK-SUUDL-2.0': 'Saskatchewan SUUDL 2.0', 'STATCAN-OPEN': 'Statistics Canada Open Licence',
+  'KITCHENER-ODL': 'Kitchener Open Data Licence', 'MISSISSAUGA-TOU': 'Mississauga Open Data Terms',
+  'LDA-UY-0.1': 'Datos Abiertos Uruguay', 'CC-BY-SA-3.0-ES': 'CC BY-SA 3.0 (ES)',
   'CC-BY-3.0-NZ': 'CC BY 3.0 (NZ)', 'CC-BY-3.0': 'CC BY 3.0', 'CC-BY-2.5': 'CC BY 2.5',
   'CC-BY-2.5-AU': 'CC BY 2.5 (AU)', 'CC-BY-2.1-JP': 'CC BY 2.1 (JP)',
   'DL-DE-0-2.0': 'DL-DE Zero 2.0', 'OGL-CA-PROVINCIAL': 'OGL (Canadian province)',
@@ -112,6 +115,16 @@ function canonLicence(raw) {
 
   const cls = ALIAS_INDEX.get(s);
   if (cls) return CLASS_LABEL[cls] || cls;
+
+  // CKAN's register has generic "Other (…)" ids — other-open, other-at — that
+  // name no licence at all. The matrix maps the ones whose bucket is itself a
+  // fact (other-pd, other-nc, other-closed) and deliberately leaves the rest
+  // unmapped: `other-open` was aliased to ODbL-1.0 until 20 Sep 2026, which put
+  // a share-alike obligation on 1,241 datasets out of nothing. Falling through
+  // to the heuristics below would relabel them "Other / bespoke" and list them
+  // under *declared* licences, which is the same overclaim in softer words —
+  // and would put this page at odds with what the product resolves.
+  if (/^other[-_]/.test(s)) return 'UNDECLARED';
 
   unmapped.set(raw, (unmapped.get(raw) || 0) + 1);
 
