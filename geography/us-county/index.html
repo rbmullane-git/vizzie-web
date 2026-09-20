@@ -44,7 +44,7 @@
         position: fixed;
         inset: 0;
         z-index: -1;
-        background: url("/bg-basemap-dark.webp") center / cover no-repeat;
+        background: var(--bg-map, url("/bg-basemap-dark.webp")) center / cover no-repeat;
       }
 
       .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
@@ -173,6 +173,21 @@
         header.site .brand .beta { display: none; }
       }
     </style>
+    <script>
+      // One city per visit: the backdrop is a different Vizzie basemap render
+      // each session — sticky across pages so navigating doesn't reshuffle
+      // the map underfoot. No-JS visitors get Melbourne via the CSS fallback.
+      (function () {
+        var cities = ['melbourne', 'newyork', 'london', 'paris', 'copenhagen', 'tokyo', 'delhi'];
+        var pick;
+        try { pick = sessionStorage.getItem('vizzie-bg'); } catch (e) {}
+        if (cities.indexOf(pick) === -1) {
+          pick = cities[Math.floor(Math.random() * cities.length)];
+          try { sessionStorage.setItem('vizzie-bg', pick); } catch (e) {}
+        }
+        document.documentElement.style.setProperty('--bg-map', 'url(/bg-basemap-' + pick + '.webp)');
+      })();
+    </script>
 <style>
   .geowrap { margin: 28px 0 10px; border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: var(--panel); }
   .geomap { display: block; width: 100%; height: auto; }
