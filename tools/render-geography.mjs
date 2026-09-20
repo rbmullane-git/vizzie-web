@@ -55,7 +55,7 @@ export function boundariesSvg(geojson, { width = 760, height = 520, pad = 8 } = 
     .join('');
   return `<svg class="geomap" viewBox="0 0 ${width} ${height}" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="${esc(
     `${geojson.features.length} boundaries drawn from the data Vizzie holds`
-  )}"><path d="${paths}" fill="rgba(34,197,94,0.10)" stroke="#22c55e" stroke-width="0.7" stroke-linejoin="round" /></svg>`;
+  )}"><path d="${paths}" fill="rgba(211, 43, 150,0.10)" stroke="#d32b96" stroke-width="0.7" stroke-linejoin="round" /></svg>`;
 }
 
 export function renderGeographyPage(facts, editorial, ctx = {}) {
@@ -133,7 +133,7 @@ ${styleBlock()}
   ol.rollup li { padding: 8px 0 8px 24px; position: relative; color: var(--muted); }
   ol.rollup li::before { content: "↑"; position: absolute; left: 4px; color: var(--faint); }
   ol.rollup li.is-this { color: var(--text); font-weight: 700; }
-  ol.rollup li.is-this::before { content: "→"; color: var(--green); }
+  ol.rollup li.is-this::before { content: "→"; color: var(--brand); }
   main p { max-width: 720px; margin-bottom: 14px; }
   main p + p { margin-top: 0; }
   main h2 + p, main h2 + table { margin-top: 14px; }

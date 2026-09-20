@@ -195,13 +195,13 @@ function render(v) {
     <style>
       /* Landing-page-only additions. The design system comes from styleBlock so
          these pages look like the product, not like an ad. */
-      .accent { color: var(--green); }
+      .accent { color: var(--brand); }
       .lp-hero { padding: 72px 0 56px; border-bottom: 1px solid var(--line); }
       .lp-hero h1 { max-width: 900px; }
       .lp-hero .lead { margin-top: 20px; }
       .lp-hero .cta-row { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
       .lp-note { margin-top: 18px; font-size: 14px; color: var(--faint); }
-      .lp-note b { color: var(--green); }
+      .lp-note b { color: var(--brand); }
       .lp-shot { width: 100%; height: auto; margin-top: 44px; border-radius: 14px;
                  border: 1px solid var(--line); box-shadow: 0 18px 60px rgba(0,0,0,.45); }
       .lp-proof { padding: 72px 0; }
@@ -221,9 +221,9 @@ function render(v) {
       <div class="wrap">
         <span class="brand" style="display:flex;align-items:center;gap:8px">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <polygon points="12,2 22,7 12,12 2,7" fill="#22C55E" />
-            <polyline points="2,12 12,17 22,12" stroke="#22C55E" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".65" />
-            <polyline points="2,17 12,22 22,17" stroke="#22C55E" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".4" />
+            <polygon points="12,2 22,7 12,12 2,7" fill="#D32B96" />
+            <polyline points="2,12 12,17 22,12" stroke="#D32B96" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".65" />
+            <polyline points="2,17 12,22 22,17" stroke="#D32B96" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".4" />
           </svg>
           <span class="word">Vizzie</span><span class="beta">beta</span>
         </span>

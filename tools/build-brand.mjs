@@ -70,10 +70,10 @@ const LOGOS = [
 ];
 
 const DONTS = [
-  'Recolour it. The green is fixed — it is the same #22C55E on light and dark.',
+  'Recolour it. The magenta is fixed — it is the same #D32B96 on light and dark.',
   'Stretch, squash or rotate it, or rebuild the wordmark in a different typeface.',
   'Add shadows, outlines, gradients or a container box.',
-  'Place it on a busy photo or a mid-tone background where the green loses contrast.',
+  'Place it on a busy photo or a mid-tone background where the magenta loses contrast.',
   'Separate the mark from the wordmark to make a new lockup — the two files above are the only approved ones.',
 ];
 
@@ -120,8 +120,8 @@ const extraStyle = `<style>
       .dl { display: inline-block; font-size: 13px; font-weight: 600; text-decoration: none;
             padding: 7px 12px; border-radius: 8px; border: 1px solid var(--line);
             background: var(--card); color: var(--text); }
-      .dl:hover { border-color: var(--green); }
-      .dl.primary { background: var(--green-soft); border-color: rgba(34,197,94,.45); color: var(--green); }
+      .dl:hover { border-color: var(--brand); }
+      .dl.primary { background: var(--brand-soft); border-color: rgba(211, 43, 150,.45); color: var(--brand); }
       .colours { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 20px; }
       .colour { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; width: 200px; }
       /* the ink chip is the page background — outline it or it reads as a hole */
@@ -131,7 +131,7 @@ const extraStyle = `<style>
       .colour .lbl { font-size: 13px; color: var(--muted); margin-top: 2px; }
       .rules { margin-top: 18px; padding-left: 20px; color: var(--muted); max-width: 70ch; }
       .rules li { margin-bottom: 8px; }
-      .boiler { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--green);
+      .boiler { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--brand);
                 border-radius: 12px; padding: 20px 22px; margin-top: 18px; max-width: 74ch; }
       .boiler p { color: var(--text); }
       .snippet { background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
@@ -186,7 +186,7 @@ const html = `<!doctype html>
           Everything you need to write about Vizzie. These files are free to use in
           any article, review, talk or post about Vizzie — no permission needed. If
           you want something that isn't here, email
-          <a href="mailto:hello@vizzie.org" style="color: var(--green)">hello@vizzie.org</a>
+          <a href="mailto:hello@vizzie.org" style="color: var(--brand)">hello@vizzie.org</a>
           and we'll make it.
         </p>
 
@@ -203,8 +203,8 @@ const html = `<!doctype html>
           <p>One brand colour, and it does not change between light and dark.</p>
           <div class="colours">
             <div class="colour">
-              <div class="chip" style="background: #22c55e"></div>
-              <div class="meta"><div class="hex">#22C55E</div><div class="lbl">Vizzie green — logo, links, buttons</div></div>
+              <div class="chip" style="background: #d32b96"></div>
+              <div class="meta"><div class="hex">#D32B96</div><div class="lbl">Vizzie magenta — logo, links, buttons</div></div>
             </div>
             <div class="colour">
               <div class="chip" style="background: #0e1116"></div>
@@ -295,7 +295,7 @@ const html = `<!doctype html>
               ${millions(FACTS.datasetTotal)} million datasets, and turns any of them into maps,
               charts and data stories in the browser — with nothing to download and no
               GIS specialist required. Vizzie is in beta at
-              <a href="https://www.vizzie.org" style="color: var(--green)">vizzie.org</a>.
+              <a href="https://www.vizzie.org" style="color: var(--brand)">vizzie.org</a>.
             </p>
           </div>
           <p style="margin-top: 14px">
@@ -307,7 +307,7 @@ const html = `<!doctype html>
         <section>
           <h2>Press enquiries</h2>
           <p>
-            <a href="mailto:hello@vizzie.org" style="color: var(--green)">hello@vizzie.org</a>
+            <a href="mailto:hello@vizzie.org" style="color: var(--brand)">hello@vizzie.org</a>
             — happy to give a walkthrough, build a map for a story, or check figures before you publish.
           </p>
         </section>
