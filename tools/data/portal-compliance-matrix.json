@@ -258,6 +258,19 @@
    "attribution_template": "{title} — {publisher}, licensed under Licence Ouverte / Open Licence v1.0 (Etalab). Retrieved {retrieved} via Vizzie.",
    "note": "The 2011 first edition of France's national open licence, superseded by v2.0 in 2017 but still declared by some OpenDataSoft portals as 'Open License v1.0'. Same substance as v2.0 for our purposes — commercial reuse permitted, attribution required, no share-alike — but kept as its own class so the attribution names the version the publisher actually declared. Added 15 Sep 2026."
   },
+  "NLOD-2.0": {
+   "name": "Norwegian Licence for Open Government Data (NLOD) 2.0",
+   "spdx": "NLOD-2.0",
+   "url": "https://data.norge.no/nlod/en/2.0",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": true,
+   "ingest": "allow",
+   "attribution_template": "{title} — contains data under the Norwegian Licence for Open Government Data (NLOD) 2.0 distributed by {publisher}. Retrieved {retrieved} via Vizzie. Reformatted and geocoded.",
+   "note": "Norway's national open licence, read in full 22 Sep 2026 at data.norge.no/nlod/en/2.0. Section 2 grants use \"for any purpose and in all contexts\", so commercial reuse is permitted and there is no share-alike. Section 5 requires attribution in the licensor's specified form, a link to both licence and source where practical, AND a clear statement that changes have been made — which Vizzie's pipeline always does, hence indicate_changes. The template follows the wording Section 5 prescribes when the licensor specifies none. Its own class rather than an alias of CC-BY-4.0: Section 9 lists CC BY 4.0 as compatible-by-contract, which is a statement about combining datasets, not about the attribution line, and that line has to name the licence actually granted."
+  },
   "PDL-1.0-JP": {
    "name": "Public Data License 1.0 (Japan, 公共データ利用規約第1.0版)",
    "spdx": null,
@@ -335,6 +348,19 @@
    "ingest": "allow",
    "attribution_template": "{title} © {publisher}, licensed CC BY 3.0. Retrieved {retrieved} via Vizzie.",
    "note": "Unported CC BY 3.0, as declared on data.qld.gov.au. Recorded as declared: Queensland may well mean the AU port, but the licence id carries no jurisdiction and the attribution line should not invent one."
+  },
+  "CC-BY-2.5-IN": {
+   "name": "Creative Commons Attribution 2.5 India",
+   "spdx": "CC-BY-2.5-IN",
+   "url": "https://creativecommons.org/licenses/by/2.5/in/",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": true,
+   "ingest": "allow",
+   "attribution_template": "{title} © {publisher}, licensed CC BY 2.5 IN. Retrieved {retrieved} via Vizzie.",
+   "note": "Added 20 Sep 2026 for the reference geometry, not a portal: geoBoundaries' India ADM1 comes from DataMeet under CC BY 2.5 India, even though HDX labels the wider bundle ODbL. Same permissions as the generic 2.5, its own class because the instrument is the Indian port."
   },
   "CC-BY-2.5-AU": {
    "name": "Creative Commons Attribution 2.5 Australia",
@@ -495,6 +521,11 @@
   "http://dcat-ap.de/def/licenses/cc-by/4.0": "CC-BY-4.0",
   "https://creativecommons.org/licenses/by/4.0/deed.cs": "CC-BY-4.0",
   "cc-by-3.0-au": "CC-BY-3.0-AU",
+  "ogl-3.0": "OGL-UK-3.0",
+  "us-census-public-domain": "US-PD",
+  "statcan-open-licence": "STATCAN-OPEN",
+  "cc-by-2.5-in": "CC-BY-2.5-IN",
+  "odbl-1.0": "ODbL-1.0",
   "https://creativecommons.org/licenses/by/3.0/au": "CC-BY-3.0-AU",
   "cc-by-au": "CC-BY-3.0-AU",
   "cc-by-sa-au": "CC-BY-3.0-AU",
@@ -7530,7 +7561,7 @@
   },
   {
    "id": "ec.europa.eu/eurostat",
-   "label": "Eurostat — EU statistics by NUTS region (all member states)",
+   "label": "Eurostat — statistics by NUTS region (EU, EFTA and candidates)",
    "country": "EU",
    "connector": "eurostat",
    "base_url": "https://ec.europa.eu/eurostat/api/dissemination",
@@ -7668,7 +7699,7 @@
   },
   {
    "id": "data.europa.eu",
-   "label": "data.europa.eu — European Data Portal (all EU member states)",
+   "label": "data.europa.eu — European Data Portal (EU and beyond)",
    "country": "EU",
    "connector": "data-europa-eu",
    "base_url": "https://data.europa.eu",
@@ -8511,6 +8542,29 @@
    },
    "auth": "None required",
    "notes": "CC BY 4.0 verified 19 Sep 2026 on SSB's API page. GEOGRAPHY IS THE WEAKEST OF THE THREE HERE and the figure is easy to overstate: SSB's Region dimension carries 952 codes, 356 of which appear in GISCO LAU 2021 — but 114 of those 356 are codes SSB itself labels as historical (Halden 2020-2023), leaving only ~242 CURRENT municipalities that join. The gap is Norway's 2024 county split, which recoded the 30xx range (Halden moved 3001 → 3101, and 3101 is absent from the 2021 vintage). A newer boundary vintage than GISCO 2021 is needed before Norwegian data joins cleanly; Sweden (290/290) and Finland (287/288) have no such problem.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "statistikkbanken.oslo.kommune.no/statbank/api/v1/no/db1",
+   "label": "Oslo kommune — Statistikkbanken",
+   "country": "NO",
+   "connector": "pxweb",
+   "base_url": "https://statistikkbanken.oslo.kommune.no/statbank/api/v1/no/db1",
+   "platform": "PXWeb statistics database",
+   "tos_url": "https://data.norge.no/datasets/fc22c19b-5347-3b20-aa1b-ae534f178f57",
+   "tos_note": "Oslo kommune's own registration of this database in Felles datakatalog, which is where the licence is declared — the statbank itself publishes no terms page.",
+   "licence_source": "Portal default only — PXWeb exposes no per-table licence field",
+   "default_licence": "NLOD-2.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 5,
+    "verified": true,
+    "note": "Published by the instance itself at ?config: maxCalls=50 per timeWindow=10s (= 5.0/s), maxCells=550000, CORS true. Read live 22 Sep 2026."
+   },
+   "auth": "None required",
+   "notes": "NLOD 2.0, verified 22 Sep 2026 in Oslo kommune's own Felles datakatalog entry. This is the sub-municipal tier that SSB does not publish: bydel, delbydel, grunnkretsområde and grunnkrets, across 14 subject folders. Municipal systems the city runs itself supply series SSB never receives. The Felles datakatalog entry carries dct:license NLOD_2_0 and the access label Åpne data; the statbank itself publishes no terms page. NORWEGIAN ONLY: the /en/ API route 400s though the web UI offers English, so titles reach the user through the translation path rather than natively. GEOGRAPHY IS NOT MAP-READY, for a different reason than the national instances: bydel codes are 1-15 (table OK-BEF005), an even smaller integer space than the municipality codes geographyLevels.ts already refuses, and Oslo's bydel boundaries are not a seeded reference geography — so this lands chart-ready. Its geography dimension also mixes the “Oslo i alt” total in among the 15 bydeler, the aggregate-row shape the clean-partition detector exists for.",
    "dataset_overrides": []
   }
  ]

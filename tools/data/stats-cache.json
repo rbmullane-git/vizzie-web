@@ -14154,5 +14154,18 @@
   "fetchedAt": "2026-09-19T21:58:49.897Z",
   "ok": true,
   "notes": []
+ },
+ "statistikkbanken-oslo-kommune-no": {
+  "count": null,
+  "countSource": "",
+  "undeclaredPct": null,
+  "licences": [],
+  "publishers": [],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-09-21T23:37:36.381Z",
+  "ok": false,
+  "notes": [
+   "count not fetched for type pxweb"
+  ]
  }
 }

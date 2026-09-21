@@ -1742,6 +1742,14 @@
   "apiAccessible": true
  },
  {
+  "connectorType": "pxweb",
+  "baseUrl": "https://statistikkbanken.oslo.kommune.no/statbank/api/v1/no/db1",
+  "label": "Oslo kommune — Statistikkbanken",
+  "countryCode": "NO",
+  "city": "Oslo",
+  "apiAccessible": true
+ },
+ {
   "connectorType": "data-gov-sg",
   "baseUrl": "https://data.gov.sg",
   "label": "data.gov.sg — Singapore (national)",
@@ -2407,14 +2415,14 @@
  {
   "connectorType": "data-europa-eu",
   "baseUrl": "https://data.europa.eu",
-  "label": "data.europa.eu — European Data Portal (all EU member states)",
+  "label": "data.europa.eu — European Data Portal (EU and beyond)",
   "countryCode": "EU",
   "apiAccessible": true
  },
  {
   "connectorType": "eurostat",
   "baseUrl": "https://ec.europa.eu/eurostat/api/dissemination",
-  "label": "Eurostat — EU statistics by NUTS region (all member states)",
+  "label": "Eurostat — statistics by NUTS region (EU, EFTA and candidates)",
   "countryCode": "EU",
   "apiAccessible": true,
   "nativeApi": true

@@ -87,6 +87,7 @@ const CLASS_LABEL = {
   'ODbL-1.0': 'ODbL 1.0', 'CC-BY-SA-4.0': 'CC BY-SA 4.0', 'CC-BY-NC': 'CC BY-NC',
   'CC-BY-ND': 'CC BY-ND', 'LO-2.0': 'Licence Ouverte 2.0', 'LO-1.0': 'Licence Ouverte 1.0',
   'PDL-1.0-JP': 'PDL 1.0 (Japan)', 'CC-BY-IGO': 'CC BY 3.0 IGO', 'PUBLIC-DOMAIN': 'Public domain',
+  'NLOD-2.0': 'NLOD 2.0 (Norway)',
   'SEMCOG-CLA': 'SEMCOG Copyright License Agreement',
   'SK-SUUDL-2.0': 'Saskatchewan SUUDL 2.0', 'STATCAN-OPEN': 'Statistics Canada Open Licence',
   'KITCHENER-ODL': 'Kitchener Open Data Licence', 'MISSISSAUGA-TOU': 'Mississauga Open Data Terms',
