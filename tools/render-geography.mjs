@@ -172,9 +172,9 @@ ${headerBlock()}
   ${editorial.vintages}
 
   <h2 style="margin-top:44px">Map a spreadsheet of these</h2>
-  <p>Paste a column of ${esc(editorial.abbr)} ${keyNoun} into Vizzie with whatever you measured beside it.
+  <p>Drop a CSV with a column of ${esc(editorial.abbr)} ${keyNoun} into Vizzie, with whatever you measured beside it.
      Vizzie recognises the ${keyNoun === 'names' ? 'names' : 'code format'}, joins ${keyNoun === 'names' ? 'them' : 'it'} to the boundaries above and draws the map — no
-     shapefile, no download, no GIS install.</p>
+     shapefile, no download, no GIS install. Your file stays private to your account.</p>
   <p><a class="btn" href="https://app.vizzie.org/">Open Vizzie</a></p>
 
   <p class="prov">
