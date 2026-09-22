@@ -90,5 +90,5 @@ vintage 2020.
 
 `EJ indexes above 80th percentile` (EPA's `EXCEED_COUNT_80`) counts how many of the 13
 EJ indexes a tract sits in the national top 20% for — 0 to 13 in one number.
-California's distribution is sharply bimodal: 3,034 tracts at zero, 1,042 at eleven.
+California's distribution is sharply bimodal: 3,012 tracts at zero, 1,042 at eleven.
 That concentration is the pattern EJScreen existed to show.

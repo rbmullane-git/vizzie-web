@@ -515,10 +515,16 @@ async function main() {
         .map((d) => d.name)
         .sort()
     : [];
+  // Standalone topic pages, each written by its own build script and found the
+  // same way — present on disk means present in the sitemap.
+  const topicPages = ['ejscreen'].filter((slug) =>
+    existsSync(join(WEB, slug, 'index.html')),
+  );
   const urls = [
     { loc: `${SITE}/`, pr: '1.0' },
     { loc: `${SITE}/portals/`, pr: '0.8' },
     { loc: `${SITE}/brand/`, pr: '0.3' },
+    ...topicPages.map((slug) => ({ loc: `${SITE}/${slug}/`, pr: '0.7' })),
     ...geographySlugs.map((slug) => ({ loc: `${SITE}/geography/${slug}/`, pr: '0.7' })),
     ...portals.map((p) => ({ loc: `${SITE}/portals/${p.slug}/`, pr: '0.6' })),
   ];
