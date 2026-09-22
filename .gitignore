@@ -1,0 +1,3 @@
+# Source archives the data scripts download and reuse. Large, reproducible from
+# the URLs in the scripts, and never served.
+tools/.cache/
