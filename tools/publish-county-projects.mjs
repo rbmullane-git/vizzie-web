@@ -99,7 +99,9 @@ for (const slug of slugs) {
       project_client_id: clientId,
       title: payload.dashboard.name,
       payload,
-      is_hosted: true,
+      // is_hosted is GENERATED ALWAYS AS (payload IS NOT NULL) — supplying it
+      // is rejected outright. A null column_default does not mean a column is
+      // writable; is_generated is the field that says so.
     }),
   });
   tokens[slug] = row.public_token;
