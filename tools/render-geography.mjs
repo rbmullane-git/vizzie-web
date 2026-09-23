@@ -126,6 +126,21 @@ export function renderGeographyPage(facts, editorial, ctx = {}) {
         .join('')}</table>`
     : '';
 
+  // Area pages nest below this one (/geography/us-county/travis-county-tx/).
+  // Without a link from here they are orphans: discoverable through the sitemap
+  // but receiving no internal link equity, which for a programmatic estate is
+  // most of the point of having a hub page at all. Discovered from disk by
+  // build-geography.mjs, so this list cannot drift from what was built.
+  const areaList = ctx.areaPages?.length
+    ? `<h2 style="margin-top:44px">${esc(ctx.areaPagesHeading || 'Profiles')}</h2>
+       <p>${ctx.areaPages.length === 1 ? 'One area has' : `${ctx.areaPages.length} areas have`} a
+          full profile — indicators, a map at the level below this one, and a comparison against
+          state and national figures.</p>
+       <ul class="areas">${ctx.areaPages
+         .map((a) => `<li><a href="/geography/${facts.slug}/${esc(a.slug)}/">${esc(a.name)}</a></li>`)
+         .join('')}</ul>`
+    : '';
+
   const rollup = editorial.rollup
     .map((step, i) => `<li${i === editorial.rollupIndex ? ' class="is-this"' : ''}>${esc(step)}</li>`)
     .join('');
@@ -154,6 +169,9 @@ ${styleBlock()}
   .fact .k { color: var(--muted); font-size: 13px; margin-top: 4px; }
   table.codes { border-collapse: collapse; margin: 14px 0 6px; width: 100%; max-width: 460px; }
   table.codes td { border-bottom: 1px solid var(--line); padding: 9px 12px 9px 0; }
+  ul.areas { list-style: none; padding: 0; margin: 14px 0 6px; display: grid;
+             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px 18px; }
+  ul.areas a { color: var(--brand-text); }
   ol.rollup { list-style: none; padding: 0; margin: 12px 0; }
   ol.rollup li { padding: 8px 0 8px 24px; position: relative; color: var(--muted); }
   ol.rollup li::before { content: "↑"; position: absolute; left: 4px; color: var(--faint); }
@@ -185,6 +203,8 @@ ${headerBlock()}
   </div>
   <p class="geocap">The ${num(facts.sample.areas)} ${esc(editorial.plural)} of ${esc(facts.sample.label)}, drawn from
      the exact boundaries Vizzie joins your data to — not a picture of them.</p>
+
+  ${areaList}
 
   <h2 style="margin-top:44px">How the ${keyNoun} are ${keyVerb}</h2>
   ${editorial.codeFormat}

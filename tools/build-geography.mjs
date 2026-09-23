@@ -10,7 +10,7 @@
 //
 // Usage:  node tools/build-geography.mjs [slug ...]
 
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { renderGeographyPage } from './render-geography.mjs';
@@ -336,6 +336,9 @@ const EDITORIAL = {
   },
 };
 
+// What to call the child list on each level that has one.
+const AREA_HEADINGS = { 'us-county': 'Counties profiled' };
+
 const facts = JSON.parse(readFileSync(FACTS, 'utf8'));
 const wanted = process.argv.slice(2);
 const slugs = (wanted.length ? wanted : Object.keys(facts.levels)).filter((s) => {
@@ -351,8 +354,31 @@ const ctx = {
   generatedDate: facts.generatedAt,
 };
 
+/**
+ * Area pages built beneath a level, read off disk. Same rule the sitemap
+ * follows: present on disk means present in the list, so a page that is deleted
+ * cannot linger in it and one that is added needs no edit here.
+ */
+function areaPagesFor(slug) {
+  const dir = join(WEB, 'geography', slug);
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && existsSync(join(dir, d.name, 'index.html')))
+    .map((d) => {
+      const html = readFileSync(join(dir, d.name, 'index.html'), 'utf8');
+      const h1 = html.match(/<h1[^>]*>([^<]+)<\/h1>/);
+      return { slug: d.name, name: h1 ? h1[1].trim() : d.name };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
 for (const slug of slugs) {
-  const html = renderGeographyPage(facts.levels[slug], EDITORIAL[slug], ctx);
+  const areaPages = areaPagesFor(slug);
+  const html = renderGeographyPage(facts.levels[slug], EDITORIAL[slug], {
+    ...ctx,
+    areaPages,
+    areaPagesHeading: AREA_HEADINGS[slug],
+  });
   const dir = join(WEB, 'geography', slug);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), html);
