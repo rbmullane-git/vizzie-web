@@ -13,7 +13,7 @@
 //
 // Usage:  node tools/build-counties.mjs [slug ...]
 
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { renderCountyPage } from './render-county.mjs';
@@ -21,6 +21,10 @@ import { renderCountyPage } from './render-county.mjs';
 const __dir = dirname(fileURLToPath(import.meta.url));
 const WEB = join(__dir, '..');
 const FACTS = join(__dir, 'data', 'county-facts.json');
+// Share tokens minted by publish-county-projects.mjs. Absent until that has
+// run, and a county without one renders the plain studio link rather than a
+// dead `#view=`.
+const TOKENS = join(__dir, 'data', 'county-tokens.json');
 
 const MIN_INDICATORS = 6;
 const MIN_JOIN_RATE = 0.95;
@@ -219,6 +223,7 @@ function gate(facts, editorial) {
 }
 
 const facts = JSON.parse(readFileSync(FACTS, 'utf8'));
+const tokens = existsSync(TOKENS) ? JSON.parse(readFileSync(TOKENS, 'utf8')) : {};
 const wanted = process.argv.slice(2);
 const slugs = wanted.length ? wanted : Object.keys(facts.counties);
 
@@ -236,7 +241,7 @@ for (const slug of slugs) {
   const reasons = gate(f, EDITORIAL[slug]);
   if (reasons.length) { skipped.push(`${slug}: ${reasons.join('; ')}`); continue; }
 
-  const html = renderCountyPage(f, EDITORIAL[slug], ctx);
+  const html = renderCountyPage(f, EDITORIAL[slug], { ...ctx, viewToken: tokens[slug] });
   const dir = join(WEB, 'geography', 'us-county', slug);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), html);

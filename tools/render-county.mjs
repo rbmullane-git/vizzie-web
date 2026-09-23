@@ -147,18 +147,18 @@ function legend(breaks, format, anyMissing) {
   return `<ul class="legend">${cells}${missing}</ul>`;
 }
 
-// NOTE on the call to action. It opens the studio, NOT this county — the app's
-// only public deep links are `#example=`, `#portal=` and `#view=` (routes.ts),
-// and it reads `location.search` solely for attribution and auth. An earlier
-// draft here linked `?geo=us-county&fips=…`, which the app silently ignores:
-// the visitor landed on an empty editor having been promised this map. The real
-// fix is a saved, shared project per county behind `#view=<id>`, which is
-// machinery that already works; until that exists the button must not promise
-// what it cannot deliver. `utm_content` carries the slug so the funnel still
-// reports which county sent the visit.
+// The call to action opens THIS county when `ctx.viewToken` is set — a hosted
+// published map at `#view=<token>`, which the app serves to anyone, signed in or
+// not. Without a token it falls back to the plain studio and says so, because an
+// earlier draft linked `?geo=us-county&fips=…` which the app silently ignores:
+// the visitor landed on an empty editor having just been promised this map.
+// Never promise the county unless the token is actually there.
+// `utm_content` carries the slug either way, so the funnel reports which county
+// sent the visit.
 export function renderCountyPage(facts, editorial, ctx = {}) {
   const siteUrl = ctx.siteUrl || 'https://www.vizzie.org';
   const url = `${siteUrl}/geography/us-county/${facts.slug}/`;
+  const appUrl = ctx.appUrl || 'https://app.vizzie.org';
   const ind = facts.indicators;
   const place = `${facts.name}, ${facts.state}`;
 
@@ -290,11 +290,17 @@ ${headerBlock()}
   ${editorial.body}
 
   <h2 style="margin-top:44px">Map this yourself</h2>
-  <p>Everything above is public data. Bring a CSV with a column of tract or county
-     ${esc('FIPS')} codes and Vizzie joins it to these same boundaries — no shapefile, no download,
-     no GIS install. Reading this page needs no account; saving a map, adding your own data or
-     publishing does.</p>
-  <p><a class="btn" href="${esc(ctx.appUrl || 'https://app.vizzie.org')}/?utm_source=vizzie-web&amp;utm_medium=geography&amp;utm_campaign=county-profile&amp;utm_content=${esc(facts.slug)}">Open the studio</a></p>
+  ${ctx.viewToken
+    ? `<p>This map is live. Open it and every tract is yours to interrogate — hover a tract for its
+         figure, recolour the classification, or bring a CSV with a column of tract or county
+         ${esc('FIPS')} codes and Vizzie joins it to these same boundaries. No shapefile, no
+         download, no GIS install. Reading needs no account; saving a copy does.</p>
+       <p><a class="btn" href="${esc(appUrl)}/#view=${esc(ctx.viewToken)}">Open this map in the studio</a></p>`
+    : `<p>Everything above is public data. Bring a CSV with a column of tract or county
+         ${esc('FIPS')} codes and Vizzie joins it to these same boundaries — no shapefile, no
+         download, no GIS install. Reading this page needs no account; saving a map, adding your
+         own data or publishing does.</p>
+       <p><a class="btn" href="${esc(appUrl)}/?utm_source=vizzie-web&amp;utm_medium=geography&amp;utm_campaign=county-profile&amp;utm_content=${esc(facts.slug)}">Open the studio</a></p>`}
 
   <p class="prov">
     Demography: US Census Bureau, American Community Survey ${facts.acsYear} 5-year estimates
