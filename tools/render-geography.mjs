@@ -19,40 +19,65 @@ function area(km2) {
   return `${(km2 * 100).toFixed(1)} hectares`;
 }
 
-/**
- * A GeoJSON FeatureCollection as one inline SVG — no tiles, no JavaScript, no
- * third-party map service. Longitude is scaled by cos(latitude) so the shapes
- * are not stretched at UK latitudes, which a raw lon/lat plot visibly does.
- */
-export function boundariesSvg(geojson, { width = 760, height = 520, pad = 8 } = {}) {
-  const rings = [];
-  for (const f of geojson.features) {
-    const g = f.geometry;
-    if (!g) continue;
-    const polys = g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
-    for (const poly of polys) for (const ring of poly) rings.push(ring);
-  }
-  if (!rings.length) return '';
+/** Every closed ring in a feature, Polygon and MultiPolygon alike. */
+export function ringsOf(feature) {
+  const g = feature.geometry;
+  if (!g) return [];
+  const polys = g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
+  const out = [];
+  for (const poly of polys) for (const ring of poly) out.push(ring);
+  return out;
+}
 
+/**
+ * Fit a FeatureCollection to a viewBox and return the lon/lat -> x/y pair.
+ *
+ * Shared with the county choropleth in render-county.mjs rather than copied.
+ * The cos(latitude) correction is exactly the kind of thing that drifts once
+ * two files own a copy of it, and a choropleth stretched differently from the
+ * locator map beside it would be the visible result.
+ */
+export function projection(geojson, { width = 760, height = 520, pad = 8 } = {}) {
   let minLon = Infinity, maxLon = -Infinity, minLat = Infinity, maxLat = -Infinity;
-  for (const ring of rings) for (const [lon, lat] of ring) {
+  let any = false;
+  for (const f of geojson.features) for (const ring of ringsOf(f)) for (const [lon, lat] of ring) {
+    any = true;
     if (lon < minLon) minLon = lon;
     if (lon > maxLon) maxLon = lon;
     if (lat < minLat) minLat = lat;
     if (lat > maxLat) maxLat = lat;
   }
+  if (!any) return null;
   const kx = Math.cos(((minLat + maxLat) / 2) * (Math.PI / 180));
   const spanX = Math.max((maxLon - minLon) * kx, 1e-9);
   const spanY = Math.max(maxLat - minLat, 1e-9);
   const scale = Math.min((width - pad * 2) / spanX, (height - pad * 2) / spanY);
   const offX = (width - spanX * scale) / 2;
   const offY = (height - spanY * scale) / 2;
-  const px = (lon) => ((lon - minLon) * kx * scale + offX).toFixed(1);
-  const py = (lat) => ((maxLat - lat) * scale + offY).toFixed(1); // SVG y grows downward
+  return {
+    width,
+    height,
+    px: (lon) => ((lon - minLon) * kx * scale + offX).toFixed(1),
+    py: (lat) => ((maxLat - lat) * scale + offY).toFixed(1), // SVG y grows downward
+  };
+}
 
-  const paths = rings
-    .map((ring) => 'M' + ring.map(([lon, lat]) => `${px(lon)},${py(lat)}`).join('L') + 'Z')
+/** One feature's rings as a single SVG path `d`. */
+export function pathFor(feature, proj) {
+  return ringsOf(feature)
+    .map((ring) => 'M' + ring.map(([lon, lat]) => `${proj.px(lon)},${proj.py(lat)}`).join('L') + 'Z')
     .join('');
+}
+
+/**
+ * A GeoJSON FeatureCollection as one inline SVG — no tiles, no JavaScript, no
+ * third-party map service. Longitude is scaled by cos(latitude) so the shapes
+ * are not stretched at UK latitudes, which a raw lon/lat plot visibly does.
+ */
+export function boundariesSvg(geojson, { width = 760, height = 520, pad = 8 } = {}) {
+  const proj = projection(geojson, { width, height, pad });
+  if (!proj) return '';
+  const paths = geojson.features.map((f) => pathFor(f, proj)).join('');
   return `<svg class="geomap" viewBox="0 0 ${width} ${height}" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="${esc(
     `${geojson.features.length} boundaries drawn from the data Vizzie holds`
   )}"><path d="${paths}" fill="rgba(211, 43, 150,0.10)" stroke="#d32b96" stroke-width="0.7" stroke-linejoin="round" /></svg>`;

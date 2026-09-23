@@ -515,6 +515,18 @@ async function main() {
         .map((d) => d.name)
         .sort()
     : [];
+  // Area pages nest one level below their level page
+  // (geography/us-county/travis-county-tx/), written by build-counties.mjs.
+  // Same rule as above, one directory deeper — without this the area estate is
+  // invisible to the sitemap, which is the entire point of building it.
+  const geographyAreas = geographySlugs
+    .flatMap((slug) =>
+      readdirSync(join(geographyDir, slug), { withFileTypes: true })
+        .filter((d) => d.isDirectory() && existsSync(join(geographyDir, slug, d.name, 'index.html')))
+        .map((d) => `${slug}/${d.name}`),
+    )
+    .sort();
+
   // Standalone topic pages, each written by its own build script and found the
   // same way — present on disk means present in the sitemap.
   const topicPages = ['ejscreen'].filter((slug) =>
@@ -526,6 +538,7 @@ async function main() {
     { loc: `${SITE}/brand/`, pr: '0.3' },
     ...topicPages.map((slug) => ({ loc: `${SITE}/${slug}/`, pr: '0.7' })),
     ...geographySlugs.map((slug) => ({ loc: `${SITE}/geography/${slug}/`, pr: '0.7' })),
+    ...geographyAreas.map((path) => ({ loc: `${SITE}/geography/${path}/`, pr: '0.6' })),
     ...portals.map((p) => ({ loc: `${SITE}/portals/${p.slug}/`, pr: '0.6' })),
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
@@ -533,7 +546,7 @@ async function main() {
     .join('\n')}\n</urlset>\n`;
   writeFileSync(join(WEB, 'sitemap.xml'), sitemap);
 
-  process.stderr.write(`wrote ${portals.length} portal pages + index + sitemap (${urls.length} urls, incl. ${geographySlugs.length} geography)\n`);
+  process.stderr.write(`wrote ${portals.length} portal pages + index + sitemap (${urls.length} urls, incl. ${geographySlugs.length} geography + ${geographyAreas.length} area)\n`);
 
   // Surface what the alias table missed. These are licences a portal really
   // declares that the compliance matrix has no class for, so they render as a
