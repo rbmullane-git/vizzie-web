@@ -147,6 +147,11 @@ function legend(breaks, format, anyMissing) {
   return `<ul class="legend">${cells}${missing}</ul>`;
 }
 
+// NOTE the `t` before the token. A hosted link's parameter is TOKEN_TAG + the
+// token (share.ts); without it parseShareParam falls through to the inline
+// branch, tries to gunzip a hex string, and the reader gets "this link
+// couldn't be opened" on a row that is perfectly good.
+//
 // The call to action opens THIS county when `ctx.viewToken` is set — a hosted
 // published map at `#view=<token>`, which the app serves to anyone, signed in or
 // not. Without a token it falls back to the plain studio and says so, because an
@@ -295,7 +300,7 @@ ${headerBlock()}
          figure, recolour the classification, or bring a CSV with a column of tract or county
          ${esc('FIPS')} codes and Vizzie joins it to these same boundaries. No shapefile, no
          download, no GIS install. Reading needs no account; saving a copy does.</p>
-       <p><a class="btn" href="${esc(appUrl)}/#view=${esc(ctx.viewToken)}">Open this map in the studio</a></p>`
+       <p><a class="btn" href="${esc(appUrl)}/#view=t${esc(ctx.viewToken)}">Open this map in the studio</a></p>`
     : `<p>Everything above is public data. Bring a CSV with a column of tract or county
          ${esc('FIPS')} codes and Vizzie joins it to these same boundaries — no shapefile, no
          download, no GIS install. Reading this page needs no account; saving a map, adding your
