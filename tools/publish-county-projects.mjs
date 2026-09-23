@@ -11,7 +11,7 @@
 // refreshed, so re-running after a data rebuild never orphans a live link.
 //
 // Needs SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in the environment.
-// Usage:  node tools/publish-county-projects.mjs <owner-uuid> <slug ...>
+// Usage:  node tools/publish-county-projects.mjs [--from-render] <owner-uuid> <slug ...>
 
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -19,13 +19,37 @@ import { dirname, join } from 'node:path';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const DIR = join(__dir, 'data', 'county-projects');
-const URL_BASE = process.env.SUPABASE_URL;
-const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+// Credentials come from the environment, or — with --from-render — straight out
+// of the vizzie-connector service, which already holds both. That saves digging
+// the service-role key out of the dashboard to paste it into a shell, which is
+// the moment a key like this usually ends up somewhere it should not be.
+const RENDER_SERVICE = 'srv-da01hutbedkc739m6tj0'; // vizzie-connector
+
+async function credentials() {
+  if (!process.argv.includes('--from-render')) {
+    return { url: process.env.SUPABASE_URL, key: process.env.SUPABASE_SERVICE_ROLE_KEY };
+  }
+  const token = process.env.RENDER_API_KEY;
+  if (!token) throw new Error('--from-render needs RENDER_API_KEY in the environment');
+  const res = await fetch(
+    `https://api.render.com/v1/services/${RENDER_SERVICE}/env-vars?limit=100`,
+    { headers: { authorization: `Bearer ${token}` } },
+  );
+  if (!res.ok) throw new Error(`Render env-vars: ${res.status} ${await res.text()}`);
+  const vars = (await res.json()).map((v) => v.envVar).filter(Boolean);
+  const pick = (k) => vars.find((v) => v.key === k)?.value;
+  return { url: pick('SUPABASE_URL'), key: pick('SUPABASE_SERVICE_ROLE_KEY') };
+}
+
+const { url: URL_BASE, key: KEY } = await credentials();
 if (!URL_BASE || !KEY) {
-  console.error('SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set');
+  console.error(
+    'Need SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in the environment,\n' +
+      'or pass --from-render to read both from the vizzie-connector service.',
+  );
   process.exit(1);
 }
-const [owner, ...slugs] = process.argv.slice(2);
+const [owner, ...slugs] = process.argv.slice(2).filter((a) => a !== '--from-render');
 if (!owner || !slugs.length) {
   console.error('usage: node tools/publish-county-projects.mjs <owner-uuid> <slug ...>');
   process.exit(1);
