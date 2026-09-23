@@ -44,8 +44,16 @@ const MIN_EDITORIAL_WORDS = 150;
 // nobody reviewed. The evidence is the whole contribution: a measured ratio, a
 // correlation, a boundary-side coverage rate. Readers who want the cause are
 // better served by the map than by our guess at it.
+// `searchName` is the name people actually type — US volume follows the city,
+// not the county that contains it (austin demographics 2,900/mo against travis
+// county demographics 50). `headline` is the honest form shown on the page: a
+// city is rarely coextensive with its county, so both are named. A county with
+// no dominant city gets neither and falls back to its own name — Nassau is not
+// Long Island, which is Nassau plus Suffolk.
 const EDITORIAL = {
   'travis-county-tx': {
+    searchName: 'Austin',
+    headline: 'Austin and Travis County, Texas',
     intro:
       `Texas's capital county, and a place whose county-level averages hide more than they show. ` +
       `The tract map below is the reason to look underneath them.`,
@@ -68,6 +76,8 @@ const EDITORIAL = {
   },
 
   'santa-clara-county-ca': {
+    searchName: 'San Jose',
+    headline: 'San Jose and Santa Clara County, California',
     intro:
       `The highest median household income of the forty most populous US counties — and, less ` +
       `obviously, one of the narrowest internal spreads.`,
@@ -88,6 +98,8 @@ const EDITORIAL = {
   },
 
   'wayne-county-mi': {
+    searchName: 'Detroit',
+    headline: 'Detroit and Wayne County, Michigan',
     intro:
       `Detroit's county, and one of only four in this set whose population fell over the decade.`,
     heading: 'What the tract map shows',
@@ -109,6 +121,8 @@ const EDITORIAL = {
   },
 
   'new-york-county-ny': {
+    searchName: 'Manhattan',
+    headline: 'Manhattan — New York County, New York',
     intro:
       `Manhattan holds the widest internal income gap of the forty most populous US counties, and ` +
       `its county-level figures give no sign of it.`,
@@ -129,6 +143,8 @@ const EDITORIAL = {
   },
 
   'bronx-county-ny': {
+    searchName: 'Bronx',
+    headline: 'The Bronx — Bronx County, New York',
     intro:
       `The lowest median household income of the forty most populous US counties, the lowest home ` +
       `ownership, and the highest share of commuters on public transport.`,
@@ -171,6 +187,8 @@ const EDITORIAL = {
   },
 
   'wake-county-nc': {
+    searchName: 'Raleigh',
+    headline: 'Raleigh and Wake County, North Carolina',
     intro:
       `The fastest-growing of the forty most populous US counties, and among the least served by ` +
       `public transport.`,

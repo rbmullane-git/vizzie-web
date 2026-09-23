@@ -164,13 +164,27 @@ export function renderCountyPage(facts, editorial, ctx = {}) {
   const siteUrl = ctx.siteUrl || 'https://www.vizzie.org';
   const url = `${siteUrl}/geography/us-county/${facts.slug}/`;
   const appUrl = ctx.appUrl || 'https://app.vizzie.org';
+  // The query string goes BEFORE the fragment: attribution.ts reads
+  // location.search and never the hash, so `#view=…?utm=…` would record
+  // nothing and the funnel could not tell which county sent a signup.
+  const utm =
+    'utm_source=vizzie-web&utm_medium=geography&utm_campaign=county-profile' +
+    `&utm_content=${facts.slug}`;
   const ind = facts.indicators;
   const place = `${facts.name}, ${facts.state}`;
+  // US search volume follows the CITY, not the administrative container that
+  // holds it: "austin demographics" runs 2,900/mo against 50 for "travis county
+  // demographics". So the page leads with the searched name where the editorial
+  // supplies one, and still names the county — Austin is not coextensive with
+  // Travis County and the page must not imply it is. `headline` carries the
+  // honest both-names form; absent, everything falls back to the county.
+  const searchName = editorial.searchName || facts.name;
+  const headline = editorial.headline || place;
 
-  const title = `${place} — census data, demographics and maps | Vizzie`;
+  const title = `${searchName} demographics — ${facts.name} census data by tract | Vizzie`;
   const description =
     `${num(ind.population)} people across ${num(facts.tracts.count)} census tracts. ` +
-    `Median household income, age, tenure and commute for ${place}, from the ${facts.acsYear} ` +
+    `Median household income, age, tenure and commute for ${headline}, from the ${facts.acsYear} ` +
     `American Community Survey — mapped, not tabulated.`;
 
   const growth = ind.populationPrev ? ind.population / ind.populationPrev - 1 : null;
@@ -199,7 +213,7 @@ export function renderCountyPage(facts, editorial, ctx = {}) {
       },
       temporalCoverage: String(facts.acsYear),
       isAccessibleForFree: true,
-      keywords: [`${facts.name} census data`, `${facts.name} demographics`, `${facts.name} median income`, `${facts.name} population`, 'census tract map'],
+      keywords: [`${searchName} demographics`, `${facts.name} census data`, `${facts.name} demographics`, `${facts.name} median income`, `${facts.name} population`, 'census tract map'],
     },
     {
       '@context': 'https://schema.org',
@@ -254,7 +268,7 @@ ${styleBlock()}
 ${headerBlock()}
 <main class="wrap" style="padding-top:44px;padding-bottom:64px">
   <p class="kicker"><a href="/geography/us-county/">US counties</a> · community profile</p>
-  <h1>${esc(place)}</h1>
+  <h1>${esc(headline)}</h1>
   <p class="lead">${editorial.intro}</p>
 
   <div class="facts">
@@ -300,12 +314,12 @@ ${headerBlock()}
          figure, recolour the classification, or bring a CSV with a column of tract or county
          ${esc('FIPS')} codes and Vizzie joins it to these same boundaries. No shapefile, no
          download, no GIS install. Reading needs no account; saving a copy does.</p>
-       <p><a class="btn" href="${esc(appUrl)}/#view=t${esc(ctx.viewToken)}">Open this map in the studio</a></p>`
+       <p><a class="btn" href="${esc(appUrl)}/?${esc(utm)}#view=t${esc(ctx.viewToken)}">Open this map in the studio</a></p>`
     : `<p>Everything above is public data. Bring a CSV with a column of tract or county
          ${esc('FIPS')} codes and Vizzie joins it to these same boundaries — no shapefile, no
          download, no GIS install. Reading this page needs no account; saving a map, adding your
          own data or publishing does.</p>
-       <p><a class="btn" href="${esc(appUrl)}/?utm_source=vizzie-web&amp;utm_medium=geography&amp;utm_campaign=county-profile&amp;utm_content=${esc(facts.slug)}">Open the studio</a></p>`}
+       <p><a class="btn" href="${esc(appUrl)}/?${esc(utm)}">Open the studio</a></p>`}
 
   <p class="prov">
     Demography: US Census Bureau, American Community Survey ${facts.acsYear} 5-year estimates
