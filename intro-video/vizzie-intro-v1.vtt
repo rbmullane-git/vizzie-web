@@ -1,0 +1,69 @@
+WEBVTT
+
+1
+00:00:00.350 --> 00:00:04.920
+From a public dataset to a shareable map story, in a few minutes.
+
+2
+00:00:06.618 --> 00:00:12.318
+Everything in Vizzie lives in a project: the map, the charts, and the story you tell with them.
+
+3
+00:00:20.487 --> 00:00:25.947
+Start with a place. Vizzie finds the government portals that publish data about it.
+
+4
+00:00:30.266 --> 00:00:39.806
+Census maps are one click away. To go further, search every portal at once, or pick one you trust. Here, the Digital Atlas of Australia.
+
+5
+00:00:40.106 --> 00:00:46.696
+Search for regional population. Results are datasets, and opening one goes straight to its preview.
+
+6
+00:00:52.694 --> 00:01:01.924
+This is the table exactly as the ABS publishes it: seventy-nine columns, two thousand four hundred and fifty-four areas, and no boundaries.
+
+7
+00:01:02.226 --> 00:01:09.766
+The table has no shapes of its own. Vizzie recognised the SA2 codes, and matched every row to the official boundaries.
+
+8
+00:01:17.349 --> 00:01:21.599
+One click on Viz it gives you a first draft: the map and its legend.
+
+9
+00:01:24.088 --> 00:01:32.878
+Open the layer to restyle it. The same boundaries tell different stories. Density shows where people are. Change shows where they're arriving.
+
+10
+00:01:43.382 --> 00:01:49.122
+Colour in segments to make the map readable at a glance. Spread decides where the breaks fall.
+
+11
+00:02:02.984 --> 00:02:09.434
+Pick the columns you care about, and charts are offered as answers to questions, each with a live preview.
+
+12
+00:02:25.910 --> 00:02:30.810
+Filter the charts to the map view, and they re-rank for the place you're looking at.
+
+13
+00:02:37.771 --> 00:02:44.171
+Sketch layers let you mark up exactly what you want people to see. They stay pinned to the map as you zoom.
+
+14
+00:03:17.362 --> 00:03:24.722
+A frame saves the view, the layers that are on, the charts, and the legend. Put frames in order, and you have a story.
+
+15
+00:03:46.326 --> 00:03:49.316
+Present turns your frames into a slideshow.
+
+16
+00:03:59.792 --> 00:04:07.872
+Publish it as an interactive presentation. Anyone with the link can open it, with no account, and the data credit stays attached.
+
+17
+00:04:24.072 --> 00:04:27.762
+Vizzie. Free during beta, at vizzie.org.

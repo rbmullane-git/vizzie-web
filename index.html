@@ -335,41 +335,34 @@
       <div class="wrap">
         <div class="kicker">See it in action</div>
 
-        <!-- Animation 1 — the open-data connector: portal to map in one click -->
-        <h2 style="margin-bottom: 8px">From a portal to a map, in a minute.</h2>
+        <!-- The intro video (the same one the app opens on a new project). Muted
+             so the browser lets it autoplay; the captions are in the picture.
+             Hosted on R2 beside the basemaps — a plain <video src> needs no CORS. -->
+        <h2 style="margin-bottom: 8px">From a place search to a shared map story.</h2>
         <p class="sub" style="margin-bottom: 26px">
-          Search a place, pick its open-data portal, find a dataset, preview it,
-          and add — then watch it map and chart itself in one click.
+          Search Sydney, open the ABS regional population table from the Digital
+          Atlas of Australia, join it to SA2 boundaries, style the map, add a
+          chart, sketch on it, save frames and publish the presentation as a link.
         </p>
-        <img
+        <video
           class="shot"
-          src="vizzie-connector-workflow.gif"
-          loading="lazy"
-          width="1456"
-          height="837"
-          alt="Searching Vancouver, choosing the City of Vancouver open-data portal, finding the street-trees dataset, previewing it, then adding it so it maps and charts itself"
-        />
-
-        <!-- Animation 2 — 150,000 trees in 3D: z-axis, rotate, filter, zoom -->
-        <h2 style="margin-top: 64px; margin-bottom: 8px">
-          150,000 street trees, in 3D.
-        </h2>
-        <p class="sub" style="margin-bottom: 26px">
-          Raise each tree by its height and tilt into 3D. Click the legend to
-          filter by species and back, then turn on the zoom filter and zoom in —
-          the charts follow the map to whatever you're looking at.
-        </p>
-        <img
-          class="shot"
-          src="vizzie-vancouver-3d.gif"
-          loading="lazy"
-          width="1456"
-          height="837"
-          alt="150,000 street trees extruded in 3D by height, filtering by clicking a species in the legend then clearing it, then zooming in with the zoom filter on so the charts follow the visible area"
-        />
+          src="https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/video/vizzie-intro-v1.mp4"
+          poster="vizzie-intro-poster.jpg"
+          width="1920"
+          height="1080"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          preload="metadata"
+          aria-label="A walkthrough of Vizzie: searching Sydney, adding the ABS regional population table from the Digital Atlas of Australia, joining it to SA2 boundaries, styling the map, adding a chart, sketching on the map, saving frames, presenting and publishing a link"
+        >
+          <track kind="captions" src="intro-video/vizzie-intro-v1.vtt" srclang="en" label="English" />
+        </video>
 
         <div class="cta-row" style="margin-top: 22px">
-          <a class="btn" data-app="/#example=vancouver-street-trees">Explore this map live →</a>
+          <a class="btn" data-app="/#view=t368f5ed1362f4e0a829f5cf4d3be3431">Open this presentation →</a>
           <span class="sub" style="align-self: center">No sign-up; it opens in Vizzie.</span>
         </div>
       </div>
