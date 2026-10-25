@@ -109,6 +109,61 @@
       }
       .btn.ghost:hover { background: var(--panel); }
 
+      /* Learn to Viz: the tutorial player, opened from the header */
+      .btn.learn {
+        display: inline-flex; align-items: center; gap: 7px;
+        font-size: 13px; padding: 8px 13px; color: var(--brand-text);
+        border-color: rgba(211, 43, 150, 0.45); cursor: pointer; font-family: inherit;
+      }
+      .btn.learn svg { flex: none; }
+      dialog.learn {
+        width: min(1080px, calc(100vw - 32px)); max-height: calc(100vh - 32px);
+        margin: auto; padding: 0; border: 1px solid var(--line); border-radius: 14px;
+        background: var(--panel); color: var(--text); overflow: hidden;
+      }
+      dialog.learn::backdrop { background: rgba(0, 0, 0, 0.7); }
+      .learn .lhead {
+        display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+        padding: 14px 18px; border-bottom: 1px solid var(--line);
+      }
+      .learn .lhead h2 { font-size: 17px; font-weight: 800; letter-spacing: 0; }
+      .learn .lhead p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+      .learn .lclose {
+        background: none; border: 0; color: var(--muted); font-size: 24px; line-height: 1;
+        width: 32px; height: 32px; border-radius: 8px; cursor: pointer; align-self: center;
+      }
+      .learn .lclose:hover { background: var(--card); color: var(--text); }
+      .learn .lbody { display: grid; grid-template-columns: 1fr 300px; min-height: 0; }
+      .learn video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+      .learn .lnow { padding: 12px 18px 16px; font-size: 14px; color: var(--muted); }
+      .learn .lnow b { color: var(--text); }
+      .learn ol { list-style: none; border-left: 1px solid var(--line); overflow-y: auto; max-height: calc(100vh - 120px); }
+      .learn li button {
+        display: flex; gap: 10px; align-items: center; width: 100%; padding: 10px 12px;
+        background: none; border: 0; border-bottom: 1px solid var(--line); color: var(--text);
+        text-align: left; cursor: pointer; font-family: inherit;
+      }
+      .learn li button:hover { background: var(--card); }
+      .learn li button[aria-current="true"] { background: var(--brand-soft); }
+      .learn li img { width: 104px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; border: 1px solid var(--line); flex: none; }
+      .learn li .t { display: block; font-size: 14px; font-weight: 700; line-height: 1.3; }
+      .learn li .d { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+      @media (max-width: 820px) {
+        .learn .lbody { grid-template-columns: 1fr; }
+        .learn ol { border-left: 0; border-top: 1px solid var(--line); max-height: 40vh; }
+      }
+      header.site .btn { white-space: nowrap; }
+      /* Three buttons and the wordmark have to share 390px */
+      @media (max-width: 480px) {
+        header.site .wrap { padding: 0 14px; }
+        header.site .wrap > div { gap: 6px !important; }
+        header.site .btn { font-size: 13px; padding: 8px 10px; }
+        header.site .brand { gap: 7px; }
+        header.site .brand svg { width: 24px; height: 24px; }
+        header.site .brand .word { font-size: 19px; }
+        .btn.learn svg { display: none; }
+      }
+
       /* Sections */
       section { padding: 132px 0; border-bottom: 1px solid var(--line); }
       .kicker {
@@ -250,6 +305,10 @@
           <span class="word">Vizzie</span><span class="beta">beta</span>
         </a>
         <div style="display: flex; gap: 10px; align-items: center">
+          <button type="button" class="btn ghost learn" id="learn-open" aria-haspopup="dialog">
+            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor" /></svg>
+            Learn to Viz
+          </button>
           <a class="btn ghost" data-app="/">Log in</a>
           <a class="btn" data-app="/#signup">Sign up</a>
         </div>
@@ -602,6 +661,81 @@
         </div>
       </div>
     </footer>
+
+    <!-- Learn to Viz: six short tutorials on R2 beside the intro video (a plain
+         <video src> needs no CORS). Captions are burned into the picture. The same
+         list is in the app's projects page (src/features/learn/tutorials.ts). -->
+    <dialog class="learn" id="learn" aria-labelledby="learn-title">
+      <div class="lhead">
+        <div>
+          <h2 id="learn-title">Learn to Viz</h2>
+          <p>Six short videos, under six minutes in all. Each one picks up where the last left off.</p>
+        </div>
+        <button type="button" class="lclose" id="learn-close" aria-label="Close">×</button>
+      </div>
+      <div class="lbody">
+        <div>
+          <video id="learn-video" controls playsinline preload="none"></video>
+          <p class="lnow" id="learn-now"></p>
+        </div>
+        <ol id="learn-list"></ol>
+      </div>
+    </dialog>
+    <script>
+      (function () {
+        var BASE = "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/video/tutorials/v1/";
+        var TUTORIALS = [
+          { slug: "1-find-data", title: "Find data", length: "1:10", about: "Search a place, pick a source and add a dataset matched to boundaries." },
+          { slug: "2-make-a-map", title: "Make a map", length: "1:09", about: "Viz-it, then style the layer: column, colours, segments, opacity and basemap." },
+          { slug: "3-add-charts", title: "Add charts", length: "0:56", about: "Pick columns, choose a chart, rename it, adjust its settings, filter it to the map view." },
+          { slug: "4-sketch-and-notes", title: "Sketch and add notes", length: "0:49", about: "Circles, arrows and notes, kept on their own sketch layer." },
+          { slug: "5-present-with-frames", title: "Present with frames", length: "0:52", about: "Save views as frames, put them in order and present them." },
+          { slug: "6-export-and-publish", title: "Export and publish", length: "0:43", about: "Download a picture, publish a live map or a presentation as a link." }
+        ];
+        var dlg = document.getElementById("learn");
+        var video = document.getElementById("learn-video");
+        var list = document.getElementById("learn-list");
+        var now = document.getElementById("learn-now");
+        var current = 0;
+        function capture(name, props) {
+          try { if (window.posthog && posthog.capture) posthog.capture(name, props); } catch (e) {}
+        }
+        TUTORIALS.forEach(function (t, i) {
+          var li = document.createElement("li");
+          var b = document.createElement("button");
+          b.type = "button";
+          b.innerHTML = '<img alt="" loading="lazy" src="' + BASE + "vizzie-tutorial-" + t.slug + '.jpg"><span><span class="t"></span><span class="d"></span></span>';
+          b.querySelector(".t").textContent = t.title;
+          b.querySelector(".d").textContent = t.length;
+          b.addEventListener("click", function () { play(i, true); });
+          li.appendChild(b);
+          list.appendChild(li);
+        });
+        function play(i, start) {
+          current = i;
+          var t = TUTORIALS[i];
+          video.src = BASE + "vizzie-tutorial-" + t.slug + ".mp4";
+          video.poster = BASE + "vizzie-tutorial-" + t.slug + ".jpg";
+          now.innerHTML = "<b></b> · ";
+          now.firstChild.textContent = t.title;
+          now.appendChild(document.createTextNode(t.about));
+          list.querySelectorAll("button").forEach(function (b, k) { b.setAttribute("aria-current", k === i ? "true" : "false"); });
+          if (start) { video.play().catch(function () {}); capture("tutorial_played", { tutorial: t.slug, surface: "site" }); }
+        }
+        // Moves on to the next video when one finishes.
+        video.addEventListener("ended", function () { if (current < TUTORIALS.length - 1) play(current + 1, true); });
+        document.getElementById("learn-open").addEventListener("click", function () {
+          if (!video.src) play(0, false);
+          dlg.showModal();
+          capture("tutorials_opened", { surface: "site" });
+        });
+        function close() { video.pause(); dlg.close(); }
+        document.getElementById("learn-close").addEventListener("click", close);
+        dlg.addEventListener("cancel", function () { video.pause(); });
+        // A click on the backdrop lands on the dialog element itself.
+        dlg.addEventListener("click", function (e) { if (e.target === dlg) close(); });
+      })();
+    </script>
 
     <script>
       // === Update this to your app's URL when it's deployed ===
