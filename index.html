@@ -109,13 +109,14 @@
       }
       .btn.ghost:hover { background: var(--panel); }
 
-      /* Learn to Viz: the tutorial player, opened from the header */
+      /* Video Tutorials: the tutorial player, opened from the header */
       .btn.learn {
         display: inline-flex; align-items: center; gap: 7px;
         font-size: 13px; padding: 8px 13px; color: var(--brand-text);
         border-color: rgba(211, 43, 150, 0.45); cursor: pointer; font-family: inherit;
       }
       .btn.learn svg { flex: none; }
+      .btn.learn .short { display: none; }
       dialog.learn {
         width: min(1080px, calc(100vw - 32px)); max-height: calc(100vh - 32px);
         margin: auto; padding: 0; border: 1px solid var(--line); border-radius: 14px;
@@ -162,6 +163,8 @@
         header.site .brand svg { width: 24px; height: 24px; }
         header.site .brand .word { font-size: 19px; }
         .btn.learn svg { display: none; }
+        .btn.learn .full { display: none; }
+        .btn.learn .short { display: inline; }
       }
 
       /* Sections */
@@ -305,9 +308,9 @@
           <span class="word">Vizzie</span><span class="beta">beta</span>
         </a>
         <div style="display: flex; gap: 10px; align-items: center">
-          <button type="button" class="btn ghost learn" id="learn-open" aria-haspopup="dialog">
+          <button type="button" class="btn ghost learn" id="learn-open" aria-haspopup="dialog" aria-label="Video Tutorials">
             <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor" /></svg>
-            Learn to Viz
+            <span class="full">Video Tutorials</span><span class="short">Videos</span>
           </button>
           <a class="btn ghost" data-app="/">Log in</a>
           <a class="btn" data-app="/#signup">Sign up</a>
@@ -662,13 +665,13 @@
       </div>
     </footer>
 
-    <!-- Learn to Viz: six short tutorials on R2 beside the intro video (a plain
+    <!-- Video Tutorials: six short tutorials on R2 beside the intro video (a plain
          <video src> needs no CORS). Captions are burned into the picture. The same
          list is in the app's projects page (src/features/learn/tutorials.ts). -->
     <dialog class="learn" id="learn" aria-labelledby="learn-title">
       <div class="lhead">
         <div>
-          <h2 id="learn-title">Learn to Viz</h2>
+          <h2 id="learn-title">Video Tutorials</h2>
           <p>Six short videos, under six minutes in all. Each one picks up where the last left off.</p>
         </div>
         <button type="button" class="lclose" id="learn-close" aria-label="Close">×</button>
