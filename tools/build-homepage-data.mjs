@@ -180,7 +180,10 @@ const jsonld = {
       legalName: 'Vizzie Trading Pty Ltd',
       url: 'https://www.vizzie.org/',
       logo: 'https://www.vizzie.org/favicon.svg',
-      sameAs: ['https://www.instagram.com/vizzie_org/'],
+      sameAs: [
+        'https://www.instagram.com/vizzie_org/',
+        'https://www.youtube.com/@Vizzie_org',
+      ],
     },
     {
       '@type': 'WebSite',
