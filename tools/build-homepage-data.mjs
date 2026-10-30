@@ -183,6 +183,7 @@ const jsonld = {
       sameAs: [
         'https://www.instagram.com/vizzie_org/',
         'https://www.youtube.com/@Vizzie_org',
+        'https://github.com/Vizzie-org',
       ],
     },
     {
