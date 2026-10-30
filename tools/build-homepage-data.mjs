@@ -171,6 +171,10 @@ const jsonld = {
       operatingSystem: 'Any (web browser)',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
       screenshot: 'https://www.vizzie.org/og-vancouver-street-trees.png',
+      // The product's Wikidata item. The company item (Q141926723, Vizzie
+      // Studio Pty Ltd) is the IP holdco — it must NOT go on the #org node
+      // below, whose legalName is the operating company, Vizzie Trading.
+      sameAs: ['https://www.wikidata.org/wiki/Q141926724'],
       publisher: { '@id': 'https://www.vizzie.org/#org' },
     },
     {
@@ -184,6 +188,7 @@ const jsonld = {
         'https://www.instagram.com/vizzie_org/',
         'https://www.youtube.com/@Vizzie_org',
         'https://github.com/Vizzie-org',
+        'https://www.crunchbase.com/organization/vizzie',
       ],
     },
     {
