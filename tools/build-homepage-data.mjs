@@ -17,7 +17,7 @@
  *   node tools/build-homepage-data.mjs           # rewrite the marked region
  *   node tools/build-homepage-data.mjs --check   # non-zero exit if stale
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { portalFacts, headline } from './portal-facts.mjs';
@@ -211,6 +211,21 @@ function replaceRegion(source, begin, end, replacement, what) {
     process.exit(1);
   }
   return source.slice(0, i) + replacement + source.slice(j + end.length);
+}
+
+// The deep-links page carries the same inline facts (data-fact spans), so it
+// is refreshed by the same build — figures are never typed into a page by hand.
+const LINK_PAGE = join(WEB, 'link', 'index.html');
+if (existsSync(LINK_PAGE)) {
+  const page = readFileSync(LINK_PAGE, 'utf8');
+  const refreshed = applyInlineFacts(page);
+  if (refreshed !== page && !process.argv.includes('--check')) {
+    writeFileSync(LINK_PAGE, refreshed);
+    process.stderr.write('link/index.html: facts refreshed\n');
+  } else if (refreshed !== page) {
+    process.stderr.write('link/index.html facts are stale\n');
+    process.exit(1);
+  }
 }
 
 const html = readFileSync(PAGE, 'utf8');

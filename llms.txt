@@ -1,0 +1,21 @@
+# Vizzie
+
+> Vizzie is a free, web-based tool for visualising and mapping open data — connected to
+> 280+ open-data portals across 40+ countries, with licence-cleared boundaries and no
+> GIS skills required. The app is at https://app.vizzie.org (works without an account).
+
+## Linking into the app
+
+- [Deep links](https://www.vizzie.org/link.md): the URL grammar that opens Vizzie
+  already searching open data for a place (#find=), drawing a census map (#census=),
+  or previewing a dataset (#dataset=) — with working examples.
+
+## Reference
+
+- [Open data portals](https://www.vizzie.org/portals/): every portal Vizzie connects
+  to — live dataset counts, platforms, and per-portal licence observations.
+- [Geography reference](https://www.vizzie.org/geography/): the boundary levels Vizzie
+  joins data to (census tracts, SA2s, LSOAs, NUTS and more), with counts, vintages and
+  licences.
+- [Brand and boilerplate](https://www.vizzie.org/brand/): logo files and the company
+  boilerplate, free to use in coverage.

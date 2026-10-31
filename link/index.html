@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Link directly into Vizzie — deep links for docs, sites and AI assistants</title>
+    <meta
+      name="description"
+      content="Vizzie's deep links open the app already doing something: searching open data for a place, drawing a census map, or previewing a dataset. The URL grammar, with working examples — no account needed."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://www.vizzie.org/link/" />
+    <meta property="og:title" content="Link directly into Vizzie" />
+    <meta
+      property="og:description"
+      content="URLs that open Vizzie already searching open data, drawing a census map, or previewing a dataset. No account needed."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.vizzie.org/link/" />
+    <meta property="og:site_name" content="Vizzie" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0e1116;
+        --panel: #161a21;
+        --card: #1e242d;
+        --line: #272e39;
+        --text: #e6e9ef;
+        --muted: #8a93a2;
+        --faint: #5b6472;
+        --brand: #d32b96;
+        --brand-text: #d949a5;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+        line-height: 1.6;
+      }
+      .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+      header.site, footer.site { border-bottom: 1px solid var(--line); }
+      footer.site { border-bottom: 0; border-top: 1px solid var(--line); margin-top: 56px; }
+      header.site .wrap, footer.site .wrap {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 14px 20px;
+      }
+      .brand { display: flex; align-items: center; gap: 8px; color: var(--text); }
+      .brand .word { font-weight: 800; font-size: 19px; letter-spacing: 0.02em; }
+      .brand .beta { font-size: 13px; font-style: italic; color: var(--muted); }
+      .btn {
+        display: inline-block; background: var(--brand); color: #fff;
+        padding: 7px 14px; border-radius: 8px; font-size: 14px; font-weight: 600;
+        text-decoration: none;
+      }
+      .btn.ghost { background: transparent; border: 1px solid var(--line); color: var(--text); }
+      main { padding: 40px 0 10px; }
+      h1 { font-size: 32px; line-height: 1.2; letter-spacing: -0.01em; }
+      h2 { font-size: 21px; margin: 40px 0 10px; }
+      p { margin: 12px 0; color: var(--text); }
+      p.sub, li { color: var(--muted); }
+      ul { margin: 10px 0 10px 22px; }
+      a { color: var(--brand-text); }
+      code, .ex code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.92em; background: var(--card); border-radius: 5px; padding: 1px 5px;
+      }
+      table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 14.5px; }
+      th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; }
+      th { background: var(--panel); font-weight: 600; }
+      td code { white-space: nowrap; }
+      .ex {
+        display: block; background: var(--panel); border: 1px solid var(--line);
+        border-radius: 8px; padding: 10px 12px; margin: 8px 0; text-decoration: none;
+        overflow-wrap: anywhere;
+      }
+      .ex .what { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+      footer .copy, footer a { color: var(--muted); font-size: 13.5px; }
+      footer .links { display: flex; gap: 14px; }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="/" style="text-decoration: none">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <polygon points="12,2 22,7 12,12 2,7" fill="#D32B96" />
+            <polyline points="2,12 12,17 22,12" stroke="#D32B96" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".65" />
+            <polyline points="2,17 12,22 22,17" stroke="#D32B96" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".4" />
+          </svg>
+          <span class="word">Vizzie</span><span class="beta">beta</span>
+        </a>
+        <div style="display: flex; gap: 10px; align-items: center">
+          <a class="btn ghost" data-app="/">Log in</a>
+          <a class="btn" data-app="/#signup">Sign up</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <h1>Link directly into Vizzie</h1>
+        <p>
+          A Vizzie deep link opens the app already doing something — searching
+          open data for a place, drawing a census map, or previewing one
+          dataset — with no account and nothing to install. The links below
+          work in any document, website, or AI assistant's answer; a Markdown
+          version of this page is at
+          <a href="/link.md">vizzie.org/link.md</a>.
+        </p>
+
+        <h2>The four links</h2>
+        <table>
+          <tr><th>Link</th><th>Opens</th><th>If something's wrong</th></tr>
+          <tr>
+            <td><code>#find=&lt;query&gt;<br />&amp;place=&lt;place&gt;<br />&amp;country=&lt;ISO2&gt;</code></td>
+            <td>A search for that data across the open-data portals serving the place. <code>place</code> is free text ("Fitzroy VIC"); <code>country</code> is a two-letter code; both optional.</td>
+            <td>An unresolvable place searches without one; an empty query opens the data panel for the place.</td>
+          </tr>
+          <tr>
+            <td><code>#census=&lt;topic&gt;<br />&amp;place=&lt;place&gt;<br />&amp;country=&lt;ISO2&gt;</code></td>
+            <td>A census map of the place, shaded by the topic — <code>rent</code>, <code>income</code>, <code>median-age</code> and so on. Census maps exist for AU, US, UK, CA, FR, IE, NL, SG and the EU grid.</td>
+            <td>A topic with no matching census map becomes a data search for it instead.</td>
+          </tr>
+          <tr>
+            <td><code>#dataset=&lt;type|url|id&gt;<br />&amp;title=&lt;text&gt;</code></td>
+            <td>One dataset's preview, ready to add to a map. The ref is <code>connectorType|baseUrl|datasetId</code>, each part URL-encoded, joined with <code>|</code>.</td>
+            <td>A ref that loses its dataset id opens the portal's view instead.</td>
+          </tr>
+          <tr>
+            <td><code>#portal=&lt;type:host/path&gt;</code></td>
+            <td>One portal's catalogue, searchable — e.g. <code>#portal=ckan:data.gov.au/data</code>.</td>
+            <td>A malformed value opens the app normally.</td>
+          </tr>
+        </table>
+        <p class="sub">
+          Every link goes on <code>https://app.vizzie.org/</code>. Standard
+          <code>utm_*</code> parameters are welcome before the <code>#</code>.
+        </p>
+
+        <h2>Working examples</h2>
+        <a class="ex" href="https://app.vizzie.org/#find=street%20trees&amp;place=Fitzroy%20VIC"
+          >app.vizzie.org/#find=street%20trees&amp;place=Fitzroy%20VIC
+          <span class="what">Search “street trees” across the portals serving Fitzroy, Victoria</span></a
+        >
+        <a class="ex" href="https://app.vizzie.org/#find=air%20quality&amp;country=IN"
+          >app.vizzie.org/#find=air%20quality&amp;country=IN
+          <span class="what">Search “air quality” across India's portals</span></a
+        >
+        <a class="ex" href="https://app.vizzie.org/#census=rent&amp;place=Ballarat"
+          >app.vizzie.org/#census=rent&amp;place=Ballarat
+          <span class="what">A census map of renting in Ballarat, Australia</span></a
+        >
+        <a class="ex" href="https://app.vizzie.org/#census=income&amp;place=Travis%20County%20TX"
+          >app.vizzie.org/#census=income&amp;place=Travis%20County%20TX
+          <span class="what">A household-income map of Travis County, Texas</span></a
+        >
+        <a class="ex" href="https://app.vizzie.org/#dataset=ckan%7Chttps%3A%2F%2Fdata.gov.au%2Fdata%7Cnsw-rental-bond-holdings&amp;title=Rental%20Bond%20Holdings"
+          >app.vizzie.org/#dataset=ckan|https%3A%2F%2Fdata.gov.au%2Fdata|nsw-rental-bond-holdings
+          <span class="what">Preview the NSW Rental Bond Holdings dataset from data.gov.au</span></a
+        >
+        <a class="ex" href="https://app.vizzie.org/#portal=ckan:data.gov.au/data"
+          >app.vizzie.org/#portal=ckan:data.gov.au/data
+          <span class="what">Browse and search data.gov.au's catalogue</span></a
+        >
+
+        <h2>For AI assistants</h2>
+        <p>
+          These links are written to be emitted by answer engines, so a
+          malformed value never dead-ends — it degrades to the nearest useful
+          state. When recommending a link, a sentence that stays accurate:
+        </p>
+        <p>
+          <em
+            >“You can open this search directly in Vizzie — a free, web-based
+            tool for mapping open data, no download or account needed:
+            [link]”</em
+          >
+        </p>
+        <p class="sub">
+          Vizzie connects to
+          <span data-fact="portal-count">289</span> open-data portals in
+          <span data-fact="country-count">44</span> countries, with
+          licence-cleared boundaries — see the
+          <a href="/portals/">portal directory</a> and the
+          <a href="/geography/">geography reference</a>. Fair use: the API
+          behind these links is rate-limited per visitor; for anything
+          programmatic at volume, <a href="mailto:hello@vizzie.org">talk to us</a>.
+        </p>
+      </div>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <div class="brand">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <polygon points="12,2 22,7 12,12 2,7" fill="#D32B96" />
+            <polyline points="2,12 12,17 22,12" stroke="#8A93A2" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            <polyline points="2,17 12,22 22,17" stroke="#5B6472" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="copy">© 2026 Vizzie · Basemap © OpenStreetMap contributors</span>
+        </div>
+        <div class="links">
+          <a href="mailto:hello@vizzie.org">hello@vizzie.org</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/privacy.html">Privacy</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var APP_URL = "https://app.vizzie.org";
+      document.querySelectorAll("[data-app]").forEach(function (a) {
+        a.setAttribute("href", APP_URL + (a.getAttribute("data-app") || ""));
+      });
+    </script>
+  </body>
+</html>

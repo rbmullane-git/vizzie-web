@@ -529,7 +529,7 @@ async function main() {
 
   // Standalone topic pages, each written by its own build script and found the
   // same way — present on disk means present in the sitemap.
-  const topicPages = ['ejscreen'].filter((slug) =>
+  const topicPages = ['ejscreen', 'link'].filter((slug) =>
     existsSync(join(WEB, slug, 'index.html')),
   );
   const urls = [
