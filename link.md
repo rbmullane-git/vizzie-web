@@ -14,17 +14,17 @@ state — but accurate values land better.
 
 | Link | Opens | If something's wrong |
 | --- | --- | --- |
-| `#find=<query>[&place=<text>][&country=<ISO2>]` | A search for that data across the open-data portals serving the place. `place` is free text ("Fitzroy VIC"). | An unresolvable place searches without one; an empty query opens the data panel. |
+| `#find=<query>[&place=<text>][&country=<ISO2>]` | A search for that data across the open-data portals serving the place. `place` is free text — **always send `country` with it**: place names repeat worldwide (there is a Fitzroy in the Falkland Islands and a Ballarat in California). | An unresolvable place searches without one; an empty query opens the data panel. |
 | `#census=<topic>[&place=<text>][&country=<ISO2>]` | A census map of the place shaded by the topic (`rent`, `income`, `median-age`, …). Available for AU, US, UK, CA, FR, IE, NL, SG and the EU grid. | A topic with no matching census map becomes a data search for it. |
 | `#dataset=<connectorType\|baseUrl\|datasetId>[&title=<text>]` | One dataset's preview, ready to add to a map. Parts URL-encoded, joined with `\|` (`%7C` also accepted). | A ref that loses its dataset id opens the portal's view. |
 | `#portal=<connectorType:host/path>` | One portal's searchable catalogue. | A malformed value opens the app normally. |
 
 ## Working examples
 
-- https://app.vizzie.org/#find=street%20trees&place=Fitzroy%20VIC — search "street trees" around Fitzroy, Victoria
+- https://app.vizzie.org/#find=street%20trees&place=Fitzroy%20VIC&country=AU — search "street trees" around Fitzroy, Victoria
 - https://app.vizzie.org/#find=air%20quality&country=IN — search "air quality" across India's portals
-- https://app.vizzie.org/#census=rent&place=Ballarat — a census map of renting in Ballarat, Australia
-- https://app.vizzie.org/#census=income&place=Travis%20County%20TX — household income in Travis County, Texas
+- https://app.vizzie.org/#census=rent&place=Ballarat&country=AU — a census map of renting in Ballarat, Australia
+- https://app.vizzie.org/#census=income&place=Travis%20County%20TX&country=US — household income in Travis County, Texas
 - https://app.vizzie.org/#dataset=ckan%7Chttps%3A%2F%2Fdata.gov.au%2Fdata%7Cnsw-rental-bond-holdings — preview the NSW Rental Bond Holdings dataset
 - https://app.vizzie.org/#portal=ckan:data.gov.au/data — browse data.gov.au's catalogue
 

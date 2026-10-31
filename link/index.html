@@ -113,7 +113,7 @@
           <tr><th>Link</th><th>Opens</th><th>If something's wrong</th></tr>
           <tr>
             <td><code>#find=&lt;query&gt;<br />&amp;place=&lt;place&gt;<br />&amp;country=&lt;ISO2&gt;</code></td>
-            <td>A search for that data across the open-data portals serving the place. <code>place</code> is free text ("Fitzroy VIC"); <code>country</code> is a two-letter code; both optional.</td>
+            <td>A search for that data across the open-data portals serving the place. <code>place</code> is free text; <code>country</code> is a two-letter code — <strong>always send it with a place</strong>: place names repeat worldwide (there is a Fitzroy in the Falkland Islands and a Ballarat in California).</td>
             <td>An unresolvable place searches without one; an empty query opens the data panel for the place.</td>
           </tr>
           <tr>
@@ -138,20 +138,20 @@
         </p>
 
         <h2>Working examples</h2>
-        <a class="ex" href="https://app.vizzie.org/#find=street%20trees&amp;place=Fitzroy%20VIC"
-          >app.vizzie.org/#find=street%20trees&amp;place=Fitzroy%20VIC
+        <a class="ex" href="https://app.vizzie.org/#find=street%20trees&amp;place=Fitzroy%20VIC&amp;country=AU"
+          >app.vizzie.org/#find=street%20trees&amp;place=Fitzroy%20VIC&amp;country=AU
           <span class="what">Search “street trees” across the portals serving Fitzroy, Victoria</span></a
         >
         <a class="ex" href="https://app.vizzie.org/#find=air%20quality&amp;country=IN"
           >app.vizzie.org/#find=air%20quality&amp;country=IN
           <span class="what">Search “air quality” across India's portals</span></a
         >
-        <a class="ex" href="https://app.vizzie.org/#census=rent&amp;place=Ballarat"
-          >app.vizzie.org/#census=rent&amp;place=Ballarat
+        <a class="ex" href="https://app.vizzie.org/#census=rent&amp;place=Ballarat&amp;country=AU"
+          >app.vizzie.org/#census=rent&amp;place=Ballarat&amp;country=AU
           <span class="what">A census map of renting in Ballarat, Australia</span></a
         >
-        <a class="ex" href="https://app.vizzie.org/#census=income&amp;place=Travis%20County%20TX"
-          >app.vizzie.org/#census=income&amp;place=Travis%20County%20TX
+        <a class="ex" href="https://app.vizzie.org/#census=income&amp;place=Travis%20County%20TX&amp;country=US"
+          >app.vizzie.org/#census=income&amp;place=Travis%20County%20TX&amp;country=US
           <span class="what">A household-income map of Travis County, Texas</span></a
         >
         <a class="ex" href="https://app.vizzie.org/#dataset=ckan%7Chttps%3A%2F%2Fdata.gov.au%2Fdata%7Cnsw-rental-bond-holdings&amp;title=Rental%20Bond%20Holdings"
