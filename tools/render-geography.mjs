@@ -95,6 +95,20 @@ export function renderGeographyPage(facts, editorial, ctx = {}) {
   // Codes are built; names are matched. Two words rather than one so the
   // sentence stays English either way.
   const keyVerb = editorial.keyVerb || 'built';
+  // A deep link that opens the studio already doing something for this
+  // level's country (grammar: www.vizzie.org/link/). Census topics are
+  // verified preset ids in the studio — do not invent one here; a country
+  // with no census quick maps gets the country-scoped data search instead.
+  // Keyed on the slug's country prefix so a new level gets a link (or
+  // nothing) deliberately, not by accident.
+  const DEEP_LINKS = {
+    au: { hash: '/#census=renters&country=AU', label: 'Make a live census map of Australia' },
+    us: { hash: '/#census=renters&country=US', label: 'Make a live census map of the US' },
+    uk: { hash: '/#census=renters&country=GB', label: 'Make a live census map of the UK' },
+    eu: { hash: '/#census=density&country=DE', label: 'Make a live population-density map' },
+    in: { hash: '/#find=&country=IN', label: "Search India's open data" },
+  };
+  const deepLink = DEEP_LINKS[facts.slug.split('-')[0]];
   const title = `${editorial.name} (${editorial.abbr}) — boundaries, ${keyNoun} and how to map them | Vizzie`;
   const description =
     `${num(facts.areas)} ${editorial.plural} in the ${facts.vintage} boundary set: what they are, ` +
@@ -220,7 +234,10 @@ ${headerBlock()}
   <p>Drop a CSV with a column of ${esc(editorial.abbr)} ${keyNoun} into Vizzie, with whatever you measured beside it.
      Vizzie recognises the ${keyNoun === 'names' ? 'names' : 'code format'}, joins ${keyNoun === 'names' ? 'them' : 'it'} to the boundaries above and draws the map — no
      shapefile, no download, no GIS install. Your file stays private to your account.</p>
-  <p><a class="btn" href="https://app.vizzie.org/">Open Vizzie</a></p>
+  <p style="display:flex;gap:12px;flex-wrap:wrap">
+    <a class="btn" data-app="/">Open Vizzie</a>
+    ${deepLink ? `<a class="btn ghost" data-app="${esc(deepLink.hash)}">${esc(deepLink.label)}</a>` : ''}
+  </p>
 
   <p class="prov">
     ${esc(facts.attribution)}<br />

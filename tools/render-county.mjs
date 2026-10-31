@@ -172,6 +172,11 @@ export function renderCountyPage(facts, editorial, ctx = {}) {
     `&utm_content=${facts.slug}`;
   const ind = facts.indicators;
   const place = `${facts.name}, ${facts.state}`;
+  // A deep link that DOES the thing the section promises: opens the studio
+  // already importing this county's census maps (grammar: /link/ on www).
+  // Query string before the fragment, same reason as `utm` above.
+  const censusDeepLink =
+    `${appUrl}/?${utm}#census=income&place=${encodeURIComponent(place)}&country=US`;
   // US search volume follows the CITY, not the administrative container that
   // holds it: "austin demographics" runs 2,900/mo against 50 for "travis county
   // demographics". So the page leads with the searched name where the editorial
@@ -314,12 +319,15 @@ ${headerBlock()}
          figure, recolour the classification, or bring a CSV with a column of tract or county
          ${esc('FIPS')} codes and Vizzie joins it to these same boundaries. No shapefile, no
          download, no GIS install. Reading needs no account; saving a copy does.</p>
-       <p><a class="btn" href="${esc(appUrl)}/?${esc(utm)}#view=t${esc(ctx.viewToken)}">Open this map in the studio</a></p>`
+       <p style="display:flex;gap:12px;flex-wrap:wrap">
+         <a class="btn" href="${esc(appUrl)}/?${esc(utm)}#view=t${esc(ctx.viewToken)}">Open this map in the studio</a>
+         <a class="btn ghost" href="${esc(censusDeepLink)}">Make your own census maps of ${esc(facts.name)}</a>
+       </p>`
     : `<p>Everything above is public data. Bring a CSV with a column of tract or county
          ${esc('FIPS')} codes and Vizzie joins it to these same boundaries — no shapefile, no
          download, no GIS install. Reading this page needs no account; saving a map, adding your
          own data or publishing does.</p>
-       <p><a class="btn" href="${esc(appUrl)}/?${esc(utm)}">Open the studio</a></p>`}
+       <p><a class="btn" href="${esc(censusDeepLink)}">Open ${esc(facts.name)}'s census maps in Vizzie</a></p>`}
 
   <p class="prov">
     Demography: US Census Bureau, American Community Survey ${facts.acsYear} 5-year estimates
