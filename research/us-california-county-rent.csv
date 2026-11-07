@@ -1,33 +1,57 @@
 county_fips,county_name,median_gross_rent_usd
-06001,"Alameda County, California",2357
-06005,"Amador County, California",1421
-06007,"Butte County, California",1414
-06009,"Calaveras County, California",1625
-06011,"Colusa County, California",1157
-06013,"Contra Costa County, California",2375
-06015,"Del Norte County, California",1233
-06017,"El Dorado County, California",1715
-06019,"Fresno County, California",1392
-06021,"Glenn County, California",1120
-06023,"Humboldt County, California",1287
-06025,"Imperial County, California",1056
-06027,"Inyo County, California",1189
-06029,"Kern County, California",1300
-06031,"Kings County, California",1331
-06033,"Lake County, California",1368
-06035,"Lassen County, California",1000
-06037,"Los Angeles County, California",1954
-06039,"Madera County, California",1390
-06041,"Marin County, California",2668
-06043,"Mariposa County, California",1305
-06045,"Mendocino County, California",1317
-06047,"Merced County, California",1343
-06049,"Modoc County, California",836
-06051,"Mono County, California",1629
-06053,"Monterey County, California",2055
-06055,"Napa County, California",2237
-06057,"Nevada County, California",1677
-06059,"Orange County, California",2434
-06061,"Placer County, California",2069
-06063,"Plumas County, California",1194
-06065,"Riverside County, California",1901
+06001,Alameda County,2357
+06005,Amador County,1421
+06007,Butte County,1414
+06009,Calaveras County,1625
+06011,Colusa County,1157
+06013,Contra Costa County,2375
+06015,Del Norte County,1233
+06017,El Dorado County,1715
+06019,Fresno County,1392
+06021,Glenn County,1120
+06023,Humboldt County,1287
+06025,Imperial County,1056
+06027,Inyo County,1189
+06029,Kern County,1300
+06031,Kings County,1331
+06033,Lake County,1368
+06035,Lassen County,1000
+06037,Los Angeles County,1954
+06039,Madera County,1390
+06041,Marin County,2668
+06043,Mariposa County,1305
+06045,Mendocino County,1317
+06047,Merced County,1343
+06049,Modoc County,836
+06051,Mono County,1629
+06053,Monterey County,2055
+06055,Napa County,2237
+06057,Nevada County,1677
+06059,Orange County,2434
+06061,Placer County,2069
+06063,Plumas County,1194
+06065,Riverside County,1901
+06067,Sacramento County,1790
+06069,San Benito County,1992
+06071,San Bernardino County,1801
+06073,San Diego County,2246
+06075,San Francisco County,2476
+06077,San Joaquin County,1734
+06079,San Luis Obispo County,1992
+06081,San Mateo County,2922
+06083,Santa Barbara County,2131
+06085,Santa Clara County,2857
+06087,Santa Cruz County,2264
+06089,Shasta County,1317
+06093,Siskiyou County,1091
+06095,Solano County,2163
+06097,Sonoma County,2158
+06099,Stanislaus County,1623
+06101,Sutter County,1439
+06103,Tehama County,1184
+06105,Trinity County,1073
+06107,Tulare County,1280
+06109,Tuolumne County,1302
+06111,Ventura County,2317
+06113,Yolo County,1857
+06115,Yuba County,1311
