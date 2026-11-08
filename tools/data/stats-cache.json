@@ -14284,91 +14284,6 @@
    "count not fetched for type pxweb"
   ]
  },
- "gdcatalog-go-th": {
-  "count": 25254,
-  "countSource": "ckan package_search",
-  "undeclaredPct": 0,
-  "licences": [
-   {
-    "cls": "Open Data Common",
-    "count": 18352
-   },
-   {
-    "cls": "License not specified",
-    "count": 4139
-   },
-   {
-    "cls": "Creative Commons Attributions",
-    "count": 2110
-   },
-   {
-    "cls": "อื่นๆ",
-    "count": 338
-   },
-   {
-    "cls": "Creative Commons Attribution Non-Commercial",
-    "count": 142
-   },
-   {
-    "cls": "Creative Commons Non-Commercial (Any)",
-    "count": 54
-   },
-   {
-    "cls": "GNU Free Documentation License",
-    "count": 50
-   },
-   {
-    "cls": "Creative Commons Attribution Non-Commercial No-Derivs",
-    "count": 30
-   },
-   {
-    "cls": "Creative Commons Attribution Share-Alike",
-    "count": 22
-   },
-   {
-    "cls": "Creative Commons Attribution No-Derivs",
-    "count": 14
-   }
-  ],
-  "publishers": [
-   {
-    "name": "สำนักงานสถิติแห่งชาติ",
-    "count": 896
-   },
-   {
-    "name": "จังหวัดลพบุรี",
-    "count": 550
-   },
-   {
-    "name": "จังหวัดนครราชสีมา",
-    "count": 424
-   },
-   {
-    "name": "จังหวัดมหาสารคาม",
-    "count": 412
-   },
-   {
-    "name": "จังหวัดสุรินทร์",
-    "count": 411
-   },
-   {
-    "name": "จังหวัดร้อยเอ็ด",
-    "count": 408
-   },
-   {
-    "name": "จังหวัดศรีสะเกษ",
-    "count": 395
-   },
-   {
-    "name": "จังหวัดนครสวรรค์",
-    "count": 377
-   }
-  ],
-  "publisherCoverage": null,
-  "fetchedAt": "2026-11-08T10:03:00.051Z",
-  "ok": true,
-  "notes": []
- },
  "data-opendevelopmentmekong-net": {
   "count": 129,
   "countSource": "ckan package_search",
@@ -14905,6 +14820,91 @@
   ],
   "publisherCoverage": null,
   "fetchedAt": "2026-11-08T10:03:01.208Z",
+  "ok": true,
+  "notes": []
+ },
+ "gdcatalog-go-th": {
+  "count": 25254,
+  "countSource": "ckan package_search",
+  "undeclaredPct": 0,
+  "licences": [
+   {
+    "cls": "Open Data Common",
+    "count": 18352
+   },
+   {
+    "cls": "License not specified",
+    "count": 4139
+   },
+   {
+    "cls": "Creative Commons Attributions",
+    "count": 2110
+   },
+   {
+    "cls": "อื่นๆ",
+    "count": 338
+   },
+   {
+    "cls": "Creative Commons Attribution Non-Commercial",
+    "count": 142
+   },
+   {
+    "cls": "Creative Commons Non-Commercial (Any)",
+    "count": 54
+   },
+   {
+    "cls": "GNU Free Documentation License",
+    "count": 50
+   },
+   {
+    "cls": "Creative Commons Attribution Non-Commercial No-Derivs",
+    "count": 30
+   },
+   {
+    "cls": "Creative Commons Attribution Share-Alike",
+    "count": 22
+   },
+   {
+    "cls": "Creative Commons Attribution No-Derivs",
+    "count": 14
+   }
+  ],
+  "publishers": [
+   {
+    "name": "สำนักงานสถิติแห่งชาติ",
+    "count": 896
+   },
+   {
+    "name": "จังหวัดลพบุรี",
+    "count": 550
+   },
+   {
+    "name": "จังหวัดนครราชสีมา",
+    "count": 424
+   },
+   {
+    "name": "จังหวัดมหาสารคาม",
+    "count": 412
+   },
+   {
+    "name": "จังหวัดสุรินทร์",
+    "count": 411
+   },
+   {
+    "name": "จังหวัดร้อยเอ็ด",
+    "count": 408
+   },
+   {
+    "name": "จังหวัดศรีสะเกษ",
+    "count": 395
+   },
+   {
+    "name": "จังหวัดนครสวรรค์",
+    "count": 377
+   }
+  ],
+  "publisherCoverage": null,
+  "fetchedAt": "2026-11-08T10:45:11.097Z",
   "ok": true,
   "notes": []
  }

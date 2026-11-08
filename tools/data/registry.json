@@ -1845,6 +1845,14 @@
   "apiAccessible": true
  },
  {
+  "connectorType": "th-census",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/th/2024",
+  "label": "Thailand census quick maps — registered population 2024 (district, province)",
+  "countryCode": "TH",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
   "connectorType": "ckan",
   "baseUrl": "https://data.opendevelopmentcambodia.net",
   "label": "Open Development Cambodia",

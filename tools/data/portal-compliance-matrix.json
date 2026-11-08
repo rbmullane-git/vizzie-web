@@ -479,6 +479,19 @@
    "attribution_template": "Contains information from {title} accessed on {retrieved} from {publisher} which is made available under the terms of the Singapore Open Data Licence version 1.0 (https://data.gov.sg/open-data-licence). Via Vizzie.",
    "note": "Read 8 Oct 2026: a worldwide, royalty-free, non-exclusive licence to use, copy, distribute, modify and adapt the datasets 'whether commercially or non-commercially', with a sub-licence where users of an application need it. Conditions: a conspicuous source notice linking the licence (the template is the licence's own example wording), and no suggestion of official status or agency endorsement; no rights over personal data, third-party rights or trade marks. SingStat's Terms of Use (rendered 8 Oct 2026) put every dataset from its services, Table Builder included, under this licence, which prevails over the site terms."
   },
+  "DGA-OGL-TH": {
+   "name": "DGA Open Government Licence (Thailand)",
+   "spdx": null,
+   "url": "https://data.go.th/pages/dga-open-government-license",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "{title}, {publisher}. Retrieved {retrieved}. Used under the DGA Open Government Licence (data.go.th). Via Vizzie.",
+   "note": "Read 8 Nov 2026 (version of 16 March 2020, through the Internet Archive): a non-exclusive licence without limit of territory or time, needing no permission and no fee, to copy, publish, distribute and otherwise use the data, apply it, and combine it with other data for services and innovation. Conditions: credit the producing agency with the source and the date accessed (or the portal's own wording where no agency is named) — an essential term; do not alter the data so it conveys a different meaning; no implied endorsement; logos, insignia and third parties' IP excluded. data.go.th's Conditions of Use put every dataset on the portal under it. gdcatalog.go.th, the CKAN behind data.go.th, labels it 'Open Data Common' (18,352 of its datasets) — the alias is that label."
+  },
   "KITCHENER-ODL": {
    "name": "City of Kitchener Open Data Licence",
    "spdx": null,
@@ -642,6 +655,8 @@
   "creative commons attribution non-commercial no-derivs": "CC-BY-NC-ND",
   "creative commons attribution no-derivs": "CC-BY-ND",
   "odc-pddl-1.0": "PDDL-1.0",
+  "open data common": "DGA-OGL-TH",
+  "dga open government license": "DGA-OGL-TH",
   "license not specified": "UNDECLARED",
   "notspecified": "UNDECLARED",
   "": "UNDECLARED",
@@ -1236,6 +1251,18 @@
    },
    "auth": "None",
    "tos_note": "The grid's read.me: 'Copyright European Union 2026. The source needs to be indicated and when re-use involves modifications to the data or text, this must be stated clearly.' Vizzie credits Eurostat and states its changes (shares, 10 km cells). Unlike the GEOSTAT 2011 grid, there are no in-house-only or non-commercial usage conditions."
+  },
+  "th-census": {
+   "platform": "Vizzie-built static files (DOPA registered population by age and sex, 31 Dec 2024, on OCHA 2022 boundaries) on Vizzie's R2 bucket",
+   "licence_source": "DGA Open Government Licence: producing agency and access date credited",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own bucket: no third-party load. One small file per level, cached in memory."
+   },
+   "auth": "None",
+   "tos_note": "DOPA publishes the age table on stat.bora.dopa.go.th, which answers only inside Thailand; Vizzie's copy of the December 2024 files was retrieved through the Internet Archive. Listed on gdcatalog.go.th under the DGA Open Government Licence ('Open Data Common'). Boundaries: OCHA, CC BY-IGO."
   },
   "land-layers": {
    "platform": "Vizzie land layers: state and council open parcel, zoning and land-use services (ArcGIS REST, GeoServer WFS, Opendatasoft), read by map extent",
@@ -9359,7 +9386,8 @@
    "licence_source": "Per-dataset `license_id` via package_search / package_show",
    "default_licence": null,
    "observed_licences": {
-    "UNDECLARED": 22879,
+    "DGA-OGL-TH": 18352,
+    "UNDECLARED": 4527,
     "CC-BY-4.0": 2110,
     "CC-BY-NC": 196,
     "CC-BY-NC-ND": 30,
@@ -9367,7 +9395,7 @@
     "CC-BY-ND": 14,
     "CC-BY-NC-SA": 3
    },
-   "undeclared_share": 0.906,
+   "undeclared_share": 0.179,
    "rate_limit": {
     "published": false,
     "requests_per_sec": 2,
@@ -9376,7 +9404,7 @@
     "note": "No published limit. 2 req/s is the conservative CKAN default."
    },
    "auth": "None required",
-   "notes": "The CKAN (2.9.2) behind data.go.th, which itself returns 403 to server fetches. 25,254 datasets, almost all tables (CSV 20,930 / XLSX 7,303 resources; SHP 88, GeoJSON 40), published mostly by the 76 provincial offices and the National Statistical Office. 18,352 declare 'Open Data Common', DGA's own licence, whose terms have not been read, so they resolve UNDECLARED. Datastore is off (0 of 315 sampled resources), so data comes by file download, and about half the sampled CSV links did not answer within 10s. Of 106 readable CSV headers, 45% name a province, 34% an amphoe (district), 22% a tambon, and none carry an area code. Thai-only metadata: COUNTRY_LANGUAGE maps TH to Thai. Over the 25k harvest threshold, so it is searched live rather than indexed. Measured 7 Nov 2026.",
+   "notes": "The CKAN (2.9.2) behind data.go.th, which itself returns 403 to server fetches. 25,254 datasets, almost all tables (CSV 20,930 / XLSX 7,303 resources; SHP 88, GeoJSON 40), published mostly by the 76 provincial offices and the National Statistical Office. 18,352 declare 'Open Data Common', gdcatalog's label for the DGA Open Government Licence (read 8 Nov 2026: an attribution licence, commercial use not excluded), so they resolve DGA-OGL-TH; 4,527 declare nothing usable. Datastore is off (0 of 315 sampled resources), so data comes by file download, and about half the sampled CSV links did not answer within 10s. Of 106 readable CSV headers, 45% name a province, 34% an amphoe (district), 22% a tambon, and none carry an area code. Thai-only metadata: COUNTRY_LANGUAGE maps TH to Thai. Over the 25k harvest threshold, so it is searched live rather than indexed. Measured 7 Nov 2026.",
    "dataset_overrides": []
   },
   {
@@ -9630,6 +9658,29 @@
    },
    "auth": "None required",
    "notes": "CKAN 2.9.11, 515 datasets. The geospatial exception among Indonesian portals: about 39% carry WMS, WFS or shapefile resources (Sep 2026). Bahasa-only metadata. Measured 7 Nov 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "census.th.vizzie",
+   "label": "Thailand census quick maps (registered population 2024, built by Vizzie)",
+   "country": "TH",
+   "connector": "th-census",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/th/2024",
+   "platform": "Vizzie-built static files on R2",
+   "tos_url": "https://data.go.th/pages/dga-open-government-license",
+   "tos_note": "DOPA's registration statistics are listed on gdcatalog.go.th under the DGA Open Government Licence ('Open Data Common'); OCHA's boundaries are CC BY-IGO. Both credited in the attribution.",
+   "licence_source": "Portal-wide (DGA Open Government Licence)",
+   "default_licence": "DGA-OGL-TH",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own R2 bucket; one small gzipped file per level."
+   },
+   "auth": "None",
+   "notes": "Added 8 Nov 2026. Built offline by scripts/census-th/ from the Department of Provincial Administration's registered population by single year of age and sex at 31 December 2024 (the 77 province files 6712ccNN.txt from stat.bora.dopa.go.th, which answers only inside Thailand, retrieved through the Internet Archive) on OCHA's 2022 district and province boundaries. DOPA reports by registration office, so a district office's row excludes the municipalities inside it: every subdistrict row is matched to its OCHA subdistrict and summed to its district. Not the UNFPA 2023 table on HDX, which is a US Census Bureau projection from 2010 with no births, deaths or migration.",
    "dataset_overrides": []
   }
  ]
