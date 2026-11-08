@@ -23,6 +23,86 @@
   "nativeApi": true
  },
  {
+  "connectorType": "abs-census",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/au/2021",
+  "label": "Australian Census 2021 — quick maps (SA1, suburb, LGA, Mesh Block)",
+  "countryCode": "AU",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "acs-census",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/us/acs2024",
+  "label": "US Census quick maps — ACS 2020–2024 (county, tract, block group)",
+  "countryCode": "US",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "uk-census",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/uk/2021",
+  "label": "UK Census quick maps — 2021/22 (output area, LSOA, MSOA, local authority)",
+  "countryCode": "GB",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "ca-census",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/ca/2021",
+  "label": "Canada Census quick maps — 2021 (dissemination area, subdivision, division)",
+  "countryCode": "CA",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "sg-census",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/sg/2025",
+  "label": "Singapore census quick maps — GHS 2025 (subzone, planning area)",
+  "countryCode": "SG",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "ie-census",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/ie/2022",
+  "label": "Ireland census quick maps — Census 2022 (small area, electoral division, local authority)",
+  "countryCode": "IE",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "nl-census",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/nl/2024",
+  "label": "Netherlands census quick maps — CBS key figures 2024 (buurt, wijk, gemeente)",
+  "countryCode": "NL",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "fr-census",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/fr/2022",
+  "label": "France census quick maps — INSEE census 2022 (IRIS, commune, département)",
+  "countryCode": "FR",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "eu-grid",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/eu/2021",
+  "label": "EU census grid quick maps — 2021 (1 km and 10 km cells)",
+  "countryCode": "EU",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
+  "connectorType": "land-layers",
+  "baseUrl": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/land/v1",
+  "label": "Land & planning — parcels, land use and zoning (AU, US parcels)",
+  "countryCode": "AU",
+  "apiAccessible": true,
+  "nativeApi": true
+ },
+ {
   "connectorType": "ckan",
   "baseUrl": "https://www.data.qld.gov.au",
   "label": "Queensland Government (data.qld.gov.au)",
@@ -1756,6 +1836,74 @@
   "countryCode": "SG",
   "apiAccessible": true,
   "nativeApi": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://gdcatalog.go.th",
+  "label": "GD Catalog — Thailand (national)",
+  "countryCode": "TH",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.opendevelopmentcambodia.net",
+  "label": "Open Development Cambodia",
+  "countryCode": "KH",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.opendevelopmentmekong.net",
+  "label": "Open Development Vietnam (Open Development Mekong)",
+  "countryCode": "VN",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.bnpb.go.id",
+  "label": "BNPB — Indonesia's disaster management agency (national)",
+  "countryCode": "ID",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.kaltimprov.go.id",
+  "label": "Satu Data Kalimantan Timur — Indonesia (province)",
+  "countryCode": "ID",
+  "region": "East Kalimantan",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.acehprov.go.id",
+  "label": "Satu Data Aceh — Indonesia (province)",
+  "countryCode": "ID",
+  "region": "Aceh",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.sumbarprov.go.id",
+  "label": "Satu Data Sumatera Barat — Indonesia (province)",
+  "countryCode": "ID",
+  "region": "West Sumatra",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.bantenprov.go.id",
+  "label": "Satu Data Banten — Indonesia (province)",
+  "countryCode": "ID",
+  "region": "Banten",
+  "apiAccessible": true
+ },
+ {
+  "connectorType": "ckan",
+  "baseUrl": "https://data.bengkuluprov.go.id",
+  "label": "Satu Data Bengkulu — Indonesia (province)",
+  "countryCode": "ID",
+  "region": "Bengkulu",
+  "apiAccessible": true
  },
  {
   "connectorType": "ckan",

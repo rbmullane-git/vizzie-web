@@ -1,112 +1,112 @@
 {
  "https://api.census.gov": {
   "count": 318,
-  "measured": "2026-09-19",
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "US Census Bureau — ACS & Decennial (by tract)",
   "connectorType": "census"
  },
  "https://ddh-openapi.worldbank.org": {
-  "count": 7967,
-  "measured": "2026-09-19",
+  "count": 7985,
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "World Bank Data Catalog (global development data)",
   "connectorType": "world-bank"
  },
  "https://sdmx.oecd.org/public": {
-  "count": 1545,
-  "measured": "2026-09-19",
+  "count": 1549,
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "OECD Data Portal (economy, education, health, environment)",
   "connectorType": "oecd"
  },
  "https://sdmx.data.unicef.org/ws/public/sdmxapi": {
-  "count": 42,
-  "measured": "2026-09-19",
+  "count": 43,
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "UNICEF Data Warehouse (child health, education, poverty)",
   "connectorType": "unicef"
  },
  "https://ghoapi.azureedge.net": {
-  "count": 3099,
-  "measured": "2026-09-19",
+  "count": 3091,
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "WHO Global Health Observatory (health indicators, all countries)",
   "connectorType": "who-gho"
  },
  "https://kidb.adb.org": {
   "count": 66,
-  "measured": "2026-09-19",
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "ADB Key Indicators Database (Asia & the Pacific)",
   "connectorType": "adb"
  },
  "https://api.dhsprogram.com": {
   "count": 4655,
-  "measured": "2026-09-19",
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "DHS Program (demographic & health surveys, developing world)",
   "connectorType": "dhs"
  },
  "https://unstats.un.org/sdgapi": {
   "count": 713,
-  "measured": "2026-09-19",
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "UN SDG Global Database (Sustainable Development Goals indicators)",
   "connectorType": "un-sdg"
  },
  "https://ec.europa.eu/eurostat/api/dissemination": {
-  "count": 4751,
-  "measured": "2026-09-19",
+  "count": 4738,
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
-  "label": "Eurostat — EU statistics by NUTS region (all member states)",
+  "label": "Eurostat — statistics by NUTS region (EU, EFTA and candidates)",
   "connectorType": "eurostat"
  },
  "https://data.api.abs.gov.au": {
   "count": 4297,
-  "measured": "2026-09-19",
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "Australian Bureau of Statistics — Data by region & SEIFA",
   "connectorType": "abs"
  },
  "https://portal.spatial.nsw.gov.au/server/rest/services": {
   "count": 211,
-  "measured": "2026-09-19",
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "NSW Spatial Services",
   "connectorType": "esri-server"
  },
  "https://spatial-gis.information.qld.gov.au/arcgis/rest/services": {
-  "count": 1835,
-  "measured": "2026-09-19",
+  "count": 1802,
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "QSpatial — Queensland Government spatial services",
   "connectorType": "esri-server"
  },
  "https://geoserver-123.aodn.org.au/geoserver/wfs": {
   "count": 398,
-  "measured": "2026-09-19",
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "AODN — Australian Ocean Data Network",
   "connectorType": "wfs-server"
  },
  "https://maps.eatlas.org.au/maps/wfs": {
   "count": 1342,
-  "measured": "2026-09-19",
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "eAtlas — Great Barrier Reef & tropical Australia",
   "connectorType": "wfs-server"
  },
  "https://geoserver.imas.utas.edu.au/geoserver/wfs": {
-  "count": 404,
-  "measured": "2026-09-19",
+  "count": 415,
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "IMAS — Institute for Marine and Antarctic Studies",
   "connectorType": "wfs-server"
  },
  "https://services.thelist.tas.gov.au/arcgis/rest/services": {
-  "count": 980,
-  "measured": "2026-09-19",
+  "count": 978,
+  "measured": "2026-11-08",
   "source": "the connector's own catalogTotal()",
   "label": "the LIST — Tasmanian Government spatial services",
   "connectorType": "esri-server"

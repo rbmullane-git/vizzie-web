@@ -16,6 +16,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { fetchPortalStats } from './fetch-portal-stats.mjs';
+import { portalRows, portalSlugs } from './portal-facts.mjs';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const WEB = join(__dir, '..');
@@ -43,7 +44,6 @@ const PLATFORM_LABEL = {
 
 const norm = (u) => (u || '').replace(/\/+$/, '');
 const host = (u) => { try { return new URL(u).host; } catch { return (u || '').replace(/^https?:\/\//, '').split('/')[0]; } };
-const slugify = (u) => host(u).replace(/^www\./, '').replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase();
 
 // Resolve what a portal *says* a licence is into a real licence class.
 //
@@ -270,13 +270,12 @@ function buildPortals() {
   const registry = loadJSON(join(DATA, 'registry.json'));
   const regByUrl = new Map(registry.map((r) => [norm(r.baseUrl), r]));
   const exMap = examplesByHost();
-  const seenSlug = new Map();
+  const rows = portalRows(matrix);
+  const slugs = portalSlugs(rows);
 
-  return matrix.portals.map((p) => {
+  return rows.map((p) => {
     const reg = regByUrl.get(norm(p.base_url)) || {};
-    let slug = slugify(p.base_url);
-    if (seenSlug.has(slug)) { slug = `${slug}-${slugify(host(p.base_url) + (new URL(p.base_url).pathname || ''))}`.replace(/-+/g, '-'); }
-    seenSlug.set(slug, true);
+    const slug = slugs.get(p.id);
     const cc = p.country || reg.countryCode || 'UN';
     // clean display name: drop " — Country…" suffix from label
     const name = (p.label || reg.label || host(p.base_url)).split(' — ')[0].trim();

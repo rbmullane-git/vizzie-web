@@ -362,6 +362,19 @@
    "attribution_template": "{title} © {publisher}, licensed CC BY 2.5 IN. Retrieved {retrieved} via Vizzie.",
    "note": "Added 20 Sep 2026 for the reference geometry, not a portal: geoBoundaries' India ADM1 comes from DataMeet under CC BY 2.5 India, even though HDX labels the wider bundle ODbL. Same permissions as the generic 2.5, its own class because the instrument is the Indian port."
   },
+  "GODL-INDIA": {
+   "name": "Government Open Data License – India",
+   "spdx": null,
+   "url": "https://data.gov.in/government-open-data-license-india",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "{publisher}, {title}, Open Government Data Platform India, retrieved {retrieved}, {sourceUrl}. Published under the Government Open Data License – India: https://data.gov.in/government-open-data-license-india",
+   "note": "Added 23 Oct 2026 after reading the gazette notification in full (Gazette of India Extraordinary No. 42, 13 Feb 2017, MeitY No. 8(2)/2013-EG-I). s.3 grants a worldwide, royalty-free licence for all lawful commercial and non-commercial purposes, derivatives included; no share-alike. s.4a/s.5 require the provider, source, licence AND the dataset's URL in the attribution, hence {sourceUrl}. s.4c non-endorsement. s.7c lets a provider revoke the licence for one dataset and retract it. Disputes go to an arbitrator appointed by the Union Law Secretary; Indian law governs."
+  },
   "CC-BY-2.5-AU": {
    "name": "Creative Commons Attribution 2.5 Australia",
    "spdx": "CC-BY-2.5-AU",
@@ -425,7 +438,7 @@
    "indicate_changes": false,
    "ingest": "allow",
    "attribution_template": "Contains information licensed under the Open Government Licence – {publisher}. Retrieved {retrieved} via Vizzie.",
-   "note": "Alberta, British Columbia, Ontario, Nova Scotia, New Brunswick, Yukon and the Northwest Territories each publish their own Open Government Licence, all modelled on the federal OGL 2.0. Three texts have now been read in full: Ontario's (19 Sep 2026) and the NWT's (20 Sep 2026) both grant a worldwide, royalty-free, perpetual licence to copy, modify, publish, adapt and distribute for any lawful purpose, explicitly including commercial purposes, conditional on acknowledging the source. Yukon's and NWT's own portals declare the licence by name and URL on every dataset (open.yukon.ca: 3,840 of 3,841; opendata.gov.nt.ca: 340 of 341); Alberta's and BC's rest on open.canada.ca's licence register, and Alberta's page 403s a server fetch. One class rather than seven because they differ only in the licensor, and the attribution wording each mandates — 'Contains information licensed under the Open Government Licence – <licensor>' — is exactly what {publisher} fills in. Deliberately NOT here: Manitoba's OpenMB licence and Saskatchewan's SUUDL, which are differently-named instruments (SUUDL has its own class), and Vancouver's and Toronto's municipal licences, whose texts are still unreachable — see the resolve.test.ts case that keeps them UNDECLARED."
+   "note": "Alberta, British Columbia, Ontario, Nova Scotia, New Brunswick, Yukon and the Northwest Territories each publish their own Open Government Licence, all modelled on the federal OGL 2.0. Three texts have now been read in full: Ontario's (19 Sep 2026) and the NWT's (20 Sep 2026) both grant a worldwide, royalty-free, perpetual licence to copy, modify, publish, adapt and distribute for any lawful purpose, explicitly including commercial purposes, conditional on acknowledging the source. Yukon's and NWT's own portals declare the licence by name and URL on every dataset (open.yukon.ca: 3,840 of 3,841; opendata.gov.nt.ca: 340 of 341); Alberta's and BC's rest on open.canada.ca's licence register, and Alberta's page 403s a server fetch. One class rather than seven because they differ only in the licensor, and the attribution wording each mandates — 'Contains information licensed under the Open Government Licence – <licensor>' — is exactly what {publisher} fills in. Calgary's (v2.1) and Edmonton's (v1.0) municipal OGLs were read in full on 7 Oct 2026 (https://data.calgary.ca/stories/s/Open-Calgary-Terms-of-Use/u45n-7awa and the licence page embedded in https://data.edmonton.ca/stories/s/Open-Government-Licence-Edmonton/msh8-if28): the same worldwide, royalty-free, perpetual grant including commercial use, conditional on 'Contains information licensed under the Open Government Licence – City of Calgary/Edmonton'. Their URLs are aliased here for the ward boundaries Vizzie seeds from those portals; the portals' own default_licence is a separate decision. Deliberately NOT here: Manitoba's OpenMB licence and Saskatchewan's SUUDL, which are differently-named instruments (SUUDL has its own class), and Vancouver's and Toronto's municipal licences, whose texts are still unreachable — see the resolve.test.ts case that keeps them UNDECLARED."
   },
   "SK-SUUDL-2.0": {
    "name": "Government of Saskatchewan Standard Unrestricted Use Data Licence 2.0",
@@ -452,6 +465,19 @@
    "ingest": "allow",
    "attribution_template": "{title} — Source: Statistics Canada, {publisher}. Reproduced and distributed on an \"as is\" basis with the permission of Statistics Canada. Retrieved {retrieved} via Vizzie.",
    "note": "Read in full 20 Sep 2026: a worldwide, royalty-free, non-exclusive licence to use, reproduce, publish, distribute or SELL the Information and value-added products, and to sublicence. Its conditions are accuracy, no implication of StatCan endorsement, no misrepresentation of the source, and no re-identification. Attribution is marked required here because 'not misrepresent the Information or its source' plus StatCan's standard citation practice amount to a source-credit obligation. It turns up on Canadian municipal hubs wherever census-derived layers are republished — 116 datasets on Brampton and 60 on Peel alone."
+  },
+  "SG-ODL-1.0": {
+   "name": "Singapore Open Data Licence 1.0",
+   "spdx": null,
+   "url": "https://data.gov.sg/open-data-licence",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "Contains information from {title} accessed on {retrieved} from {publisher} which is made available under the terms of the Singapore Open Data Licence version 1.0 (https://data.gov.sg/open-data-licence). Via Vizzie.",
+   "note": "Read 8 Oct 2026: a worldwide, royalty-free, non-exclusive licence to use, copy, distribute, modify and adapt the datasets 'whether commercially or non-commercially', with a sub-licence where users of an application need it. Conditions: a conspicuous source notice linking the licence (the template is the licence's own example wording), and no suggestion of official status or agency endorsement; no rights over personal data, third-party rights or trade marks. SingStat's Terms of Use (rendered 8 Oct 2026) put every dataset from its services, Table Builder included, under this licence, which prevails over the site terms."
   },
   "KITCHENER-ODL": {
    "name": "City of Kitchener Open Data Licence",
@@ -504,6 +530,32 @@
    "ingest": "block",
    "attribution_template": null,
    "note": "An affirmative 'no' from the publisher, not a missing answer — distinct from UNDECLARED, which is silence. Never ingest. Covers CKAN's other-closed and the SPREP network's private / inter-agency values."
+  },
+  "BCN-CL-USO-LIBRE": {
+   "name": "Biblioteca del Congreso Nacional de Chile — free use with attribution",
+   "spdx": null,
+   "url": "https://www.bcn.cl/siit/mapas_vectoriales/index_html",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "{title} — Fuente: Biblioteca del Congreso Nacional de Chile ({publisher}). Retrieved {retrieved} via Vizzie.",
+   "note": "Added 7 Oct 2026 for the CL/COMUNA reference geometry, not a portal. BCN's 'Condiciones de uso' for its vector maps, read in full that day: 'Las personas o instituciones pueden usar libremente esta información, señalando como fuente a la Biblioteca del Congreso Nacional de Chile' — free use, the one condition being source credit; no commercial, derivative or share-alike restriction is stated. It is a bespoke grant, not a named licence, and it does not mention redistribution in so many words. The material is declared reference-only (no geodetic precision) and boundary depictions do not bind the State of Chile."
+  },
+  "CBS-IL-OPEN": {
+   "name": "Israel Central Bureau of Statistics Open License",
+   "spdx": null,
+   "url": "https://www.cbs.gov.il/en/Pages/Enduser-license.aspx",
+   "commercial_ok": true,
+   "attribution_required": true,
+   "share_alike": false,
+   "no_derivatives": false,
+   "indicate_changes": false,
+   "ingest": "allow",
+   "attribution_template": "The Central Bureau of Statistics (CBS), {title} ({retrieved}), copied and distributed as is according to the CBS license at https://www.cbs.gov.il/en/Pages/Enduser-license.aspx. Via Vizzie.",
+   "note": "Read in full 7 Oct 2026: a worldwide, royalty-free, perpetual, non-exclusive licence to copy, distribute, make available, broadcast and create derivative works and adaptations, for 'commercial and non-commercial use'. Conditions: the prescribed source acknowledgement, no misleading alteration, no implied CBS/State endorsement, no breach of law or privacy (re-identification). Excludes third-party rights CBS cannot license, logos and photographs. Added for the IL/LOCALITY_NAME reference geometry, whose ArcGIS item states its use is subject to this licence."
   }
  },
  "licence_aliases": {
@@ -581,6 +633,16 @@
   "cc by-nd": "CC-BY-ND",
   "cc by-nd 4.0": "CC-BY-ND",
   "creative commons attribution | noderivatives 4.0 international license": "CC-BY-ND",
+  "creative commons attribution": "CC-BY-4.0",
+  "creative commons attributions": "CC-BY-4.0",
+  "creative commons attribution share-alike": "CC-BY-SA-4.0",
+  "creative commons attribution non-commercial": "CC-BY-NC",
+  "creative commons non-commercial (any)": "CC-BY-NC",
+  "creative commons attribution non-commercial share-alike": "CC-BY-NC-SA",
+  "creative commons attribution non-commercial no-derivs": "CC-BY-NC-ND",
+  "creative commons attribution no-derivs": "CC-BY-ND",
+  "odc-pddl-1.0": "PDDL-1.0",
+  "license not specified": "UNDECLARED",
   "notspecified": "UNDECLARED",
   "": "UNDECLARED",
   "other": "UNDECLARED",
@@ -708,6 +770,11 @@
   "http://www.statcan.gc.ca/en/reference/licence": "STATCAN-OPEN",
   "statistics canada open licence": "STATCAN-OPEN",
   "https://www.hamilton.ca/city-initiatives/strategies-actions/open-data-licence-terms-and-conditions": "OGL-CA-PROVINCIAL",
+  "https://data.calgary.ca/stories/s/open-calgary-terms-of-use/u45n-7awa": "OGL-CA-PROVINCIAL",
+  "open government licence - city of calgary": "OGL-CA-PROVINCIAL",
+  "https://data.edmonton.ca/stories/s/open-government-licence-edmonton/msh8-if28": "OGL-CA-PROVINCIAL",
+  "open government licence - city of edmonton": "OGL-CA-PROVINCIAL",
+  "open government licence - edmonton": "OGL-CA-PROVINCIAL",
   "http://apps.kelowna.ca/images/opendata/opengovernmentlicence.pdf": "OGL-CA-PROVINCIAL",
   "https://apps.kelowna.ca/images/opendata/opengovernmentlicence.pdf": "OGL-CA-PROVINCIAL",
   "https://www.coquitlam.ca/894/open-government-licence": "OGL-CA-PROVINCIAL",
@@ -729,7 +796,10 @@
   "ns-oglns": "OGL-CA-PROVINCIAL",
   "nb-oglnb": "OGL-CA-PROVINCIAL",
   "ogl-on-1.0": "OGL-CA-PROVINCIAL",
-  "nova scotia open government licence": "OGL-CA-PROVINCIAL"
+  "nova scotia open government licence": "OGL-CA-PROVINCIAL",
+  "bcn-cl-uso-libre": "BCN-CL-USO-LIBRE",
+  "cbs-il-open": "CBS-IL-OPEN",
+  "ogl-canada-2.0": "OGL-Canada-2.0"
  },
  "platforms": {
   "ckan": {
@@ -1059,6 +1129,127 @@
    "auth": "None",
    "tos_note": "Reuse permitted for commercial and non-commercial purposes with attribution (CC BY 4.0)."
   },
+  "abs-census": {
+   "platform": "Vizzie-built static files (ABS 2021 Census DataPacks, SEIFA 2021, Mesh Block counts) on Vizzie's R2 bucket",
+   "licence_source": "Blanket CC BY 4.0 (ABS website copyright statement and the DataPacks' own CreativeCommons_Licensing_readme.txt)",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own bucket, not an ABS service: no third-party load. Files are fetched once per level and state and cached in memory."
+   },
+   "auth": "None",
+   "tos_note": "Reuse permitted with attribution (CC BY 4.0). The DataPack readme adds: data derived from ABS statistics must not be attributed to the ABS, and the line 'ABS data used with permission from the Australian Bureau of Statistics' is required. Vizzie's percentages are derived, so they are credited as 'Vizzie calculation from ABS 2021 Census data'."
+  },
+  "acs-census": {
+   "platform": "Vizzie-built static files (ACS 2020–2024 5-year Summary File, CDC/ATSDR SVI 2022, 2024 cartographic boundaries) on Vizzie's R2 bucket",
+   "licence_source": "U.S. Government works (17 USC §105): Census Bureau and CDC/ATSDR data are public domain",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own bucket, not a Census Bureau service: no third-party load. Files are fetched once per level and state and cached in memory."
+   },
+   "auth": "None",
+   "tos_note": "Public domain. The Census Bureau asks that derived figures not be presented as its own; Vizzie's are credited as 'Vizzie calculation from U.S. Census Bureau, American Community Survey 2020–2024 5-year estimates'."
+  },
+  "uk-census": {
+   "platform": "Vizzie-built static files (England & Wales Census 2021, Scotland's Census 2022, Northern Ireland Census 2021; ONS/NRS/OSNI boundaries) on Vizzie's R2 bucket",
+   "licence_source": "Open Government Licence v3.0 (ONS, NRS and NISRA census outputs and ONS Open Geography boundaries)",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own bucket: no third-party load. Files are fetched once per level and region and cached in memory."
+   },
+   "auth": "None",
+   "tos_note": "OGL v3.0: reuse with attribution. Credited as 'Contains public sector information licensed under the Open Government Licence v3.0'; Vizzie's percentages are derived and labelled as Vizzie calculations."
+  },
+  "ca-census": {
+   "platform": "Vizzie-built static files (Statistics Canada 2021 Census Profile; 2021 cartographic boundary files) on Vizzie's R2 bucket",
+   "licence_source": "Statistics Canada Open Licence (Census Profile and boundary files)",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own bucket: no third-party load. Files are fetched once per level and province and cached in memory."
+   },
+   "auth": "None",
+   "tos_note": "Statistics Canada Open Licence: use, reproduce, publish and sell, with source credit and no implied endorsement. Credited as 'Reproduced and distributed on an \"as is\" basis with the permission of Statistics Canada'; Vizzie's percentages are derived and labelled as Vizzie calculations."
+  },
+  "sg-census": {
+   "platform": "Vizzie-built static files (SingStat General Household Survey 2025; URA Master Plan 2019 boundaries) on Vizzie's R2 bucket",
+   "licence_source": "Singapore Open Data Licence 1.0 (SingStat Table Builder datasets; URA boundaries via data.gov.sg)",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own bucket: no third-party load. One small national file per level, cached in memory."
+   },
+   "auth": "None",
+   "tos_note": "Singapore Open Data Licence 1.0: commercial use allowed with a conspicuous source notice linking the licence, and no suggestion of agency endorsement. Vizzie's figures are labelled as Vizzie calculations."
+  },
+  "ie-census": {
+   "platform": "Vizzie-built static files (CSO Census 2022 SAPS; CSO/Tailte Éireann 2022 statistical boundaries) on Vizzie's R2 bucket",
+   "licence_source": "CC BY 4.0 (CSO statistics, per its copyright policy; Tailte Éireann open data boundaries)",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own bucket: no third-party load. One small file per level and region, cached in memory."
+   },
+   "auth": "None",
+   "tos_note": "CC BY 4.0: reuse with attribution. Credited as the CSO's Census 2022 on CSO/Tailte Éireann boundaries; Vizzie's percentages are derived and labelled as Vizzie calculations."
+  },
+  "nl-census": {
+   "platform": "Vizzie-built static files (CBS Kerncijfers wijken en buurten 2024; CBS Wijk- en Buurtkaart 2024) on Vizzie's R2 bucket",
+   "licence_source": "CC BY 4.0 (CBS website and StatLine content, per its copyright page)",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own bucket: no third-party load. One small file per level and province, cached in memory."
+   },
+   "auth": "None",
+   "tos_note": "CC BY 4.0: reuse with CBS named as the source, and no suggestion CBS endorses the derived work. Vizzie's figures are labelled as Vizzie calculations."
+  },
+  "fr-census": {
+   "platform": "Vizzie-built static files (INSEE census 2022 IRIS bases, Filosofi 2021; IGN/INSEE Contours…IRIS 2024) on Vizzie's R2 bucket",
+   "licence_source": "Licence Ouverte 2.0 (INSEE's legal notice; IGN Contours…IRIS)",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own bucket: no third-party load. One file per level and region, cached in memory."
+   },
+   "auth": "None",
+   "tos_note": "Licence Ouverte 2.0: free reuse including commercial, crediting 'Source: INSEE' with the date of the data, without altering its meaning. Vizzie's figures are labelled as Vizzie calculations."
+  },
+  "eu-grid": {
+   "platform": "Vizzie-built static files (Eurostat Census 2021 population grid, version 3) on Vizzie's R2 bucket",
+   "licence_source": "Eurostat reuse policy (CC BY 4.0): source credited, changes stated",
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own bucket: no third-party load. One small file per level and 100 km block, cached in memory."
+   },
+   "auth": "None",
+   "tos_note": "The grid's read.me: 'Copyright European Union 2026. The source needs to be indicated and when re-use involves modifications to the data or text, this must be stated clearly.' Vizzie credits Eurostat and states its changes (shares, 10 km cells). Unlike the GEOSTAT 2011 grid, there are no in-house-only or non-commercial usage conditions."
+  },
+  "land-layers": {
+   "platform": "Vizzie land layers: state and council open parcel, zoning and land-use services (ArcGIS REST, GeoServer WFS, Opendatasoft), read by map extent",
+   "licence_source": "Per jurisdiction, from the registry in backend/src/connectors/landLayers/registry.ts: CC BY 4.0 (NSW, VIC, QLD, ACT, Brisbane, ABS), CC BY 3.0 AU (TAS), NC OneMap terms; FL and WA (US) state no restriction and are flagged unverified.",
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 4,
+    "burst": 6,
+    "verified": false,
+    "note": "The base URL is a constant identifier; every request goes to a publisher host and is paced by that host's own limiter (rateLimiterFor(endpoint)). Counts are cached 10 minutes; crops in cropped_reads."
+   },
+   "auth": "None",
+   "tos_note": "Attribution differs per jurisdiction and is served per layer by GET /api/land-layers/available (sources[].attribution). Blocked sources (WA cadastre and zoning, SA cadastre, NM/NV parcels) are never read; the registry carries the publisher's reason."
+  },
   "eurostat": {
    "platform": "Eurostat dissemination API",
    "licence_source": "Blanket CC BY 4.0 (Eurostat reuse policy, Decision 2011/833/EU + CC BY 4.0 adoption 2020)",
@@ -1177,7 +1368,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Queensland"
   },
   {
    "id": "data.nsw.gov.au/data",
@@ -1206,7 +1398,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New South Wales"
   },
   {
    "id": "discover.data.vic.gov.au",
@@ -1236,7 +1429,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Victoria"
   },
   {
    "id": "data.sa.gov.au/data",
@@ -1267,7 +1461,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "South Australia"
   },
   {
    "id": "catalogue.data.wa.gov.au",
@@ -1297,7 +1492,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Western Australia"
   },
   {
    "id": "data.nt.gov.au",
@@ -1324,7 +1520,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Northern Territory"
   },
   {
    "id": "www.data.act.gov.au",
@@ -1349,7 +1546,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Australian Capital Territory",
+   "city": "Canberra"
   },
   {
    "id": "data-cityofsydney.opendata.arcgis.com",
@@ -1377,7 +1576,9 @@
    },
    "auth": "None for public items",
    "notes": "Measured for the first time 19 Sep 2026, during the AU batch. 92 of these datasets were resolving UNDECLARED purely because they write the CC BY 4.0 deed with an http:// scheme and only the https:// form was aliased; adding the http:// alias moved them to CC-BY-4.0. Reachable at two host names — this one and data.cityofsydney.nsw.gov.au, which serves the identical DCAT feed and is deliberately not a second registry entry.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New South Wales",
+   "city": "Sydney"
   },
   {
    "id": "data-logancity.opendata.arcgis.com",
@@ -1401,7 +1602,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Queensland",
+   "city": "Logan City"
   },
   {
    "id": "opendata.transport.nsw.gov.au",
@@ -1430,7 +1633,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New South Wales"
   },
   {
    "id": "data.melbourne.vic.gov.au",
@@ -1453,7 +1657,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Victoria",
+   "city": "Melbourne"
   },
   {
    "id": "www.data.brisbane.qld.gov.au",
@@ -1476,7 +1682,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Queensland",
+   "city": "Brisbane"
   },
   {
    "id": "datahub.moretonbay.qld.gov.au",
@@ -1500,7 +1708,8 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Queensland"
   },
   {
    "id": "opendata.launceston.tas.gov.au",
@@ -1524,7 +1733,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Tasmania",
+   "city": "Launceston"
   },
   {
    "id": "spatial-brisbane.opendata.arcgis.com",
@@ -1550,7 +1761,9 @@
    },
    "auth": "None for public items",
    "notes": "The largest single-publisher catalogue in Australia on any platform Vizzie speaks, and the cleanest: all 3,397 datasets carry the bare string 'https://creativecommons.org/licenses/by/4.0' and every one is a feature service (measured 19 Sep 2026). Distinct from www.data.brisbane.qld.gov.au, the council's OpenDataSoft portal already in this matrix — that one is tabular council data, this is the spatial layer catalogue, and they do not overlap. 5 of 6 sampled datasets ingested; the failure was a superseded City Plan 2000 layer whose feature service is gone.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Queensland",
+   "city": "Brisbane"
   },
   {
    "id": "data.sunshinecoast.qld.gov.au",
@@ -1578,7 +1791,9 @@
    },
    "auth": "None for public items",
    "notes": "559 datasets declare CC BY 3.0 as the bare URL and 17 declare 4.0 — both now alias. The 196 undeclared are StoryMaps, apps and a repeated accuracy disclaimer that grants nothing, so no portal default is set: the disclaimer is a warranty exclusion, not a licence.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Queensland",
+   "city": "Sunshine Coast"
   },
   {
    "id": "portal-mainroads.opendata.arcgis.com",
@@ -1605,7 +1820,8 @@
    },
    "auth": "None for public items",
    "notes": "The state road authority's own catalogue: road network, bridges, heavy-vehicle route networks. 690 of 695 declare CC BY 4.0 and 6 of 6 sampled datasets ingested.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Western Australia"
   },
   {
    "id": "actmapi-ACTGOV.opendata.arcgis.com",
@@ -1631,7 +1847,9 @@
    },
    "auth": "None for public items",
    "notes": "Measured 100% UNDECLARED on the first pass and is in fact 100% CC BY 4.0. 148 datasets declare the plain URL; the other 196 carry the SAME sentence wrapped in five different HTML markups — 'Creative Commons By Attribution 4.0 (Australian Capital Territory)', sometimes followed by a pointer to the ACTmapi terms page. Every distinct licence text on the portal was enumerated (19 Sep 2026) and all 196 say that, which is what justifies the portal default rather than an alias per markup variant. The terms page confirms it: 'ACT Government utilises the Creative Commons Attribution 4.0 licence' plus attribution guidelines. Complements data.act.gov.au (Socrata), which carries the ACT's tabular data and none of its geospatial layers.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Australian Capital Territory",
+   "city": "Canberra"
   },
   {
    "id": "cow-open-data-hub-CityOfWodonga.hub.arcgis.com",
@@ -1660,7 +1878,9 @@
    },
    "auth": "None for public items",
    "notes": "10 datasets are CC BY-NC-SA and so resolve to the CC-BY-NC block class — ingestable only while the free-beta exception is active (see NC_FREE_BETA_EXCEPTION in licence.ts and report:nc-exposure). One dataset is CC BY-SA 3.0, which has no class here and stays UNDECLARED.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Victoria",
+   "city": "Wodonga"
   },
   {
    "id": "city-maps-and-data-AlbanyWA.hub.arcgis.com",
@@ -1687,7 +1907,9 @@
    },
    "auth": "None for public items",
    "notes": "24 datasets declare CC BY 4.0; the rest declare a per-item accuracy disclaimer or nothing. The org publishes no Hub page carrying a site-wide licence (searched 19 Sep 2026), so there is nothing to make a portal default out of and the majority stay UNDECLARED.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Western Australia",
+   "city": "Albany"
   },
   {
    "id": "city-plan-stakeholder-engagement-AdelaideCity.hub.arcgis.com",
@@ -1713,7 +1935,9 @@
    },
    "auth": "None for public items",
    "notes": "100% UNDECLARED and connected anyway, because the data is city-analysis staple — ABS meshblocks, GTFS stops and routes, libraries, public open space — and UNDECLARED is ingested with the unverified-rights warning rather than refused. The chase was run and came up empty: the council's org publishes three Hub pages and the only plausible one, 'Disclaimer', contains no grant language. Note the odd base URL: this engagement microsite is the only Adelaide City Council site with a populated DCAT feed; the council's 'CityPlan' site serves zero datasets.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "South Australia",
+   "city": "Adelaide"
   },
   {
    "id": "data-tweed.opendata.arcgis.com",
@@ -1740,7 +1964,9 @@
    },
    "auth": "None for public items",
    "notes": "38 datasets declare CC BY 4.0 per-item. No portal default despite a footer nav link labelled 'Creative Commons' pointing at the CC BY 4.0 deed: a bare link states no scope, and the site's own 'Terms of Use' PDF (tweed.nsw.gov.au/Documents/GIS/open-data-hub-terms-of-use.pdf) answers HTTP 403, so the grant cannot be read. Same call as Durham in the Canadian batch. One dataset declares the Esri Master License Agreement and stays UNDECLARED.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New South Wales",
+   "city": "Tweed Heads"
   },
   {
    "id": "geohub-perth.opendata.arcgis.com",
@@ -1767,7 +1993,9 @@
    },
    "auth": "None for public items",
    "notes": "CBD-scale city data: car parks, planning scheme plot-ratio plans, road seal. 47 of 67 declare CC BY 4.0; 6 of 6 sampled datasets ingested.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Western Australia",
+   "city": "Perth"
   },
   {
    "id": "data-melbournewater.opendata.arcgis.com",
@@ -1794,7 +2022,9 @@
    },
    "auth": "None for public items",
    "notes": "Declares its licence as the DISPLAY NAME 'Creative Commons Attribution Share-Alike 4.0 International' on 44 of 45 datasets — aliased 19 Sep 2026. Share-alike, so anything derived from these catchment and waterway layers carries the SA obligation.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Victoria",
+   "city": "Melbourne"
   },
   {
    "id": "opendata.redland.qld.gov.au",
@@ -1821,7 +2051,9 @@
    },
    "auth": "None for public items",
    "notes": "Declares CC BY-SA 4.0 as a bare URL on 41 of 43 datasets (aliased 19 Sep 2026). Mostly City Plan overlays — landslide hazard, environmental significance, airport environs.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Queensland",
+   "city": "Cleveland"
   },
   {
    "id": "opendata.unley.sa.gov.au",
@@ -1847,7 +2079,9 @@
    },
    "auth": "None for public items",
    "notes": "Measured 100% UNDECLARED and is in fact a blanket CC BY 4.0 portal. The grant is on the site's own 'Help and support' Hub page, which is JS-rendered and had to be pulled through the ArcGIS item API: 'All data available on our open data portal is licensed under the Creative Commons Attribution 4.0 license', followed by the CC BY conditions in full. That is a site-wide statement, so it is the portal default.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "South Australia",
+   "city": "Unley"
   },
   {
    "id": "library-mdba.opendata.arcgis.com",
@@ -1928,7 +2162,9 @@
    },
    "auth": "None required",
    "notes": "Found through the ArcGIS Hub index and connected as OpenDataSoft instead: it serves a Project Open Data /data.json feed (which is how the Hub sweep saw it) but is an ODS portal, and the ODS API is strictly better here — the DCAT feed carries NO licence at all while the ODS metadata declares one on 118 of 137 datasets. Licence arrives as the ODS display name 'CC BY 3', aliased to CC-BY-3.0 (unported, not the AU port — Ballarat's portal distinguishes the two, declaring 'Creative Commons Attribution 3.0 Australia' separately).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Victoria",
+   "city": "Narre Warren"
   },
   {
    "id": "data.ballarat.vic.gov.au",
@@ -1955,7 +2191,9 @@
    },
    "auth": "None required",
    "notes": "Same ODS-behind-a-DCAT-feed case as Casey. Strong on sensor and time-series data — solar radiation, noise observations, traffic lights, building permits — which is unusual for a council portal of this size.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Victoria",
+   "city": "Ballarat"
   },
   {
    "id": "data.cumberland.nsw.gov.au",
@@ -1981,7 +2219,9 @@
    },
    "auth": "None required",
    "notes": "Small Western Sydney portal; only 5 of 25 datasets declare a licence. Connected for the Greater Sydney derivatives it republishes at LGA scale (heat vulnerability index, tree canopy to SA2) alongside its own smart-city feeds.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New South Wales",
+   "city": "Merrylands"
   },
   {
    "id": "data.liverpool.nsw.gov.au",
@@ -2007,7 +2247,9 @@
    },
    "auth": "None required",
    "notes": "Half the catalogue declares CC BY 4.0. Liverpool also runs a separate ArcGIS Hub site (open-data-LivCC.hub.arcgis.com, 14 datasets) which is NOT connected: it declares nothing but a liability disclaimer and its content is a subset of what this portal serves.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New South Wales",
+   "city": "Liverpool"
   },
   {
    "id": "datasets.seed.nsw.gov.au",
@@ -2035,7 +2277,8 @@
    },
    "auth": "None required",
    "notes": "NSW's environmental data catalogue and the largest AU addition outside the Esri hubs: 6,874 datasets, 666 of them carrying a format the ingest pipeline reads. 4,525 declare cc-by. The 2,236 UNDECLARED are dominated by license_id '3rd' (2,192) — the portal's own marker for third-party rights, which is a statement that SEED cannot grant the licence, so it is correctly left unmapped rather than aliased. Ingest is lumpier than the Esri hubs: 9 of 15 sampled datasets fetched, with the failures being flood-study ZIPs hosted on flooddata.ses.nsw.gov.au (HTTP 403 to every client, browser UA included — not a UA block) and two archives over the 200MB body cap.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New South Wales"
   },
   {
    "id": "data.api.abs.gov.au",
@@ -2058,6 +2301,237 @@
    },
    "auth": "None",
    "notes": "Added 19 Sep 2026. The host is data.api.abs.gov.au; api.data.abs.gov.au — the address in the ABS's own documentation — does not resolve. The catalogue unit is a (measure × region type) pair rather than a dataflow, because a dataflow is up to 985 measures across 43 geography levels and only the pair yields one value per area. ~4,700 datasets from three flows (Data by region, SEIFA 2021 by SA2 and by LGA). SA2, LGA and STE join to seeded AU boundaries by area code; SA3/SA4/GCCSA chart but do not yet draw.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "census.uk.vizzie",
+   "label": "UK Census quick maps (2021/22, built by Vizzie)",
+   "country": "GB",
+   "connector": "uk-census",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/uk/2021",
+   "platform": "Vizzie-built static files on R2",
+   "tos_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "tos_note": "ONS, NRS and NISRA publish census outputs under the Open Government Licence v3.0 — read 8 Oct 2026.",
+   "licence_source": "Portal-wide (Open Government Licence v3.0)",
+   "default_licence": "OGL-UK-3.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own R2 bucket; one ~0.01–6 MB gzipped file per level and region, cached in memory."
+   },
+   "auth": "None",
+   "notes": "Added 8 Oct 2026. Built offline by scripts/census-uk/ from the Nomis Census 2021 bulk tables (England & Wales), Scotland's Census 2022 output-area tables and the NISRA Census 2021 main statistics (wards). 15 indicator groups at four common levels: output area (E&W, Scotland), LSOA/data zone (Scotland's merged from OAs), MSOA/intermediate zone/NI ward, and local authority. Benchmarks: English regions and nations as published, Scotland summed from OAs, the UK from the four nations. Deprivation is E&W only; overcrowding not published for NI; English proficiency not comparable for Scotland.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "census.ca.vizzie",
+   "label": "Canada Census quick maps (2021, built by Vizzie)",
+   "country": "CA",
+   "connector": "ca-census",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/ca/2021",
+   "platform": "Vizzie-built static files on R2",
+   "tos_url": "https://www.statcan.gc.ca/en/reference/licence",
+   "tos_note": "Statistics Canada publishes the Census Profile and boundary files under the Statistics Canada Open Licence — read 8 Oct 2026.",
+   "licence_source": "Portal-wide (Statistics Canada Open Licence)",
+   "default_licence": "STATCAN-OPEN",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own R2 bucket; one ~0.01–3 MB gzipped file per level and province, cached in memory."
+   },
+   "auth": "None",
+   "notes": "Added 8 Oct 2026. Built offline by scripts/census-ca/ from the 2021 Census Profile (98-401-X2021006 for DAs, CSDs, CDs, provinces and Canada; 98-401-X2021002 for CMAs and CAs) and the 2021 cartographic boundary files. 15 indicator groups at dissemination area, census subdivision and census division. Benchmarks are the published CMA/CA, province and Canada figures. Counts are randomly rounded to 5 and small areas suppressed by Statistics Canada; medians are published per area and interpolated from brackets only for a mapped area.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "census.sg.vizzie",
+   "label": "Singapore census quick maps (GHS 2025, built by Vizzie)",
+   "country": "SG",
+   "connector": "sg-census",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/sg/2025",
+   "platform": "Vizzie-built static files on R2",
+   "tos_url": "https://data.gov.sg/open-data-licence",
+   "tos_note": "SingStat's Terms of Use place datasets from its services under the Singapore Open Data Licence 1.0; the URA boundaries are on data.gov.sg under the same licence — read 8 Oct 2026.",
+   "licence_source": "Portal-wide (Singapore Open Data Licence 1.0)",
+   "default_licence": "SG-ODL-1.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own R2 bucket; one ~10–30 KB gzipped file per level."
+   },
+   "auth": "None",
+   "notes": "Added 8 Oct 2026. Built offline by scripts/census-sg/ from SingStat Table Builder's General Household Survey 2025 tables (C02…, released 30 Jun 2026) and URA's Master Plan 2019 subzone and planning-area boundaries (no sea). Subzones (332) carry age, ethnic group, dwelling type and density; planning areas (55) add tenure, household size, income from work, education, labour force, transport to work and difficulty with basic activities, published for ~30 residential planning areas (the rest, ~1% of households, are 'Others' and left blank). Rows are keyed by name and matched within their planning area: 332/332 subzones and 55/55 planning areas. Regions are the sum of their planning areas.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "census.ie.vizzie",
+   "label": "Ireland census quick maps (Census 2022, built by Vizzie)",
+   "country": "IE",
+   "connector": "ie-census",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/ie/2022",
+   "platform": "Vizzie-built static files on R2",
+   "tos_url": "https://www.cso.ie/en/aboutus/whoweare/copyrightpolicy/",
+   "tos_note": "The CSO's copyright policy licenses its statistical information under CC BY 4.0; the boundaries carry Tailte Éireann's CC BY 4.0 open data licence — both read 8 Oct 2026.",
+   "licence_source": "Portal-wide (CC BY 4.0)",
+   "default_licence": "CC-BY-4.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own R2 bucket; one ~0.01–0.6 MB gzipped file per level and region."
+   },
+   "auth": "None",
+   "notes": "Added 8 Oct 2026. Built offline by scripts/census-ie/ from the CSO's Census 2022 Small Area Population Statistics (one CSV) and the CSO Small Areas 2022 boundaries (generalised 20 m, served in ITM). Small Areas (18,919) as published; electoral divisions (3,420), local authorities (31; the boundary file's 34 pre-2014 counties merged), NUTS 3 regions and the State are sums of small areas — the State's 5,149,139 matches the published total exactly. 14 indicator groups.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "census.nl.vizzie",
+   "label": "Netherlands census quick maps (CBS key figures 2024, built by Vizzie)",
+   "country": "NL",
+   "connector": "nl-census",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/nl/2024",
+   "platform": "Vizzie-built static files on R2",
+   "tos_url": "https://www.cbs.nl/nl-nl/over-ons/website/copyright",
+   "tos_note": "CBS licenses its website content, StatLine tables and the Wijk- en Buurtkaart under CC BY 4.0, with CBS named as the source — read 8 Oct 2026.",
+   "licence_source": "Portal-wide (CC BY 4.0)",
+   "default_licence": "CC-BY-4.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own R2 bucket; one ~0.01–0.2 MB gzipped file per level and province."
+   },
+   "auth": "None",
+   "notes": "Added 8 Oct 2026. Built offline by scripts/census-nl/ from StatLine 85984NED (Kerncijfers wijken en buurten 2024, via ODataFeed — ODataApi refuses $skip) and the CBS Wijk- en Buurtkaart 2024 v2 (RD New). Buurten (14,574; water-only buurten and the GM0998 'Buitenland' placeholder dropped), wijken (3,393) and gemeenten (342) as CBS publishes them; provinces (from 85755NED Gebieden in Nederland 2024) summarised from gemeenten. Counts are rounded to 5 and small cells left empty by CBS. No median age: CBS publishes five broad age bands only.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "census.fr.vizzie",
+   "label": "France census quick maps (INSEE census 2022, built by Vizzie)",
+   "country": "FR",
+   "connector": "fr-census",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/fr/2022",
+   "platform": "Vizzie-built static files on R2",
+   "tos_url": "https://www.insee.fr/fr/information/2008466",
+   "tos_note": "INSEE publishes its data, databases and downloadable files under Licence Ouverte 2.0 (commercial reuse allowed, 'Source: INSEE'); IGN/INSEE Contours…IRIS likewise — read 9 Oct 2026.",
+   "licence_source": "Portal-wide (Licence Ouverte 2.0)",
+   "default_licence": "LO-2.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own R2 bucket; one ~0.1–2 MB gzipped file per level and region."
+   },
+   "auth": "None",
+   "notes": "Added 9 Oct 2026. Built offline by scripts/census-fr/ from INSEE's 2022 IRIS bases (population, logement, couples-familles-ménages, diplômes-formation, activité des résidents; geography 1 Jan 2024), Filosofi 2021 (IRIS, commune, département, region, mainland France) and IGN/INSEE Contours…IRIS 2024 (mainland only). IRIS (48,569), communes (34,848, dissolved from IRIS) and départements (96). Census counts are summed from IRIS (mainland population 65.8M); income as published at each level, pooled from deciles for a mapped area. P22_POP80P is in two bases: read once.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "census.eu-grid.vizzie",
+   "label": "EU census grid quick maps (Eurostat 2021, built by Vizzie)",
+   "country": "EU",
+   "connector": "eu-grid",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/eu/2021",
+   "platform": "Vizzie-built static files on R2",
+   "tos_url": "https://ec.europa.eu/eurostat/web/main/about-us/policies/copyright",
+   "tos_note": "Eurostat's reuse policy, as the grid's read.me restates it: credit the source and state modifications — read 9 Oct 2026.",
+   "licence_source": "Portal-wide (Eurostat reuse policy, CC BY 4.0)",
+   "default_licence": "CC-BY-4.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own R2 bucket; one ~0.1 MB gzipped file per level and 100 km block."
+   },
+   "auth": "None",
+   "notes": "Added 9 Oct 2026. Built offline by scripts/census-eu/ from Eurostat_Census-GRID_2021_V3 (EU27 + NO, CH, LI; 1,901,599 populated 1 km cells, 455.7M residents). 10 km cells, countries and Europe are summed from 1 km cells, each share over only the cells that publish it, and shown only where those cells hold ≥ 50% of its base (DE and FR publish no employment). Moves in the past year are left out: Spain's figure (13M of 47M) shows the countries measured different things.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "land-layers.vizzie",
+   "label": "Land & planning layers (parcels, land use, zoning; AU + US parcels)",
+   "country": "AU",
+   "connector": "land-layers",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/land/v1",
+   "platform": "Vizzie land layers (live publisher services; R2 cells later)",
+   "tos_url": "https://creativecommons.org/licenses/by/4.0/",
+   "tos_note": "Most sources are CC BY 4.0 — read 3 Nov 2026 (Research_Product+Data/parcels-landuse-zoning-sources-au-us-uk.md). The default below is what the ingest licence gate sees; each layer's real licence and attribution come from the registry.",
+   "licence_source": "Per jurisdiction (registry); default CC BY 4.0",
+   "default_licence": "CC-BY-4.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 4,
+    "burst": 6,
+    "verified": false,
+    "note": "The base URL is a constant identifier; every request goes to a publisher host and is paced by that host's own limiter (rateLimiterFor(endpoint)). Counts are cached 10 minutes; crops in cropped_reads."
+   },
+   "auth": "None",
+   "notes": "Added 3 Nov 2026. Phase 1 slice of the Land & planning one-click plan: NSW, VIC, QLD, ACT, TAS parcels; NSW, VIC, ACT and Brisbane zoning; VIC and QLD land use plus the ABS Mesh Block category elsewhere in AU; NC, WA and FL statewide parcels. FL and WA (US) parcels state no restriction (disclaimer only) and need a licence recheck before paid launch.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "census.us.vizzie",
+   "label": "US Census quick maps (ACS 2020–2024, built by Vizzie)",
+   "country": "US",
+   "connector": "acs-census",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/us/acs2024",
+   "platform": "Vizzie-built static files on R2",
+   "tos_url": "https://www.census.gov/about/policies/open-gov/open-data.html",
+   "tos_note": "Census Bureau data products are public domain U.S. Government works; CDC/ATSDR SVI is public domain — read 7 Oct 2026.",
+   "licence_source": "Portal-wide (U.S. Government works, public domain)",
+   "default_licence": "US-PD",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own R2 bucket; one ~0.01–3 MB gzipped file per level and state, cached in memory by the connector."
+   },
+   "auth": "None",
+   "notes": "Added 7 Oct 2026, the US counterpart of census.au.vizzie. Built offline by scripts/census-us/ from the ACS 2020–2024 5-year table-based Summary File (released 29 Jan 2026), CDC/ATSDR SVI 2022 and the 2024 cartographic boundary files: 17 indicator groups at state, county, tract and block group (foreign-born and SVI stop at tracts), one dataset per group, level and state, plus national ids routed by extent. Benchmarks are the Census Bureau's own published metro (CBSA), state and US figures; a mapped area's medians are interpolated from summed brackets (within 1% of the published national medians). All levels are drawn from PMTiles in the same bucket.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "census.au.vizzie",
+   "label": "Australian Census quick maps (ABS 2021, built by Vizzie)",
+   "country": "AU",
+   "connector": "abs-census",
+   "base_url": "https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/census/au/2021",
+   "platform": "Vizzie-built static files on R2",
+   "tos_url": "https://www.abs.gov.au/website-privacy-copyright-and-disclaimer",
+   "tos_note": "\"All material presented on this website is provided under a Creative Commons Attribution 4.0 International licence\" — read 7 Oct 2026; the 2021 DataPacks carry the same licence in their own readme.",
+   "licence_source": "Portal-wide reuse policy (CC BY 4.0)",
+   "default_licence": "CC-BY-4.0",
+   "observed_licences": null,
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": true,
+    "requests_per_sec": 10,
+    "verified": true,
+    "note": "Vizzie's own R2 bucket; one ~0.1–4 MB gzipped file per level and state, cached in memory by the connector."
+   },
+   "auth": "None",
+   "notes": "Added 7 Oct 2026 from a council planner's interview (super-user blockers B11/B12). Built offline by scripts/census-au/ from the ABS 2021 General Community Profile DataPacks (all geographies), SEIFA 2021 and the Mesh Block counts: curated indicator groups (tenure, social housing, age, households, travel to work, cars, sex ratio, dwelling type, SEIFA, Mesh Block density) at SA1, SA2, suburb (SAL), LGA and Mesh Block, one dataset per group, level and state. Denominators follow ABS QuickStats (verified exactly for Fortitude Valley). SA2 and LGA join to seeded boundaries; SA1, suburb and Mesh Block are drawn from PMTiles in the same bucket.",
    "dataset_overrides": []
   },
   {
@@ -2084,7 +2558,8 @@
    },
    "auth": "None for public folders. 34 of 57 folders are internal applications and answer 'Token Required'; the connector skips them.",
    "notes": "Added 19 Sep 2026: the largest Esri publisher in Australia, 1,835 public queryable layers across 23 open folders, and invisible to the arcgis-hub connector because QSpatial runs no Hub site and publishes no DCAT feed. Left UNDECLARED deliberately rather than defaulted to CC BY 4.0. The evidence for a grant is real but indirect — qld.gov.au licenses its own site CC BY 4.0, and many of these same layers are republished with an explicit CC-BY-4.0 license_id on data.qld.gov.au (already connected, 188,161 datasets) — and neither statement is made about this host. A user who needs a clear licence should take the data.qld.gov.au copy; this connection is for the layers that only exist here.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Queensland"
   },
   {
    "id": "portal.spatial.nsw.gov.au",
@@ -2110,7 +2585,8 @@
    },
    "auth": "None for public folders; four of six folders answer 'Token Required'.",
    "notes": "Added 19 Sep 2026. 211 public queryable layers — the NSW themes (administrative boundaries, cadastre history, elevation, transport, emergency service facilities) rather than the whole SIX estate, most of which sits in the token-protected folders. Smaller than QSpatial and, like it, declares no licence: the Spatial Services copyright page asserts Crown copyright without granting reuse. data.nsw.gov.au (connected) carries licensed copies of some of the same themes.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New South Wales"
   },
   {
    "id": "geoserver-123.aodn.org.au",
@@ -2162,7 +2638,8 @@
    },
    "auth": "None",
    "notes": "Added 20 Sep 2026. 404 layers of temperate marine and Antarctic research data from the University of Tasmania — the Southern Ocean counterpart to AODN, and the largest Tasmanian scientific data source Vizzie can reach. Its capabilities document declares AccessConstraints 'None', which is an absence of a statement rather than a grant; the per-layer licences are in the IMAS metadata catalogue (a GeoNetwork with a CSW).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Tasmania"
   },
   {
    "id": "maps.eatlas.org.au",
@@ -2188,7 +2665,8 @@
    },
    "auth": "None",
    "notes": "Added 20 Sep 2026, and the largest of the three at 1,342 layers: AIMS-run, covering the Great Barrier Reef, Torres Strait and tropical Australia — reef features, flood plumes, habitat mapping, marine park zoning. Its AccessConstraints says 'Please refer to the layer metadata for licensing constraints', i.e. the service explicitly declines to state one, which is why every layer here is UNDECLARED until the metadata join exists.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Queensland"
   },
   {
    "id": "services.thelist.tas.gov.au",
@@ -2212,7 +2690,8 @@
    },
    "auth": "None for public folders.",
    "notes": "Added 20 Sep 2026: 74 services, 980 listed layers, and the first substantial Tasmanian source beyond Launceston's council hub. The LIST is what forced the esri-server connector to read licences out of copyrightText, and it pays for itself here: 4 services carry a CC BY 3.0 AU badge covering 116 of the 980 layers, which now resolve to a real licence instead of UNDECLARED. The other 864 carry a bare ownership notice and stay UNDECLARED. A further 11 services carry a CC BY-NC-ND 3.0 AU badge, but every one of them is tiled aerial photography, which this connector excludes as a fused map cache before licensing is even considered — so the no-derivatives class is not doing work on this portal today, only standing ready for a server that puts that badge on vector data.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Tasmania"
   },
   {
    "id": "catalog.data.gov",
@@ -2288,7 +2767,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California"
   },
   {
    "id": "data.ny.gov",
@@ -2313,7 +2793,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New York"
   },
   {
    "id": "data.texas.gov",
@@ -2338,7 +2819,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Texas"
   },
   {
    "id": "data.wa.gov",
@@ -2363,7 +2845,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Washington"
   },
   {
    "id": "data.colorado.gov",
@@ -2388,7 +2871,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Colorado"
   },
   {
    "id": "data.ct.gov",
@@ -2413,7 +2897,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Connecticut"
   },
   {
    "id": "data.nj.gov",
@@ -2438,7 +2923,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New Jersey"
   },
   {
    "id": "data.michigan.gov",
@@ -2463,7 +2949,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Michigan"
   },
   {
    "id": "data.oregon.gov",
@@ -2488,7 +2975,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Oregon"
   },
   {
    "id": "data.pa.gov",
@@ -2513,7 +3001,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Pennsylvania"
   },
   {
    "id": "opendata.maryland.gov",
@@ -2538,7 +3027,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Maryland"
   },
   {
    "id": "data.kingcounty.gov",
@@ -2563,7 +3053,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Washington"
   },
   {
    "id": "datacatalog.cookcountyil.gov",
@@ -2588,7 +3079,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Illinois"
   },
   {
    "id": "data.montgomerycountymd.gov",
@@ -2613,7 +3105,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Maryland"
   },
   {
    "id": "data.cityofnewyork.us",
@@ -2638,7 +3131,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New York",
+   "city": "New York"
   },
   {
    "id": "data.cityofchicago.org",
@@ -2663,7 +3158,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Illinois",
+   "city": "Chicago"
   },
   {
    "id": "data.lacity.org",
@@ -2688,7 +3185,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California",
+   "city": "Los Angeles"
   },
   {
    "id": "data.sfgov.org",
@@ -2713,7 +3212,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California",
+   "city": "San Francisco"
   },
   {
    "id": "data.seattle.gov",
@@ -2738,7 +3239,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Washington",
+   "city": "Seattle"
   },
   {
    "id": "data.austintexas.gov",
@@ -2763,7 +3266,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Texas",
+   "city": "Austin"
   },
   {
    "id": "www.dallasopendata.com",
@@ -2788,7 +3293,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Texas",
+   "city": "Dallas"
   },
   {
    "id": "data.nola.gov",
@@ -2813,7 +3320,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Louisiana",
+   "city": "New Orleans"
   },
   {
    "id": "data.boston.gov",
@@ -2841,7 +3350,9 @@
    },
    "auth": "None required",
    "notes": "93% PDDL-1.0 (219/235), measured live 8 Sep 2026. The earlier reading of 230 UNDECLARED was an artefact of PDDL having no alias in this matrix, not the portal's own metadata.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Massachusetts",
+   "city": "Boston"
   },
   {
    "id": "opendata.dc.gov",
@@ -2865,7 +3376,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "District of Columbia",
+   "city": "Washington"
   },
   {
    "id": "data.cdc.gov",
@@ -2986,7 +3499,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California",
+   "city": "San Francisco"
   },
   {
    "id": "gisdata-scag.opendata.arcgis.com",
@@ -3010,7 +3525,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California",
+   "city": "Los Angeles"
   },
   {
    "id": "data.sacog.org",
@@ -3034,7 +3551,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California",
+   "city": "Sacramento"
   },
   {
    "id": "psrc-psregcncl.hub.arcgis.com",
@@ -3058,7 +3577,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Washington",
+   "city": "Seattle"
   },
   {
    "id": "data-nctcoggis.hub.arcgis.com",
@@ -3082,7 +3603,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Texas",
+   "city": "Dallas"
   },
   {
    "id": "datahub.cmap.illinois.gov",
@@ -3106,7 +3629,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Illinois",
+   "city": "Chicago"
   },
   {
    "id": "data.illinois.gov",
@@ -3131,7 +3656,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Illinois"
   },
   {
    "id": "data.mo.gov",
@@ -3156,7 +3682,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Missouri"
   },
   {
    "id": "data.delaware.gov",
@@ -3181,7 +3708,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Delaware"
   },
   {
    "id": "opendata.hawaii.gov",
@@ -3209,7 +3737,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Hawaii"
   },
   {
    "id": "geodata.vermont.gov",
@@ -3233,7 +3762,8 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Vermont"
   },
   {
    "id": "vgin.vdem.virginia.gov",
@@ -3257,7 +3787,8 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Virginia"
   },
   {
    "id": "www.nconemap.gov",
@@ -3281,7 +3812,8 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "North Carolina"
   },
   {
    "id": "geodata.floridagio.gov",
@@ -3305,7 +3837,8 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Florida"
   },
   {
    "id": "gis.data.mass.gov",
@@ -3329,7 +3862,8 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Massachusetts"
   },
   {
    "id": "opendata.gis.utah.gov",
@@ -3353,7 +3887,8 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Utah"
   },
   {
    "id": "gis.data.mn.gov",
@@ -3383,7 +3918,8 @@
    },
    "auth": "None for public items",
    "notes": "Statewide catalogue (MnGeo). Licences measured against the full DCAT feed 2026-09-19: 416 datasets carry the MGDPA public-domain sentence, aliased to PUBLIC-DOMAIN; the remainder are free-text liability disclaimers that resolve UNDECLARED. The DNR's 'General Geographic Data License Agreement' (61 datasets) is a named agreement that has not been read — deliberately left UNDECLARED rather than guessed at.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Minnesota"
   },
   {
    "id": "gis-odnr.opendata.arcgis.com",
@@ -3409,7 +3945,8 @@
    },
    "auth": "None for public items",
    "notes": "Ohio's largest open catalogue; the state has no whole-of-government portal (data.ohio.gov and the OGRIP hub are both dead). Every dataset's `license` is the same HTML liability statement, so 100% resolve UNDECLARED (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ohio"
   },
   {
    "id": "azgeo.az.gov",
@@ -3437,7 +3974,8 @@
    },
    "auth": "None for public items",
    "notes": "Statewide hub run by the Arizona State Land Department. 167 of 1,539 datasets declare a CC licence by URL; the rest are free-text disclaimers (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Arizona"
   },
   {
    "id": "mainegeolibrary-maine.hub.arcgis.com",
@@ -3464,7 +4002,8 @@
    },
    "auth": "None for public items",
    "notes": "Statewide catalogue. Most datasets say 'Access: Public. Use: User accepts risk.' — an access statement, not a licence grant, so they resolve UNDECLARED (measured 2026-09-19). Worth revisiting if Maine publishes blanket terms that would justify a default_licence.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Maine"
   },
   {
    "id": "www.indianamap.org",
@@ -3492,7 +4031,8 @@
    },
    "auth": "None for public items",
    "notes": "The state's framework-data catalogue (IGIC/IU). 50 of 840 datasets declare a CC licence; the rest are warranty disclaimers (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Indiana"
   },
   {
    "id": "hub.kansasgis.org",
@@ -3519,7 +4059,8 @@
    },
    "auth": "None for public items",
    "notes": "Kansas Data Access & Support Center. 148 of 655 datasets declare CC0 by URL (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Kansas"
   },
   {
    "id": "opengisdata.ky.gov",
@@ -3548,7 +4089,8 @@
    },
    "auth": "None for public items",
    "notes": "The best-licensed of the 2026-09 state batch: 72% of datasets carry a machine-readable licence, 390 of them CC0 (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Kentucky"
   },
   {
    "id": "data.ok.gov",
@@ -3575,7 +4117,8 @@
    },
    "auth": "None required",
    "notes": "The only CKAN in the 2026-09 state batch, so licences arrive as machine ids rather than free text; 64 of 395 datasets declare CC-BY-4.0 and the rest are unset (measured 2026-09-19 over all 395 packages).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Oklahoma"
   },
   {
    "id": "gishubdata-ndgov.hub.arcgis.com",
@@ -3601,7 +4144,8 @@
    },
    "auth": "None for public items",
    "notes": "Statewide hub (NDIT). Every dataset carries a state compilation disclaimer rather than a licence, so 100% resolve UNDECLARED (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "North Dakota"
   },
   {
    "id": "alic-algeohub.hub.arcgis.com",
@@ -3627,7 +4171,8 @@
    },
    "auth": "None for public items",
    "notes": "Alabama's statewide hub. 404 of 417 datasets carry no `license` value at all and the remainder are copyright notices, so 100% resolve UNDECLARED (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Alabama"
   },
   {
    "id": "geohub.lacity.org",
@@ -3654,7 +4199,9 @@
    },
    "auth": "None for public items",
    "notes": "The city's spatial catalogue, distinct from the Socrata data.lacity.org: the two overlap barely at all. Measured 2026-09-19 — 17 of 1,696 datasets declare CC BY, the rest carry Esri free-text disclaimers. Six titles are the literal template string \"{{name}}\", unrendered on the publisher's side.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California",
+   "city": "Los Angeles"
   },
   {
    "id": "egis-lacounty.hub.arcgis.com",
@@ -3680,7 +4227,8 @@
    },
    "auth": "None for public items",
    "notes": "County-tier parcels, districts and service areas for 9.7m people. Every one of the 965 datasets carries the County's informational-purposes disclaimer rather than a licence (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California"
   },
   {
    "id": "data-ocpw.opendata.arcgis.com",
@@ -3707,7 +4255,8 @@
    },
    "auth": "None for public items",
    "notes": "OC Public Works' catalogue, 933 datasets for 3.2m people; 57 declare CC0 (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California"
   },
   {
    "id": "gishub-h-gac.hub.arcgis.com",
@@ -3733,7 +4282,9 @@
    },
    "auth": "None for public items",
    "notes": "The MPO for the 13-county Houston region — land use, travel demand and regional boundaries the City of Houston's own hub does not carry. 126 of 260 datasets have an empty `license`, the rest an informational-purposes disclaimer (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Texas",
+   "city": "Houston"
   },
   {
    "id": "data-wfrc.opendata.arcgis.com",
@@ -3760,7 +4311,9 @@
    },
    "auth": "None for public items",
    "notes": "Salt Lake City region MPO. Pairs with the already-connected UGRC state hub (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Utah",
+   "city": "Salt Lake City"
   },
   {
    "id": "data-bmc.opendata.arcgis.com",
@@ -3786,7 +4339,9 @@
    },
    "auth": "None for public items",
    "notes": "Baltimore region MPO. Several datasets are marked 'For planning use only' with a link to a BMC white paper — a caveat on fitness for purpose, not a licence grant, so they stay UNDECLARED (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Maryland",
+   "city": "Baltimore"
   },
   {
    "id": "maps-semcog.opendata.arcgis.com",
@@ -3812,7 +4367,9 @@
    },
    "auth": "None for public items",
    "notes": "Detroit region MPO, and the only portal in either 2026-09 US batch with a real licence rather than a disclaimer. The site-wide Copyright License Agreement is permissive (see the SEMCOG-CLA class), so it is set as the portal default and all 66 datasets resolve to it rather than UNDECLARED. The per-dataset `license` values are a mix of links to that same agreement and Esri boilerplate, which is why the default does the work here.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Michigan",
+   "city": "Detroit"
   },
   {
    "id": "public-morpc.hub.arcgis.com",
@@ -3838,7 +4395,9 @@
    },
    "auth": "None for public items",
    "notes": "Columbus region MPO. 50 of 59 datasets have an empty `license`; two say 'Public data', which is too vague to map (measured 2026-09-19).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ohio",
+   "city": "Columbus"
   },
   {
    "id": "data.baltimorecity.gov",
@@ -3862,7 +4421,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Maryland",
+   "city": "Baltimore"
   },
   {
    "id": "data.oaklandca.gov",
@@ -3887,7 +4448,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California",
+   "city": "Oakland"
   },
   {
    "id": "data.indy.gov",
@@ -3911,7 +4474,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Indiana",
+   "city": "Indianapolis"
   },
   {
    "id": "data.louisvilleky.gov",
@@ -3935,7 +4500,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Kentucky",
+   "city": "Louisville"
   },
   {
    "id": "opendataphilly.org",
@@ -3959,7 +4526,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Pennsylvania",
+   "city": "Philadelphia"
   },
   {
    "id": "geohub.houstontx.gov",
@@ -3983,7 +4552,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Texas",
+   "city": "Houston"
   },
   {
    "id": "data.honolulu.gov",
@@ -4008,7 +4579,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Hawaii",
+   "city": "Honolulu"
   },
   {
    "id": "data.cambridgema.gov",
@@ -4033,7 +4606,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Massachusetts",
+   "city": "Cambridge"
   },
   {
    "id": "data.kcmo.org",
@@ -4058,7 +4633,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Missouri",
+   "city": "Kansas City"
   },
   {
    "id": "data.charlottenc.gov",
@@ -4082,7 +4659,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "North Carolina",
+   "city": "Charlotte"
   },
   {
    "id": "data.wprdc.org",
@@ -4113,7 +4692,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Pennsylvania",
+   "city": "Pittsburgh"
   },
   {
    "id": "data.buffalony.gov",
@@ -4138,7 +4719,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "New York",
+   "city": "Buffalo"
   },
   {
    "id": "gis-pdx.opendata.arcgis.com",
@@ -4162,7 +4745,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Oregon",
+   "city": "Portland"
   },
   {
    "id": "data.detroitmi.gov",
@@ -4186,7 +4771,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Michigan",
+   "city": "Detroit"
   },
   {
    "id": "opendata-geospatialdenver.hub.arcgis.com",
@@ -4210,7 +4797,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Colorado",
+   "city": "Denver"
   },
   {
    "id": "data.providenceri.gov",
@@ -4235,7 +4824,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Rhode Island",
+   "city": "Providence"
   },
   {
    "id": "opendata.minneapolismn.gov",
@@ -4259,7 +4850,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Minnesota",
+   "city": "Minneapolis"
   },
   {
    "id": "data.raleighnc.gov",
@@ -4283,7 +4876,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "North Carolina",
+   "city": "Raleigh"
   },
   {
    "id": "city-tampa.opendata.arcgis.com",
@@ -4307,7 +4902,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Florida",
+   "city": "Tampa"
   },
   {
    "id": "gisdata.tucsonaz.gov",
@@ -4331,7 +4928,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Arizona",
+   "city": "Tucson"
   },
   {
    "id": "data.milwaukee.gov",
@@ -4358,7 +4957,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Wisconsin",
+   "city": "Milwaukee"
   },
   {
    "id": "open-data.bouldercolorado.gov",
@@ -4382,7 +4983,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Colorado",
+   "city": "Boulder"
   },
   {
    "id": "data.sanjoseca.gov",
@@ -4410,7 +5013,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California",
+   "city": "San Jose"
   },
   {
    "id": "data.nashville.gov",
@@ -4434,7 +5039,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Tennessee",
+   "city": "Nashville"
   },
   {
    "id": "data.cincinnati-oh.gov",
@@ -4459,7 +5066,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ohio",
+   "city": "Cincinnati"
   },
   {
    "id": "data.sanantonio.gov",
@@ -4485,7 +5094,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Texas",
+   "city": "San Antonio"
   },
   {
    "id": "data.cityofsacramento.org",
@@ -4509,7 +5120,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California",
+   "city": "Sacramento"
   },
   {
    "id": "www.phoenixopendata.com",
@@ -4536,7 +5149,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Arizona",
+   "city": "Phoenix"
   },
   {
    "id": "data.hartford.gov",
@@ -4560,7 +5175,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Connecticut",
+   "city": "Hartford"
   },
   {
    "id": "data.memphistn.gov",
@@ -4584,7 +5201,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Tennessee",
+   "city": "Memphis"
   },
   {
    "id": "opendata.columbus.gov",
@@ -4608,7 +5227,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ohio",
+   "city": "Columbus"
   },
   {
    "id": "data.richmondgov.com",
@@ -4633,7 +5254,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Virginia",
+   "city": "Richmond"
   },
   {
    "id": "data.fortworthtexas.gov",
@@ -4657,7 +5280,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Texas",
+   "city": "Fort Worth"
   },
   {
    "id": "data.longbeach.gov",
@@ -4680,7 +5305,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "California",
+   "city": "Long Beach"
   },
   {
    "id": "data.gov.uk",
@@ -4782,7 +5409,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "England",
+   "city": "London"
   },
   {
    "id": "opendata.bristol.gov.uk",
@@ -4806,7 +5435,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "England",
+   "city": "Bristol"
   },
   {
    "id": "data.london.gov.uk",
@@ -4829,7 +5460,9 @@
    },
    "auth": "None",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "England",
+   "city": "London"
   },
   {
    "id": "www.data.gouv.fr",
@@ -4875,7 +5508,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Île-de-France",
+   "city": "Paris"
   },
   {
    "id": "data.toulouse-metropole.fr",
@@ -4898,7 +5533,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Occitanie",
+   "city": "Toulouse"
   },
   {
    "id": "data.rennesmetropole.fr",
@@ -4921,7 +5558,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Brittany",
+   "city": "Rennes"
   },
   {
    "id": "data.nantesmetropole.fr",
@@ -4944,7 +5583,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Pays de la Loire",
+   "city": "Nantes"
   },
   {
    "id": "opendata.bordeaux-metropole.fr",
@@ -4967,7 +5608,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Nouvelle-Aquitaine",
+   "city": "Bordeaux"
   },
   {
    "id": "ckan.govdata.de",
@@ -5023,7 +5666,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Berlin",
+   "city": "Berlin"
   },
   {
    "id": "suche.transparenz.hamburg.de",
@@ -5052,7 +5697,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Hamburg",
+   "city": "Hamburg"
   },
   {
    "id": "opendata.muenchen.de",
@@ -5081,7 +5728,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Bavaria",
+   "city": "Munich"
   },
   {
    "id": "data.overheid.nl/data",
@@ -5132,7 +5781,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Flanders",
+   "city": "Ghent"
   },
   {
    "id": "portaal-stadantwerpen.opendata.arcgis.com",
@@ -5156,7 +5807,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Flanders",
+   "city": "Antwerp"
   },
   {
    "id": "www.dati.gov.it/opendata",
@@ -5244,7 +5897,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Leinster",
+   "city": "Dublin"
   },
   {
    "id": "dados.gov.pt",
@@ -5320,7 +5975,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Zurich",
+   "city": "Zurich"
   },
   {
    "id": "data.gov.gr",
@@ -5507,7 +6164,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Catalonia",
+   "city": "Barcelona"
   },
   {
    "id": "datos.madrid.es",
@@ -5534,7 +6193,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Community of Madrid",
+   "city": "Madrid"
   },
   {
    "id": "hri.fi/data",
@@ -5562,7 +6223,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Uusimaa",
+   "city": "Helsinki"
   },
   {
    "id": "www.avoindata.fi/data",
@@ -5618,7 +6281,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Pirkanmaa",
+   "city": "Tampere"
   },
   {
    "id": "data.gov.sg",
@@ -5694,7 +6359,8 @@
    },
    "auth": "None required",
    "notes": "59% undeclared but Ontario publishes a blanket Open Government Licence – Ontario. Portal default is defensible; confirm wording.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario"
   },
   {
    "id": "catalogue.data.gov.bc.ca",
@@ -5720,7 +6386,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "British Columbia"
   },
   {
    "id": "www.donneesquebec.ca/recherche",
@@ -5751,7 +6418,8 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Quebec"
   },
   {
    "id": "data.novascotia.ca",
@@ -5776,7 +6444,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Nova Scotia"
   },
   {
    "id": "data.princeedwardisland.ca",
@@ -5800,7 +6469,8 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Prince Edward Island"
   },
   {
    "id": "ckan0.cf.opendata.inter.prod-toronto.ca",
@@ -5826,7 +6496,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Toronto"
   },
   {
    "id": "donnees.montreal.ca",
@@ -5853,7 +6525,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Quebec",
+   "city": "Montreal"
   },
   {
    "id": "opendata.vancouver.ca",
@@ -5876,7 +6550,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "British Columbia",
+   "city": "Vancouver"
   },
   {
    "id": "data.calgary.ca",
@@ -5888,7 +6564,7 @@
    "tos_url": null,
    "tos_note": "Socrata developer terms apply in addition to the publisher's licence.",
    "licence_source": "Per-dataset metadata via api/catalog/v1 (`license` field)",
-   "default_licence": null,
+   "default_licence": "OGL-CA-PROVINCIAL",
    "observed_licences": null,
    "undeclared_share": null,
    "rate_limit": {
@@ -5900,8 +6576,10 @@
     "note": "1,000 requests per rolling hour WITH a registered app token; without a token throttling is by shared IP pool and much tighter. Higher quotas by request. REGISTER AN APP TOKEN PER PORTAL."
    },
    "auth": "App token strongly recommended (X-App-Token header)",
-   "notes": null,
-   "dataset_overrides": []
+   "notes": "Datasets say 'See Terms of Use', which is the Open Government Licence – City of Calgary v2.1, read in full at https://data.calgary.ca/stories/s/Open-Calgary-Terms-of-Use/u45n-7awa on 7 Oct 2026 (attribution, commercial use and derivatives allowed). Set as default_licence by the founder's decision, 8 Oct 2026; a dataset that declares its own licence still wins.",
+   "dataset_overrides": [],
+   "region": "Alberta",
+   "city": "Calgary"
   },
   {
    "id": "open.ottawa.ca",
@@ -5925,7 +6603,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Ottawa"
   },
   {
    "id": "data-hrm.hub.arcgis.com",
@@ -5949,7 +6629,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Nova Scotia",
+   "city": "Halifax"
   },
   {
    "id": "data.winnipeg.ca",
@@ -5974,7 +6656,9 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Manitoba",
+   "city": "Winnipeg"
   },
   {
    "id": "open.yukon.ca",
@@ -6001,7 +6685,8 @@
    },
    "auth": "None required",
    "notes": "The largest Canadian portal after open.canada.ca itself, and the cleanest licence profile of any portal in the September batches: 3,840 of 3,841 datasets declare OGL-Yukon-2.0 by id, name and URL (measured 20 Sep 2026).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Yukon"
   },
   {
    "id": "gos-initiative-saskatchewan.hub.arcgis.com",
@@ -6028,7 +6713,8 @@
    },
    "auth": "None for public items",
    "notes": "Saskatchewan's statewide hub. 334 of 456 datasets point their licence field at the SUUDL 2.0 PDF, which was read in full and given its own class; the remaining 122 are empty or Esri boilerplate (measured 20 Sep 2026). An older hub at geohub-old-saskatchewan.opendata.arcgis.com is superseded and not connected. Five of the 456 titles are the literal template string \"{{name}}\", unrendered on the publisher's side.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Saskatchewan"
   },
   {
    "id": "opendata.gov.nt.ca",
@@ -6055,7 +6741,8 @@
    },
    "auth": "None required",
    "notes": "340 of 341 datasets declare the Open Government Licence – Northwest Territories under the licence id 'GNWT'. Its text was read in full (20 Sep 2026) and is the standard OGL grant, which is the evidence behind naming the NWT in OGL-CA-PROVINCIAL.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Northwest Territories"
   },
   {
    "id": "data.edmonton.ca",
@@ -6067,7 +6754,7 @@
    "tos_url": null,
    "tos_note": "Socrata developer terms apply in addition to the publisher's licence.",
    "licence_source": "Per-dataset metadata via api/catalog/v1 (`license` field)",
-   "default_licence": null,
+   "default_licence": "OGL-CA-PROVINCIAL",
    "observed_licences": {
     "UNDECLARED": 1418,
     "OGL-Canada-2.0": 3
@@ -6082,8 +6769,10 @@
     "note": "1,000 requests per rolling hour WITH a registered app token; without a token throttling is by shared IP pool and much tighter. Higher quotas by request. REGISTER AN APP TOKEN PER PORTAL."
    },
    "auth": "App token strongly recommended (X-App-Token header)",
-   "notes": "Every dataset but three says 'See Terms of Use' — the same pointer Chicago uses, which names no terms and so resolves UNDECLARED by design. Edmonton's terms page is a Socrata story rendered in JavaScript and its API route 404s, so the terms could not be read (20 Sep 2026). If someone reads them and finds them permissive, that belongs in this row's default_licence, not in an alias.",
-   "dataset_overrides": []
+   "notes": "Every dataset but three says 'See Terms of Use', which is the Open Government Licence – City of Edmonton v1.0, read in full via https://data.edmonton.ca/stories/s/Open-Government-Licence-Edmonton/msh8-if28 on 7 Oct 2026 (attribution, commercial use and derivatives allowed). Set as default_licence by the founder's decision, 8 Oct 2026; a dataset that declares its own licence still wins.",
+   "dataset_overrides": [],
+   "region": "Alberta",
+   "city": "Edmonton"
   },
   {
    "id": "geohub.brampton.ca",
@@ -6111,7 +6800,9 @@
    },
    "auth": "None for public items",
    "notes": "356 of 617 datasets declare CC BY 4.0 outright and another 116 carry the Statistics Canada Open Licence on census-derived layers; the rest are unlabelled (measured 20 Sep 2026).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Brampton"
   },
   {
    "id": "open-kitchenergis.opendata.arcgis.com",
@@ -6137,7 +6828,9 @@
    },
    "auth": "None for public items",
    "notes": "Kitchener's own licence was read in full and is permissive to the point of waiving attribution, so it is set as the portal default. A minority of datasets point at the Region of Waterloo's licence instead, whose page 404s and which therefore stays unresolved.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Kitchener"
   },
   {
    "id": "insights-york.opendata.arcgis.com",
@@ -6163,7 +6856,8 @@
    },
    "auth": "None for public items",
    "notes": "Most datasets say only 'Please refer to \"York Region Open Data Licence\", searchable on this website' — a pointer with no URL, and the hub lists no licence page to read, so the catalogue stays rights-unknown (checked 20 Sep 2026).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario"
   },
   {
    "id": "data-markham.opendata.arcgis.com",
@@ -6189,7 +6883,9 @@
    },
    "auth": "None for public items",
    "notes": "Shares York Region's licence pointer and its unreadable licence page; same rights-unknown position (checked 20 Sep 2026).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Markham"
   },
   {
    "id": "opendata.victoria.ca",
@@ -6216,7 +6912,9 @@
    },
    "auth": "None for public items",
    "notes": "Victoria's licence page was read through the Hub's page item (20 Sep 2026) and is the standard OGL grant, so it is the portal default.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "British Columbia",
+   "city": "Victoria"
   },
   {
    "id": "open.hamilton.ca",
@@ -6242,7 +6940,9 @@
    },
    "auth": "None for public items",
    "notes": "391 of 463 datasets point at Hamilton's licence page, which was read in full: worldwide, royalty-free, perpetual, 'including for commercial purposes', attribution required. Set as the portal default so the remaining datasets resolve to it too.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Hamilton"
   },
   {
    "id": "opendata.durham.ca",
@@ -6269,7 +6969,8 @@
    },
    "auth": "None for public items",
    "notes": "269 of 385 datasets point at Durham's own licence agreement PDF, which 404s (checked 20 Sep 2026), so the terms could not be read and the catalogue stays rights-unknown. Seven datasets carry Ontario's OGL and resolve on their own.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario"
   },
   {
    "id": "open.niagarafalls.ca",
@@ -6295,7 +6996,9 @@
    },
    "auth": "None for public items",
    "notes": "Terms page read through the Hub's page item (20 Sep 2026): standard OGL grant.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Niagara Falls"
   },
   {
    "id": "data.mississauga.ca",
@@ -6322,7 +7025,9 @@
    },
    "auth": "None for public items",
    "notes": "The terms PDF was read in full and grants use, modification and distribution for any lawful purpose — revocably, which is why it has its own class. Two further datasets carry the Statistics Canada Open Licence.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Mississauga"
   },
   {
    "id": "opendata.kelowna.ca",
@@ -6348,7 +7053,9 @@
    },
    "auth": "None for public items",
    "notes": "Kelowna's licence PDF was read in full (20 Sep 2026): the standard OGL text.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "British Columbia",
+   "city": "Kelowna"
   },
   {
    "id": "data.coquitlam.ca",
@@ -6374,7 +7081,9 @@
    },
    "auth": "None for public items",
    "notes": "207 of 257 datasets embed Coquitlam's OGL as HTML; the licence page itself was read and is the standard OGL grant.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "British Columbia",
+   "city": "Coquitlam"
   },
   {
    "id": "opendata.london.ca",
@@ -6400,7 +7109,9 @@
    },
    "auth": "None for public items",
    "notes": "Datasets point at an ArcGIS item holding the city's licence text; the item fetches but carries none of the OGL grant language, so nothing could be confirmed (checked 20 Sep 2026).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "London"
   },
   {
    "id": "mydata-kamloops.opendata.arcgis.com",
@@ -6426,7 +7137,9 @@
    },
    "auth": "None for public items",
    "notes": "175 of 225 datasets name an 'Open Government Licence - Kamloops' in free text but give no URL, and no licence page is published on the hub — a named licence whose text cannot be read is not evidence, so it stays UNDECLARED (checked 20 Sep 2026).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "British Columbia",
+   "city": "Kamloops"
   },
   {
    "id": "opendata-surrey.hub.arcgis.com",
@@ -6452,7 +7165,9 @@
    },
    "auth": "None for public items",
    "notes": "224 of 225 datasets carry no licence value at all and the hub publishes no licence page (checked 20 Sep 2026).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "British Columbia",
+   "city": "Surrey"
   },
   {
    "id": "opendata-abbotsford.hub.arcgis.com",
@@ -6478,7 +7193,9 @@
    },
    "auth": "None for public items",
    "notes": "Licence page read through the Hub's page item (20 Sep 2026): standard OGL grant.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "British Columbia",
+   "city": "Abbotsford"
   },
   {
    "id": "portal-exploreoakville.opendata.arcgis.com",
@@ -6504,7 +7221,9 @@
    },
    "auth": "None for public items",
    "notes": "Oakville's licence page was read in full (20 Sep 2026): standard OGL grant.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Oakville"
   },
   {
    "id": "data.peelregion.ca",
@@ -6531,7 +7250,8 @@
    },
    "auth": "None for public items",
    "notes": "Peel's licence page was read through the Hub's page item (20 Sep 2026). It is the UK-OGL wording rather than the Canadian one — 'exploit the Information commercially' — but the same grant-plus-attribution shape, so it maps to the same class. 60 further datasets carry the Statistics Canada Open Licence.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario"
   },
   {
    "id": "opendata.barrie.ca",
@@ -6557,7 +7277,9 @@
    },
    "auth": "None for public items",
    "notes": "Licence fields here are copyright notices and internal housekeeping text ('DO NOT DELETE OR MODIFY THIS ITEM'), not grants (checked 20 Sep 2026).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Barrie"
   },
   {
    "id": "explore.guelph.ca",
@@ -6583,7 +7305,9 @@
    },
    "auth": "None for public items",
    "notes": "Licence page read through the Hub's page item (20 Sep 2026): standard OGL grant.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario",
+   "city": "Guelph"
   },
   {
    "id": "data.burnaby.ca",
@@ -6609,7 +7333,9 @@
    },
    "auth": "None for public items",
    "notes": "70 of 73 datasets point at Burnaby's licence page, which was read through the Hub's page item (20 Sep 2026): standard OGL grant.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "British Columbia",
+   "city": "Burnaby"
   },
   {
    "id": "open.niagararegion.ca",
@@ -6635,7 +7361,8 @@
    },
    "auth": "None for public items",
    "notes": "All 45 datasets carry an empty licence field and the hub publishes no licence page (checked 20 Sep 2026).",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Ontario"
   },
   {
    "id": "catalogue.data.govt.nz",
@@ -6689,7 +7416,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Auckland",
+   "city": "Auckland"
   },
   {
    "id": "data-wcc.opendata.arcgis.com",
@@ -6713,7 +7442,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Wellington",
+   "city": "Wellington"
   },
   {
    "id": "opendata-christchurchcity.hub.arcgis.com",
@@ -6737,7 +7468,9 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Canterbury",
+   "city": "Christchurch"
   },
   {
    "id": "opendata.canterburymaps.govt.nz",
@@ -6761,7 +7494,8 @@
    },
    "auth": "None for public items",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Canterbury"
   },
   {
    "id": "data.e-gov.go.jp",
@@ -6839,7 +7573,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Tokyo",
+   "city": "Tokyo"
   },
   {
    "id": "data.city.yokohama.lg.jp",
@@ -6865,7 +7601,9 @@
    },
    "auth": "None required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Kanagawa",
+   "city": "Yokohama"
   },
   {
    "id": "datos.gov.co",
@@ -7089,7 +7827,9 @@
    },
    "auth": "None for public items",
    "notes": "85 datasets point at the City's open-data terms page, which was read (20 Sep 2026): it is a disclaimer plus the Esri Master Agreement and grants no reuse rights of its own, so the catalogue stays rights-unknown. The City's Open Data Policy may grant more, but the terms it links do not.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Western Cape",
+   "city": "Cape Town"
   },
   {
    "id": "data-esrihk.opendata.arcgis.com",
@@ -7159,7 +7899,7 @@
    "tos_url": null,
    "tos_note": "GODL-India: attribution required, no endorsement implied.",
    "licence_source": "Government Open Data Licence – India",
-   "default_licence": null,
+   "default_licence": "GODL-INDIA",
    "observed_licences": null,
    "undeclared_share": null,
    "rate_limit": {
@@ -7181,7 +7921,7 @@
    "tos_url": null,
    "tos_note": "GODL-India.",
    "licence_source": "GODL-India",
-   "default_licence": null,
+   "default_licence": "GODL-INDIA",
    "observed_licences": null,
    "undeclared_share": null,
    "rate_limit": {
@@ -7191,7 +7931,8 @@
    },
    "auth": "API key required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Karnataka"
   },
   {
    "id": "tn.data.gov.in",
@@ -7203,7 +7944,7 @@
    "tos_url": null,
    "tos_note": "GODL-India.",
    "licence_source": "GODL-India",
-   "default_licence": null,
+   "default_licence": "GODL-INDIA",
    "observed_licences": null,
    "undeclared_share": null,
    "rate_limit": {
@@ -7213,7 +7954,8 @@
    },
    "auth": "API key required",
    "notes": null,
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Tamil Nadu"
   },
   {
    "id": "smartcities.data.gov.in",
@@ -7225,7 +7967,7 @@
    "tos_url": null,
    "tos_note": "GODL-India.",
    "licence_source": "GODL-India",
-   "default_licence": null,
+   "default_licence": "GODL-INDIA",
    "observed_licences": null,
    "undeclared_share": null,
    "rate_limit": {
@@ -7308,7 +8050,7 @@
    "tos_url": null,
    "tos_note": "GODL-India.",
    "licence_source": "GODL-India",
-   "default_licence": null,
+   "default_licence": "GODL-INDIA",
    "observed_licences": null,
    "undeclared_share": null,
    "rate_limit": {
@@ -7318,7 +8060,8 @@
    },
    "auth": "API key required",
    "notes": "1,407 catalogued, 42 fetchable (measured 2026-09-19). The other 1,365 hit the platform-wide 403 on www.data.gov.in/files/ogdpv2dms/s3fs-public/... — re-tested six ways that day (browser UA, Referer from both hosts, warmed cookie jar): a server-side permissions bug, not hotlink protection. Reported to MoHUA/NIC; the connector marks each row fetchable or not rather than hiding them.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Punjab"
   },
   {
    "id": "sikkim.data.gov.in",
@@ -7330,7 +8073,7 @@
    "tos_url": null,
    "tos_note": "GODL-India.",
    "licence_source": "GODL-India",
-   "default_licence": null,
+   "default_licence": "GODL-INDIA",
    "observed_licences": null,
    "undeclared_share": null,
    "rate_limit": {
@@ -7340,7 +8083,8 @@
    },
    "auth": "API key required",
    "notes": "89 catalogued, 8 fetchable (measured 2026-09-19) — the same 403 as Punjab on the rest.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Sikkim"
   },
   {
    "id": "kerala.data.gov.in",
@@ -7352,7 +8096,7 @@
    "tos_url": null,
    "tos_note": "GODL-India.",
    "licence_source": "GODL-India",
-   "default_licence": null,
+   "default_licence": "GODL-INDIA",
    "observed_licences": null,
    "undeclared_share": null,
    "rate_limit": {
@@ -7362,7 +8106,8 @@
    },
    "auth": "API key required",
    "notes": "34 catalogued, 11 fetchable (measured 2026-09-19) — the same 403 as Punjab on the rest.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Kerala"
   },
   {
    "id": "odisha.data.gov.in",
@@ -7374,7 +8119,7 @@
    "tos_url": null,
    "tos_note": "GODL-India.",
    "licence_source": "GODL-India",
-   "default_licence": null,
+   "default_licence": "GODL-INDIA",
    "observed_licences": null,
    "undeclared_share": null,
    "rate_limit": {
@@ -7384,7 +8129,8 @@
    },
    "auth": "API key required",
    "notes": "19 catalogued, 3 fetchable (measured 2026-09-19) — the same 403 as Punjab on the rest.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Odisha"
   },
   {
    "id": "ap.data.gov.in",
@@ -7396,7 +8142,7 @@
    "tos_url": null,
    "tos_note": "GODL-India.",
    "licence_source": "GODL-India",
-   "default_licence": null,
+   "default_licence": "GODL-INDIA",
    "observed_licences": null,
    "undeclared_share": null,
    "rate_limit": {
@@ -7406,7 +8152,8 @@
    },
    "auth": "API key required",
    "notes": "7 catalogued, 3 fetchable (measured 2026-09-19) — the same 403 as Punjab on the rest.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Andhra Pradesh"
   },
   {
    "id": "data.humdata.org",
@@ -7788,7 +8535,8 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "380 datasets, 58 of them map-enabled — the best-served Pacific territory by a factor of three, and the source of 232 of the Pacific Data Hub's geospatial records. 287 datasets under Licence Ouverte v2.0, which is why the LO-2.0 class exists. Measured 10 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Nouvelle-Calédonie"
   },
   {
    "id": "data.gov.ua",
@@ -7842,7 +8590,8 @@
    },
    "auth": "None required",
    "notes": "12449 datasets, 200 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Tuscany"
   },
   {
    "id": "open.nrw",
@@ -7869,7 +8618,8 @@
    },
    "auth": "None required",
    "notes": "Declares licences as DCAT-AP.de URIs, not CKAN ids: 182 of 200 sampled are http://dcat-ap.de/def/licenses/dl-zero-de/2.0 and 18 are dl-by-de/2.0. Both URI forms are aliased; without them this portal resolved 91% UNDECLARED.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "North Rhine-Westphalia"
   },
   {
    "id": "dati.emilia-romagna.it",
@@ -7898,7 +8648,8 @@
    },
    "auth": "None required",
    "notes": "2908 datasets, 200 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Emilia-Romagna"
   },
   {
    "id": "aperto.comune.torino.it",
@@ -7926,7 +8677,9 @@
    },
    "auth": "None required",
    "notes": "2118 datasets, 200 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Piedmont",
+   "city": "Turin"
   },
   {
    "id": "datosabiertos.malaga.eu",
@@ -7954,7 +8707,9 @@
    },
    "auth": "None required",
    "notes": "The portal contradicts itself on its own licences: id `by-sa-40` carries licence URL creativecommons.org/licenses/by-sa/4.0/ but a title reading \"CC BY 4.0\". Id and URL agree on share-alike and the title does not, so it resolves CC-BY-SA-4.0 — the restrictive reading — rather than dropping a share-alike obligation. `by-sa` is CC BY-SA 3.0 España (its own class). 58% of the catalogue carries an ingestible resource; the rest is filtered out of search by hasIngestibleResource.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Andalusia",
+   "city": "Málaga"
   },
   {
    "id": "portal.opendata.dk",
@@ -8008,7 +8763,9 @@
    },
    "auth": "None required",
    "notes": "260 datasets, 200 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Pomeranian Voivodeship",
+   "city": "Gdynia"
   },
   {
    "id": "opendata.stuttgart.de",
@@ -8034,7 +8791,9 @@
    },
    "auth": "None required",
    "notes": "139 datasets, 139 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Baden-Württemberg",
+   "city": "Stuttgart"
   },
   {
    "id": "data.corkcity.ie",
@@ -8062,7 +8821,9 @@
    },
    "auth": "None required",
    "notes": "34 datasets, 34 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Munster",
+   "city": "Cork"
   },
   {
    "id": "www.odwb.be",
@@ -8090,7 +8851,8 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "Covers Wallonia and the French Community. Sample includes 2 CC BY-NC 4.0 (block class, refused). 22 of 100 declare no licence or a non-instrument string and stay link-only.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Wallonia"
   },
   {
    "id": "data.iledefrance.fr",
@@ -8118,7 +8880,8 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "Sample includes 1 CC BY-NC-ND 4.0, which resolves to the CC-BY-NC block class and is refused. Note that class names CC BY-NC rather than CC BY-NC-ND; the ingest decision is identical (block, never attributed), but the class is not a precise description of the instrument.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Île-de-France"
   },
   {
    "id": "opendata.comune.bologna.it",
@@ -8145,7 +8908,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "704 datasets, 100 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Emilia-Romagna",
+   "city": "Bologna"
   },
   {
    "id": "data.tg.ch",
@@ -8171,7 +8936,8 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "456 datasets, 100 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Thurgau"
   },
   {
    "id": "data.grandparissud.fr",
@@ -8199,7 +8965,8 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "61 of 100 sampled declare no licence and stay link-only; the licensed remainder is Licence Ouverte v2.0 and ODbL. Connected for the licensed portion — check undeclared_share before relying on it.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Île-de-France"
   },
   {
    "id": "data.strasbourg.eu",
@@ -8226,7 +8993,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "401 datasets, 100 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Grand Est",
+   "city": "Strasbourg"
   },
   {
    "id": "data.bs.ch",
@@ -8253,7 +9022,8 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "361 datasets, 100 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Basel-Stadt"
   },
   {
    "id": "opendata.bruxelles.be",
@@ -8282,7 +9052,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "Sample includes 2 CC BY-NC 4.0 and 1 CC BY-ND 4.0 — both block classes, correctly refused rather than ingested-and-flagged. Also 7 datasets under \"Statbel Open Data\", a named but unread instrument, left UNDECLARED.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Brussels-Capital Region",
+   "city": "Brussels"
   },
   {
    "id": "data.laregion.fr",
@@ -8309,7 +9081,8 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "203 datasets, 100 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Occitanie"
   },
   {
    "id": "data.bretagne.bzh",
@@ -8337,7 +9110,8 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "191 datasets, 100 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Brittany"
   },
   {
    "id": "opendata.reseaux-energies.fr",
@@ -8388,7 +9162,9 @@
    },
    "auth": "Optional API key raises quota",
    "notes": "96 of 100 sampled are ODbL-1.0 — share-alike, so nearly the whole catalogue carries the export warning.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Pays de la Loire",
+   "city": "Angers"
   },
   {
    "id": "data.brno.cz",
@@ -8416,7 +9192,9 @@
    },
    "auth": "None for public items",
    "notes": "Serves its DCAT at both /data.json and /api/feed/dcat-us/1.1.json. 149 of 400 sampled declare the literal unrendered template string \"{{licenseInfo}}\" — a portal-side templating bug, deliberately NOT aliased; a further 14 are HTML fragments wrapping a licence name. Those resolve UNDECLARED and stay link-only, which is why undeclared_share is 0.568 despite the portal intending CC BY.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "South Moravian Region",
+   "city": "Brno"
   },
   {
    "id": "dati.lombardia.it",
@@ -8445,7 +9223,8 @@
    },
    "auth": "App token strongly recommended (X-App-Token header)",
    "notes": "4270 datasets, 100 sampled live 19 Sep 2026.",
-   "dataset_overrides": []
+   "dataset_overrides": [],
+   "region": "Lombardy"
   },
   {
    "id": "opendata.rdw.nl",
@@ -8565,6 +9344,292 @@
    },
    "auth": "None required",
    "notes": "NLOD 2.0, verified 22 Sep 2026 in Oslo kommune's own Felles datakatalog entry. This is the sub-municipal tier that SSB does not publish: bydel, delbydel, grunnkretsområde and grunnkrets, across 14 subject folders. Municipal systems the city runs itself supply series SSB never receives. The Felles datakatalog entry carries dct:license NLOD_2_0 and the access label Åpne data; the statbank itself publishes no terms page. NORWEGIAN ONLY: the /en/ API route 400s though the web UI offers English, so titles reach the user through the translation path rather than natively. GEOGRAPHY IS NOT MAP-READY, for a different reason than the national instances: bydel codes are 1-15 (table OK-BEF005), an even smaller integer space than the municipality codes geographyLevels.ts already refuses, and Oslo's bydel boundaries are not a seeded reference geography — so this lands chart-ready. Its geography dimension also mixes the “Oslo i alt” total in among the 15 bydeler, the aggregate-row shape the clean-partition detector exists for.",
+   "dataset_overrides": [],
+   "city": "Oslo"
+  },
+  {
+   "id": "gdcatalog.go.th",
+   "label": "GD Catalog — Thailand (national)",
+   "country": "TH",
+   "connector": "ckan",
+   "base_url": "https://gdcatalog.go.th",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Thailand's Government Data Catalog, run by the Digital Government Development Agency (DGA). Licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 22879,
+    "CC-BY-4.0": 2110,
+    "CC-BY-NC": 196,
+    "CC-BY-NC-ND": 30,
+    "CC-BY-SA-4.0": 22,
+    "CC-BY-ND": 14,
+    "CC-BY-NC-SA": 3
+   },
+   "undeclared_share": 0.906,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "No published limit. 2 req/s is the conservative CKAN default."
+   },
+   "auth": "None required",
+   "notes": "The CKAN (2.9.2) behind data.go.th, which itself returns 403 to server fetches. 25,254 datasets, almost all tables (CSV 20,930 / XLSX 7,303 resources; SHP 88, GeoJSON 40), published mostly by the 76 provincial offices and the National Statistical Office. 18,352 declare 'Open Data Common', DGA's own licence, whose terms have not been read, so they resolve UNDECLARED. Datastore is off (0 of 315 sampled resources), so data comes by file download, and about half the sampled CSV links did not answer within 10s. Of 106 readable CSV headers, 45% name a province, 34% an amphoe (district), 22% a tambon, and none carry an area code. Thai-only metadata: COUNTRY_LANGUAGE maps TH to Thai. Over the 25k harvest threshold, so it is searched live rather than indexed. Measured 7 Nov 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.opendevelopmentcambodia.net",
+   "label": "Open Development Cambodia",
+   "country": "KH",
+   "connector": "ckan",
+   "base_url": "https://data.opendevelopmentcambodia.net",
+   "platform": "CKAN",
+   "tos_url": "https://opendevelopmentcambodia.net/terms-of-use/",
+   "tos_note": "Open Development Mekong's terms; licences are carried per dataset.",
+   "licence_source": "Per-dataset `license_id` via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-SA-4.0": 145,
+    "UNDECLARED": 90,
+    "CC-BY-4.0": 65,
+    "CC-BY-NC-SA": 9,
+    "CC-BY-IGO": 6
+   },
+   "undeclared_share": 0.286,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "No published limit. 2 req/s is the conservative CKAN default."
+   },
+   "auth": "None required",
+   "notes": "Cambodia's slice of the Open Development Mekong CKAN, which serves five countries and 14.5k packages, 13k of them library and law records. ckan.ts PORTAL_SCOPES restricts every search to organization:cambodia-organization and type:dataset: 315 datasets, mostly geospatial (WMS 238, SHP 104, KML 86, GeoJSON 81, CSV 123 resources). English metadata with Khmer translations. CC BY-SA is the most common licence, so most of it carries the share-alike flag. Measured 7 Nov 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.opendevelopmentmekong.net",
+   "label": "Open Development Vietnam (Open Development Mekong)",
+   "country": "VN",
+   "connector": "ckan",
+   "base_url": "https://data.opendevelopmentmekong.net",
+   "platform": "CKAN",
+   "tos_url": "https://opendevelopmentmekong.net/terms-of-use/",
+   "tos_note": "Open Development Mekong's terms; licences are carried per dataset.",
+   "licence_source": "Per-dataset `license_id` via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-SA-4.0": 65,
+    "UNDECLARED": 48,
+    "CC-BY-4.0": 10,
+    "PDDL-1.0": 2,
+    "CC-BY-IGO": 2,
+    "CC-BY-NC": 1,
+    "ODbL-1.0": 1
+   },
+   "undeclared_share": 0.372,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "No published limit. 2 req/s is the conservative CKAN default."
+   },
+   "auth": "None required",
+   "notes": "Vietnam's slice of the Open Development Mekong CKAN, scoped in ckan.ts PORTAL_SCOPES to organization:vietnam-organization and type:dataset: 129 datasets (CSV 70, WMS 51, GeoJSON 25, KML 13 resources), English metadata. Registered under the regional hostname because Vietnam has no host of its own (data.opendevelopmentvietnam.net does not answer). It is the only reachable Vietnamese source: data.gov.vn does not resolve, opendata.hochiminhcity.gov.vn rejects the request, and Da Nang's portal times out. Measured 7 Nov 2026.",
+   "dataset_overrides": []
+  },
+  {
+   "id": "data.kaltimprov.go.id",
+   "label": "Satu Data Kalimantan Timur — Indonesia (province)",
+   "country": "ID",
+   "connector": "ckan",
+   "base_url": "https://data.kaltimprov.go.id",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Provincial open data portal; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 5648,
+    "CC-BY-4.0": 4729,
+    "CC-BY-NC": 1304,
+    "PUBLIC-DOMAIN": 1240,
+    "ODC-BY-1.0": 464,
+    "CLOSED": 11,
+    "CC-BY-SA-4.0": 10,
+    "PDDL-1.0": 10,
+    "ODbL-1.0": 7,
+    "OGL-UK-3.0": 2,
+    "CC0-1.0": 1
+   },
+   "undeclared_share": 0.421,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "No published limit. 2 req/s is the conservative CKAN default."
+   },
+   "auth": "None required",
+   "notes": "East Kalimantan, the largest working Indonesian provincial CKAN: 13,426 datasets, almost all spreadsheets (41 of 13,022 geospatial in Sep 2026). Datastore is off, so data comes by file download. 614 datasets put a URL (satudata.samarindakota.go.id) in license_id, which resolves UNDECLARED. Bahasa-only metadata. Measured 7 Nov 2026; see Research_Product+Data/indonesia-open-data-and-boundary-seeding.md.",
+   "dataset_overrides": [],
+   "region": "East Kalimantan"
+  },
+  {
+   "id": "data.acehprov.go.id",
+   "label": "Satu Data Aceh — Indonesia (province)",
+   "country": "ID",
+   "connector": "ckan",
+   "base_url": "https://data.acehprov.go.id",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Provincial open data portal; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "CC-BY-4.0": 4173,
+    "CC-BY-NC": 1,
+    "PUBLIC-DOMAIN": 1
+   },
+   "undeclared_share": 0,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "No published limit. 2 req/s is the conservative CKAN default."
+   },
+   "auth": "None required",
+   "notes": "CKAN 2.7.4, 4,175 datasets, all but two CC BY. No geospatial resources, but in a Sep 2026 sample 25% broke down by kabupaten/kota with a Kemendagri or BPS code, which joins to HDX COD adm2. Bahasa-only metadata. Measured 7 Nov 2026.",
+   "dataset_overrides": [],
+   "region": "Aceh"
+  },
+  {
+   "id": "data.sumbarprov.go.id",
+   "label": "Satu Data Sumatera Barat — Indonesia (province)",
+   "country": "ID",
+   "connector": "ckan",
+   "base_url": "https://data.sumbarprov.go.id",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Provincial open data portal; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 2351,
+    "CC-BY-4.0": 487,
+    "ODC-BY-1.0": 117,
+    "PDDL-1.0": 101,
+    "CC-BY-NC": 75,
+    "PUBLIC-DOMAIN": 22,
+    "CLOSED": 6,
+    "ODbL-1.0": 4,
+    "CC-BY-SA-4.0": 1,
+    "CC0-1.0": 1
+   },
+   "undeclared_share": 0.743,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "No published limit. 2 req/s is the conservative CKAN default."
+   },
+   "auth": "None required",
+   "notes": "West Sumatra: 3,165 datasets, all spreadsheets (zero geospatial resources, Sep 2026). Bahasa-only metadata. Measured 7 Nov 2026.",
+   "dataset_overrides": [],
+   "region": "West Sumatra"
+  },
+  {
+   "id": "data.bantenprov.go.id",
+   "label": "Satu Data Banten — Indonesia (province)",
+   "country": "ID",
+   "connector": "ckan",
+   "base_url": "https://data.bantenprov.go.id",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Provincial open data portal; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 2475,
+    "CC-BY-SA-4.0": 41,
+    "ODbL-1.0": 1
+   },
+   "undeclared_share": 0.983,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "No published limit. 2 req/s is the conservative CKAN default."
+   },
+   "auth": "None required",
+   "notes": "Banten: 2,517 datasets, mostly spreadsheets. Most datasets declare CKAN's generic 'other-open', which names no terms and resolves UNDECLARED. Bahasa-only metadata. Measured 7 Nov 2026.",
+   "dataset_overrides": [],
+   "region": "Banten"
+  },
+  {
+   "id": "data.bengkuluprov.go.id",
+   "label": "Satu Data Bengkulu — Indonesia (province)",
+   "country": "ID",
+   "connector": "ckan",
+   "base_url": "https://data.bengkuluprov.go.id",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "Provincial open data portal; no dataset declares a licence.",
+   "licence_source": "Per-dataset `license_id` via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 632
+   },
+   "undeclared_share": 1,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "No published limit. 2 req/s is the conservative CKAN default."
+   },
+   "auth": "None required",
+   "notes": "Bengkulu: 632 datasets, none with a license_id, so all resolve UNDECLARED. Bahasa-only metadata. Measured 7 Nov 2026.",
+   "dataset_overrides": [],
+   "region": "Bengkulu"
+  },
+  {
+   "id": "data.bnpb.go.id",
+   "label": "BNPB — Indonesia's disaster management agency (national)",
+   "country": "ID",
+   "connector": "ckan",
+   "base_url": "https://data.bnpb.go.id",
+   "platform": "CKAN",
+   "tos_url": null,
+   "tos_note": "National agency CKAN; licence is carried per dataset.",
+   "licence_source": "Per-dataset `license_id` via package_search / package_show",
+   "default_licence": null,
+   "observed_licences": {
+    "UNDECLARED": 326,
+    "CC-BY-4.0": 121,
+    "PUBLIC-DOMAIN": 34,
+    "ODC-BY-1.0": 17,
+    "CC-BY-NC": 7,
+    "PDDL-1.0": 6,
+    "ODbL-1.0": 2,
+    "CLOSED": 2
+   },
+   "undeclared_share": 0.633,
+   "rate_limit": {
+    "published": false,
+    "requests_per_sec": 2,
+    "burst": 5,
+    "verified": false,
+    "note": "No published limit. 2 req/s is the conservative CKAN default."
+   },
+   "auth": "None required",
+   "notes": "CKAN 2.9.11, 515 datasets. The geospatial exception among Indonesian portals: about 39% carry WMS, WFS or shapefile resources (Sep 2026). Bahasa-only metadata. Measured 7 Nov 2026.",
    "dataset_overrides": []
   }
  ]

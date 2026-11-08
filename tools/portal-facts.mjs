@@ -26,8 +26,47 @@ const norm = (u) => (u || '').replace(/\/+$/, '');
 const host = (u) => {
   try { return new URL(u).host; } catch { return (u || '').replace(/^https?:\/\//, '').split('/')[0]; }
 };
-// Must match build-portals.mjs, or a portal's stats look up as missing here.
 const slugify = (u) => host(u).replace(/^www\./, '').replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase();
+
+/**
+ * The matrix rows that are third-party portals. The matrix also carries sources
+ * Vizzie builds itself (census quick maps, land & planning layers — ids ending
+ * ".vizzie"), so the connector can licence-check them like anything else. They
+ * are not open-data portals: there is no catalogue to visit (their base URLs
+ * are paths on Vizzie's own R2 bucket and 404 in a browser), so they get no
+ * portal page and don't count towards "N portals across M countries".
+ */
+export function portalRows(matrix) {
+  return matrix.portals.filter((p) => !/\.vizzie$/.test(String(p.id)));
+}
+
+/**
+ * The /portals/<slug>/ for every matrix row, keyed by matrix id. build-portals
+ * uses this too, so a page and its stats can never look each other up under
+ * different names.
+ *
+ * A portal is slugged from its host. Hosts that serve more than one matrix row
+ * are slugged from the row's id instead: when ten rows on one R2 host reached
+ * the build (8 Nov 2026), slugging by host put them onto two pages, each
+ * overwriting the last. Throws rather than let two rows share a page.
+ */
+export function portalSlugs(rows) {
+  const hostKey = (u) => host(u).replace(/^www\./, '').toLowerCase();
+  const perHost = new Map();
+  for (const p of rows) perHost.set(hostKey(p.base_url), (perHost.get(hostKey(p.base_url)) || 0) + 1);
+  const out = new Map();
+  const taken = new Map();
+  for (const p of rows) {
+    const shared = perHost.get(hostKey(p.base_url)) > 1;
+    const slug = shared
+      ? String(p.id).replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase()
+      : slugify(p.base_url);
+    if (taken.has(slug)) throw new Error(`matrix rows ${taken.get(slug)} and ${p.id} both resolve to /portals/${slug}/`);
+    taken.set(slug, p.id);
+    out.set(p.id, slug);
+  }
+  return out;
+}
 
 /** Round down to a headline figure: 4,183,902 -> "4.1M". Never rounds up — a
  *  claim on a marketing page should be one the data already supports. */
@@ -47,8 +86,10 @@ export function portalFacts() {
 
   const bespokeByUrl = new Map(Object.entries(bespoke).map(([u, v]) => [norm(u), v]));
   const fetched = [];
-  const portals = matrix.portals.map((p) => {
-    const slug = slugify(p.base_url);
+  const rows = portalRows(matrix);
+  const slugs = portalSlugs(rows);
+  const portals = rows.map((p) => {
+    const slug = slugs.get(p.id);
     const live = stats[slug] || {};
     const fallback = bespokeByUrl.get(norm(p.base_url));
     const count = live.count ?? fallback?.count ?? null;

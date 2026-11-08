@@ -123,6 +123,23 @@ function bucketsToArray(map) {
 // CKAN
 // ---------------------------------------------------------------------------
 
+// Portals that are one slice of a larger shared CKAN. Mirrors PORTAL_SCOPES in
+// vizzie-connector/backend/src/connectors/ckan.ts — keep the two in step.
+// data.opendevelopmentcambodia.net and data.opendevelopmentmekong.net both
+// serve Open Development Mekong's whole five-country catalogue (~14.5k
+// packages); without the scope each page would claim all of it. The scope must
+// go as a single `fq`: this CKAN silently ignores a second `fq` param and
+// answers with the whole catalogue.
+const CKAN_PORTAL_SCOPES = {
+  'https://data.opendevelopmentcambodia.net': '+organization:cambodia-organization +type:dataset',
+  'https://data.opendevelopmentmekong.net': '+organization:vietnam-organization +type:dataset',
+};
+
+function ckanScopeParam(base) {
+  const scope = CKAN_PORTAL_SCOPES[base];
+  return scope ? `&fq=${encodeURIComponent(scope)}` : '';
+}
+
 function isUndeclaredCkanLicence(name) {
   if (name === null || name === undefined) return true;
   const s = String(name).trim().toLowerCase();
@@ -139,7 +156,7 @@ function isUndeclaredCkanLicence(name) {
  * risk asserting that licensed data carries no permission.
  */
 async function ckanLicencesLiveOnDistributions(base, result) {
-  const url = `${base}/api/3/action/package_search?rows=25`;
+  const url = `${base}/api/3/action/package_search?rows=25${ckanScopeParam(base)}`;
   const { json, note } = await fetchJson(url, { timeoutMs: DEFAULT_TIMEOUT_MS });
   if (note) result.notes.push(`licence-home probe: ${note}`);
   const packages = json && json.result && Array.isArray(json.result.results) ? json.result.results : null;
@@ -158,7 +175,8 @@ async function fetchCkan(portal, opts, result) {
   const base = portal.baseUrl.replace(/\/+$/, '');
   const url =
     `${base}/api/3/action/package_search` +
-    `?rows=0&facet.field=%5B%22license_id%22%2C%22organization%22%5D&facet.limit=60`;
+    `?rows=0&facet.field=%5B%22license_id%22%2C%22organization%22%5D&facet.limit=60` +
+    ckanScopeParam(base);
 
   const { json, note } = await fetchJson(url, { timeoutMs: DEFAULT_TIMEOUT_MS });
   if (note) result.notes.push(note);
