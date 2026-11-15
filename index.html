@@ -277,6 +277,10 @@
       .qm-key .y { background: var(--brand); }
       .qm-key .p { border: 2px solid var(--brand); }
       .qm-key .n { background: var(--faint); height: 2px; border-radius: 1px; }
+      /* US and Canadian visitors see tree canopy in place of planning constraints (see the intro video's script). */
+      .qm.na-only { display: none; }
+      .visitor-na .qm.na-only { display: flex; }
+      .visitor-na .qm.not-na { display: none; }
       @media (max-width: 1000px) { .qm-grid { grid-template-columns: repeat(2, 1fr); } }
       @media (max-width: 560px) { .qm-grid { grid-template-columns: 1fr; } }
 
@@ -450,6 +454,8 @@
           // housing element progress reports), as the app does: by timezone,
           // or by the browser's locale when there is no timezone.
           // Its presentation isn't hosted, so the open-it button goes.
+          // The same visitors see tree canopy in Quick maps in place of
+          // planning constraints, through the visitor-na class on <html>.
           (function () {
             var tz = '', lang = '';
             try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
@@ -460,6 +466,7 @@
             // when the browser gives no timezone at all.
             var isNA = tz ? na.test(tz) : region === 'US' || region === 'CA';
             if (!isNA) return;
+            document.documentElement.classList.add('visitor-na');
             var v = document.getElementById('intro-video');
             v.src = 'https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/video/vizzie-intro-us-v1.mp4';
             v.poster = 'vizzie-intro-poster-us.jpg';
@@ -475,7 +482,9 @@
     <!-- Quick maps: what each layer covers in the US, Australia and the UK.
          Coverage is read from the connector's land-layer registry and the
          census presets; recheck it whenever a source is added or pulled.
-         Thumbnails are cropped from the studio (quick-maps/*.webp). -->
+         Thumbnails are cropped from the studio (quick-maps/*.webp).
+         US and Canadian visitors see the Tree canopy card (na-only) in place
+         of Planning constraints (not-na); everyone else sees constraints. -->
     <section id="quick-maps">
       <div class="wrap">
         <div class="kicker">Quick maps</div>
@@ -540,12 +549,12 @@
               <dl>
                 <div class="p"><dt>USA</dt><dd>City and county zoning in most large metros; statewide in Maryland, Washington and DC</dd></div>
                 <div class="p"><dt>Australia</dt><dd>NSW, Vic, ACT, SA, and the Brisbane, Gold Coast, Moreton Bay and Sunshine Coast councils. Not WA, Tas or NT yet.</dd></div>
-                <div class="n"><dt>UK</dt><dd>The UK has no zoning; see planning constraints</dd></div>
+                <div class="n"><dt>UK</dt><dd>The UK has no zoning; it has planning constraints instead</dd></div>
               </dl>
             </div>
           </article>
 
-          <article class="qm">
+          <article class="qm not-na">
             <img src="/quick-maps/constraints.webp" width="640" height="480" loading="lazy"
               alt="Planning constraints in Bath, England: conservation areas, listed buildings and flood zones" />
             <div class="qb">
@@ -555,6 +564,20 @@
                 <div class="n"><dt>USA</dt><dd>Not available</dd></div>
                 <div class="n"><dt>Australia</dt><dd>Not available</dd></div>
                 <div class="y"><dt>UK</dt><dd>England, Scotland, Wales and Northern Ireland</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="qm na-only">
+            <img src="/quick-maps/canopy.webp" width="640" height="480" loading="lazy"
+              alt="Tree canopy mapped at 1 m across Piedmont, California" />
+            <div class="qb">
+              <h3>Tree canopy</h3>
+              <p class="qd">Tree canopy mapped at 1 m from aerial imagery, detailed enough to pick out street trees, with the share of the land under canopy.</p>
+              <dl>
+                <div class="p"><dt>USA</dt><dd>California, Oregon and Washington statewide, plus the coastal and Great Lakes states. Not inland states such as Colorado.</dd></div>
+                <div class="n"><dt>Australia</dt><dd>Not available</dd></div>
+                <div class="n"><dt>UK</dt><dd>Not available</dd></div>
               </dl>
             </div>
           </article>
