@@ -1,0 +1,73 @@
+WEBVTT
+
+1
+00:00:00.350 --> 00:00:05.150
+From a public dataset to a shareable map story, in a few minutes.
+
+2
+00:00:06.543 --> 00:00:12.853
+Everything in Vizzie lives in a project: the map, the charts, and the story you tell with them.
+
+3
+00:00:21.263 --> 00:00:26.843
+Start with a place. Vizzie finds the government portals that publish data about it.
+
+4
+00:00:32.530 --> 00:00:45.280
+Quick maps put parcels, zoning and census a click away. To go further, search every portal at once, or pick one you trust. Here, the State of California's open data portal.
+
+5
+00:00:45.783 --> 00:00:53.113
+Search for the housing element progress reports. Results are datasets, and opening one goes straight to its preview.
+
+6
+00:00:57.990 --> 00:01:07.970
+This is every housing application California's cities and counties reported: 358,000 rows. Too many to load at once.
+
+7
+00:01:08.472 --> 00:01:17.352
+Narrow it to Los Angeles County in 2025, and it fits. Each application carries coordinates, so every one can go on the map.
+
+8
+00:01:24.860 --> 00:01:30.340
+One click on Viz it gives you a first draft: the map and its legend.
+
+9
+00:01:32.684 --> 00:01:44.064
+Open the layer to restyle it. Weight the density by proposed homes rather than applications, so a large apartment building counts for more than a backyard cottage.
+
+10
+00:01:50.988 --> 00:01:59.878
+Add the same data again as points, coloured by type. Blue is accessory dwelling units: two in every three applications.
+
+11
+00:02:32.142 --> 00:02:39.352
+The basemap can change too. Switch to satellite imagery, and the same data sits over the real landscape.
+
+12
+00:02:48.129 --> 00:02:54.829
+Pick the columns you care about, and charts are offered as answers to questions, each with a live preview.
+
+13
+00:03:10.717 --> 00:03:15.437
+Filter the charts to the map view, and they re-rank for the place you're looking at.
+
+14
+00:03:26.324 --> 00:03:32.544
+Sketch layers let you mark up exactly what you want people to see. They stay pinned to the map as you zoom.
+
+15
+00:04:06.488 --> 00:04:14.788
+A frame saves the view, the layers that are on, the charts, and the legend. Put frames in order, and you have a story.
+
+16
+00:04:53.027 --> 00:04:56.477
+Present turns your frames into a slideshow.
+
+17
+00:05:07.371 --> 00:05:15.671
+Publish it as an interactive presentation. Anyone with the link can open it, with no account, and the data credit stays attached.
+
+18
+00:05:30.811 --> 00:05:34.571
+Vizzie. Free during beta, at vizzie.org.

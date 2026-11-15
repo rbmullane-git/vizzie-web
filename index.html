@@ -417,13 +417,14 @@
              so the browser lets it autoplay; the captions are in the picture.
              Hosted on R2 beside the basemaps — a plain <video src> needs no CORS. -->
         <h2 style="margin-bottom: 8px">From a place search to a shared map story.</h2>
-        <p class="sub" style="margin-bottom: 26px">
+        <p class="sub" id="intro-sub" style="margin-bottom: 26px">
           Search Sydney, open the ABS regional population table from the Digital
           Atlas of Australia, join it to SA2 boundaries, style the map, switch
           the basemap to satellite imagery, add a chart, sketch on it, save
           frames and publish the presentation as a link.
         </p>
         <video
+          id="intro-video"
           class="shot"
           src="https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/video/vizzie-intro-v6.mp4"
           poster="vizzie-intro-poster.jpg"
@@ -440,10 +441,34 @@
           <track kind="captions" src="intro-video/vizzie-intro-v6.vtt" srclang="en" label="English" />
         </video>
 
-        <div class="cta-row" style="margin-top: 22px">
+        <div class="cta-row" id="intro-cta" style="margin-top: 22px">
           <a class="btn" data-app="/#view=tc750bdc9a97c4f0dbb8d0f67e57b03e3">Open this presentation →</a>
           <span class="sub" style="align-self: center">No sign-up; it opens in Vizzie.</span>
         </div>
+        <script>
+          // Visitors in the US and Canada get the Los Angeles cut (California's
+          // housing element progress reports), as the app does: by timezone,
+          // or by the browser's locale when there is no timezone.
+          // Its presentation isn't hosted, so the open-it button goes.
+          (function () {
+            var tz = '', lang = '';
+            try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+            try { lang = navigator.language || ''; } catch (e) {}
+            var na = /^America\/(New_York|Chicago|Denver|Phoenix|Los_Angeles|Anchorage|Detroit|Boise|Juneau|Sitka|Nome|Adak|Yakutat|Metlakatla|Menominee|Indiana\/.+|Kentucky\/.+|North_Dakota\/.+|Toronto|Montreal|Vancouver|Edmonton|Winnipeg|Halifax|Regina|St_Johns|Moncton|Glace_Bay|Goose_Bay|Whitehorse|Dawson|Dawson_Creek|Fort_Nelson|Creston|Cambridge_Bay|Yellowknife|Inuvik|Iqaluit|Rankin_Inlet|Resolute|Swift_Current|Atikokan|Blanc-Sablon|Nipigon|Thunder_Bay|Rainy_River|Pangnirtung)$|^Pacific\/Honolulu$/;
+            var region = (lang.split('-')[1] || '').toUpperCase();
+            // Every US and Canadian zone is in the list; the locale only decides
+            // when the browser gives no timezone at all.
+            var isNA = tz ? na.test(tz) : region === 'US' || region === 'CA';
+            if (!isNA) return;
+            var v = document.getElementById('intro-video');
+            v.src = 'https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/video/vizzie-intro-us-v1.mp4';
+            v.poster = 'vizzie-intro-poster-us.jpg';
+            v.setAttribute('aria-label', "A walkthrough of Vizzie: searching Los Angeles, opening California's housing element progress reports from data.ca.gov, narrowing them to Los Angeles County in 2025, mapping the applications as a heatmap and as points, switching the basemap to satellite imagery, adding a chart, sketching on the map, saving frames, presenting and publishing a link");
+            v.querySelector('track').src = 'intro-video/vizzie-intro-us-v1.vtt';
+            document.getElementById('intro-sub').textContent = "Search Los Angeles, open California's housing element progress reports from data.ca.gov, narrow 358,000 applications to Los Angeles County in 2025, map them as a heatmap and as points, switch the basemap to satellite imagery, add a chart, sketch on it, save frames and publish the presentation as a link.";
+            document.getElementById('intro-cta').style.display = 'none';
+          })();
+        </script>
       </div>
     </section>
 
