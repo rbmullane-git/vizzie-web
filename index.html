@@ -246,6 +246,40 @@
       .prow .pn { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
       .prow .pc { color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; flex: 0 0 auto; }
 
+      /* Quick maps grid */
+      .qm-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; }
+      .qm {
+        background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+        overflow: hidden; display: flex; flex-direction: column;
+      }
+      .qm img {
+        display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
+        border-bottom: 1px solid var(--line); background: var(--card);
+      }
+      .qm .qb { padding: 16px 16px 18px; display: flex; flex-direction: column; flex: 1; }
+      .qm h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+      .qm .qd { font-size: 13.5px; color: var(--muted); line-height: 1.45; margin-bottom: 12px; }
+      .qm dl { margin-top: auto; border-top: 1px solid var(--line); padding-top: 10px; }
+      .qm dl div { display: grid; grid-template-columns: 78px 1fr; gap: 6px; padding: 3px 0; font-size: 12.5px; line-height: 1.4; }
+      .qm dt { color: var(--text); font-weight: 700; display: flex; align-items: baseline; gap: 6px; }
+      .qm dt::before {
+        content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%;
+        transform: translateY(-1px);
+      }
+      .qm dd { color: var(--muted); }
+      .qm .y dt::before { background: var(--brand); }
+      .qm .p dt::before { border: 2px solid var(--brand); }
+      .qm .n dt::before { background: var(--faint); height: 2px; border-radius: 1px; transform: translateY(-3px); }
+      .qm .n dd { color: var(--faint); }
+      .qm-key { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 18px; font-size: 13px; color: var(--muted); }
+      .qm-key span { display: inline-flex; align-items: center; gap: 7px; }
+      .qm-key i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; }
+      .qm-key .y { background: var(--brand); }
+      .qm-key .p { border: 2px solid var(--brand); }
+      .qm-key .n { background: var(--faint); height: 2px; border-radius: 1px; }
+      @media (max-width: 1000px) { .qm-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 560px) { .qm-grid { grid-template-columns: 1fr; } }
+
       /* Values */
       .value { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
       .value .badge {
@@ -409,6 +443,152 @@
         <div class="cta-row" style="margin-top: 22px">
           <a class="btn" data-app="/#view=tc750bdc9a97c4f0dbb8d0f67e57b03e3">Open this presentation →</a>
           <span class="sub" style="align-self: center">No sign-up; it opens in Vizzie.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick maps: what each layer covers in the US, Australia and the UK.
+         Coverage is read from the connector's land-layer registry and the
+         census presets; recheck it whenever a source is added or pulled.
+         Thumbnails are cropped from the studio (quick-maps/*.webp). -->
+    <section id="quick-maps">
+      <div class="wrap">
+        <div class="kicker">Quick maps</div>
+        <h2>Ready-made maps for the place you search.</h2>
+        <p class="sub" style="margin-top: 12px">
+          Search a town, suburb or city and open Quick maps. Vizzie draws census,
+          property and terrain layers for that place from official open sources,
+          already joined to boundaries, so there's nothing to find, download or
+          match up. What you get depends on what each country, state and council
+          publishes openly, so coverage varies. This is where it stands today.
+        </p>
+
+        <div class="qm-grid">
+          <article class="qm">
+            <img src="/quick-maps/census.webp" width="640" height="480" loading="lazy"
+              alt="Median household income by census block group in Oakland, California" />
+            <div class="qb">
+              <h3>Census</h3>
+              <p class="qd">Ready-made census maps at the finest published level, each with a chart comparing the place to the wider region and the country.</p>
+              <dl>
+                <div class="y"><dt>USA</dt><dd>34 topics from the ACS 2020–2024 to block group, and CDC social vulnerability by tract</dd></div>
+                <div class="y"><dt>Australia</dt><dd>25 topics from the 2021 Census and SEIFA, to SA1</dd></div>
+                <div class="y"><dt>UK</dt><dd>28 topics from the 2021 Census (Scotland 2022), to output area; ward in Northern Ireland</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="qm">
+            <img src="/quick-maps/parcels.webp" width="640" height="480" loading="lazy"
+              alt="Property parcels in Paddington, Sydney" />
+            <div class="qb">
+              <h3>Parcels</h3>
+              <p class="qd">Property boundaries at street scale. In the biggest cities they load a neighbourhood at a time.</p>
+              <dl>
+                <div class="p"><dt>USA</dt><dd>Statewide in 14 states and DC, plus city and county sources. Licence terms rule out AZ, MI, NV, NM and TN for now.</dd></div>
+                <div class="p"><dt>Australia</dt><dd>NSW, Vic, Qld, ACT and Tas. Not WA or SA, where the cadastre isn't open data; NT not yet.</dd></div>
+                <div class="p"><dt>UK</dt><dd>England, Wales and Scotland. Not Northern Ireland, which has no open parcels.</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="qm">
+            <img src="/quick-maps/landuse.webp" width="640" height="480" loading="lazy"
+              alt="Current land use in Salt Lake City, Utah" />
+            <div class="qb">
+              <h3>Current land use</h3>
+              <p class="qd">What is on the ground today, as distinct from what zoning allows. Shown only where the map is at least as detailed as zoning.</p>
+              <dl>
+                <div class="p"><dt>USA</dt><dd>Statewide in 11 states and DC, plus regional and city sources</dd></div>
+                <div class="p"><dt>Australia</dt><dd>Vic (mostly rural), Qld and SA</dd></div>
+                <div class="n"><dt>UK</dt><dd>No open land-use map as detailed as lots</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="qm">
+            <img src="/quick-maps/zoning.webp" width="640" height="480" loading="lazy"
+              alt="Planning zones in Fitzroy, Melbourne" />
+            <div class="qb">
+              <h3>Zoning</h3>
+              <p class="qd">Local zones grouped into about ten common classes for colour, with each zone's own code kept as the label.</p>
+              <dl>
+                <div class="p"><dt>USA</dt><dd>City and county zoning in most large metros; statewide in Maryland, Washington and DC</dd></div>
+                <div class="p"><dt>Australia</dt><dd>NSW, Vic, ACT, SA, and the Brisbane, Gold Coast, Moreton Bay and Sunshine Coast councils. Not WA, Tas or NT yet.</dd></div>
+                <div class="n"><dt>UK</dt><dd>The UK has no zoning; see planning constraints</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="qm">
+            <img src="/quick-maps/constraints.webp" width="640" height="480" loading="lazy"
+              alt="Planning constraints in Bath, England: conservation areas, listed buildings and flood zones" />
+            <div class="qb">
+              <h3>Planning constraints</h3>
+              <p class="qd">Listed buildings, conservation areas, flood zones and nature designations, gathered from each national body into one layer.</p>
+              <dl>
+                <div class="n"><dt>USA</dt><dd>Not available</dd></div>
+                <div class="n"><dt>Australia</dt><dd>Not available</dd></div>
+                <div class="y"><dt>UK</dt><dd>England, Scotland, Wales and Northern Ireland</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="qm">
+            <img src="/quick-maps/contours.webp" width="640" height="480" loading="lazy"
+              alt="Contour lines across the Blue Mountains, west of Sydney" />
+            <div class="qb">
+              <h3>Contours</h3>
+              <p class="qd">Traced from national elevation models, with finer LiDAR contours for small areas where a survey exists.</p>
+              <dl>
+                <div class="y"><dt>USA</dt><dd>USGS 3DEP; 5 ft LiDAR contours for small areas</dd></div>
+                <div class="y"><dt>Australia</dt><dd>Geoscience Australia; 1–2 m where LiDAR covers</dd></div>
+                <div class="y"><dt>UK</dt><dd>OS Terrain 50 and OSNI 50 m</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="qm">
+            <img src="/quick-maps/waterways.webp" width="640" height="480" loading="lazy"
+              alt="Puget Sound, Lake Union and Lake Washington filled in around central Seattle, with its streams" />
+            <div class="qb">
+              <h3>Waterways</h3>
+              <p class="qd">Rivers and streams, with lakes and the sea filled in, so a coastline reads properly at any zoom.</p>
+              <dl>
+                <div class="y"><dt>USA</dt><dd>USGS 3D Hydrography Program</dd></div>
+                <div class="y"><dt>Australia</dt><dd>Geofabric streams and lakes</dd></div>
+                <div class="y"><dt>UK</dt><dd>OS Open Rivers and UKCEH lakes; DAERA rivers in Northern Ireland</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="qm">
+            <img src="/quick-maps/shading.webp" width="640" height="480" loading="lazy"
+              alt="Landform shading over the hills of Mill Valley, California" />
+            <div class="qb">
+              <h3>Landform shading</h3>
+              <p class="qd">Hill shading from the same elevation models, so the lie of the land shows under any other layer.</p>
+              <dl>
+                <div class="y"><dt>USA</dt><dd>Nationwide</dd></div>
+                <div class="y"><dt>Australia</dt><dd>Nationwide; sharper where LiDAR covers</dd></div>
+                <div class="y"><dt>UK</dt><dd>Nationwide</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+
+        <div class="qm-key" aria-hidden="true">
+          <span><i class="y"></i>Everywhere</span>
+          <span><i class="p"></i>In some places</span>
+          <span><i class="n"></i>Not available</span>
+        </div>
+        <p class="sub" style="margin-top: 14px; font-size: 15px">
+          Parcels, land use or zoning reach 46 of the 50 largest US cities, and 33 have all three.
+          <span style="color: var(--faint)">Coverage as at 15 November 2026.</span>
+        </p>
+        <div class="cta-row" style="margin-top: 22px">
+          <a class="btn" data-app="/#signup">Try Quick maps free</a>
+          <span class="sub" style="align-self: center; font-size: 15px">Search any place and see what's there.</span>
         </div>
       </div>
     </section>
