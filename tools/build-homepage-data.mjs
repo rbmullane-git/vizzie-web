@@ -170,7 +170,7 @@ const jsonld = {
       applicationCategory: 'Data visualisation and mapping',
       operatingSystem: 'Any (web browser)',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      screenshot: 'https://www.vizzie.org/og-vancouver-street-trees.png',
+      screenshot: 'https://www.vizzie.org/og-vancouver-street-trees-v2.png',
       // The product's Wikidata item. The company item (Q141926723, Vizzie
       // Studio Pty Ltd) is the IP holdco — it must NOT go on the #org node
       // below, whose legalName is the operating company, Vizzie Trading.

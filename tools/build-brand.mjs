@@ -36,7 +36,7 @@ const description =
   'Download the Vizzie logo in SVG and PNG, check the colour and clear-space ' +
   'rules, and copy the company boilerplate. Free to use in any coverage of Vizzie.';
 const canonical = `${SITE}/brand/`;
-const socialImage = `${SITE}/og-vancouver-street-trees.png`;
+const socialImage = `${SITE}/og-vancouver-street-trees-v2.png`;
 const socialImageAlt =
   'Vizzie mapping 150,000 Vancouver street trees in 3D, extruded by height ' +
   'and coloured by species, with charts alongside';
@@ -275,10 +275,10 @@ const html = `<!doctype html>
             Sized 1200 × 630 for social cards; credit the data to the City of Vancouver.
           </p>
           <div class="shot">
-            <img src="/og-vancouver-street-trees.png" alt="${esc(socialImageAlt)}" width="1200" height="630" />
+            <img src="/og-vancouver-street-trees-v2.png" alt="${esc(socialImageAlt)}" width="1200" height="630" />
           </div>
           <div class="dls">
-            <a class="dl primary" href="/og-vancouver-street-trees.png" download>PNG 1200 × 630</a>
+            <a class="dl primary" href="/og-vancouver-street-trees-v2.png" download>PNG 1200 × 630</a>
             <a class="dl" href="/vizzie-vancouver-3d.gif" download>Animated GIF</a>
             <a class="dl" href="/vizzie-connector-workflow.gif" download>Workflow GIF</a>
           </div>
@@ -322,7 +322,7 @@ const html = `<!doctype html>
 
 // Fail loudly rather than shipping a page full of broken download links.
 const missing = [
-  'og-vancouver-street-trees.png',
+  'og-vancouver-street-trees-v2.png',
   'brand/vizzie-logo-email.png',
   'brand/vizzie-logo-email-90.png',
   'brand/vizzie-logo-email-120.png',
