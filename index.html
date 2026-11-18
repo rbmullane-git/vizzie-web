@@ -297,7 +297,7 @@
       .qm h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
       .qm .qd { font-size: 13.5px; color: var(--muted); line-height: 1.45; margin-bottom: 12px; }
       .qm dl { margin-top: auto; border-top: 1px solid var(--line); padding-top: 10px; }
-      .qm dl div { display: grid; grid-template-columns: 78px 1fr; gap: 6px; padding: 3px 0; font-size: 12.5px; line-height: 1.4; }
+      .qm dl div { display: grid; grid-template-columns: 96px 1fr; gap: 6px; padding: 3px 0; font-size: 12.5px; line-height: 1.4; }
       .qm dt { color: var(--text); font-weight: 700; display: flex; align-items: baseline; gap: 6px; }
       .qm dt::before {
         content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%;
@@ -314,6 +314,20 @@
       .qm-key .y { background: var(--brand); }
       .qm-key .p { border: 2px solid var(--brand); }
       .qm-key .n { background: var(--faint); height: 2px; border-radius: 1px; }
+      /* Compact by default: each card keeps one row of country dots, and
+         "Show coverage" opens the detail under every card at once. */
+      .qm-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 18px; }
+      .qm-bar .qm-key { margin-top: 0; }
+      .btn.qm-toggle {
+        display: inline-flex; align-items: center; gap: 7px; cursor: pointer; font-family: inherit;
+        font-size: 13px; padding: 7px 13px; color: var(--brand-text);
+        border-color: rgba(211, 43, 150, 0.45);
+      }
+      .qm-toggle svg { transition: transform 0.15s ease; }
+      .qm-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+      .qm-compact .qm dl { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+      .qm-compact .qm dl div { display: block; padding: 0; }
+      .qm-compact .qm dd, .qm-compact .qm-more { display: none; }
       /* US and Canadian visitors see tree canopy in place of planning constraints (see the intro video's script). */
       .qm.na-only { display: none; }
       .visitor-na .qm.na-only { display: flex; }
@@ -612,13 +626,15 @@
       </div>
     </section>
 
-    <!-- Quick maps: what each layer covers in the US, Australia and the UK.
+    <!-- Quick maps: what each layer covers in the US, Australia and the UK,
+         plus every other country with census quick maps on the Census card.
          Coverage is read from the connector's land-layer registry and the
-         census presets; recheck it whenever a source is added or pulled.
+         census presets (topic counts = presets in ~/vizzie/src/features/main/
+         census/presets*.ts); recheck it whenever a source is added or pulled.
          Thumbnails are cropped from the studio (quick-maps/*.webp).
          US and Canadian visitors see the Tree canopy card (na-only) in place
          of Planning constraints (not-na); everyone else sees constraints. -->
-    <section id="quick-maps">
+    <section id="quick-maps" class="qm-compact">
       <div class="wrap">
         <div class="kicker">Quick maps</div>
         <h2>Ready-made maps for the place you search.</h2>
@@ -630,7 +646,7 @@
           publishes openly, so coverage varies. This is where it stands today.
         </p>
 
-        <div class="qm-grid">
+        <div class="qm-grid" id="qm-grid">
           <article class="qm">
             <img src="/quick-maps/census-ces.webp" width="640" height="480" loading="lazy"
               alt="CalEnviroScreen 5.0 score percentile by census tract in Fresno, California" />
@@ -641,6 +657,13 @@
                 <div class="y"><dt>USA</dt><dd>37 topics: the ACS 2020–2024 to block group, CDC social vulnerability by tract, and in California, CalEnviroScreen 5.0 by tract</dd></div>
                 <div class="y"><dt>Australia</dt><dd>25 topics from the 2021 Census and SEIFA, to SA1</dd></div>
                 <div class="y"><dt>UK</dt><dd>28 topics from the 2021 Census (Scotland 2022), to output area; ward in Northern Ireland</dd></div>
+                <div class="y"><dt>Canada</dt><dd>35 topics from the 2021 Census, to dissemination area</dd></div>
+                <div class="y"><dt>Ireland</dt><dd>28 topics from Census 2022, to small area</dd></div>
+                <div class="y"><dt>France</dt><dd>24 topics from INSEE's 2022 census and 2021 income figures, to IRIS; metropolitan France</dd></div>
+                <div class="y"><dt>Netherlands</dt><dd>20 topics from CBS's 2024 neighbourhood figures, to buurt</dd></div>
+                <div class="y"><dt>Singapore</dt><dd>24 topics from the General Household Survey 2025, to subzone or planning area</dd></div>
+                <div class="y"><dt>Thailand</dt><dd>8 topics from the 2024 registered population, to district</dd></div>
+                <div class="y"><dt>Rest of Europe</dt><dd>27 more EU and EFTA countries: 9 topics from Eurostat's 2021 census grid, in 1 km cells</dd></div>
               </dl>
             </div>
           </article>
@@ -758,12 +781,29 @@
           </article>
         </div>
 
-        <div class="qm-key" aria-hidden="true">
-          <span><i class="y"></i>Everywhere</span>
-          <span><i class="p"></i>In some places</span>
-          <span><i class="n"></i>Not available</span>
+        <div class="qm-bar">
+          <div class="qm-key" aria-hidden="true">
+            <span><i class="y"></i>Everywhere</span>
+            <span><i class="p"></i>In some places</span>
+            <span><i class="n"></i>Not available</span>
+          </div>
+          <button type="button" class="btn ghost qm-toggle" id="qm-toggle" aria-expanded="false" aria-controls="qm-grid">
+            <span>Show coverage</span>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5 5 6.5l3-3" /></svg>
+          </button>
         </div>
-        <p class="sub" style="margin-top: 14px; font-size: 15px">
+        <script>
+          (function () {
+            var b = document.getElementById('qm-toggle');
+            var s = document.getElementById('quick-maps');
+            b.addEventListener('click', function () {
+              var open = s.classList.toggle('qm-compact') === false;
+              b.setAttribute('aria-expanded', String(open));
+              b.querySelector('span').textContent = open ? 'Hide coverage' : 'Show coverage';
+            });
+          })();
+        </script>
+        <p class="sub qm-more" style="margin-top: 14px; font-size: 15px">
           Parcels, land use or zoning reach 46 of the 50 largest US cities, and 33 have all three.
           <span style="color: var(--faint)">Coverage as at 15 November 2026.</span>
         </p>
