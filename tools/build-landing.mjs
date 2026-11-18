@@ -204,11 +204,13 @@ function render(v) {
       .lp-note b { color: var(--muted); }
       .lp-shot { width: 100%; height: auto; margin-top: 44px; border-radius: 4px; }
       .lp-proof { padding: 72px 0; }
-      .lp-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
+      /* The three points read as prose, one column, not three equal cards */
+      .lp-point { font-size: 19px; line-height: 1.6; color: var(--muted); max-width: 760px; }
+      .lp-point + .lp-point { margin-top: 18px; }
+      .lp-point b { color: var(--text); }
       .lp-final { padding: 72px 0; }
       .lp-final h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.015em; }
       .lp-final .cta-row { margin-top: 24px; display: flex; align-items: center; gap: 20px; }
-      @media (max-width: 860px) { .lp-grid { grid-template-columns: 1fr; } }
     </style>
     ${analyticsBlock()}
     ${googleAdsBlock()}
@@ -248,16 +250,9 @@ function render(v) {
 
     <section class="lp-proof">
       <div class="wrap">
-        <div class="lp-grid">
-          ${SHARED.proof
-            .map(
-              (c) => `<div class="card">
-            <h3>${esc(c.h)}</h3>
-            <p>${esc(c.p.replace(/\s+/g, ' ').trim())}</p>
-          </div>`,
-            )
-            .join('\n          ')}
-        </div>
+        ${SHARED.proof
+          .map((c) => `<p class="lp-point"><b>${esc(c.h)}.</b> ${esc(c.p.replace(/\s+/g, ' ').trim())}</p>`)
+          .join('\n        ')}
       </div>
     </section>
 
