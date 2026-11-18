@@ -222,6 +222,43 @@
         padding: 3px 10px; margin-bottom: 12px;
       }
 
+      /* How it works: the workflow Vizzie replaces. Muted on purpose so the
+         magenta Connect / Explore / Share cards above stay the focus; each
+         group of three sits under the card that does its job in one step. */
+      /* "Learn more" jumps here: land the kicker just under the sticky header
+         rather than at the top of the section's padding, so the cards and the
+         diagram fit one laptop screen together. */
+      #how { scroll-margin-top: -44px; }
+      .wf-head { margin-top: 36px; }
+      .wf-head h3 { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+      .wf-head .sub { margin-top: 8px; font-size: 16px; }
+      .wf { margin-top: 24px; }
+      .wf-group { position: relative; display: flex; flex-direction: column; }
+      .wf-steps { display: grid; grid-template-columns: 1fr 9px 1fr 9px 1fr; align-items: start; flex: 1; }
+      .wf-step { text-align: center; min-width: 0; text-wrap: balance; }
+      .wf-icon {
+        display: flex; align-items: center; justify-content: center;
+        width: 60px; height: 60px; margin: 0 auto 12px; border-radius: 13px;
+        background: var(--card); border: 1px solid var(--line); color: var(--muted);
+      }
+      .wf-icon svg { width: 28px; height: 28px; }
+      .wf-tool { display: block; font-size: 12.5px; font-weight: 700; line-height: 1.3; }
+      .wf-what { display: block; font-size: 12.5px; color: var(--muted); line-height: 1.35; margin-top: 3px; }
+      .wf-arrow { display: flex; justify-content: center; height: 60px; align-items: center; color: var(--faint); }
+      .wf-arrow svg { width: 9px; height: 6px; flex: none; }
+      .wf-bridge { position: absolute; top: 0; right: -20px; width: 20px; }
+      .wf-brace {
+        height: 10px; margin-top: 18px; border: 1px solid rgba(211, 43, 150, 0.45);
+        border-top: 0; border-radius: 0 0 6px 6px;
+      }
+      .wf-now { margin-top: 8px; text-align: center; font-size: 13px; color: var(--muted); }
+      .wf-now b { color: var(--brand-text); }
+      @media (max-width: 820px) {
+        #how { scroll-margin-top: 0; }
+        .wf.grid { gap: 44px; }
+        .wf-bridge { top: auto; bottom: -33px; right: auto; left: 50%; width: 22px; height: 22px; transform: translateX(-50%) rotate(90deg); }
+      }
+
       /* Stat band */
       .band { background: var(--panel); }
       .stats { display: flex; flex-wrap: wrap; gap: 40px; align-items: baseline; }
@@ -370,7 +407,7 @@
         </p>
         <div class="cta-row">
           <a class="btn" data-app="/#signup">Sign up free</a>
-          <a class="btn ghost" href="#mission">Learn more ↓</a>
+          <a class="btn ghost" href="#how">Learn more ↓</a>
         </div>
         <p class="note"><b>Now in beta.</b> A working version is live, and we're welcoming early users. <a href="#examples" style="color: var(--brand-text); text-decoration: none">Try an example, no sign-up needed →</a></p>
       </div>
@@ -407,6 +444,102 @@
             </svg></div>
             <h3>Share</h3>
             <p>Turn what you find into presentation-ready maps and interactive stories you can publish and share with a link.</p>
+          </div>
+        </div>
+
+        <div class="wf-head">
+          <h3>The workflow it replaces</h3>
+          <p class="sub">Getting public data from a portal into a shared map can currently take nine steps across separate tools, with each export severing the live data for easy updates.</p>
+        </div>
+        <div class="grid g3 wf">
+          <div class="wf-group">
+            <div class="wf-steps">
+              <div class="wf-step">
+                <div class="wf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="10.5" cy="10.5" r="6" /><path d="m15 15 5.5 5.5" />
+                </svg></div>
+                <span class="wf-tool">Google</span>
+                <span class="wf-what">Search for the right portal</span>
+              </div>
+              <div class="wf-arrow" aria-hidden="true"><svg viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h13M10.5 1.5 14 5l-3.5 3.5" /></svg></div>
+              <div class="wf-step">
+                <div class="wf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 8.5h18M7 12.5h10M7 16h6" />
+                </svg></div>
+                <span class="wf-tool">Data portal</span>
+                <span class="wf-what">Search the portal for a dataset</span>
+              </div>
+              <div class="wf-arrow" aria-hidden="true"><svg viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h13M10.5 1.5 14 5l-3.5 3.5" /></svg></div>
+              <div class="wf-step">
+                <div class="wf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3.5v11M7.5 10l4.5 4.5 4.5-4.5M4 17v3h16v-3" />
+                </svg></div>
+                <span class="wf-tool">Downloads</span>
+                <span class="wf-what">Download the files</span>
+              </div>
+            </div>
+            <div class="wf-arrow wf-bridge" aria-hidden="true"><svg viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h13M10.5 1.5 14 5l-3.5 3.5" /></svg></div>
+            <div class="wf-brace"></div>
+            <p class="wf-now">In Vizzie: <b>Connect</b></p>
+          </div>
+          <div class="wf-group">
+            <div class="wf-steps">
+              <div class="wf-step">
+                <div class="wf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3.5 21 8l-9 4.5L3 8Z" /><path d="m3 12.5 9 4.5 9-4.5" /><path d="m3 16.5 9 4.5 9-4.5" />
+                </svg></div>
+                <span class="wf-tool">ArcGIS or QGIS</span>
+                <span class="wf-what">Upload the data to GIS</span>
+              </div>
+              <div class="wf-arrow" aria-hidden="true"><svg viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h13M10.5 1.5 14 5l-3.5 3.5" /></svg></div>
+              <div class="wf-step">
+                <div class="wf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3.5 4.5 11 3l1.5 7-8 2.5Z" /><path d="M11 3l9.5 2-1 8-7-3" /><path d="M4.5 12.5 12.5 10l7 3-1.5 7.5-12 .5Z" />
+                </svg></div>
+                <span class="wf-tool">GIS</span>
+                <span class="wf-what">Join the data to boundaries</span>
+              </div>
+              <div class="wf-arrow" aria-hidden="true"><svg viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h13M10.5 1.5 14 5l-3.5 3.5" /></svg></div>
+              <div class="wf-step">
+                <div class="wf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 20h16M7 16.5V11M12 16.5V6M17 16.5v-4.5" />
+                </svg></div>
+                <span class="wf-tool">Excel or Power BI</span>
+                <span class="wf-what">Build the charts</span>
+              </div>
+            </div>
+            <div class="wf-arrow wf-bridge" aria-hidden="true"><svg viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h13M10.5 1.5 14 5l-3.5 3.5" /></svg></div>
+            <div class="wf-brace"></div>
+            <p class="wf-now">In Vizzie: <b>Explore</b></p>
+          </div>
+          <div class="wf-group">
+            <div class="wf-steps">
+              <div class="wf-step">
+                <div class="wf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3 5.5 10.5 8 19h8l2.5-8.5Z" /><path d="M12 3v7.5" /><circle cx="12" cy="12" r="1.5" /><path d="M8 21h8" />
+                </svg></div>
+                <span class="wf-tool">Illustrator</span>
+                <span class="wf-what">Export to redraw the graphics</span>
+              </div>
+              <div class="wf-arrow" aria-hidden="true"><svg viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h13M10.5 1.5 14 5l-3.5 3.5" /></svg></div>
+              <div class="wf-step">
+                <div class="wf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="12" rx="1.5" /><path d="M12 16v4M8.5 20h7M7.5 12.5l3-3 2 2 4-4" />
+                </svg></div>
+                <span class="wf-tool">PowerPoint</span>
+                <span class="wf-what">Export to slides to present</span>
+              </div>
+              <div class="wf-arrow" aria-hidden="true"><svg viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h13M10.5 1.5 14 5l-3.5 3.5" /></svg></div>
+              <div class="wf-step">
+                <div class="wf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8.5" /><path d="M3.5 12h17" /><path d="M12 3.5c2.4 2.4 3.6 5.2 3.6 8.5s-1.2 6.1-3.6 8.5c-2.4-2.4-3.6-5.2-3.6-8.5S9.6 5.9 12 3.5Z" />
+                </svg></div>
+                <span class="wf-tool">Website</span>
+                <span class="wf-what">Host the deck or PDF</span>
+              </div>
+            </div>
+            <div class="wf-brace"></div>
+            <p class="wf-now">In Vizzie: <b>Share</b></p>
           </div>
         </div>
       </div>
