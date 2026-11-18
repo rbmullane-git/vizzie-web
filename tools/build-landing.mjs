@@ -98,8 +98,8 @@ const VARIANTS = [
  * variable to a test sized for one — see §2 of the campaign brief.
  */
 const SHARED = {
-  lead: `Vizzie is an easy-to-use mapping and analytics platform that connects you to
-         the world's open data. There's nothing to download, and you don't need a GIS
+  lead: `Vizzie is a mapping and analytics studio connected to the world's open data.
+         There's nothing to download, and you don't need a GIS
          specialist to build beautiful maps, charts, and data stories.`,
   primaryCta: 'Start free',
   secondaryCta: 'Explore a live map first',
@@ -195,20 +195,19 @@ function render(v) {
     <style>
       /* Landing-page-only additions. The design system comes from styleBlock so
          these pages look like the product, not like an ad. */
-      .accent { color: var(--brand); }
-      .lp-hero { padding: 72px 0 56px; border-bottom: 1px solid var(--line); }
+      .accent { color: inherit; } /* was a magenta line in the h1: an AI-template tell */
+      .lp-hero { padding: 72px 0 56px; }
       .lp-hero h1 { max-width: 900px; }
       .lp-hero .lead { margin-top: 20px; }
-      .lp-hero .cta-row { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+      .lp-hero .cta-row { margin-top: 28px; display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
       .lp-note { margin-top: 18px; font-size: 14px; color: var(--faint); }
-      .lp-note b { color: var(--brand); }
-      .lp-shot { width: 100%; height: auto; margin-top: 44px; border-radius: 14px;
-                 border: 1px solid var(--line); box-shadow: 0 18px 60px rgba(0,0,0,.45); }
+      .lp-note b { color: var(--muted); }
+      .lp-shot { width: 100%; height: auto; margin-top: 44px; border-radius: 4px; }
       .lp-proof { padding: 72px 0; }
       .lp-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
-      .lp-final { padding: 72px 0; text-align: center; }
-      .lp-final h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.01em; }
-      .lp-final .cta-row { margin-top: 24px; display: flex; justify-content: center; gap: 12px; }
+      .lp-final { padding: 72px 0; }
+      .lp-final h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.015em; }
+      .lp-final .cta-row { margin-top: 24px; display: flex; align-items: center; gap: 20px; }
       @media (max-width: 860px) { .lp-grid { grid-template-columns: 1fr; } }
     </style>
     ${analyticsBlock()}

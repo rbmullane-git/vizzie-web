@@ -249,12 +249,12 @@ export function renderCountyPage(facts, editorial, ctx = {}) {
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 ${styleBlock()}
 <style>
-  .geowrap { margin: 28px 0 10px; border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: var(--panel); }
+  .geowrap { margin: 28px 0 10px; border: 1px solid var(--line); border-radius: 6px; padding: 10px; background: var(--panel); }
   .geomap { display: block; width: 100%; height: auto; }
   .geocap { color: var(--muted); font-size: 14px; margin: 10px 2px 0; max-width: 720px; }
   .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 26px 0; }
-  .fact { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--card); }
-  .fact .n { font-size: 26px; font-weight: 800; letter-spacing: -0.01em; }
+  .fact { border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; background: var(--card); }
+  .fact .n { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
   .fact .k { color: var(--muted); font-size: 13px; margin-top: 4px; }
   ul.legend { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 0; margin: 14px 2px 2px; font-size: 13px; color: var(--muted); }
   ul.legend li { display: flex; align-items: center; gap: 7px; }

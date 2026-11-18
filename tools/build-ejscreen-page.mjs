@@ -167,7 +167,7 @@ const cards = states
             <h3>${esc(s.name)}</h3>
             <p>${esc(s.blurb)}</p>
             <p class="meta">${num(s.rows)} census tracts</p>
-            <span class="openlink">Open the live map →</span>
+            <span class="openlink">Open the live map</span>
           </a>`,
   )
   .join('\n          ');

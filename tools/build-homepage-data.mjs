@@ -2,7 +2,7 @@
  * build-homepage-data.mjs — fill the homepage's "Connected today" band from
  * the real numbers.
  *
- * That band — three headline stats, a curated list of portals with dataset
+ * That band — the headline figures as one sentence, a curated list of portals with dataset
  * counts, and an "as at" date — was hand-typed HTML. It said 170 portals, 28
  * countries and "counts as at 6 Aug 2026" on 15 September, by which point
  * eight more portals were connected and several figures had moved by a lot
@@ -107,11 +107,7 @@ if (missing.length) {
 }
 
 const block = `${BEGIN}
-        <div class="stats">
-          <div class="stat"><div class="n">${facts.portalCount}</div><div class="l">open-data portals connected</div></div>
-          <div class="stat"><div class="n">${facts.countryCount}</div><div class="l">countries &amp; regions</div></div>
-          <div class="stat"><div class="n">${headline(facts.datasetTotal)}+</div><div class="l">datasets you can map today</div></div>
-        </div>
+        <p class="stat-line"><b>${facts.portalCount}</b> open-data portals in <b>${facts.countryCount}</b> countries and regions, with <b>${headline(facts.datasetTotal)}+</b> datasets you can map today.</p>
 
         <div class="portals">
 ${groupHtml}
@@ -120,7 +116,7 @@ ${groupHtml}
           …and new portals added regularly. <span style="color: var(--faint)">Counts as at ${longDate(facts.asAt)}, read live from each portal.</span>
         </p>
         <div class="cta-row" style="margin-top: 26px">
-          <a class="btn ghost" href="/portals/">Explore all ${facts.portalCount} portals →</a>
+          <a class="btn ghost" href="/portals/">Explore all ${facts.portalCount} portals</a>
           <span class="sub" style="align-self: center; font-size: 15px">Live dataset counts, licences, and top publishers for each.</span>
         </div>
         ${END}`;

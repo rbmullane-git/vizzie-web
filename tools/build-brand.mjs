@@ -109,21 +109,21 @@ const extraStyle = `<style>
       .brandpage p { color: var(--muted); max-width: 70ch; }
       .brandpage p + p { margin-top: 12px; }
       .assets { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top: 22px; }
-      .asset { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+      .asset { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
       .swatches { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
-      .sw { display: flex; align-items: center; justify-content: center; border-radius: 10px; padding: 22px 14px; min-height: 120px; }
+      .sw { display: flex; align-items: center; justify-content: center; border-radius: 4px; padding: 22px 14px; min-height: 120px; }
       .sw.dark { background: var(--bg); border: 1px solid var(--line); }
       .sw.light { background: #ffffff; }
       .sw img { max-width: 100%; }
       .note { font-size: 14px; }
       .dls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
       .dl { display: inline-block; font-size: 13px; font-weight: 600; text-decoration: none;
-            padding: 7px 12px; border-radius: 8px; border: 1px solid var(--line);
+            padding: 7px 12px; border-radius: 4px; border: 1px solid var(--line);
             background: var(--card); color: var(--text); }
       .dl:hover { border-color: var(--brand); }
       .dl.primary { background: var(--brand-soft); border-color: rgba(211, 43, 150,.45); color: var(--brand); }
       .colours { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 20px; }
-      .colour { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; width: 200px; }
+      .colour { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; width: 200px; }
       /* the ink chip is the page background — outline it or it reads as a hole */
       .colour .chip { height: 74px; box-shadow: inset 0 0 0 1px var(--line); }
       .colour .meta { padding: 12px 14px; }
@@ -131,16 +131,16 @@ const extraStyle = `<style>
       .colour .lbl { font-size: 13px; color: var(--muted); margin-top: 2px; }
       .rules { margin-top: 18px; padding-left: 20px; color: var(--muted); max-width: 70ch; }
       .rules li { margin-bottom: 8px; }
-      .boiler { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--brand);
-                border-radius: 12px; padding: 20px 22px; margin-top: 18px; max-width: 74ch; }
+      .boiler { background: var(--panel); border: 1px solid var(--line);
+                border-radius: 6px; padding: 20px 22px; margin-top: 18px; max-width: 74ch; }
       .boiler p { color: var(--text); }
-      .snippet { background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+      .snippet { background: var(--bg); border: 1px solid var(--line); border-radius: 4px;
                  padding: 14px 16px; margin-top: 16px; overflow-x: auto; max-width: 74ch; }
       .snippet code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12.5px;
                       color: var(--text); white-space: pre; }
-      .sigdemo { background: #ffffff; border-radius: 10px; padding: 18px 20px; margin-top: 18px;
+      .sigdemo { background: #ffffff; border-radius: 4px; padding: 18px 20px; margin-top: 18px;
                  display: inline-block; }
-      .shot { margin-top: 20px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; max-width: 760px; }
+      .shot { margin-top: 20px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; max-width: 760px; }
       .shot img { display: block; width: 100%; }
       @media (max-width: 640px) { .brandpage h1 { font-size: 30px; } }
     </style>`;
