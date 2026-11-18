@@ -104,9 +104,9 @@ const SHARED = {
   primaryCta: 'Start free',
   secondaryCta: 'Explore a live map first',
   // A real map of a real place, above the fold — not a product screenshot.
-  heroImage: '/og-vancouver-street-trees-v3.png',
+  heroImage: '/og-vancouver-street-trees-v4.png',
   heroImageAlt:
-    'Vizzie mapping 150,000 Vancouver street trees in 3D, extruded by height and coloured by species, with charts alongside',
+    'Vizzie mapping 150,000 Vancouver street trees in 3D, extruded by height and coloured by genus, with charts alongside',
   proof: [
     {
       h: 'Nothing to download',

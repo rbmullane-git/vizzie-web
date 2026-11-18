@@ -28,10 +28,10 @@ export function exampleThumb(slug) {
 // One shared card for every generated page. LinkedIn, Slack and X all render a
 // 1.91:1 image; a real map earns the click in a way a logo never does, so this
 // is the Vancouver street-trees example — 150,000 points extruded in 3D.
-const socialImage = 'https://www.vizzie.org/og-vancouver-street-trees-v3.png';
+const socialImage = 'https://www.vizzie.org/og-vancouver-street-trees-v4.png';
 const socialImageAlt =
   'Vizzie mapping 150,000 Vancouver street trees in 3D, extruded by height ' +
-  'and coloured by species, with charts alongside';
+  'and coloured by genus, with charts alongside';
 
 // ---------------------------------------------------------------------------
 // Helpers
