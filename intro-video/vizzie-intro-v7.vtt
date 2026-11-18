@@ -1,0 +1,73 @@
+WEBVTT
+
+1
+00:00:00.350 --> 00:00:05.150
+From a public dataset to a shareable map story, in a few minutes.
+
+2
+00:00:06.540 --> 00:00:12.850
+Everything in Vizzie lives in a project: the map, the charts, and the story you tell with them.
+
+3
+00:00:20.348 --> 00:00:25.928
+Start with a place. Vizzie finds the government portals that publish data about it.
+
+4
+00:00:29.586 --> 00:00:41.086
+Quick maps put parcels, zoning and census a click away. To go further, search every portal at once, or pick one you trust. Here, the Digital Atlas of Australia.
+
+5
+00:00:41.590 --> 00:00:47.970
+Search for regional population. Results are datasets, and opening one goes straight to its preview.
+
+6
+00:00:53.348 --> 00:01:02.868
+This is the table exactly as the ABS publishes it: seventy-nine columns, two thousand four hundred and fifty-four areas, and no boundaries.
+
+7
+00:01:03.370 --> 00:01:11.420
+The table has no shapes of its own. Vizzie recognised the SA2 codes, and matched every row to the official boundaries.
+
+8
+00:01:15.365 --> 00:01:20.845
+One click on Viz it gives you a first draft: the map and its legend.
+
+9
+00:01:24.187 --> 00:01:33.427
+Open the layer to restyle it. The same boundaries tell different stories. Density shows where people are. Change shows where they're arriving.
+
+10
+00:01:42.702 --> 00:01:48.632
+Colour in segments to make the map readable at a glance. Spread decides where the breaks fall.
+
+11
+00:02:14.228 --> 00:02:21.438
+The basemap can change too. Switch to satellite imagery, and the same data sits over the real landscape.
+
+12
+00:02:31.115 --> 00:02:37.815
+Pick the columns you care about, and charts are offered as answers to questions, each with a live preview.
+
+13
+00:02:53.458 --> 00:02:58.178
+Filter the charts to the map view, and they re-rank for the place you're looking at.
+
+14
+00:03:07.404 --> 00:03:13.624
+Sketch layers let you mark up exactly what you want people to see. They stay pinned to the map as you zoom.
+
+15
+00:03:52.869 --> 00:04:01.169
+A frame saves the view, the layers that are on, the charts, and the legend. Put frames in order, and you have a story.
+
+16
+00:04:45.375 --> 00:04:48.825
+Present turns your frames into a slideshow.
+
+17
+00:05:03.187 --> 00:05:11.487
+Publish it as an interactive presentation. Anyone with the link can open it, with no account, and the data credit stays attached.
+
+18
+00:05:29.856 --> 00:05:33.616
+Vizzie. Free during beta, at vizzie.org.

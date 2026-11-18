@@ -419,8 +419,8 @@
           <video
             id="intro-video"
             class="shot"
-            src="https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/video/vizzie-intro-v6.mp4"
-            poster="vizzie-intro-poster.jpg"
+            src="https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/video/vizzie-intro-v7.mp4"
+            poster="vizzie-intro-poster-v7.jpg"
             width="1920"
             height="1080"
             autoplay
@@ -431,7 +431,7 @@
             preload="metadata"
             aria-label="A walkthrough of Vizzie: searching Sydney, adding the ABS regional population table from the Digital Atlas of Australia, joining it to SA2 boundaries, styling the map, switching the basemap to satellite imagery, adding a chart, sketching on the map, saving frames, presenting and publishing a link"
           >
-            <track kind="captions" src="intro-video/vizzie-intro-v6.vtt" srclang="en" label="English" />
+            <track kind="captions" src="intro-video/vizzie-intro-v7.vtt" srclang="en" label="English" />
           </video>
           <p class="cap" id="intro-sub">
             Search Sydney, open the ABS regional population table from the Digital
@@ -460,10 +460,10 @@
             if (!isNA) return;
             document.documentElement.classList.add('visitor-na');
             var v = document.getElementById('intro-video');
-            v.src = 'https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/video/vizzie-intro-us-v1.mp4';
-            v.poster = 'vizzie-intro-poster-us.jpg';
+            v.src = 'https://pub-1ee30415ca43496abbc034bc48f48c5f.r2.dev/video/vizzie-intro-us-v2.mp4';
+            v.poster = 'vizzie-intro-poster-us-v2.jpg';
             v.setAttribute('aria-label', "A walkthrough of Vizzie: searching Los Angeles, opening California's housing element progress reports from data.ca.gov, narrowing them to Los Angeles County in 2025, mapping the applications as a heatmap and as points, switching the basemap to satellite imagery, adding a chart, sketching on the map, saving frames, presenting and publishing a link");
-            v.querySelector('track').src = 'intro-video/vizzie-intro-us-v1.vtt';
+            v.querySelector('track').src = 'intro-video/vizzie-intro-us-v2.vtt';
             document.getElementById('intro-sub').textContent = "Search Los Angeles, open California's housing element progress reports from data.ca.gov, narrow 358,000 applications to Los Angeles County in 2025, map them as a heatmap and as points, switch the basemap to satellite imagery, add a chart, sketch on it, save frames and publish the presentation as a link.";
             document.getElementById('intro-cta').style.display = 'none';
           })();
