@@ -245,7 +245,7 @@ export function renderCountyPage(facts, editorial, ctx = {}) {
 <meta property="og:title" content="${esc(title)}" />
 <meta property="og:description" content="${esc(description)}" />
 <meta property="og:url" content="${esc(url)}" />
-<meta property="og:image" content="${esc(siteUrl)}/og-vancouver-street-trees-v2.png" />
+<meta property="og:image" content="${esc(siteUrl)}/og-vancouver-street-trees-v3.png" />
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 ${styleBlock()}
 <style>
