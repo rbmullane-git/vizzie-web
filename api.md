@@ -28,7 +28,8 @@ map it". The answer ends in a Vizzie link that opens the map, no account needed 
 | `get_boundaries` | `POST /v1/boundaries` | Boundary polygons as GeoJSON for a list of codes or a bounding box, with attribution. Up to 2,000 areas per call, and only for boundaries whose licence allows it. |
 | `create_map` | `POST /v1/maps` | A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview. |
 
-REST calls go to `https://api.vizzie.org`; `GET /v1` lists them. Every failure answers
+REST calls go to `https://api.vizzie.org`; `GET /v1` lists them, and an OpenAPI 3.1
+document is at https://api.vizzie.org/v1/openapi.json. Every failure answers
 with a plain-language `error.message`, a `next` step and, where there is one, a
 `fallback_url` to open instead.
 

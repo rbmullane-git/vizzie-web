@@ -161,7 +161,8 @@
         </table>
         <p class="sub">
           REST calls go to <code>https://api.vizzie.org</code>;
-          <code>GET /v1</code> lists them. Every failure answers with a
+          <code>GET /v1</code> lists them, and an OpenAPI 3.1 document is at
+          <a href="https://api.vizzie.org/v1/openapi.json">api.vizzie.org/v1/openapi.json</a>. Every failure answers with a
           plain-language <code>error.message</code>, a <code>next</code> step
           and, where there is one, a <code>fallback_url</code> to open instead.
         </p>
