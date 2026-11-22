@@ -119,9 +119,9 @@
             <td>An unresolvable place searches without one; an empty query opens the data panel for the place.</td>
           </tr>
           <tr>
-            <td><code>#census=&lt;topic&gt;<br />&amp;place=&lt;place&gt;<br />&amp;country=&lt;ISO2&gt;</code></td>
-            <td>A census map of the place, shaded by the topic — <code>rent</code>, <code>income</code>, <code>median-age</code> and so on. Census maps exist for AU, US, UK, CA, FR, IE, NL, SG and the EU grid.</td>
-            <td>A topic with no matching census map becomes a data search for it instead.</td>
+            <td><code>#census=&lt;topic&gt;<br />&amp;place=&lt;place&gt;<br />&amp;country=&lt;ISO2&gt;<br />&amp;level=&lt;level&gt;</code></td>
+            <td>A census map of the place, shaded by the topic — <code>rent</code>, <code>income</code>, <code>median-age</code> and so on. Census maps exist for AU, US, UK, CA, FR, IE, NL, SG and the EU grid. <code>level</code> asks for an area level — <code>SA2</code>, <code>TRACT</code>, <code>LSOA</code> and so on — otherwise Vizzie picks the finest that fits the place.</td>
+            <td>A topic with no matching census map becomes a data search for it instead; a level that doesn't exist there, or would be more than 10,000 areas in view, falls back to Vizzie's choice.</td>
           </tr>
           <tr>
             <td><code>#dataset=&lt;type|url|id&gt;<br />&amp;title=&lt;text&gt;</code></td>
@@ -151,6 +151,10 @@
         <a class="ex" href="https://app.vizzie.org/#census=rent&amp;place=Ballarat&amp;country=AU"
           >app.vizzie.org/#census=rent&amp;place=Ballarat&amp;country=AU
           <span class="what">A census map of renting in Ballarat, Australia</span></a
+        >
+        <a class="ex" href="https://app.vizzie.org/#census=median-rent&amp;place=Ballarat&amp;country=AU&amp;level=SA2"
+          >app.vizzie.org/#census=median-rent&amp;place=Ballarat&amp;country=AU&amp;level=SA2
+          <span class="what">Median rent in Ballarat, by SA2</span></a
         >
         <a class="ex" href="https://app.vizzie.org/#census=income&amp;place=Travis%20County%20TX&amp;country=US"
           >app.vizzie.org/#census=income&amp;place=Travis%20County%20TX&amp;country=US
