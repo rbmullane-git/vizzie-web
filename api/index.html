@@ -120,9 +120,12 @@
         <h2>Add Vizzie to an AI assistant</h2>
         <p>
           The MCP server is at <code>https://api.vizzie.org/mcp</code>
-          (Streamable HTTP, no sign-in). In Claude, open the connector
-          settings, add a custom connector, and give it that URL. Any client
-          that supports remote MCP servers can use the same address.
+          (Streamable HTTP). In Claude, open the connector settings, add a
+          custom connector, and give it that URL. Any client that supports
+          remote MCP servers can use the same address. Searching and making
+          maps need no sign-in. Saving, editing and publishing a map need a
+          free Vizzie account: the first time you ask, the assistant opens
+          Vizzie's sign-in, where you can also sign up.
         </p>
         <p class="sub">
           Once added, ask for things like “map median weekly rent by SA2 in
@@ -165,6 +168,21 @@
             <td><code>POST /v1/maps</code></td>
             <td>A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview. A map from your rows can carry a <code>catchment</code> (the same fields as <code>get_catchment</code>), and <code>crop_to_catchment</code> keeps only the areas that touch it.</td>
           </tr>
+          <tr>
+            <td><code>save_map</code></td>
+            <td><code>POST /v1/maps/{token}/save</code></td>
+            <td>Keeps a map from <code>create_map</code> in your Vizzie account, so its link doesn't expire. Saved maps are listed on your projects page. <strong>Needs sign-in.</strong></td>
+          </tr>
+          <tr>
+            <td><code>edit_map</code></td>
+            <td><code>PATCH /v1/maps/{token}</code></td>
+            <td>Changes a map's title, colours or values (new rows go through the same checks as <code>create_map</code>), and saves it. <strong>Needs sign-in.</strong></td>
+          </tr>
+          <tr>
+            <td><code>publish_map</code></td>
+            <td><code>POST /v1/maps/{token}/publish</code></td>
+            <td>Saves the map and returns a <code>publish_url</code> that opens it in Vizzie with the Share panel open; one click there publishes a public link. <strong>Needs sign-in.</strong></td>
+          </tr>
         </table>
         <p class="sub">
           REST calls go to <code>https://api.vizzie.org</code>;
@@ -172,6 +190,16 @@
           <a href="https://api.vizzie.org/v1/openapi.json">api.vizzie.org/v1/openapi.json</a>. Every failure answers with a
           plain-language <code>error.message</code>, a <code>next</code> step
           and, where there is one, a <code>fallback_url</code> to open instead.
+        </p>
+        <p class="sub">
+          The three calls that need sign-in take a Vizzie access token as
+          <code>Authorization: Bearer …</code>. MCP clients get one through
+          OAuth: the server's metadata is at
+          <code>https://api.vizzie.org/.well-known/oauth-protected-resource/mcp</code>.
+          A call without a token answers 401 with a
+          <code>WWW-Authenticate</code> header pointing there. A token issued
+          to an assistant works with these calls only, not with the rest of
+          your account.
         </p>
 
         <h2>Examples</h2>
@@ -214,7 +242,8 @@
           <tr><td>Boundaries, maps, catchments</td><td>20 calls per 5 minutes each</td></tr>
           <tr><td>Isochrone origins (each one is a routing request)</td><td>200 a day per address</td></tr>
           <tr><td>All calls</td><td>2,000 a day per address</td></tr>
-          <tr><td>Maps from your own rows</td><td>5,000 rows, 1 MB, 200 maps a day; links last 30 days</td></tr>
+          <tr><td>Maps from your own rows</td><td>5,000 rows, 1 MB, 200 maps a day; links last 30 days unless saved</td></tr>
+          <tr><td>Saved maps</td><td>200 per account</td></tr>
         </table>
         <p class="sub">
           For more, <a href="mailto:hello@vizzie.org">talk to us</a>.

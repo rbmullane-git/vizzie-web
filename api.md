@@ -10,9 +10,11 @@ can use Vizzie directly.
 
 ## Add Vizzie to an AI assistant
 
-The MCP server is at `https://api.vizzie.org/mcp` (Streamable HTTP, no sign-in). In
-Claude, open the connector settings, add a custom connector, and give it that URL. Any
-client that supports remote MCP servers can use the same address.
+The MCP server is at `https://api.vizzie.org/mcp` (Streamable HTTP). In Claude, open
+the connector settings, add a custom connector, and give it that URL. Any client that
+supports remote MCP servers can use the same address. Searching and making maps need no
+sign-in. Saving, editing and publishing a map need a free Vizzie account: the first time
+you ask, the assistant opens Vizzie's sign-in, where you can also sign up.
 
 Then ask for things like "map median weekly rent by SA2 in Ballarat, Victoria", "find
 street tree data for Fitzroy, Victoria", "show everywhere within a 15-minute walk of
@@ -29,11 +31,20 @@ map it". The answer ends in a Vizzie link that opens the map, no account needed 
 | `get_boundaries` | `POST /v1/boundaries` | Boundary polygons as GeoJSON for a list of codes or a bounding box, with attribution. Up to 2,000 areas per call, and only for boundaries whose licence allows it. |
 | `get_catchment` | `POST /v1/catchment` | The area within reach of an address, or of up to 1,000 points or GeoJSON shapes: everywhere within a straight-line distance (a shape grows outward from its edge), or an isochrone — how far you can walk or drive along roads (up to 100 origins). 0.1–10 km or 0.1–5 mi. Returns the polygons as GeoJSON and a `map_url` that opens them in Vizzie. |
 | `create_map` | `POST /v1/maps` | A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview. A map from your rows can carry a `catchment` (the same fields as `get_catchment`), and `crop_to_catchment` keeps only the areas that touch it. |
+| `save_map` | `POST /v1/maps/{token}/save` | Keeps a map from `create_map` in your Vizzie account, so its link doesn't expire. Saved maps are listed on your projects page. **Needs sign-in.** |
+| `edit_map` | `PATCH /v1/maps/{token}` | Changes a map's title, colours or values (new rows go through the same checks as `create_map`), and saves it. **Needs sign-in.** |
+| `publish_map` | `POST /v1/maps/{token}/publish` | Saves the map and returns a `publish_url` that opens it in Vizzie with the Share panel open; one click there publishes a public link. **Needs sign-in.** |
 
 REST calls go to `https://api.vizzie.org`; `GET /v1` lists them, and an OpenAPI 3.1
 document is at https://api.vizzie.org/v1/openapi.json. Every failure answers
 with a plain-language `error.message`, a `next` step and, where there is one, a
 `fallback_url` to open instead.
+
+The three calls that need sign-in take a Vizzie access token as
+`Authorization: Bearer …`. MCP clients get one through OAuth: the server's metadata is
+at `https://api.vizzie.org/.well-known/oauth-protected-resource/mcp`. A call without a
+token answers 401 with a `WWW-Authenticate` header pointing there. A token issued to an
+assistant works with these calls only, not with the rest of your account.
 
 ## Examples
 
@@ -79,7 +90,8 @@ so its boundaries stay on Vizzie's side.
 | Boundaries, maps, catchments | 20 calls per 5 minutes each |
 | Isochrone origins (each one is a routing request) | 200 a day per address |
 | All calls | 2,000 a day per address |
-| Maps from your own rows | 5,000 rows, 1 MB, 200 maps a day; links last 30 days |
+| Maps from your own rows | 5,000 rows, 1 MB, 200 maps a day; links last 30 days unless saved |
+| Saved maps | 200 per account |
 
 For more, email hello@vizzie.org.
 
