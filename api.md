@@ -88,7 +88,7 @@ so its boundaries stay on Vizzie's side.
 | --- | --- |
 | Search, describe, resolve | 60 calls per 5 minutes each |
 | Boundaries, maps, catchments | 20 calls per 5 minutes each |
-| Isochrone origins (each one is a routing request) | 200 a day per address |
+| Isochrone origins (each one is a routing request) | 50 a day per address |
 | All calls | 2,000 a day per address |
 | Maps from your own rows | 5,000 rows, 1 MB, 200 maps a day; links last 30 days unless saved |
 | Saved maps | 200 per account |
