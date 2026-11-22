@@ -10,6 +10,13 @@
   already searching open data for a place (#find=), drawing a census map (#census=),
   or previewing a dataset (#dataset=) — with working examples.
 
+## API and MCP server
+
+- [API and MCP server](https://www.vizzie.org/api.md): a free API and remote MCP server
+  (https://api.vizzie.org/mcp) for finding open data for a place, identifying area
+  codes, fetching licence-cleared boundaries and making a map someone can open with
+  one link — every answer licensed and linked.
+
 ## Reference
 
 - [Open data portals](https://www.vizzie.org/portals/): every portal Vizzie connects

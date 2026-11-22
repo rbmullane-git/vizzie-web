@@ -209,17 +209,19 @@ function replaceRegion(source, begin, end, replacement, what) {
   return source.slice(0, i) + replacement + source.slice(j + end.length);
 }
 
-// The deep-links page carries the same inline facts (data-fact spans), so it
-// is refreshed by the same build — figures are never typed into a page by hand.
-const LINK_PAGE = join(WEB, 'link', 'index.html');
-if (existsSync(LINK_PAGE)) {
-  const page = readFileSync(LINK_PAGE, 'utf8');
+// The deep-links and API pages carry the same inline facts (data-fact spans),
+// so they are refreshed by the same build — figures are never typed into a
+// page by hand.
+for (const slug of ['link', 'api']) {
+  const file = join(WEB, slug, 'index.html');
+  if (!existsSync(file)) continue;
+  const page = readFileSync(file, 'utf8');
   const refreshed = applyInlineFacts(page);
   if (refreshed !== page && !process.argv.includes('--check')) {
-    writeFileSync(LINK_PAGE, refreshed);
-    process.stderr.write('link/index.html: facts refreshed\n');
+    writeFileSync(file, refreshed);
+    process.stderr.write(`${slug}/index.html: facts refreshed\n`);
   } else if (refreshed !== page) {
-    process.stderr.write('link/index.html facts are stale\n');
+    process.stderr.write(`${slug}/index.html facts are stale\n`);
     process.exit(1);
   }
 }

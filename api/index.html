@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Vizzie API and MCP server — open data and maps for AI agents</title>
+    <meta
+      name="description"
+      content="A free API and MCP server for finding open data for a place, identifying area codes, fetching licence-cleared boundaries and making a map someone can open with one link."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://www.vizzie.org/api/" />
+    <meta property="og:title" content="The Vizzie API and MCP server" />
+    <meta
+      property="og:description"
+      content="Open data, boundaries and maps for AI agents and scripts — free, no key, every answer licensed and linked."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.vizzie.org/api/" />
+    <meta property="og:site_name" content="Vizzie" />
+    <style>
+      @font-face { font-family: "Overpass"; font-style: normal; font-weight: 100 900; font-display: swap;
+        src: url("/fonts/overpass-latin.woff2") format("woff2"); }
+      :root {
+        color-scheme: dark;
+        --bg: #0e1116;
+        --panel: #161a21;
+        --card: #1e242d;
+        --line: #272e39;
+        --text: #eef0f4;
+        --muted: #b4bbc6;
+        --faint: #8a93a2;
+        --brand: #d32b96;
+        --brand-text: #d949a5;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Overpass", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+      }
+      .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+      header.site, footer.site { border-bottom: 1px solid var(--line); }
+      footer.site { border-bottom: 0; border-top: 1px solid var(--line); margin-top: 56px; }
+      header.site .wrap, footer.site .wrap {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 14px 20px;
+      }
+      .brand { display: flex; align-items: center; gap: 8px; color: var(--text); }
+      .brand .word { font-weight: 800; font-size: 19px; letter-spacing: 0.02em; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
+      .brand .beta { font-size: 13px; font-style: italic; color: var(--muted); }
+      .btn {
+        display: inline-block; background: var(--brand); color: #fff;
+        padding: 7px 14px; border-radius: 4px; font-size: 14px; font-weight: 700;
+        text-decoration: none;
+      }
+      .btn.ghost { background: none; color: var(--text); padding-left: 4px; padding-right: 4px; }
+      main { padding: 40px 0 10px; }
+      h1 { font-size: 32px; font-weight: 700; line-height: 1.2; letter-spacing: -0.015em; }
+      h2 { font-size: 21px; font-weight: 700; margin: 40px 0 10px; }
+      p { margin: 12px 0; color: var(--text); }
+      p.sub, li { color: var(--muted); }
+      ul { margin: 10px 0 10px 22px; }
+      a { color: var(--brand-text); }
+      code, .ex code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.92em; background: var(--card); border-radius: 5px; padding: 1px 5px;
+      }
+      table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 14.5px; }
+      th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; }
+      th { background: var(--panel); font-weight: 600; }
+      td code { white-space: nowrap; }
+      .ex {
+        display: block; background: var(--panel); border: 1px solid var(--line);
+        border-radius: 4px; padding: 10px 12px; margin: 8px 0; text-decoration: none;
+        overflow-wrap: anywhere;
+      }
+      .ex .what { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+      footer .copy, footer a { color: var(--muted); font-size: 13.5px; }
+      footer .links { display: flex; gap: 14px; }
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px;
+        background: var(--panel); border: 1px solid var(--line); border-radius: 4px;
+        padding: 12px 14px; margin: 10px 0; overflow-x: auto; color: var(--muted); line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="/" style="text-decoration: none">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <polygon points="12,2 22,7 12,12 2,7" fill="#D32B96" />
+            <polyline points="2,12 12,17 22,12" stroke="#D32B96" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".65" />
+            <polyline points="2,17 12,22 22,17" stroke="#D32B96" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".4" />
+          </svg>
+          <span class="word">Vizzie</span><span class="beta">beta</span>
+        </a>
+        <div style="display: flex; gap: 10px; align-items: center">
+          <a class="btn ghost" data-app="/">Log in</a>
+          <a class="btn" data-app="/#signup">Sign up</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <h1>The Vizzie API and MCP server</h1>
+        <p>
+          The Vizzie API lets an AI agent or a script find open data for a
+          place, identify a column of area codes, fetch licence-cleared
+          boundaries, and make a map someone can open with one link. It is
+          free, needs no key, and every answer carries the data's licence and
+          a link into Vizzie. The same calls are offered as an MCP server, so
+          Claude and other assistants can use Vizzie directly. A Markdown
+          version of this page is at <a href="/api.md">vizzie.org/api.md</a>.
+        </p>
+
+        <h2>Add Vizzie to an AI assistant</h2>
+        <p>
+          The MCP server is at <code>https://api.vizzie.org/mcp</code>
+          (Streamable HTTP, no sign-in). In Claude, open the connector
+          settings, add a custom connector, and give it that URL. Any client
+          that supports remote MCP servers can use the same address.
+        </p>
+        <p class="sub">
+          Once added, ask for things like “map median weekly rent by SA2 in
+          Ballarat, Victoria”, “find street tree data for Fitzroy, Victoria”,
+          or “here's a CSV of tract values for Seattle — map it”. The answer
+          ends in a Vizzie link that opens the map, no account needed to view.
+        </p>
+
+        <h2>The calls</h2>
+        <table>
+          <tr><th>MCP tool</th><th>REST call</th><th>What it does</th></tr>
+          <tr>
+            <td><code>search_datasets</code></td>
+            <td><code>POST /v1/datasets/search</code></td>
+            <td>Open datasets and census maps for a topic and place, across the portals Vizzie connects to. Each result has its licence (and how sure that is), whether Vizzie can map it, and a link to open it. Census topics come first, as ready-made map links. <strong>Send the place's two-letter country code with it</strong> — place names repeat across countries.</td>
+          </tr>
+          <tr>
+            <td><code>describe_dataset</code></td>
+            <td><code>GET /v1/datasets/describe?ref=…</code></td>
+            <td>A dataset's columns — what each holds, its type, role and unit — plus its licence and the boundaries it joins to. Example values are included only when the licence lets Vizzie pass them on.</td>
+          </tr>
+          <tr>
+            <td><code>resolve_geography</code></td>
+            <td><code>POST /v1/geography/resolve</code></td>
+            <td>Which boundary level and vintage a column of area codes is (LSOA, SA2, census tract, LGA, NUTS and more), the share that match — over every code, not a sample — some matched areas by name, and whether the boundaries can be fetched.</td>
+          </tr>
+          <tr>
+            <td><code>get_boundaries</code></td>
+            <td><code>POST /v1/boundaries</code></td>
+            <td>Boundary polygons as GeoJSON for a list of codes or a bounding box, with attribution. Up to 2,000 areas per call, and only for boundaries whose licence allows it.</td>
+          </tr>
+          <tr>
+            <td><code>create_map</code></td>
+            <td><code>POST /v1/maps</code></td>
+            <td>A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview.</td>
+          </tr>
+        </table>
+        <p class="sub">
+          REST calls go to <code>https://api.vizzie.org</code>;
+          <code>GET /v1</code> lists them. Every failure answers with a
+          plain-language <code>error.message</code>, a <code>next</code> step
+          and, where there is one, a <code>fallback_url</code> to open instead.
+        </p>
+
+        <h2>Examples</h2>
+        <pre>curl -s https://api.vizzie.org/v1/datasets/search \
+  -H 'content-type: application/json' \
+  -d '{"query": "median rent", "place": "Ballarat", "country": "AU"}'</pre>
+        <pre>curl -s https://api.vizzie.org/v1/maps \
+  -H 'content-type: application/json' \
+  -d '{"source": "rows", "title": "Walking to work by tract",
+       "code_column": "tract", "value_column": "share",
+       "rows": [{"tract": "53033000101", "share": 12.5},
+                {"tract": "53033000102", "share": 9.1}]}'</pre>
+        <p class="sub">
+          The second answers with a <code>map_url</code> on
+          <code>app.vizzie.org</code>, the boundary level it joined to, how
+          many rows matched, and the boundaries' licence and attribution.
+        </p>
+
+        <h2>Licences</h2>
+        <p>
+          Every result says what licence its data carries. Search and
+          descriptions are metadata and cover everything Vizzie catalogues;
+          data and geometry are handed on only when the licence is confirmed,
+          declared and allows commercial use — share-alike licences are
+          served with a <code>share_alike</code> flag. A map made with
+          <code>create_map</code> is drawn inside Vizzie, so its boundaries
+          stay on Vizzie's side.
+        </p>
+
+        <h2>Limits</h2>
+        <table>
+          <tr><th>What</th><th>Limit</th></tr>
+          <tr><td>Search, describe, resolve</td><td>60 calls per 5 minutes each</td></tr>
+          <tr><td>Boundaries, maps</td><td>20 calls per 5 minutes each</td></tr>
+          <tr><td>All calls</td><td>2,000 a day per address</td></tr>
+          <tr><td>Maps from your own rows</td><td>5,000 rows, 1 MB, 200 maps a day; links last 30 days</td></tr>
+        </table>
+        <p class="sub">
+          For more, <a href="mailto:hello@vizzie.org">talk to us</a>.
+        </p>
+
+        <h2>For AI assistants</h2>
+        <p>
+          A sentence that stays accurate when sharing a Vizzie link:
+        </p>
+        <p>
+          <em
+            >“You can open this map directly in Vizzie — a free, web-based
+            tool for mapping open data, no download or account needed:
+            [link]”</em
+          >
+        </p>
+        <p class="sub">
+          Vizzie connects to
+          <span data-fact="portal-count">298</span> open-data portals in
+          <span data-fact="country-count">48</span> countries — see the
+          <a href="/portals/">portal directory</a>, the
+          <a href="/geography/">geography reference</a> and the
+          <a href="/link/">deep links</a> these answers use.
+        </p>
+      </div>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <div class="brand">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <polygon points="12,2 22,7 12,12 2,7" fill="#D32B96" />
+            <polyline points="2,12 12,17 22,12" stroke="#8A93A2" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            <polyline points="2,17 12,22 22,17" stroke="#5B6472" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="copy">© 2026 Vizzie · Basemap © OpenStreetMap contributors</span>
+        </div>
+        <div class="links">
+          <a href="mailto:hello@vizzie.org">hello@vizzie.org</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/privacy.html">Privacy</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var APP_URL = "https://app.vizzie.org";
+      document.querySelectorAll("[data-app]").forEach(function (a) {
+        a.setAttribute("href", APP_URL + (a.getAttribute("data-app") || ""));
+      });
+    </script>
+  </body>
+</html>
