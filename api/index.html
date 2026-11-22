@@ -6,7 +6,7 @@
     <title>The Vizzie API and MCP server — open data and maps for AI agents</title>
     <meta
       name="description"
-      content="A free API and MCP server for finding open data for a place, identifying area codes, fetching licence-cleared boundaries and making a map someone can open with one link."
+      content="A free API and MCP server for finding open data for a place, identifying area codes, fetching licence-cleared boundaries, drawing walk and drive catchments, and making a map someone can open with one link."
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href="https://www.vizzie.org/api/" />
@@ -109,7 +109,8 @@
         <p>
           The Vizzie API lets an AI agent or a script find open data for a
           place, identify a column of area codes, fetch licence-cleared
-          boundaries, and make a map someone can open with one link. It is
+          boundaries, draw the area within reach of a place, and make a map
+          someone can open with one link. It is
           free, needs no key, and every answer carries the data's licence and
           a link into Vizzie. The same calls are offered as an MCP server, so
           Claude and other assistants can use Vizzie directly. A Markdown
@@ -126,7 +127,8 @@
         <p class="sub">
           Once added, ask for things like “map median weekly rent by SA2 in
           Ballarat, Victoria”, “find street tree data for Fitzroy, Victoria”,
-          or “here's a CSV of tract values for Seattle — map it”. The answer
+          “show everywhere within a 15-minute walk of Flinders Street
+          Station”, or “here's a CSV of tract values for Seattle — map it”. The answer
           ends in a Vizzie link that opens the map, no account needed to view.
         </p>
 
@@ -154,9 +156,14 @@
             <td>Boundary polygons as GeoJSON for a list of codes or a bounding box, with attribution. Up to 2,000 areas per call, and only for boundaries whose licence allows it.</td>
           </tr>
           <tr>
+            <td><code>get_catchment</code></td>
+            <td><code>POST /v1/catchment</code></td>
+            <td>The area within reach of an address, or of up to 1,000 points or GeoJSON shapes: everywhere within a straight-line distance (a shape grows outward from its edge), or an isochrone — how far you can walk or drive along roads (up to 100 origins). 0.1–10 km or 0.1–5 mi. Returns the polygons as GeoJSON and a <code>map_url</code> that opens them in Vizzie.</td>
+          </tr>
+          <tr>
             <td><code>create_map</code></td>
             <td><code>POST /v1/maps</code></td>
-            <td>A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview.</td>
+            <td>A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview. A map from your rows can carry a <code>catchment</code> (the same fields as <code>get_catchment</code>), and <code>crop_to_catchment</code> keeps only the areas that touch it.</td>
           </tr>
         </table>
         <p class="sub">
@@ -177,10 +184,16 @@
        "code_column": "tract", "value_column": "share",
        "rows": [{"tract": "53033000101", "share": 12.5},
                 {"tract": "53033000102", "share": 9.1}]}'</pre>
+        <pre>curl -s https://api.vizzie.org/v1/catchment \
+  -H 'content-type: application/json' \
+  -d '{"address": "Flinders Street Station, Melbourne", "country": "AU",
+       "method": "isochrone", "mode": "walk", "distance": 1.2, "unit": "km"}'</pre>
         <p class="sub">
           The second answers with a <code>map_url</code> on
           <code>app.vizzie.org</code>, the boundary level it joined to, how
-          many rows matched, and the boundaries' licence and attribution.
+          many rows matched, and the boundaries' licence and attribution. The
+          third answers with the walking catchment as GeoJSON and a
+          <code>map_url</code> that draws it.
         </p>
 
         <h2>Licences</h2>
@@ -198,7 +211,8 @@
         <table>
           <tr><th>What</th><th>Limit</th></tr>
           <tr><td>Search, describe, resolve</td><td>60 calls per 5 minutes each</td></tr>
-          <tr><td>Boundaries, maps</td><td>20 calls per 5 minutes each</td></tr>
+          <tr><td>Boundaries, maps, catchments</td><td>20 calls per 5 minutes each</td></tr>
+          <tr><td>Isochrone origins (each one is a routing request)</td><td>200 a day per address</td></tr>
           <tr><td>All calls</td><td>2,000 a day per address</td></tr>
           <tr><td>Maps from your own rows</td><td>5,000 rows, 1 MB, 200 maps a day; links last 30 days</td></tr>
         </table>
