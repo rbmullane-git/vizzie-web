@@ -97,7 +97,7 @@ For more, email hello@vizzie.org.
 
 ## What we keep
 
-We keep the words searched for, with the country, city and state, for 90 days, and counts
+We keep the words searched for, with the country, city or suburb, and state, for 90 days, and counts
 of the datasets described and mapped. A map made from your own rows is stored for 30 days
 unless it is saved; anyone with its link can open it. If it names the dataset its rows came
 from (`ref`), we keep that dataset's columns, boundaries and colours that were chosen. The
