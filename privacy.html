@@ -93,7 +93,7 @@
         <span class="mark">VIZZIE</span><span class="beta">beta</span>
       </header>
       <h1>Privacy Policy</h1>
-      <p class="muted">Last updated: 7 September 2026 (v3)</p>
+      <p class="muted">Last updated: 24 November 2026 (v4)</p>
 
       <p>
         This policy explains what personal data
@@ -108,11 +108,12 @@
         <li>
           <strong>Account details</strong> — your email address and display
           name, provided when you sign up or sign in (including via Google or
-          Facebook).
+          Microsoft).
         </li>
         <li>
-          <strong>Your content</strong> — the projects, maps, charts, and the
-          data sources you follow (open-data portals, publishers, datasets).
+          <strong>Your content</strong> — the projects, maps, charts, files you
+          upload, and the data sources you follow (open-data portals,
+          publishers, datasets).
         </li>
         <li>
           <strong>Usage &amp; security events</strong> — sign-in events (time
@@ -171,14 +172,67 @@
           approximate country, and the address of the page that referred them —
           never the raw IP.
         </li>
+        <li>
+          <strong>The Vizzie API and AI assistants</strong> — when an AI
+          assistant or a program uses the Vizzie API
+          (<code>api.vizzie.org</code>), including through our MCP server, we
+          receive what it sends: search words, place names and addresses, area
+          codes, points or shapes, and, when it makes a map, the map's title and
+          the codes and values in it. We don't receive the rest of your
+          conversation or your files. What the assistant's provider does with
+          your conversation, and with the answers we return, is covered by its
+          own privacy policy. We use the IP address a request comes from to
+          apply limits and prevent abuse. Often this is the assistant provider's
+          address, not yours. Our hosting provider's request logs record it. Our
+          usage counts hold a one-way keyed hash of it or, if you are signed in,
+          your account id.
+        </li>
+        <li>
+          <strong>What assistants look for</strong> — so that we can add and
+          improve the data people need, we keep a record of what assistants and
+          programs ask the API for: the words searched for, with the country,
+          city and state; which datasets were described or mapped; and, when a
+          map names the dataset it was made from, the dataset's columns,
+          boundaries and colours that were chosen. This record doesn't include
+          your account, your IP address or the map's title and values. We leave
+          out search words that look like an address, an email, a phone number
+          or a link, but we can't recognise every personal detail, so please
+          don't put any in a search.
+        </li>
+        <li>
+          <strong>Maps made through the API</strong> — a map made from a table
+          or a catchment is stored so that its link works.
+          <strong
+            >Anyone who has the link can open the map and see its data</strong
+          >, so don't send personal or sensitive data. With each map we keep a
+          one-way keyed hash of the IP address that made it, and how often and
+          when it was last opened. If the assistant says which dataset the map
+          was made from, we keep that with the map. The link stops working after
+          30 days and the map is deleted soon after, unless someone saves it to
+          a Vizzie account.
+        </li>
+        <li>
+          <strong>Connecting an AI assistant to your account</strong> — if you
+          connect an assistant, such as Claude, ChatGPT or Gemini, you sign in
+          to Vizzie and choose whether to allow it. If you do, the assistant's
+          provider receives your account id, email address and name. The
+          assistant can then save, edit and prepare to publish maps in your
+          account through the API. It can't open your projects or uploads. We
+          keep a record of the connection. A map it saves is stored against your
+          account, doesn't expire, and is listed on your projects page, where
+          you can remove it. Saving a map doesn't make it private: its link
+          still opens it.
+        </li>
       </ul>
 
       <h2>Publishing &amp; sharing a map</h2>
       <p>
-        When you publish or share a map, the data behind it is encoded directly
-        into the shareable link. This means anyone who has the link can view
-        that data — so treat published links as public, and do not publish maps
-        built on personal or sensitive data.
+        When you publish a map while signed in, the map and the data behind it
+        are stored with your account, and you can turn its link off. In older
+        links, and maps published without signing in, the data is held in the
+        link itself, so we can't turn those off. Either way, anyone who has the
+        link can view that data — so treat published links as public, and do not
+        publish maps built on personal or sensitive data.
       </p>
 
       <h2>How we use it</h2>
@@ -188,6 +242,11 @@
           your usage and analytics.
         </li>
         <li>To secure accounts and prevent abuse.</li>
+        <li>
+          To improve Vizzie — to see where people get stuck, to decide which
+          data to add, describe and fix first, and to test and improve the maps
+          it suggests.
+        </li>
         <li>
           To send essential account emails (e.g. confirmation and password
           reset), and optional product updates you opt into.
@@ -212,12 +271,45 @@
           <strong>Resend</strong> — delivering feedback you send us by email.
         </li>
         <li>
-          <strong>Google / Facebook</strong> — only if you choose to sign in
+          <strong>Google / Microsoft</strong> — only if you choose to sign in
           with them, to verify your identity.
         </li>
         <li>
-          <strong>Mapbox</strong> — optional address lookup and routing
-          features, when used.
+          <strong>Render</strong> — hosting for the app, the Vizzie API and the
+          service that reads open data, and their database.
+        </li>
+        <li>
+          <strong>Cloudflare</strong> — map tiles, and preview cards for
+          published maps.
+        </li>
+        <li>
+          <strong>Geoapify</strong>, and
+          <strong>OpenStreetMap's Nominatim</strong>
+          service — place names, addresses and points, to find them and to work
+          out walking and driving areas.
+        </li>
+        <li>
+          <strong>Mapbox</strong>, and the free <strong>OSRM</strong> service —
+          routes, when you use the routing tool.
+        </li>
+        <li>
+          <strong>Translation services</strong> — search words, to search
+          portals in other languages. We use Microsoft Azure Translator and, if
+          it isn't available, Google Translate.
+        </li>
+        <li>
+          <strong>Anthropic</strong> — the AI that suggests how a dataset opens
+          and what its columns mean. It receives the dataset's title, column
+          names, and a summary or sample of its values. For a file you upload it
+          receives the title, column names and a summary, not the rows.
+        </li>
+        <li>
+          <strong>Sentry</strong> and <strong>Better Stack</strong> — technical
+          reports and logs, which can include details of a request that failed.
+        </li>
+        <li>
+          <strong>An AI assistant you connect</strong> — as described above, and
+          only if you allow it.
         </li>
         <li>
           Open-data providers you connect to serve the public datasets you map.
@@ -228,8 +320,23 @@
       <p>
         We keep your account data for as long as your account is active. Raw
         map-visit records are rolled up into aggregate counts after about 30
-        days, and old sign-in records are pruned over time. You can delete your
-        account and data at any time — see
+        days, and old sign-in records are pruned over time. Maps made through
+        the API are kept for 30 days or, once saved to an account, until you
+        remove them or delete your account. After an account is deleted, its
+        saved maps are deleted, and its id is removed from our usage counts,
+        within about 10 days.
+      </p>
+      <p>
+        Search words sent through the API are kept for 90 days; after that only
+        monthly totals by country remain. Counts of which datasets were used,
+        and how they were mapped, don't say who used them and have no end date.
+        Walking and driving areas we have worked out are kept without anything
+        linking them to the person who asked. Server logs and error reports are
+        kept for up to 30 days. The backups of the API's database go back 7
+        days, so a deleted record can remain in them for that long.
+      </p>
+      <p>
+        You can delete your account and data at any time — see
         <a href="data-deletion.html">Data Deletion</a>.
       </p>
 
@@ -239,6 +346,14 @@
         export, or delete your personal data, and to withdraw consent. To
         exercise these, contact us at the address below or follow the
         <a href="data-deletion.html">deletion instructions</a>.
+      </p>
+      <p>
+        You can end an assistant's connection under Connected apps in your
+        profile. It may keep working for up to an hour. Maps it saved stay until
+        you remove them, and removing a saved map stops its link. A copy you
+        kept as a project is separate and stays until you delete it. The record
+        of what assistants look for doesn't say who asked, so we can't find or
+        remove one person's entries in it.
       </p>
 
       <h2>Security</h2>

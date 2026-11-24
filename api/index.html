@@ -166,7 +166,7 @@
           <tr>
             <td><code>create_map</code></td>
             <td><code>POST /v1/maps</code></td>
-            <td>A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview. A map from your rows can carry a <code>catchment</code> (the same fields as <code>get_catchment</code>), and <code>crop_to_catchment</code> keeps only the areas that touch it.</td>
+            <td>A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview. A map from your rows can carry a <code>catchment</code> (the same fields as <code>get_catchment</code>), and <code>crop_to_catchment</code> keeps only the areas that touch it. <code>ref</code> names the dataset the rows came from, if they came from one.</td>
           </tr>
           <tr>
             <td><code>save_map</code></td>
@@ -247,6 +247,21 @@
         </table>
         <p class="sub">
           For more, <a href="mailto:hello@vizzie.org">talk to us</a>.
+        </p>
+
+        <h2>What we keep</h2>
+        <p>
+          We keep the words searched for, with the country, city and state, for
+          90 days, and counts of the datasets described and mapped. A map made
+          from your own rows is stored for 30 days unless it is saved; anyone
+          with its link can open it. If it names the dataset its rows came from
+          (<code>ref</code>), we keep that dataset's columns, boundaries and
+          colours that were chosen. The records of searches and datasets don't
+          say who asked. A stored map holds a one-way hash of the IP address
+          that made it and, once saved, the account that saved it. Please don't
+          put personal details in a search or a map. The
+          <a href="/privacy.html">privacy policy</a> has the rest, and the
+          <a href="/terms.html">terms</a> apply.
         </p>
 
         <h2>For AI assistants</h2>

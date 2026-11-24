@@ -30,7 +30,7 @@ map it". The answer ends in a Vizzie link that opens the map, no account needed 
 | `resolve_geography` | `POST /v1/geography/resolve` | Which boundary level and vintage a column of area codes is (LSOA, SA2, census tract, LGA, NUTS and more), the share that match — over every code, not a sample — some matched areas by name, and whether the boundaries can be fetched. |
 | `get_boundaries` | `POST /v1/boundaries` | Boundary polygons as GeoJSON for a list of codes or a bounding box, with attribution. Up to 2,000 areas per call, and only for boundaries whose licence allows it. |
 | `get_catchment` | `POST /v1/catchment` | The area within reach of an address, or of up to 1,000 points or GeoJSON shapes: everywhere within a straight-line distance (a shape grows outward from its edge), or an isochrone — how far you can walk or drive along roads (up to 100 origins). 0.1–10 km or 0.1–5 mi. Returns the polygons as GeoJSON and a `map_url` that opens them in Vizzie. |
-| `create_map` | `POST /v1/maps` | A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview. A map from your rows can carry a `catchment` (the same fields as `get_catchment`), and `crop_to_catchment` keeps only the areas that touch it. |
+| `create_map` | `POST /v1/maps` | A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview. A map from your rows can carry a `catchment` (the same fields as `get_catchment`), and `crop_to_catchment` keeps only the areas that touch it. `ref` names the dataset the rows came from, if they came from one. |
 | `save_map` | `POST /v1/maps/{token}/save` | Keeps a map from `create_map` in your Vizzie account, so its link doesn't expire. Saved maps are listed on your projects page. **Needs sign-in.** |
 | `edit_map` | `PATCH /v1/maps/{token}` | Changes a map's title, colours or values (new rows go through the same checks as `create_map`), and saves it. **Needs sign-in.** |
 | `publish_map` | `POST /v1/maps/{token}/publish` | Saves the map and returns a `publish_url` that opens it in Vizzie with the Share panel open; one click there publishes a public link. **Needs sign-in.** |
@@ -94,6 +94,18 @@ so its boundaries stay on Vizzie's side.
 | Saved maps | 200 per account |
 
 For more, email hello@vizzie.org.
+
+## What we keep
+
+We keep the words searched for, with the country, city and state, for 90 days, and counts
+of the datasets described and mapped. A map made from your own rows is stored for 30 days
+unless it is saved; anyone with its link can open it. If it names the dataset its rows came
+from (`ref`), we keep that dataset's columns, boundaries and colours that were chosen. The
+records of searches and datasets don't say who asked. A stored map holds a one-way hash of
+the IP address that made it and, once saved, the account that saved it. Please don't put
+personal details in a search or a map. The privacy policy
+(https://www.vizzie.org/privacy.html) has the rest, and the terms
+(https://www.vizzie.org/terms.html) apply.
 
 ## For AI assistants
 
