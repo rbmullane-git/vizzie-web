@@ -166,17 +166,17 @@
           <tr>
             <td><code>create_map</code></td>
             <td><code>POST /v1/maps</code></td>
-            <td>A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); or a dataset's preview. A map from your rows can carry a <code>catchment</code> (the same fields as <code>get_catchment</code>), and <code>crop_to_catchment</code> keeps only the areas that touch it. <code>ref</code> names the dataset the rows came from, if they came from one.</td>
+            <td>A link that opens a map in Vizzie: a census map of a topic for a place; your own table of area codes and values, joined to boundaries (the level is worked out from the codes if you don't name it); a dataset's preview; or up to five layers together (<code>source</code>: <code>layers</code>), each a census topic or a table with its own place and level. <code>style</code> sets the colours (<code>ramp</code>, or the two ends as <code>colors</code>) and the classes, including your own <code>breaks</code>; <code>legend_title</code> and <code>note</code> set the words in the key. A map from your rows can carry a <code>catchment</code> (the same fields as <code>get_catchment</code>), and <code>crop_to_catchment</code> keeps only the areas that touch it. <code>ref</code> names the dataset the rows came from, if they came from one.</td>
           </tr>
           <tr>
             <td><code>save_map</code></td>
             <td><code>POST /v1/maps/{token}/save</code></td>
-            <td>Keeps a map from <code>create_map</code> in your Vizzie account, so its link doesn't expire. Saved maps are listed on your projects page. A saved map counts as one of your plan's projects and its rows as one of its datasets: 5 of each on the free plan, together with the projects you make in Vizzie. <strong>Needs sign-in.</strong></td>
+            <td>Keeps a map from <code>create_map</code> in your Vizzie account, so its link doesn't expire. Saved maps are listed on your projects page. A saved map counts as one of your plan's projects and each table or census source in it as a dataset: 5 of each on the free plan, together with the projects you make in Vizzie. <strong>Needs sign-in.</strong></td>
           </tr>
           <tr>
             <td><code>edit_map</code></td>
             <td><code>PATCH /v1/maps/{token}</code></td>
-            <td>Changes a map's title, colours or values (new rows go through the same checks as <code>create_map</code>), and saves it. <strong>Needs sign-in.</strong></td>
+            <td>Changes a map and saves it: its title; a layer's colours, classes, key and note; a census layer's topic, place or level; a table's values (new rows go through the same checks as <code>create_map</code>); and adding, removing or reordering layers. The link stays the same. <strong>Needs sign-in.</strong></td>
           </tr>
           <tr>
             <td><code>publish_map</code></td>
@@ -242,7 +242,8 @@
           <tr><td>Boundaries, maps, catchments</td><td>20 calls per 5 minutes each</td></tr>
           <tr><td>Isochrone origins (each one is a routing request)</td><td>50 a day per address</td></tr>
           <tr><td>All calls</td><td>2,000 a day per address</td></tr>
-          <tr><td>Maps from your own rows</td><td>5,000 rows, 1 MB, 200 maps a day; links last 30 days unless saved</td></tr>
+          <tr><td>Layers in a map</td><td>5</td></tr>
+          <tr><td>Maps with your own rows</td><td>5,000 rows and 1 MB across the map, 200 maps a day; links last 30 days unless saved</td></tr>
           <tr><td>Saved maps</td><td>200 per account</td></tr>
         </table>
         <p class="sub">
@@ -253,8 +254,8 @@
         <p>
           We keep the words searched for, with the country, city or suburb, and state, for
           90 days, and counts of the datasets described and mapped. A map made
-          from your own rows is stored for 30 days unless it is saved; anyone
-          with its link can open it. If it names the dataset its rows came from
+          from your own rows, a census topic and place, or a catchment is stored
+          for 30 days unless it is saved; anyone with its link can open it. If it names the dataset its rows came from
           (<code>ref</code>), we keep that dataset's columns, boundaries and
           colours that were chosen. The records of searches and datasets don't
           say who asked. A stored map holds a one-way hash of the IP address
