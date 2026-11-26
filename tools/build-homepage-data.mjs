@@ -159,10 +159,11 @@ const jsonld = {
       name: 'Vizzie',
       url: 'https://www.vizzie.org/',
       description:
-        `Vizzie is a free web-based tool for visualising and mapping open data — ` +
-        `connected to ${facts.portalCount} open-data portals (national, city and ` +
-        `international catalogues) across ${facts.countryCount} countries and regions, ` +
-        `with licence-cleared boundaries and no GIS skills required.`,
+        `Vizzie is a mapping and analytics studio connected to the world's open data: ` +
+        `${facts.portalCount} open-data portals (national, city and international ` +
+        `catalogues) across ${facts.countryCount} countries and regions. There's nothing ` +
+        `to download, and you don't need a GIS specialist to build beautiful maps, ` +
+        `charts, and data stories.`,
       applicationCategory: 'Data visualisation and mapping',
       operatingSystem: 'Any (web browser)',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
